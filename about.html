@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>אודות</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <html lang="he"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
+
+    h1, h2, p{
+        font-family: 'Noto Sans Hebrew', sans-serif;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .center{
+        position: relative;
+        border-radius: 50%;
+    }
+    .center img{
+        transition: all linear 0.7s;
+    }
+    img.hover-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 50%;
+    }
+    .center:hover img{
+        opacity: 0;
+    }
+    .center:hover img.hover-img{
+        opacity: 1;
+    }
+    .shadow{
+        background-color: black;
+        font-family: 'Noto Sans Hebrew', sans-serif;
+        text-align: center;
+    }
+    .shadow:hover{
+        background-color: goldenrod;
+        color: white;
+    }
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<body dir="rtl">
+    <img class="logo" src="indexphoto/logo.png" alt="לוגו" height="200px" width="auto">
+
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="story.html">הסיפור</a></li>
+            <li><a href="files.html">האנשים</a></li>
+            <li><a href="history.html">ההיסטוריה</a></li>
+            <li><a href="world.html">העולם</a></li>
+            <li><a href="about.html">היוצר</a></li>
+        </ul>
+        <article style="background-color: goldenrod;">
+            <h1>מיהו האיש שבצללים</h1>
+            <div class="container">
+            <div class="center">
+                <img style="border-radius: 50%;" src="shadow.jpg" alt="תמונת פרופיל" height="250px" width="250px">
+                <img class="hover-img" src="profile.jpg" alt="תמונת פרופיל" height="250px" width="250px">
+            </div>
+            </div>
+            <p class="shadow" style="transition: 3s;">מר גיא ברכה</p>
+            <br>
+            <h2>למה יצרתי את כל זה?</h2>
+            <div class="shadow" style="transition: 3s;">
+            <p>מגיל צעיר מאוד אהבתי לדמיין ולחלום על סיפורים ועולמות שלא יכולים להתקיים במציאות, אז עם השנים וככל שצברתי יותר רעיונות והשראה, כך הגעתי למצב שהצלחתי ליצור דמויות וסיפורים משלי. וכעת אחרי 10 שנות יצירה לעצמי, החלטתי לשתף אותם אתכם.</p>
+            <p>תדמיינו לכם למשל שאתם מקבלים רהיט להרכבה מאיקאה, יש לכם את החלקים, יש לכם את הכלים שאיתם תבנו את הרהיט, אבל אין לכם את ההוראות. אז מה תעשו? פשוט מאוד, תרכיבו אותו לפי האינסטינקטים שלכם.</p>
+            <p>הרעיון המרכזי הוא שבנוסף הרצון לשתף אתכם בכל מה שיצרתי, היה שגם אתם תוכלו גם לתרום לרעיונות הקיימים עם הסיפורים שלכם (כמו תוכנה חופשית למשל)</p>
+            <p>אז מקווה שתהנו מהמשחק</p>
+            </div>
+            <h2>לפניות עסקיות או בנוגע לאתר</h2>
+            <br>
+            <br>
+            <form method="post" action="php/send.php">
+                <label for="name">שם מלא</label>
+                <input type="text" name="name" id="name" required>
+                <br>
+                <label for="email">כתובת מייל</label>
+                <input type="text" name="email" id="email" required>
+                <br>
+                <label for="subject">נושא</label>
+                <input type="text" name="subject" id="subject" required>
+                <br><br>
+                <label for="message">תוכן פנייה</label>
+                <textarea name="message" id="message" required></textarea>
+
+                <br>
+                <button>שלח</button>
+
+            </form>
+        </article>
+        <footer>
+            <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
+            <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
+            <p>2023</p>
+        </footer>
+</body>
+</html>

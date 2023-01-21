@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(218, 240, 255);
+}
+header{
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: rgb(255, 140, 0);
+}
+header:hover{
+    opacity: 0.5;
+    transition: 2s;
+    background-color: aqua;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+form{
+    background-color: brown;
+    color: white;
+    font-family: 'Noto Sans Hebrew', sans-serif;
+    text-decoration: underline blue;
+}
+button{
+    background-color: red;
+    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: yellow;
+    color: blue;
+}

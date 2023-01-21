@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>עולם המצפן</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <html lang="he"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
+
+    h1, h2, p{
+        font-family: 'Noto Sans Hebrew', sans-serif;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .column1{
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+    .row::after{
+        content: "";
+        clear:both;
+        display: table;
+    }
+    .title{
+        font-size: 75px;
+        text-align: center;
+    }
+    .lobby{
+        font-size: 25px;
+        text-align: center;
+    }
+    #compass{
+    position:relative;
+    top: 50px;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-name: rotation;
+    }
+    @keyframes rotation{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(359deg);}
+    }
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body dir="rtl">
+
+    <img class="logo" src="indexphoto/logo.png" alt="לוגו" height="200px" width="auto">
+
+    <p class="lobby">ברוכים הבאים לעולם חדש ומופלא</p>
+    <p class="lobby">איפה תרצו להתחיל?</p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <a href="story.html">
+            <img src="indexphoto/book.jpg" style="width:100%">
+            </a>
+            <div class="text">סיפור</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <a href="world.html">
+            <img src="indexphoto/city.jpg" style="width:100%">
+            </a>
+            <div class="text">עולם</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <a href="history.html">
+            <img src="indexphoto/time.jpg" style="width:100%">
+            </a>
+            <div class="text">היסטוריה</div>
+          </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <a href="files.html">
+                <img src="indexphoto/files.jpg" style="width:100%">
+                </a>
+                <div class="text">אנשי המצפן</div>
+          </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    <script src="scripts/slider.js"></script>
+    <br>
+
+    <ul>
+        <li><a href="index.html">בית</a></li>
+        <li><a href="story.html">הסיפור</a></li>
+        <li><a href="files.html">האנשים</a></li>
+        <li><a href="history.html">ההיסטוריה</a></li>
+        <li><a href="world.html">העולם</a></li>
+        <li><a href="about.html">היוצר</a></li>
+    </ul>
+
+    <section style="background-color: rgb(12, 109, 109); color: white;">
+        <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
+        <p>מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
+        <p>אני מאוד מקווה שתאהבו את האתר ואת תכניו, לקח לי כ-10 שנים לאסוף ולכתוב את הרעיונות, הסיפורים והדמויות, כך שיצרתי אותו עם לבי.</p>
+        <p>אז שתהיה לכם חוויה מהנה מהאתר :)</p>
+        <p>יוצר האתר והעולם, ינואר 2023</p>
+    </section>
+    <footer>
+        <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
+        <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
+        <p>2023</p>
+    </footer>
+</body>
+</html>
