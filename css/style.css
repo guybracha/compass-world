@@ -28,6 +28,14 @@ button{
     font-family: 'Noto Sans Hebrew', sans-serif;
     font-weight: bolder;
 }
+textarea{
+    background-color: rgb(228, 228, 228);
+    border-radius: 11px;
+}
+input{
+    background-color: rgb(228, 228, 228);
+    border-radius: 25px;
+}
 button:hover{
     background-color: yellow;
     color: blue;
