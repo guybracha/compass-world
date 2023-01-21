@@ -27,10 +27,11 @@ button{
     background-color: red;
     font-family: 'Noto Sans Hebrew', sans-serif;
     font-weight: bolder;
+    border-radius: 25px;
 }
 textarea{
     background-color: rgb(228, 228, 228);
-    border-radius: 11px;
+    border: 2px black;
 }
 input{
     background-color: rgb(228, 228, 228);
