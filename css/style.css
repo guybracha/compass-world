@@ -40,4 +40,5 @@ input{
 button:hover{
     background-color: yellow;
     color: blue;
+    border: solid red 0.5px;
 }
