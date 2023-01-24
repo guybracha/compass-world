@@ -87,10 +87,33 @@
 
 <body dir="rtl">
 
-    <img class="logo" src="indexphoto/logo.png" alt="לוגו" height="200px" width="auto">
-
+    <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/logo.png" class="img-fluid" alt="logo">
     <p class="lobby">ברוכים הבאים לעולם חדש ומופלא</p>
     <p class="lobby">איפה תרצו להתחיל?</p>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -116,28 +139,21 @@
         </button>
       </div>
     <br>
-    <ul>
-        <li><a href="index.html">בית</a></li>
-        <li><a href="story.html">הסיפור</a></li>
-        <li><a href="files.html">האנשים</a></li>
-        <li><a href="history.html">ההיסטוריה</a></li>
-        <li><a href="world.html">העולם</a></li>
-        <li><a href="about.html">היוצר</a></li>
-    </ul>
-    <div class="third-flex">
-    <div class="third" style="background-color: rgb(99, 183, 96, 0.504); float: right;">
-        <h2 style="text-decoration: underline;">אנשי המצפן</h2>
-        <p>מיהם הנפשות הפועלות בעולם זה?</p>
-    </div>
-    <div class="third" style="background-color: rgba(223, 223, 223, 0.504); margin: 0;">
-        <h2 style="text-decoration: underline;">ההיסטוריה האבודה</h2>
-        <p>אסופת תיעודים ואירועים הידועים לאנושות</p>
-    </div>
-    <div class="third" style="background-color: rgb(98, 98, 196, 0.504); float: left;">
-        <h2 style="text-decoration: underline;">העולם המופלא</h2>
-        <p>אוסף רישומים על מקומות מופלאים</p>
-    </div>
-    </div>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+          <h2>אנשי המצפן</h2>
+          <p>מיהם הנפשות הפועלות בעולם חדש ומופלא כמו זה?</p>
+          </div>
+          <div class="col">
+            <h2>ההיסטוריה האבודה</h2>
+            <p>אסופת תיעודים ואירועים הידועים לאנושות</p>
+          </div>
+          <div class="col">
+            <h2>העולם המופלא</h2>
+            <p>אוסף רישומים ופריטי מידע על מקומות מרחבי תבל</p>
+          </div>
+        </div>
     <br>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
