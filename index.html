@@ -41,16 +41,24 @@
         font-size: 25px;
         text-align: center;
     }
+
     #compass{
-    position:relative;
-    top: 50px;
-    animation-iteration-count: infinite;
-    animation-duration: 15s;
-    animation-name: rotation;
+    animation: rotate 10s linear infinite;
+    margin: 20px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
     }
-    @keyframes rotation{
-    from{transform: rotate(0deg);}
-    to{transform: rotate(359deg);}
+
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(359deg);
+        }
     }
     .logo{
         display: block;
@@ -131,5 +139,6 @@
         <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
         <p>2023</p>
     </footer>
+    <img id="compass" src="rotate.png">
 </body>
 </html>
