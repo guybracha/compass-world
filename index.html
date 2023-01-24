@@ -2,11 +2,10 @@
 <html>
 <head>
     <title>עולם המצפן</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="rotate.png">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,49 +91,30 @@
 
     <p class="lobby">ברוכים הבאים לעולם חדש ומופלא</p>
     <p class="lobby">איפה תרצו להתחיל?</p>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <a href="story.html">
-            <img src="indexphoto/book.jpg" style="width:100%">
-            </a>
-            <div class="text">סיפור</div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="indexphoto/files.jpg" class="d-block w-100" alt="...">
           </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <a href="world.html">
-            <img src="indexphoto/city.jpg" style="width:100%">
-            </a>
-            <div class="text">עולם</div>
+          <div class="carousel-item">
+            <img src="indexphoto/time.jpg" class="d-block w-100" alt="...">
           </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <a href="history.html">
-            <img src="indexphoto/time.jpg" style="width:100%">
-            </a>
-            <div class="text">היסטוריה</div>
+          <div class="carousel-item">
+            <img src="indexphoto/city.jpg" class="d-block w-100" alt="...">
           </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <a href="files.html">
-                <img src="indexphoto/files.jpg" style="width:100%">
-                </a>
-                <div class="text">אנשי המצפן</div>
+          <div class="carousel-item">
+            <img src="shadow.jpg" class="d-block w-100" alt="...">
           </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
-    <br>
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span> 
-    </div>
-    <script src="scripts/slider.js"></script>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     <br>
     <ul>
         <li><a href="index.html">בית</a></li>
@@ -159,7 +139,8 @@
     </div>
     </div>
     <br>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <section style="background-color: rgb(12, 109, 109); color: white;">
         <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
         <p>מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
@@ -167,7 +148,7 @@
         <p>אז שתהיה לכם חוויה מהנה מהאתר :)</p>
         <p>יוצר האתר והעולם, ינואר 2023</p>
     </section>
-    <footer>
+    <footer class="text-white bg-dark" style="text-align: center;">
         <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
         <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
         <p>2023</p>
