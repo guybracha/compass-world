@@ -44,11 +44,21 @@
     body{
         background-color: whitesmoke;
     }
+    .third-flex{
+        display: flex;
+        background-color: rgb(177, 177, 177);
+        flex-wrap: wrap;
+        column-gap: 10px;
+        width: 100%;
+    }
     .third {
      float: right;
-     width: 33.33%;
+     width: 32.5%;
      padding: 10px;
+     border-radius: 20px;
+     border: solid black 5px;
      height: 300px; /* Should be removed. Only for demonstration */
+     width: 450px;
     }
 
     #compass{
@@ -137,18 +147,19 @@
         <li><a href="world.html">העולם</a></li>
         <li><a href="about.html">היוצר</a></li>
     </ul>
-    <div class="third" style="background-color: rgb(99, 183, 96);">
+    <div class="third-flex">
+    <div class="third" style="background-color: rgb(99, 183, 96); float: right;">
         <h2>אנשי המצפן</h2>
         <p>מיהם הנפשות הפועלות בעולם זה?</p>
-
     </div>
-    <div class="third" style="background-color: white;">
+    <div class="third" style="background-color: white; margin: 0;">
         <h2>ההיסטוריה האבודה</h2>
         <p>אסופת תיעודים ואירועים הידועים לאנושות</p>
     </div>
-    <div class="third" style="background-color: rgb(98, 98, 196);">
+    <div class="third" style="background-color: rgb(98, 98, 196); float: left;">
         <h2>העולם המופלא</h2>
         <p>אוסף רישומים על מקומות מופלאים</p>
+    </div>
     </div>
     <br>
 
