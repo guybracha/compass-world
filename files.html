@@ -5,7 +5,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/profiles.css">
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +15,10 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
 
-    h1, h2, p{
+    h1, h2, h4, p{
     font-family: 'Noto Sans Hebrew', sans-serif;
     }
-    P{
-    font-weight: bolder;
-    }
-    img {
+    .central {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +27,35 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .column {
+      float: right;
+      width: 40%;
+      padding: 3px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(2, 185, 36, 0.749);
+      transition: 0.3s;
+      border: grey solid 3px;
+      width: fit-content;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+      background-color: rgb(17, 153, 40);
+      color: white;
+      border: greenyellow solid 2px;
     }
 </style>
 <body dir="rtl">
@@ -50,32 +75,41 @@
         <div style="background-color:brown; border: solid gold 3px;"> 
         <h1 style="text-decoration: underline;">האחים והאחות לבית משפחת ורן</h1>
         <div class="row">
-            <div class="column">
+          <div class="column">
+          <div class="card">
+            <img src="avatars/paladin.png" alt="Dr Palladium" style="width: 250px; height: 250px;">
               <div class="container">
-              <img style="border-radius: 50%; border: solid goldenrod 10px;" src="avatars/paladin.png" alt="doctor palladium" width="250px" height="250px">
-              <div class="bottom-left">דוקטור פלדיום</div>
+                <h4><b>דוקטור פלדיום</b></h4> 
+                <p>עור חסין ורפלקסים גבוהים</p> 
+              </div>
+              </div>
+          </div>
+          <div class="column">
+          <div class="card">
+            <img src="avatars/voltage.png" alt="Electrician" style="width: 250px; height: 250px;">
+              <div class="container">
+                <h4><b>החשמלאי</b></h4> 
+                <p>יריות חשמל ומהירות על</p> 
+              </div>
+          </div>
+          </div>
+          <div class="column">
+          <div class="card">
+            <img src="avatars/tsunami.png" alt="Tidal Wave" style="width: 250px; height: 250px;">
+              <div class="container">
+                <h4><b>גל גאות</b></h4> 
+                <p>שליטה במים ושירת סירנה</p> 
               </div>
             </div>
-            <div class="column">
-              <div class="container">
-              <img style="border-radius: 50%; border: solid goldenrod 10px" src="avatars/voltage.png" alt="the electrician" width="250px" height="250px">
-              <div class="bottom-left">החשמלאי</div>
-              </div>
             </div>
-            <div class="column">
-              <div class="container">
-              <img style="border-radius: 50%; border: solid goldenrod 10px" src="avatars/tsunami.png" alt="tidal wave" width="250px" height="250px">
-              <div class="bottom-left">גל גאות</div>
-              </div>
-            </div>
-          </div> 
+          </div>
           <div style="background-color: rgba(0, 124, 124, 0.54); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האיחוד העולמי של הרפתקני העל</h1>
-            <img src="indexphoto/union.png" alt="the world union" height="450px" width="auto">
+            <img class="central" src="indexphoto/union.png" alt="the world union" height="450px" width="auto">
         </div>
         <div style="background-color: rgb(58, 166, 100);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>
-          <img src="indexphoto/council.png" alt="the pyramid council" height="300px" width="auto">
+          <img class="central" src="indexphoto/council.png" alt="the pyramid council" height="300px" width="auto">
       </div>
     </div>
         </article>
