@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/pop.css">
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,13 +65,22 @@
         <script src="scripts/modal.js"></script>
 
         <p>אז קדימה, הגיבורים מחכים לפקודתך</p>
-        <button onclick="myFunction()">לחץ כאן לפרטים נוספים</button>
+        <br>
+        <!-- Trigger/Open The Modal -->
+        <button id="popBtn">תלחץ עליי לפרטים נוספים</button>
 
-        <script>
-        function myFunction() {
-        alert("בקרוב :)");
-        }
-        </script>
+        <!-- The Modal -->
+        <div id="popModal" class="popModal">
+
+        <!-- Modal content -->
+        <div class="popModal-content">
+            <span class="popClose">&times;</span>
+            <p style="color: black;">המשך יבוא...</p>
+        </div>
+
+        </div>
+
+        <script src="scripts/pop.js"></script>
         </div>
     </article>
     <footer>
