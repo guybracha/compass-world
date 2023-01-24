@@ -57,8 +57,10 @@ img {
   .pin-text h3 {
       color:white;
       text-shadow: 1px 1px 1px #000;
+      background-color: blue;
   }
   .pin-text p {
     color:white;
     text-shadow: 1px 1px 1px #000;
+    background-color: blue;
 }
