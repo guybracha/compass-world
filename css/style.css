@@ -17,12 +17,6 @@ footer{
     color: white;
     text-align: center;
 }
-form{
-    background-color: brown;
-    color: white;
-    font-family: 'Noto Sans Hebrew', sans-serif;
-    text-decoration: underline blue;
-}
 button{
     background-color: red;
     font-family: 'Noto Sans Hebrew', sans-serif;

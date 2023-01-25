@@ -92,23 +92,27 @@
             <h2>לפניות עסקיות או בנוגע לאתר</h2>
             <br>
             <br>
-            <form method="post" action="php/send.php">
-                <label for="name">שם מלא</label>
-                <input type="text" name="name" id="name" required>
-                <br>
-                <label for="email">כתובת מייל</label>
-                <input type="text" name="email" id="email" required>
-                <br>
-                <label for="subject">נושא</label>
-                <input type="text" name="subject" id="subject" required>
-                <br><br>
-                <label for="message">תוכן פנייה</label>
-                <textarea name="message" id="message" required></textarea>
-
-                <br>
-                <button>שלח</button>
-
-            </form>
+            <form>
+                <div class="form-group">
+                  <label for="fullname">שם מלא</label>
+                  <input type="text" class="form-control" id="fullname" aria-describedby="fullname" placeholder="שם">
+                </div>
+                <div class="form-group">
+                    <label for="emailadd">כתובת מייל</label>
+                    <input type="email" class="form-control" id="emailadd" aria-describedby="emailadd" placeholder="כתובת מייל">
+                  </div>
+                <div class="form-group">
+                  <label for="proposal">סיבת פנייה</label>
+                  <input type="textarea" class="form-control" id="proposal" placeholder="הצעת עבודה">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">מאשר פנייה</label>
+                </div>
+                <button type="submit" class="btn btn-primary">הגש</button>
+              </form>
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>      
         </article>
         <footer>
             <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
