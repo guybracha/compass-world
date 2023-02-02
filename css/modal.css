@@ -7,7 +7,7 @@
   #myImg:hover {opacity: 0.7;}
   
   /* The Modal (background) */
-  .modal {
+  .BGmodal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -22,7 +22,7 @@
   }
   
   /* Modal Content (image) */
-  .modal-content {
+  .photo-content {
     margin: auto;
     display: block;
     width: 80%;
@@ -43,7 +43,7 @@
   }
   
   /* Add Animation */
-  .modal-content, #caption {  
+  .photo-content, #caption {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -80,7 +80,7 @@
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
-    .modal-content {
+    .photo-content {
       width: 100%;
     }
   }
