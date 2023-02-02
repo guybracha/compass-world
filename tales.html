@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <html lang="he"></html>
+    <link rel="stylesheet" href="css/modal.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,12 +61,51 @@
           </div>
         </div>
       </nav>
-      <article style="background-color: rgb(200, 255, 237); border: dotted 3px rgb(128, 17, 117);">
+      <article style="background-image: linear-gradient(rgb(169, 169, 255), rgb(255, 148, 148)) ; border: dotted 3px rgb(128, 17, 117);">
         <h1>עלילות עולם המצפן</h1>
         <p>אסופת סיפורים על הרפתקאות הגיבורים של עולם המצפן</p>
         <br>
         <br>
         <h2>האחים והאחות לבית ורן</h2>
+        <div class="text-center">
+        <img class="img-fluid" src="comics/verne1.jpg" alt="האחים והאחות לבית ורן 1" width="auto" height="auto">
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+
+        <script src="scripts/modal.js"></script>
+      </div>
+      <br>
+      <br>
+      <h2>כוח ב'</h2>
+      <div class="text-center">
+      <img class="img-fluid" src="comics/bforce1.jpg" alt="כוח ב' 1" width="auto" height="auto">
+
+      <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+
+      <script src="scripts/modal.js"></script>
+    </div>
+    <br>
+    <br>
+    <h2>אפולודורס</h2>
+    <div class="text-center">
+    <img class="img-fluid" src="comics/apollodorus1.jpg" alt="אפולודורס 1" width="auto" height="auto">
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+    <script src="scripts/modal.js"></script>
+    </div>
     </article>
     <footer class="text-white bg-dark" style="text-align: center;">
         <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
