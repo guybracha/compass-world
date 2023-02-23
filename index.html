@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="rotate.png">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,9 +42,6 @@
         font-size: 25px;
         text-align: center;
     }
-    body{
-        background: linear-gradient(#4e7988, #e4eff0);
-    }
     .third-flex{
         display: flex;
         background-color: rgb(177, 177, 177);
@@ -70,6 +68,9 @@
     top: 0;
     left: 0;
     }
+    body{
+      background-color: rgba(27, 20, 166);
+    }
 
     @keyframes rotate{
         0%{
@@ -89,14 +90,14 @@
 <body dir="rtl">
 
     <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/logo.png" class="img-fluid" alt="logo">
-    <h1 style="text-align: center;">יקום הרעיונות של הרפתקני המחר</h1>
+    <h1 style="text-align: center; color:  white;">יקום הרעיונות של הרפתקני המחר</h1>
     <nav class="navbar navbar-expand-lg" style="background-color: red;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: rgb(0, 0, 0); font-weight: bolder;">ספריית המדריכים</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav" style="background-color: green;">
+          <div class="collapse navbar-collapse" id="navbarNav" style="background-color: blue;">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" style="color: white;" aria-current="page" href="index.html">בית</a>
@@ -123,70 +124,43 @@
           </div>
         </div>
       </nav>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="indexphoto/files.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="indexphoto/time.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="indexphoto/city.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="shadow.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     <br>
     <div class="container px-4">
         <div class="row gx-6">
           <div class="col">
           <div class="p-3">
-          <h2 style="background-color: rgba(135, 207, 235, 0.5);">אנשי המצפן</h2>
-          <p style="background-color: rgba(135, 207, 235, 0.750);">מיהם הנפשות הפועלות בעולם חדש ומופלא כמו זה?</p>
+          <h2 style="background-color: gold;">אנשי המצפן</h2>
+          <p style="background-color:gold;">מיהם הנפשות הפועלות בעולם חדש ומופלא כמו זה?</p>
           </div>
           </div>
           <div class="col">
             <div class="p-3">
-            <h2 style="background-color: rgba(135, 207, 235, 0.5);">ההיסטוריה האבודה</h2>
-            <p style="background-color: rgba(135, 207, 235, 0.750);">אסופת תיעודים ואירועים הידועים לאנושות</p>
+            <h2 style="background-color: gold;">ההיסטוריה האבודה</h2>
+            <p style="background-color:gold;">אסופת תיעודים ואירועים הידועים לאנושות</p>
           </div>
           </div>
           <div class="col">
             <div class="p-3">
-            <h2 style="background-color: rgba(135, 207, 235, 0.5);">העולם המופלא</h2>
-            <p style="background-color: rgba(135, 207, 235, 0.750);">אוסף רישומים ופריטי מידע על מקומות מרחבי תבל</p>
+            <h2 style="background-color: gold;">העולם המופלא</h2>
+            <p style="background-color:gold;">אוסף רישומים ופריטי מידע על מקומות מרחבי תבל</p>
           </div>
           </div>
         </div>
     <br>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <section style="background-color: rgb(12, 109, 109); color: white;">
+    <section style="background-color: rgb(229, 72, 72); color: white; border: solid white;">
         <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
         <p>מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
         <p>אני מאוד מקווה שתאהבו את האתר ואת תכניו, לקח לי כ-10 שנים לאסוף ולכתוב את הרעיונות, הסיפורים והדמויות, כך שיצרתי אותו עם לבי.</p>
         <p>אז שתהיה לכם חוויה מהנה מהאתר :)</p>
         <p>יוצר האתר והעולם, ינואר 2023</p>
     </section>
-    <img src="art/Extraordinary_Voyages_col.jpg" class="img-fluid" alt="Extraordinary Voyages">
-    <br>
-    <img src="art/Amazing_Academy col1.jpg" class="img-fluid" alt="Amazing Academy">
-    <footer class="text-white bg-dark" style="text-align: center;">
-        <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
-        <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
-        <p>2023</p>
-    </footer>
     <img style="border: solid green 3px; border-radius: 50%;" id="compass" src="rotate.png">
+    <footer class="text-white bg-dark" style="text-align: center;">
+      <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
+      <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
+      <p>2023</p>
+  </footer>
 </body>
 </html>
