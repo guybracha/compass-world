@@ -3,22 +3,27 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #00224423;
+    background-color: #0080ff;
     text-align: center;
+    border-radius: 25px;
   }
   
   li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans Hebrew', sans-serif;
     display: inline-block;
+    font-weight: bolder;
+    color: white;
   }
   
   li a {
     display: block;
     padding: 8px;
     width: 16.66%;
+    color: white;
+    text-decoration: underline blue;
   }
   a{
-    color: rgb(0, 81, 85);
+    color: rgb(255, 255, 255);
     font-family: 'Noto Sans Hebrew', sans-serif;
     text-decoration: none;
   }
