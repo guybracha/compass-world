@@ -17,6 +17,9 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
 
+    * {
+      box-sizing: border-box;
+    }
     h1, h2, h4, p{
     font-family: 'Noto Sans Hebrew', sans-serif;
     }
@@ -29,35 +32,18 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-    .column {
-      float: right;
-      width: 40%;
-      padding: 3px;
-    }
-
-    /* Clearfix (clear floats) */
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(2, 185, 36, 0.749);
-      transition: 0.3s;
-      border: grey solid 3px;
-      width: fit-content;
-    }
-
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-
+   }
     .container {
-      padding: 2px 16px;
-      background-color: rgb(17, 153, 40);
-      color: white;
-      border: greenyellow solid 2px;
+      position: relative;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-weight: bolder;
+      background-color: rgb(0, 0, 181);
+    }
+    .bottom{
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
     }
     .btn{
       background-color: gold;
@@ -65,7 +51,47 @@
     }
     body{
         background: linear-gradient(#4e7988, #e4eff0);
+        margin: 0;
     }
+    .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+      }
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 </style>
 <body dir="rtl">
   <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/logo.png" class="img-fluid" alt="logo">
@@ -110,6 +136,70 @@
           <div style="background-color: rgba(0, 124, 124, 0.54); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האיחוד העולמי של הרפתקני העל</h1>
         <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/union.png" class="img-fluid" alt="World union">
+        <div class="row"> 
+          <div class="column">
+            <div class="container">
+            <img src="avatars/paladin.png" style="width:100%">
+            <div class="bottom">
+            </div>
+            פלאדין
+            </div>
+            <div class="container" style="background-color: red;">
+            <img src="avatars/astral.png" style="width:100%">
+            <div class="bottom">
+            </div>
+             אסטרל         
+            </div>
+            <div class="container" style="background-color: yellow;">
+            <img src="avatars/voltage.png" style="width:100%">
+            <div class="bottom">
+            </div>
+            וולטאז'
+            </div>
+            <div class="container" style="background-color: greenyellow;">
+            <img src="avatars/dragon.png" style="width:100%">
+            <div class="bottom">
+            </div>
+            קיסר דרקון
+            </div>
+            <div class="container" style="background-color: purple;">
+            <img src="avatars/size.png" style="width:100%">
+            <div class="bottom">
+            </div>
+            סייז
+            </div>
+            <div class="container" style="background-color: rgb(255, 161, 177);">
+            <img src="avatars/mariposa.png" style="width:100%">
+            <div class="bottom">
+            </div>
+            מריפוסה
+            </div>
+          </div>
+          <div class="column">
+            <img src="avatars/gigantic.png" style="width:100%">
+            <img src="avatars/comrade.png" style="width:100%">
+            <img src="avatars/tsunami.png" style="width:100%">
+            <img src="avatars/techno.png" style="width:100%">
+            <img src="avatars/rocket.png" style="width:100%">
+            <img src="avatars/northlight.png" style="width:100%">
+          </div>  
+          <div class="column">
+            <img src="avatars/symbol.png" style="width:100%">
+            <img src="avatars/enforcer.png" style="width:100%">
+            <img src="avatars/melody.png" style="width:100%">
+            <img src="avatars/nightlord.png" style="width:100%">
+            <img src="avatars/captain.png" style="width:100%">
+            <img src="avatars/sodalite.png" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="avatars/flora.png" style="width:100%">
+            <img src="avatars/polar.png" style="width:100%">
+            <img src="avatars/urban.png" style="width:100%">
+            <img src="avatars/leviathan.png" style="width:100%">
+            <img src="avatars/orel.png" style="width:100%">
+            <img src="avatars/galatea.png" style="width:100%">
+          </div>
+        </div>
         </div>
         <div style="background-color: rgb(58, 166, 100);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>

@@ -10,9 +10,9 @@ ul {
   
   li {
     font-family: 'Noto Sans Hebrew', sans-serif;
-    display: inline-block;
     font-weight: bolder;
-    color: white;
+    text-align: center;
+    display: inline-block;
   }
   
   li a {
