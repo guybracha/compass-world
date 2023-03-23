@@ -1,4 +1,6 @@
-let BtnRand = document.querySelector('clickMe');
-let result = document.querySelector('h1');
+let heroes = ["Paladin", "Voltage", "Astral", "Dragon Fighter", "Size", "Mariposa", "Gigantic", "Comrade", "Tsunami"];
 
-let heroes = ["Paladin", "Voltage", "Astral"];
+const surprise = heroes[(Math.floor(Math.random() * (heroes.length)))];
+function clickMe(){
+alert(surprise);
+}
