@@ -2,5 +2,5 @@ let heroes = ["Paladin", "Voltage", "Astral", "Dragon Fighter", "Size", "Maripos
 
 const surprise = heroes[(Math.floor(Math.random() * (heroes.length)))];
 function clickMe(){
-alert(surprise);
+alert("This time the hero is " + surprise);
 }
