@@ -62,75 +62,67 @@
       padding: 0 4px;
       }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
+      /* Create four equal columns that sits next to each other */
+      .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+      .profile{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-right: 120px;
+      }
+      .title{
+        font-size: 45px;
+        font-family: 'Noto Sans Hebrew', sans-serif;
+        margin-right: 300px;
+      }
+      .info{
+        font-size: 25px;
+        font-family: 'Noto Sans Hebrew', sans-serif;
+        margin-right: 300px;
+      }
 </style>
 <body dir="rtl">
   <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/logo.png" class="img-fluid" alt="logo">
   <h1 style="text-align: center; color: white; font-weight: bolder;">יקום הרעיונות של הרפתקני המחר</h1>
 
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">ספריית המדריכים</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">בית</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="story.html">הסיפור</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tales.html">עלילות</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="files.html">אנשי המצפן</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="history.html">אלמנך</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="world.html">אטלס</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">האיש שבצללים</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">בית</a></li>
+      <li><a href="tales.html">קומיקסים</a></li>
+      <li><a href="files.html">גיבורים-נבלים</a></li>
+      <li><a href="story.html">הסיפור</a></li>
+      <li><a href="about.html">היוצר</a></li>
+    </ul>
+    </nav>
         <article style="background-color:antiquewhite;">
         <h1>אנשי עולם המצפן</h1>
         <p>בואו ותכירו את האנשים השונים שמרכיבים את העולם המופלא הזה...</p>
@@ -141,106 +133,37 @@
           <div style="background-color: rgba(0, 124, 124, 0.25); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האחדות העולמית</h1>
         <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/union.png" class="img-fluid" alt="World union">
-        <div class="row"> 
-          <div class="column">
-            <div class="container">
-            <img src="avatars/paladin.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            פלאדין
-            </div>
-            <div class="container" style="background-color: red;">
-            <img src="avatars/astral.png" style="width:100%">
-            <div class="bottom">
-            </div>
-             אסטרל         
-            </div>
-            <div class="container" style="background-color: yellow;">
-            <img src="avatars/voltage.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            וולטאז'
-            </div>
-            <div class="container" style="background-color: greenyellow;">
-            <img src="avatars/dragon.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            קיסר דרקון
-            </div>
-            <div class="container" style="background-color: purple;">
-            <img src="avatars/size.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            סייז
-            </div>
-            <div class="container" style="background-color: rgb(255, 161, 177);">
-            <img src="avatars/mariposa.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            מריפוסה
-            </div>
+          <div>
+            <img src="avatars/paladin.png" class="profile" alt="paladin">
+            <p class="title">פלאדין</p>
+            <p class="info">שם: יואב רמון<br> כוח על: רפלקסים משופרים</p>
+            <br>
+            <img src="avatars/voltage.png" class="profile" alt="voltage">
+            <p class="title">וולטאז'</p>
+            <p class="info">שם: יונתן אטלס<br> כוח על: חשמל ומהירות על</p>
+            <br>
+            <img src="avatars/astral.png" class="profile" alt="lady astral">
+            <p class="title">ליידי אסטרל</p>
+            <p class="info">שם: הנסיכה מיאנסקה<br> כוח על: טלפתיה שמיימית וערפל קוסמי</p>
+            <br>
+            <img src="avatars/dragon.png" class="profile" alt="dragon fighter">
+            <p class="title">דרגון פייטר</p>
+            <p class="info">שם: ריי וון<br> כוח על: קונג פו</p>
+            <br>
+            <img src="avatars/size.png" class="profile" alt="size">
+            <p class="title">סייז</p>
+            <p class="info">שם: בן גורדון<br> כוח על: גדילה והתכווצות לממדים אדירים</p>
+            <br>
+            <img src="avatars/mariposa.png" class="profile" alt="mariposa">
+            <p class="title">מריפוסה</p>
+            <p class="info">שם: נלי אנדור<br> כוח על: קסם פיות</p>
+            <br>
           </div>
-          <div class="column">
-            <div class="container" style="background-color: green;">
-            <img src="avatars/gigantic.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            ג'ייגנטיק
-            </div>
-            <div class="container" style="background-color: rgb(117, 0, 0);">
-            <img src="avatars/comrade.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            קומראד
-            </div>
-            <div class="container" style="background-color: skyblue;">
-            <img src="avatars/tsunami.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            צונאמי
-            </div>
-            <div class="container" style="background-color: grey;">
-            <img src="avatars/techno.png" style="width:100%">
-            <div class="bottom">
-            </div>
-            טכנו
-            </div>
-            <div class="container" style="background-color: silver;">
-            <img src="avatars/rocket.png" style="width:100%">
-            <div class="bottom">              
-            </div>
-            רוקט פריים
-            </div>
-            <div class="container" style="background-color: aquamarine;">
-            <img src="avatars/northlight.png" style="width:100%">
-            <div class="bottom">
-            </div>  
-            נורת'לייט
-            </div>
-          </div>  
-          <div class="column">
-            <img src="avatars/symbol.png" style="width:100%">
-            <img src="avatars/enforcer.png" style="width:100%">
-            <img src="avatars/melody.png" style="width:100%">
-            <img src="avatars/nightlord.png" style="width:100%">
-            <img src="avatars/captain.png" style="width:100%">
-            <img src="avatars/sodalite.png" style="width:100%">
-          </div>
-          <div class="column">
-            <img src="avatars/flora.png" style="width:100%">
-            <img src="avatars/polar.png" style="width:100%">
-            <img src="avatars/urban.png" style="width:100%">
-            <img src="avatars/leviathan.png" style="width:100%">
-            <img src="avatars/orel.png" style="width:100%">
-            <img src="avatars/galatea.png" style="width:100%">
-          </div>
-        </div>
-        </div>
         <div style="background-color: rgba(92, 0, 66, 0.885);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>
           <img style="display: block; margin-left: auto; margin-right: auto;" src="indexphoto/council.png" class="img-fluid" alt="Council">
         </div>
-    </div>
+        </div>
         </article>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
