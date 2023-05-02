@@ -1,3 +1,4 @@
+![logo](https://user-images.githubusercontent.com/19489192/235637436-4dcb7813-9590-47b3-8d25-5c5651f84be9.png)
 # compass-world
 worldbuilding project with original characters, places, and intecactive webcomics 
 
