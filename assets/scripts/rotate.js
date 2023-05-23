@@ -1,10 +1,12 @@
-function replaceAnimatedImage(imageId, newImageUrl) {
+var imageUrl = "../compass-world/contents/indexphoto/britain.png";
+
+function replaceAnimatedImage(imageId, ImageUrl) {
     // Get the animated image element
     var image = document.getElementById(imageId);
   
     // Create a new image element
     var newImage = new Image();
-    newImage.src = "../contents/indexphoto/britain.png";
+    newImage.src = ImageUrl;
     newImage.style.margin = "20px";
     newImage.style.display = "block";
     newImage.style.position = "relative";
@@ -26,5 +28,6 @@ function replaceAnimatedImage(imageId, newImageUrl) {
     // Replace the original image with the new image
     image.parentNode.insertBefore(newImage, image);
     image.parentNode.removeChild(image);
-  }
-  
+}
+
+replaceAnimatedImage("imageId", imageUrl);

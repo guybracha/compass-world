@@ -234,7 +234,40 @@
       <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
       <p>2023</p>
       <script src="assets/scripts/credits.js"></script>
-      <script src="assets/scripts/rotate.js"></script>
+      <script>
+        function replaceAnimatedImage(imageId, ImageUrl) {
+            // Get the animated image element
+            var image = document.getElementById(imageId);
+        
+            // Create a new image element
+            var newImage = new Image();
+            newImage.src = "contents/indexphoto/britain.png";
+            newImage.style.margin = "20px";
+            newImage.style.display = "block";
+            newImage.style.position = "relative";
+            newImage.style.width = "200px";
+            newImage.style.height = "200px";
+            newImage.style.marginLeft = "auto";
+            newImage.style.marginRight = "auto";
+            newImage.style.top = "0";
+            newImage.style.left = "0";
+
+            // Copy the animation properties from the original image to the new image
+            var animation = getComputedStyle(image).animation;
+            newImage.style.animation = animation;
+        
+            // Copy the keyframes from the original image to the new image
+            var keyframes = getComputedStyle(image).animationName;
+            newImage.style.animationName = keyframes;
+        
+            // Replace the original image with the new image
+            image.parentNode.insertBefore(newImage, image);
+            image.parentNode.removeChild(image);
+        }
+
+        replaceAnimatedImage("imageId", newImage.src);
+
+      </script>
   </footer>
 </body>
 </html>
