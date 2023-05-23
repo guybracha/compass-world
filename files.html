@@ -109,6 +109,42 @@
         font-family: 'Noto Sans Hebrew', sans-serif;
         margin-right: 300px;
       }
+      #files{
+        background-color: black;
+        border: solid 2.5px greenyellow;
+      }
+      #files h1{
+        color: greenyellow;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+      #files p{
+        color: greenyellow;
+        font-weight: bolder;
+      }
+    #collection {
+     width: 100%;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .image-container {
+      text-align: center;
+      width: 48%; /* Adjust the width to leave space for spacing between images */
+    }
+
+    .image-container img {
+      width: 50%;
+      height: auto;
+      padding: 0.5px;
+    }
+
+    .image-container p {
+      margin-top: 10px; /* Adjust the spacing between the image and text as needed */
+    }
+
 </style>
 <body dir="rtl">
   <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo">
@@ -119,6 +155,8 @@
       <li><a href="index.html">בית</a></li>
       <li><a href="tales.html">קומיקסים</a></li>
       <li><a href="files.html">גיבורים-נבלים</a></li>
+      <li><a href="history.html">היסטוריה</a></li>
+      <li><a href="world.html">אטלס</a></li>
       <li><a href="story.html">הסיפור</a></li>
       <li><a href="about.html">היוצר</a></li>
     </ul>
@@ -134,32 +172,113 @@
           <div style="background-color: rgba(0, 124, 124, 0.25); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האחדות העולמית</h1>
         <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/union.png" class="img-fluid" alt="World union">
-          <div>
-            <img src="contents/avatars/paladin.png" class="profile" alt="paladin">
-            <p class="title">פלאדין</p>
-            <p class="info">שם: יואב רמון<br> כוח על: רפלקסים משופרים</p>
-            <br>
-            <img src="contents/avatars/voltage.png" class="profile" alt="voltage">
-            <p class="title">וולטאז'</p>
-            <p class="info">שם: יונתן אטלס<br> כוח על: חשמל ומהירות על</p>
-            <br>
-            <img src="contents/avatars/astral.png" class="profile" alt="lady astral">
-            <p class="title">ליידי אסטרל</p>
-            <p class="info">שם: הנסיכה מיאנסקה<br> כוח על: טלפתיה שמיימית וערפל קוסמי</p>
-            <br>
-            <img src="contents/avatars/dragon.png" class="profile" alt="dragon fighter">
-            <p class="title">דרגון פייטר</p>
-            <p class="info">שם: ריי וון<br> כוח על: קונג פו</p>
-            <br>
-            <img src="contents/avatars/size.png" class="profile" alt="size">
-            <p class="title">סייז</p>
-            <p class="info">שם: בן גורדון<br> כוח על: גדילה והתכווצות לממדים אדירים</p>
-            <br>
-            <img src="contents/avatars/mariposa.png" class="profile" alt="mariposa">
-            <p class="title">מריפוסה</p>
-            <p class="info">שם: נלי אנדור<br> כוח על: קסם פיות</p>
-            <br>
+        <div id="files">
+          <h1>מסמכי הגיבורים</h1>
+          <div id="collection">
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/paladin.png" alt="Image 1">
+                <h1>פלאדין</h1>
+                <p>מרדכי רמון</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/voltage.png" alt="Image 2">
+                <h1>וולטאז'</h1>
+                <p>ג'ונתן אטלס</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/astral.png" alt="Image 3">
+                <h1>ליידי אסטרל</h1>
+                <p>מיאנסקה</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/dragon.png" alt="Image 4">
+                <h1>דרגון פייטר</h1>
+                <p>בלייק וו-צ'אנג</p>
+              </div>
+            </div>
           </div>
+          <div id="collection">
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/size.png" alt="Image 1">
+                <h1>סייז</h1>
+                <p>בן גורדון</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/mariposa.png" alt="Image 2">
+                <h1>מריפוסה</h1>
+                <p>נלי אנדור</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/gigantic.png" alt="Image 3">
+                <h1>ג'ייגנטיק</h1>
+                <p>מייק היידרברג</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/comrade.png" alt="Image 4">
+                <h1>קומראד</h1>
+                <p>רוסלן חרוסקוב</p>
+              </div>
+            </div>
+          </div>
+          <div id="collection">
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/rocket.png" alt="Image 1">
+                <h1>רוקט פריים</h1>
+                <p>חי גרינברג</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/enforcer.png" alt="Image 2">
+                <h1>אנפורסר</h1>
+                <p>אלי רמון</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/tsunami.png" alt="Image 3">
+                <h1>צונאמי</h1>
+                <p>טליה</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/symbol.png" alt="Image 4">
+                <h1>סימבול</h1>
+                <p>נתניאל</p>
+              </div>
+            </div>
+          </div>
+          <div id="collection">
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/northlight.png" alt="Image 1">
+                <h1>נורת'לייט</h1>
+                <p>אורורה</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/techno.png" alt="Image 2">
+                <h1>טכנולאד</h1>
+                <p>אריק קרלטון</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="image-container">
+                <img src="contents/avatars/melody.png" alt="Image 3">
+                <h1>מלודי</h1>
+                <p>מלודי אנדרסון</p>
+              </div>
+              <div class="image-container">
+                <img src="contents/avatars/nightlord.png" alt="Image 4">
+                <h1>נייטלורד</h1>
+                <p>ג'ק לוין</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div style="background-color: rgba(92, 0, 66, 0.885);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>
           <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/council.png" class="img-fluid" alt="Council">
