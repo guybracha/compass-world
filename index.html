@@ -109,21 +109,32 @@
     }
     .photoback{
         background-image: url("contents/art/onepiece.png");
-        margin: auto;
-        padding: 10px;
-        background-size: contain;
-        resize:both;
-        height: 200px;
-        width: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            padding: 10px;
+            width: 100%; /* Optional, adjust as needed */
+            height: 100%;
     }
     .photoback h1{
-        color: red;
-        font-size: larger;
-        font-weight: bolder;
         text-align: center;
-        padding: 0;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        font-size: 120px;
+        font-weight: bolder;
+        color: white;
+        -webkit-text-stroke: 0.5px blue;
+    }
+    #collection{
+        width: 100%;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .row img{
+        width: 12.5%;
+        height: auto;
+        padding: 0.5px;
     }
 </style>
 
@@ -142,31 +153,55 @@
     </ul>
     </nav>
     <br>
-    <div class="photoback"></div>
+    <div class="photoback">
+        <h1>ברוכים הבאים</h1>
+        <h1>לעולם המצפן!</h1>
+    </div>
+    <div id="collection">
+        <div class="row">
+            <img src="contents/avatars/paladin.png" alt="paladin">
+            <img src="contents/avatars/voltage.png" alt="paladin">
+            <img src="contents/avatars/astral.png" alt="paladin">
+            <img src="contents/avatars/dragon.png" alt="paladin">
+            <img src="contents/avatars/size.png" alt="paladin">
+            <img src="contents/avatars/mariposa.png" alt="paladin">
+            <img src="contents/avatars/gigantic.png" alt="paladin">
+            <img src="contents/avatars/comrade.png" alt="paladin">
+        </div>
+        <div class="row">
+            <img src="contents/avatars/tsunami.png" alt="paladin">
+            <img src="contents/avatars/enforcer.png" alt="paladin">
+            <img src="contents/avatars/northlight.png" alt="paladin">
+            <img src="contents/avatars/rocket.png" alt="paladin">
+            <img src="contents/avatars/techno.png" alt="paladin">
+            <img src="contents/avatars/symbol.png" alt="paladin">
+            <img src="contents/avatars/melody.png" alt="paladin">
+            <img src="contents/avatars/nightlord.png" alt="paladin">
+        </div>
+    </div>
     <div class="container px-4">
         <div class="row gx-6">
-          <div class="col">
+          <div class="col" style="background-image: url(contents/indexphoto/files.jpg);">
           <div class="p-3">
           <h2 style="background-color: gold;">אנשי המצפן</h2>
           <p style="background-color:gold;">מיהם הנפשות הפועלות בעולם חדש ומופלא כמו זה?</p>
           <a style="background-color: red;" href="files.html">תגלה עליהם</a>
           </div>
           </div>
-          <div class="col">
+          <div class="col" style="background-image: url(contents/indexphoto/time.jpg);">
             <div class="p-3">
             <h2 style="background-color: gold;">ההיסטוריה האבודה</h2>
             <p style="background-color:gold;">אסופת תיעודים ואירועים הידועים לאנושות</p>
             <a style="background-color: red;" href="history.html">תיסע בזמן</a>
           </div>
           </div>
-          <div class="col">
+          <div class="col" style="background-image: url(contents/indexphoto/compass.jpg);">
             <div class="p-3">
             <h2 style="background-color: gold;">העולם המופלא</h2>
             <p style="background-color:gold;">אוסף רישומים ופריטי מידע על מקומות מרחבי תבל</p>
             <a style="background-color: red;" href="world.html">העולם מחכה לכם</a>
           </div>
           </div>
-          <img class="img-fluid" src="contents/art/boss.png" width="auto" height="auto">
         </div>
     <br>
     <div class="sidenav" style="display:block">
@@ -192,7 +227,6 @@
         <p>אז שתהיה לכם חוויה מהנה מהאתר</p>
         <p>יוצר האתר והעולם, ינואר 2023</p>
     </section>
-    <img class="img-fluid" src="contents/art/FinishedCOM alt.jpg" width="auto" height="auto">
     <img style="border: solid green 3px; border-radius: 50%;" id="compass" src="contents/indexphoto/rotate.png">
     <footer class="text-white bg-dark" style="text-align: center;">
       <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
