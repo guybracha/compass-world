@@ -227,12 +227,14 @@
         <p>אז שתהיה לכם חוויה מהנה מהאתר</p>
         <p>יוצר האתר והעולם, ינואר 2023</p>
     </section>
-    <img style="border: solid green 3px; border-radius: 50%;" id="compass" src="contents/indexphoto/rotate.png">
+    <img id="compass" src="contents/indexphoto/rotate.png" style="animation: rotate 10s linear infinite;">
+    <button onclick="replaceAnimatedImage('compass', 'new.jpg')">תחליף אותי</button>    
     <footer class="text-white bg-dark" style="text-align: center;">
       <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
       <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
       <p>2023</p>
       <script src="assets/scripts/credits.js"></script>
+      <script src="assets/scripts/rotate.js"></script>
   </footer>
 </body>
 </html>
