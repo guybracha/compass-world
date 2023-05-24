@@ -5,7 +5,7 @@ function loadChapter(chapterNumber) {
     case 1:
       // Chapter 1 text
       text = `
-        <p>This is the first chapter of the story.</p>
+        <p>בוקר החל לו עם זריחה מעל הארץ, יום חדש התחיל בעולמנו</p>
         <p>Here is some more text.</p>
       `;
       break;
