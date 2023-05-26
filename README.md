@@ -6,4 +6,3 @@ the project was made for fun, by adding various narrative ideas that i created i
 initially i wanted that the site will be served as a platform for interactive webcomic in the style of "Homestuck".
 https://guybracha.github.io/compass-world/
 <br>
-Ultra Beyond!
