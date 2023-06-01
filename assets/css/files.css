@@ -1,0 +1,38 @@
+
+* {
+    box-sizing: border-box;
+  }
+  h1, h2, h4, p{
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  }
+  .central {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ .logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+ }
+  .container {
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    background-color: rgb(0, 0, 181);
+  }
+  .bottom{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  .btn{
+    background-color: gold;
+    color: black;
+  }
+  body{
+    margin: 0;
+    background-color: rgb(66, 66, 255);
+    background-image: linear-gradient(rgb(0, 0, 157), white);
+  }

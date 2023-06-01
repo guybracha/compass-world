@@ -5,8 +5,8 @@
     <title>עולם המצפן</title>
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
     <link rel="stylesheet" href="assets/css/nav.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,38 +14,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap" rel="stylesheet">
 </head>
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
     h1, h2, p{
         font-family: 'Noto Sans Hebrew', sans-serif;
     }
     *{
         box-sizing: border-box;
     }
-    .column1{
-        float: left;
-        width: 50%;
-        padding: 5px;
-    }
-    .row::after{
-        content: "";
-        clear:both;
-        display: table;
-    }
-    .title{
-        font-size: 75px;
+    header{
+        width: auto;
+        height: auto;
         text-align: center;
+        background-color: rgb(255, 140, 0);
     }
-    .lobby{
-        font-size: 25px;
-        text-align: center;
+    header:hover{
+        opacity: 0.5;
+        transition: 2s;
+        background-color: rgb(41, 112, 0);
     }
-    .third-flex{
-        display: flex;
-        background-color: rgb(177, 177, 177);
-        border: double rgba(99, 237, 255, 0.462) 12px;
+    footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    }
+    button{
+        font-family: 'Noto Sans Hebrew', sans-serif;
+        border-radius: 15px;
+    }
+    button:hover{
+        background-color: yellow;
+        color: blue;
+    }
+
+    h1, h2, p{
+        font-family: 'Noto Sans Hebrew', sans-serif;
+    }
+    *{
+        box-sizing: border-box;
     }
     .third {
      float: right;
@@ -86,24 +92,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .sidenav {
-    width: 130px;
-    position: fixed;
-    z-index: 1;
-    top: 25px;
-    left: 10px;
-    border-radius: 15px;
-    overflow-x: hidden;
-    padding: 10px 0;
-    margin-left: 250px;
-    }
-    .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
-    }
     a{
         color: white;
     }
@@ -136,7 +124,6 @@
         padding: 0.5px;
     }
 </style>
-
 <body dir="rtl">
     <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" width="auto" height="150px">
     <h1 style="text-align: center; color: white; font-weight: bolder;">יקום הרעיונות של הרפתקני המחר</h1>
@@ -151,6 +138,9 @@
       <li><a href="about.html">היוצר</a></li>
     </ul>
     </nav>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <br>
     <h1 class="welcome">ברוכים הבאים</h1>
     <img class="img-fluid" src="contents/art/onepiece.png" alt="">
@@ -209,18 +199,6 @@
             </div>
         </div>
     <br>
-    <div class="sidenav" style="display:block">
-        <button id="myBtn" class="sidenav">תלחץ עליי</button>
-
-        <div id="myModal" class="modal">
-        
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>אני לא אוריד את הקומיקסים פיראטית...</p>
-          </div>
-        <script src="assets/scripts/pop.js"></script>
-    </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <section style="background-color: rgb(229, 72, 72); color: white; border: solid white;">
@@ -236,6 +214,7 @@
       <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
       <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
       <p>2023</p>
+
       <script src="assets/scripts/credits.js"></script>
       <script>
         function replaceAnimatedImage(imageId, ImageUrl) {
