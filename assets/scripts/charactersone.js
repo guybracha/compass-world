@@ -1,15 +1,25 @@
 function displayCharacterDetails() {
-    var characterDropdown = document.getElementById("characterDropdown");
-    var characterNameElement = document.getElementById("characterName");
-    var characterBioElement = document.getElementById("characterBiography");
-    var characterPowerElement = document.getElementById("characterPower");
-    var characterImageElement = document.getElementById("characterImage");
-    
-    // Clear previous character details
-    characterNameElement.textContent = "";
-    characterBioElement.textContent = "";
-    characterPowerElement.textContent = "";
-    characterImageElement.src = "";
+  var characterDropdown = document.getElementById("characterDropdown");
+  var characterNameElement = document.getElementById("characterName");
+  var characterBioElement = document.getElementById("characterBiography");
+  var characterPowerElement = document.getElementById("characterPower");
+  var characterAge = document.getElementById("characterAge");
+  var characterCity = document.getElementById("characterCity");
+  var characterFamily = document.getElementById("characterFamily");
+  var characterRole = document.getElementById("characterRole");
+  
+  // Retrieve the character image element
+  var characterImageElement = document.getElementById("characterImageElement");
+  
+  // Clear previous character details
+  characterNameElement.textContent = "";
+  characterBioElement.textContent = "";
+  characterPowerElement.textContent = "";
+  characterImageElement.src = "";
+  characterAge.textContent = "";
+  characterCity.textContent = "";
+  characterFamily.textContent = "";
+  characterRole.textContent = "";
   
     // Get the selected character value
     var selectedCharacter = characterDropdown.value;
@@ -19,6 +29,10 @@ function displayCharacterDetails() {
       characterNameElement.textContent = "פלאדין";
       characterBioElement.textContent = "ביוגרפיה: בעקבות בילוי בתא לחץ נסיוני, שופרו יכולות הרפלקסים של מרדכי רמון במאות אחוזים. משמש כמנהיג הצוות. אח גדול לאנפורסר ולמלודי.";
       characterPowerElement.textContent = "כוח: רפלקסים משופרים";
+      characterAge.textContent = "גיל: 24";
+      characterCity.textContent = "עיר: הרצליה";
+      characterFamily.textContent = "משפחה: אמא - מגי רמון, אח צעיר - אלייז'ה רמון, אחות צעירה - מלודי רמון";
+      characterRole.textContent = "תפקיד בצוות: מנהיג";
       characterImageElement.src = "assets/scripts/ref/paladin.png";
     } else if (selectedCharacter === "character2") {
       characterNameElement.textContent = "וולטאז'";
@@ -65,6 +79,36 @@ function displayCharacterDetails() {
       characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
       characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
       characterImageElement.src = "assets/scripts/ref/symbol.png";
-    }
+    } else if (selectedCharacter === "character11") {
+      characterNameElement.textContent = "טכנולאד";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/techno.png";
+    } else if (selectedCharacter === "character12") {
+      characterNameElement.textContent = "אנפורסר";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/enforcer.png";
+    }  else if (selectedCharacter === "character13") {
+      characterNameElement.textContent = "מלודי";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/melody.png";
+    } else if (selectedCharacter === "character14") {
+      characterNameElement.textContent = "רוקט פריים";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/rocket.png";
+    } else if (selectedCharacter === "character15") {
+      characterNameElement.textContent = "נורת'לייט";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/northlight.png";
+    } else if (selectedCharacter === "character16") {
+      characterNameElement.textContent = "נייטלורד";
+      characterBioElement.textContent = "ביוגרפיה: נוצר כדי להיות אל סינתטי דמוי-אנוש, אך הצליח לברוח מהמעבדה שבה הוא נוצר, התחיל כמגנה של העיר מאוטיינס סיטי, ולאחר מכן החליט להצטרף לחבורה של פלאדין.";
+      characterPowerElement.textContent = "כוח: תעופה וראייה סולארית";
+      characterImageElement.src = "assets/scripts/ref/nightlord.png";
+    } 
   }
   
