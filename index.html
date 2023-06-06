@@ -123,6 +123,22 @@
         height: auto;
         padding: 0.5px;
     }
+    #comic-container {
+      text-align: center;
+    }
+    #button-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    
+    #prev-button {
+      order: 1;
+    }
+    
+    #next-button {
+      order: 2;
+    }
 </style>
 <body dir="rtl">
     <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" width="auto" height="150px">
@@ -142,6 +158,13 @@
     <h1 class="welcome">ברוכים הבאים</h1>
     <img class="img-fluid" src="contents/art/onepiece.png" alt="">
     <h1 class="welcome">לעולם חדש!</h1>
+    <div style="background-color: azure;">
+    <div id="comic-container"></div>
+    <div id="button-container">
+    <button id="prev-button">קודם</button>
+    <button id="next-button">הבא</button>
+    </div>
+  </div>
     <div class="container text-center" style="font-size: 20px; background-color: papayawhip;">
         <div class="row">
             <div class="col">
@@ -321,6 +344,7 @@
         replaceAnimatedImage("imageId", newImage.src);
 
       </script>
+      <script src="assets/scripts/webcomics.js"></script>
   </footer>
 </body>
 </html>
