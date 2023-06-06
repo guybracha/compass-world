@@ -25,9 +25,15 @@
       background-color: rgb(66, 66, 255);
       background-image: linear-gradient(rgb(0, 0, 157), white);
     }
-    html{
-      scroll-behavior: smooth;
-    }
+    .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .image {
+            flex: 0 0 auto;
+            margin-right: 10px;
+        }
 </style>
 <body dir="rtl">
     <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo">
@@ -52,8 +58,19 @@
       <h2>ההרפתקה הראשונה</h2>
       <div id="storyone"></div>
       <button onclick="loadChapter(1)">התחל הרפתקה</button>
-
-      
+      </div>
+      <div style="background-color: rgba(172, 255, 47, 0.568); border: solid 2px red;">
+        <h2>הכר את הברית</h2>
+        <div class="container">
+        <p>זה היה יום רגיל, שהפך ליום שונה מכל הימים...</p>
+        <img class="image" src="contents/art/cartoon.png" alt="החבורה" height="400px" width="auto">
+        </div>
+        <p>הכל התחיל כאשר גיבור על צעיר בן 15 בשם פלאדין מצא בלב היער חללית מסתורית שהתרסקה לא רחוק מביתו.</p>
+        <h2>החבר'ה הרעים</h2>
+        <div class="container">
+        <p>כל אלוף צריך יריב מצוין, וכל גיבור צריך אויב מנוול.</p>
+        <img class="image" src="contents/art/villains.png" alt="החבורה" height="400px" width="auto">
+        </div>
       </div>
     </article>
     <script src="assets/scripts/taleone.js"></script>
