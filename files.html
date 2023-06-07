@@ -11,18 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&display=swap');
 
     * {
       box-sizing: border-box;
     }
-    h1, h2, h4, p{
-    font-family: 'Noto Sans Hebrew', sans-serif;
-    }
+
     .central {
     display: block;
     margin-left: auto;
@@ -33,34 +36,12 @@
       bottom: 8px;
       right: 16px;
     }
-    body{
-      margin: 0;
-      background-color: rgb(160, 160, 255);
-      background-image: linear-gradient(rgb(0, 0, 157), white);
-    }
-
       .column img {
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
       }
 
-      .profile{
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        margin-right: 120px;
-      }
-      .title{
-        font-size: 45px;
-        font-family: 'Noto Sans Hebrew', sans-serif;
-        margin-right: 300px;
-      }
-      .info{
-        font-size: 25px;
-        font-family: 'Noto Sans Hebrew', sans-serif;
-        margin-right: 300px;
-      }
       #files{
         background-color: black;
         border: solid 2.5px greenyellow;
@@ -68,11 +49,9 @@
       #files h1, h2, h3{
         color: greenyellow;
         text-decoration: underline;
-        font-weight: bolder;
       }
-      #files p{
+      #files{
         color: greenyellow;
-        font-weight: bolder;
       }
     #collection {
      width: 100%;
@@ -93,9 +72,14 @@
       padding: 0.5px;
     }
 
-    .image-container p {
+    .image-container {
       margin-top: 10px; /* Adjust the spacing between the image and text as needed */
     }
+    .name{
+      font-family: 'Amatic SC', cursive;
+      font-size: 50px;
+    }
+
     .fadeIn {
       opacity: 0;
       animation: fadeInAnimation 1s ease-in-out forwards;
@@ -112,17 +96,17 @@
 
 </style>
 <body dir="rtl">
-  <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo">
-  <h1 style="text-align: center; color: white; font-weight: bolder;">יקום הרעיונות של הרפתקני המחר</h1>
+  <a href="index.html"><img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" width="auto" height="150px"></a>
+  <h1 style="text-align: center;">יקום הרעיונות של הרפתקני המחר</h1>
 
   <nav>
     <ul>
       <li><a href="index.html">בית</a></li>
+      <li><a href="story.html">הסיפור</a></li>
       <li><a href="tales.html">הרפתקאות</a></li>
       <li><a href="files.html">גיבורים-נבלים</a></li>
       <li><a href="history.html">היסטוריה</a></li>
       <li><a href="world.html">אטלס</a></li>
-      <li><a href="story.html">הסיפור</a></li>
       <li><a href="about.html">היוצר</a></li>
     </ul>
     </nav>
@@ -144,24 +128,24 @@
               <div class="image-container">
                 <img src="contents/avatars/paladin.png" alt="Image 1">
                 <h1>פלאדין</h1>
-                <p>מרדכי רמון</p>
+                <p class="name">מרדכי רמון</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/voltage.png" alt="Image 2">
                 <h1>וולטאז'</h1>
-                <p>אלק אטלס</p>
+                <p class="name">אלק אטלס</p>
               </div>
             </div>
             <div class="row">
               <div class="image-container">
                 <img src="contents/avatars/astral.png" alt="Image 3">
                 <h1>ליידי אסטרל</h1>
-                <p>מיאנסקה</p>
+                <p class="name">מיאנסקה</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/dragon.png" alt="Image 4">
                 <h1>דרגון פייטר</h1>
-                <p>בלייק וו-צ'אנג</p>
+                <p class="name">בלייק וו-צ'אנג</p>
               </div>
             </div>
           </div>
@@ -170,24 +154,24 @@
               <div class="image-container">
                 <img src="contents/avatars/size.png" alt="Image 1">
                 <h1>סייז</h1>
-                <p>בן גורדון</p>
+                <p class="name">בן גורדון</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/mariposa.png" alt="Image 2">
                 <h1>מריפוסה</h1>
-                <p>נלי אנדור</p>
+                <p class="name">נלי אנדור</p>
               </div>
             </div>
             <div class="row">
               <div class="image-container">
                 <img src="contents/avatars/gigantic.png" alt="Image 3">
                 <h1>ג'ייגנטיק</h1>
-                <p>מייק היידרברג</p>
+                <p class="name">מייק היידרברג</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/comrade.png" alt="Image 4">
                 <h1>קומראד</h1>
-                <p>רוסלן חרוסקוב</p>
+                <p class="name">רוסלן חרוסקוב</p>
               </div>
             </div>
           </div>
@@ -196,24 +180,24 @@
               <div class="image-container">
                 <img src="contents/avatars/rocket.png" alt="Image 1">
                 <h1>רוקט פריים</h1>
-                <p>חי גרינברג</p>
+                <p class="name">חי גרינברג</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/enforcer.png" alt="Image 2">
                 <h1>אנפורסר</h1>
-                <p>אלייז'ה רמון</p>
+                <p class="name">אלייז'ה רמון</p>
               </div>
             </div>
             <div class="row">
               <div class="image-container">
                 <img src="contents/avatars/tsunami.png" alt="Image 3">
                 <h1>צונאמי</h1>
-                <p>טליה</p>
+                <p class="name">טליה</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/symbol.png" alt="Image 4">
                 <h1>סימבול</h1>
-                <p>נתניאל</p>
+                <p class="name">נתניאל</p>
               </div>
             </div>
           </div>
@@ -222,24 +206,24 @@
               <div class="image-container">
                 <img src="contents/avatars/northlight.png" alt="Image 1">
                 <h1>נורת'לייט</h1>
-                <p>אורורה</p>
+                <p class="name">אורורה</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/techno.png" alt="Image 2">
                 <h1>טכנולאד</h1>
-                <p>אריק קרלטון</p>
+                <p class="name">אריק קרלטון</p>
               </div>
             </div>
             <div class="row">
               <div class="image-container">
                 <img src="contents/avatars/melody.png" alt="Image 3">
                 <h1>מלודי</h1>
-                <p>מלודי רמון</p>
+                <p class="name">מלודי רמון</p>
               </div>
               <div class="image-container">
                 <img src="contents/avatars/nightlord.png" alt="Image 4">
                 <h1>נייטלורד</h1>
-                <p>ג'ק לוין</p>
+                <p class="name">ג'ק לוין</p>
               </div>
             </div>
           </div>
