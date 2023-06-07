@@ -18,7 +18,7 @@ footer{
     text-align: center;
 }
 button{
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: 'Rubik Bubbles', cursive;
     border-radius: 15px;
 }
 textarea{
@@ -33,4 +33,35 @@ button:hover{
     background-color: yellow;
     color: blue;
 }
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
+h1, h2, h3, p, a{
+    font-family: 'Rubik Bubbles', cursive;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#compass{
+    animation: rotate 10s linear infinite;
+    margin: 20px;
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    }
+    
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(359deg);
+        }
+    }

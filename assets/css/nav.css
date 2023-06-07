@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #0080ff;
+    background-color: #005bb6;
     text-align: center;
     border-radius: 15px;
   }
@@ -20,15 +20,17 @@ ul {
     padding: 8px;
     width: 16.66%;
     color: white;
-    text-decoration: underline blue;
+    text-decoration: none;
+    font-family: 'Rubik Vinyl', cursive;
   }
   a{
     color: rgb(255, 255, 255);
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: 'Rubik Vinyl', cursive;
     text-decoration: none;
   }
   a:hover{
-    color: #002d5a;
-    font-weight: bolder;
+    color: grey;
     transition: 1s;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+  
