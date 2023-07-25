@@ -1,4 +1,4 @@
-    body{
+body{
       background-color: brown(66, 66, 255);
       background-image: linear-gradient(brown, orange);
     }
@@ -70,3 +70,21 @@ h1, h2, h3, p, a{
             transform: rotate(359deg);
         }
     }
+
+.id{
+    width: 300px;
+    background-color: rgb(174, 255, 211);
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+.hero-info{
+    color: rgb(31, 103, 21);
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+.id img {
+    max-width: 100%;
+    height: auto;
+}

@@ -89,15 +89,6 @@
     <h1 class="welcome">ברוכים הבאים</h1>
     <h1 class="welcome">לעולם חדש!</h1>
     <img class="img-fluid" src="contents/art/onepiece.png" alt="עולם המצפן">
-    <div style="background-color: azure;">
-    <!--
-    <div id="comic-container"></div>
-    <div id="button-container">
-    <button id="prev-button">קודם</button>
-    <button id="next-button">הבא</button>
-    </div>
-    -->
-  </div>
   <h2 style="text-align: center;"><i>החבורה המופלאה</i></h2>
     <img class="img-fluid" src="contents/art/FinishedCOM.png" alt="החבורה במלואה">
     <div class="container text-center" style="font-size: 20px; background-color: papayawhip;">
@@ -157,6 +148,12 @@
           </div>
     </div>
     <h2 style="text-align: center;"><a style="color: white;" href="story.html">מהו הסיפור? לחץ כאן</a></h2>
+    <div class="id">
+      <h1 class="hero-info" id="heroName"></h1>
+      <p class="hero-info" id="Private"></p>
+      <p class="hero-info" id="powers"></p>
+      <img id="image" src="" alt="Hero Image">
+    </div>
     <div class="container px-4">
         <div class="row gx-6">
           <div class="col"  style="color: crimson; background-color: crimson;">
@@ -251,6 +248,7 @@
         replaceAnimatedImage("imageId", newImage.src);
 
       </script>
+      <script src="assets/scripts/id.js"></script>
       <script src="assets/scripts/webcomics.js"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
       <script>
