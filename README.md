@@ -4,5 +4,8 @@ worldbuilding project with original characters, places, and intecactive webcomic
 
 the project was made for fun, by adding various narrative ideas that i created in the last 10 years.
 initially i wanted that the site will be served as a platform for interactive webcomic in the style of "Homestuck".
+Site:
 https://guybracha.github.io/compass-world/
+Facebook Group:
+https://www.facebook.com/groups/6941542269224419
 <br>
