@@ -91,7 +91,7 @@
     <h1 class="welcome">לעולם חדש!</h1>
     <img class="img-fluid" src="contents/art/onepiece.png" alt="עולם המצפן">
   <h2 style="text-align: center;"><i>החבורה המופלאה</i></h2>
-    <img class="img-fluid" src="contents/art/FinishedCOM.png" alt="החבורה במלואה">
+    <img class="img-fluid" src="contents/art/ensemble.png" alt="החבורה במלואה">
     <div class="container text-center" style="font-size: 20px; background-color: papayawhip;">
       <div class="row" style="font-family: 'Rubik Bubbles', cursive;">
           <div class="col">
@@ -110,13 +110,16 @@
               וולטאז'
             </div>
             <div class="col">
-              ליידי אסטרל
+              אסטרל
             </div>
             <div class="col">
               ג'ייגנטיק
             </div>
             <div class="col">
               צונאמי
+            </div>
+            <div class="col">
+              קומראד
             </div>
         </div>
   </div>
@@ -127,9 +130,6 @@
             </div>
             <div class="col">
               אנפורסר
-            </div>
-            <div class="col">
-              קומראד
             </div>
             <div class="col">
                 נורת'לייט
@@ -144,7 +144,13 @@
                 סימבול
               </div>
               <div class="col">
-                נייטלורד
+                קפטן חלל
+              </div>
+              <div class="col">
+                הרקאדיוס
+              </div>
+              <div class="col">
+                הייליתיאה
               </div>
           </div>
     </div>
@@ -184,7 +190,7 @@
         <div class="row">
             <div class="col" style="background-color: rgba(255, 152, 173, 0.5); font-size: 30px; border: double 5px white;">
                 <h2 style="text-decoration: underline; font-weight: bolder;">היי אתם? מעוניינים לצאת להרפתקה מותחת ומרגשת?</h2>
-                <p>מסעות בזמן, הרפתקאות ברחבי העולם, הצטרפות לאלים בני נוער במאבקם נגד אויביהם המושבעים: נבלי העל.</p>
+                <p>מסעות בזמן, הרפתקאות ברחבי העולם, הצטרפות לאלים בני נוער במאבקם נגד אויביהם המושבעים: האילומינטי השואפים לשלוט בעולם מהצללים.</p>
                 <p>בואו תצטרפו לגיבורים הצעירים השומרים על העולם המופלא הזה. תכירו אותם, תחוו את הרפתקאותיהם, ותלמדו עליהם ועל עולמם לעומק.</p>
                 <p style="text-align: center;">זה לא סתם עולם, זהו...</p>
                 <h2 style="text-align: center; font-size: 60px;"><b>עולם המצפן!</b></h2>
@@ -205,7 +211,6 @@
         <p style="margin-right: 15px; margin-left: 15px;">יוצר האתר והעולם (שזהותו תגלו עוד מעט), ינואר 2023</p>
     </section>
     <img id="compass" src="contents/indexphoto/rotate.png" style="animation: rotate 10s linear infinite;">
-    <button style="border-radius: 15px; font-family: 'Rubik Bubbles', cursive;" onclick="replaceAnimatedImage('compass', 'new.jpg')">תחליף אותי</button>    
     <footer class="text-white bg-dark" style="text-align: center;">
       <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
       <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
@@ -215,42 +220,7 @@
       <a href="https://github.com/guybracha/compass-world"><img src="contents/indexphoto/GitHub-Mark.png" height="50px" width="50px"></a>
       </div>
       <script src="assets/scripts/credits.js"></script>
-      <script>
-        function replaceAnimatedImage(imageId, ImageUrl) {
-            // Get the animated image element
-            var image = document.getElementById(imageId);
-        
-            // Create a new image element
-            var newImage = new Image();
-            newImage.src = "contents/indexphoto/britain.png";
-            newImage.style.margin = "20px";
-            newImage.style.display = "block";
-            newImage.style.position = "relative";
-            newImage.style.width = "200px";
-            newImage.style.height = "200px";
-            newImage.style.marginLeft = "auto";
-            newImage.style.marginRight = "auto";
-            newImage.style.top = "0";
-            newImage.style.left = "0";
-
-            // Copy the animation properties from the original image to the new image
-            var animation = getComputedStyle(image).animation;
-            newImage.style.animation = animation;
-        
-            // Copy the keyframes from the original image to the new image
-            var keyframes = getComputedStyle(image).animationName;
-            newImage.style.animationName = keyframes;
-        
-            // Replace the original image with the new image
-            image.parentNode.insertBefore(newImage, image);
-            image.parentNode.removeChild(image);
-        }
-
-        replaceAnimatedImage("imageId", newImage.src);
-
-      </script>
       <script src="assets/scripts/id.js"></script>
-      <script src="assets/scripts/webcomics.js"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
