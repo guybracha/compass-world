@@ -1,11 +1,10 @@
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #005bb6;
+    background-color: #7ebeff;
     text-align: center;
-    border-radius: 15px;
+    padding: auto;
+    margin: 25px;
   }
   
   li {
@@ -19,17 +18,17 @@ ul {
     display: block;
     padding: 8px;
     width: 16.66%;
-    color: white;
+    color: black;
     text-decoration: none;
     font-family: 'Rubik Vinyl', cursive;
   }
   a{
-    color: rgb(255, 255, 255);
+    color: black(255, 255, 255);
     font-family: 'Rubik Vinyl', cursive;
     text-decoration: none;
   }
   a:hover{
-    color: grey;
+    color: yellow;
     transition: 1s;
   }
   @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');

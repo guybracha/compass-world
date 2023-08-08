@@ -6,12 +6,7 @@ header{
     width: auto;
     height: auto;
     text-align: center;
-    background-color: rgb(255, 140, 0);
-}
-header:hover{
-    opacity: 0.5;
-    transition: 2s;
-    background-color: rgb(41, 112, 0);
+    background-color: white;
 }
 footer{
     background-color: black;
@@ -77,6 +72,7 @@ h1, h2, h3, p, a{
     padding: 20px;
     margin: auto;
     text-align: center;
+    border-radius: 12%;
 }
 .hero-info{
     color: rgb(31, 103, 21);
