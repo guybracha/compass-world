@@ -6,18 +6,15 @@
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nav.css">
+    <script defer src="assets/scripts/heroes.js"></script>
+    <script src="assets/scripts/heroJson.js"></script>
+    <script src="assets/scripts/heroClass.js"></script>
     <html lang="he"></html>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -47,7 +44,7 @@
         border: solid 2.5px greenyellow;
       }
       #files h1, h2, h3{
-        color: greenyellow;
+        color: rgb(102, 102, 102);
         text-decoration: underline;
       }
       #files{
@@ -121,212 +118,19 @@
         <br>
           <div style="background-color: rgba(0, 124, 124, 0.25); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האחדות העולמית</h1>
-        <img class="img-fluid" src="contents/indexphoto/union.png" alt="World union" style="display: block; margin-left: auto; margin-right: auto;"  height="100px" width="auto">
-        <div id="files">
-          <h1>מסמכי הגיבורים</h1>       
-          <div id="collection">
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/paladin.png" alt="Image 1">
-                <h1>פלאדין</h1>
-                <p class="name">מרדכי רמון</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/voltage.png" alt="Image 2">
-                <h1>וולטאז'</h1>
-                <p class="name">אלק אטלס</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/astral.png" alt="Image 3">
-                <h1>ליידי אסטרל</h1>
-                <p class="name">מיאנסקה</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/dragon.png" alt="Image 4">
-                <h1>דרגון פייטר</h1>
-                <p class="name">בלייק וו-צ'אנג</p>
-              </div>
-            </div>
-          </div>
-          <div id="collection">
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/size.png" alt="Image 1">
-                <h1>סייז</h1>
-                <p class="name">בן גורדון</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/mariposa.png" alt="Image 2">
-                <h1>מריפוסה</h1>
-                <p class="name">נלי אנדור</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/gigantic.png" alt="Image 3">
-                <h1>ג'ייגנטיק</h1>
-                <p class="name">מייק היידרברג</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/comrade.png" alt="Image 4">
-                <h1>קומראד</h1>
-                <p class="name">רוסלן חרוסקוב</p>
-              </div>
-            </div>
-          </div>
-          <div id="collection">
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/rocket.png" alt="Image 1">
-                <h1>רוקט פריים</h1>
-                <p class="name">חי גרינברג</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/enforcer.png" alt="Image 2">
-                <h1>אנפורסר</h1>
-                <p class="name">אלייז'ה רמון</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/tsunami.png" alt="Image 3">
-                <h1>צונאמי</h1>
-                <p class="name">טליה</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/symbol.png" alt="Image 4">
-                <h1>סימבול</h1>
-                <p class="name">נתניאל</p>
-              </div>
-            </div>
-          </div>
-          <div id="collection">
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/northlight.png" alt="Image 1">
-                <h1>נורת'לייט</h1>
-                <p class="name">אורורה</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/techno.png" alt="Image 2">
-                <h1>טכנולאד</h1>
-                <p class="name">אריק קרלטון</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/avatars/melody.png" alt="Image 3">
-                <h1>מלודי</h1>
-                <p class="name">מלודי רמון</p>
-              </div>
-              <div class="image-container">
-                <img src="contents/avatars/nightlord.png" alt="Image 4">
-                <h1>נייטלורד</h1>
-                <p class="name">ג'ק לוין</p>
-              </div>
-            </div>
-          </div>
-          <h1>ביוגרפיות</h1>
-          <select id="characterDropdown" onchange="displayCharacterDetails()">
-            <option value="">בחר דמות</option>
-            <option value="character1">פלאדין</option>
-            <option value="character2">וולטאז'</option>
-            <option value="character3">ליידי אסטרל</option>
-            <option value="character4">קומראד</option>
-            <option value="character5">ג'ייגנטיק</option>
-            <option value="character6">דרגון פייטר</option>
-            <option value="character7">סייז</option>
-            <option value="character8">מריפוסה</option>
-            <option value="character9">צונאמי</option>
-            <option value="character10">סימבול</option>
-            <!--
-            <option value="character11">טכנולאד</option>
-            <option value="character12">אנפורסר</option>
-            <option value="character13">מלודי</option>
-            <option value="character14">רוקט פריים</option>
-            <option value="character15">נורת'לייט</option>
-            <option value="character16">נייטלורד</option>
-            -->
-          </select>
-          
-          <div id="characterDetails">
-            <h3 style="padding-right: 15px" id="characterName"></h3>
-            <p style="padding-right: 40px;" id="characterBiography"></p>
-            <p style="padding-right: 40px;" id="characterPower"></p>
-            <p style="padding-right: 40px;" id="characterAge"></p>
-            <p style="padding-right: 40px;" id="characterCity"></p>
-            <p style="padding-right: 40px;" id="characterFamily"></p>
-            <p style="padding-right: 40px;" id="characterRole"></p>
-            <img id="characterImageElement" src="" alt="" width="400" height="400" style="display: block; margin-left: auto; margin-right: auto; border-radius: 50%;">
-          </div>
-          
+        <img class="img-fluid" src="contents/indexphoto/union.png" alt="World union" style="display: block; margin-left: auto; margin-right: auto;">
+        <div class="container">
+          <div id="showMe" class="row"></div>
+        </div>
         </div>
         <div style="background-color: rgba(92, 0, 66, 0.885);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>
-          <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/council.png" class="img-fluid" alt="Council" height="100px" width="auto">
-          <div id="collection">
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/villains/darkness.png" alt="general darkness">
-                <h1>גנרל האפלה</h1>
-              </div>
-              <div class="image-container">
-                <img src="contents/villains/timethief.png" alt="time thief">
-                <h1>גנב הזמן</h1>
-              </div>
-        </div>
-        <div class="row">
-          <div class="image-container">
-            <img src="contents/villains/frown.png" alt="mr frown">
-            <h1>מיסטר פראון</h1>
-          </div>
-          <div class="image-container">
-            <img src="contents/villains/monstro.png" alt="Dr monstro">
-            <h1>דוקטור מונסטרו</h1>
-          </div>
-          </div>
-          <h2 style="text-align: center;">הגרנדמאסטרס</h2>
-          <div class="row">
-            <div class="image-container">
-              <img src="contents/villains/q.png" alt="q">
-              <h1>קיו</h1>
-            </div>
-            <div class="image-container">
-              <img src="contents/villains/bladejet.png" alt="bladejet">
-              <h1>בליידג'ט</h1>
-            </div>
-            </div>
-            <div class="row">
-              <div class="image-container">
-                <img src="contents/villains/ultraBeef.png" alt="ultraBeef">
-                <h1>אולטרה ביף</h1>
-              </div>
-              <div class="image-container">
-                <img src="contents/villains/madMechanic.png" alt="madMechanic">
-                <h1>המכונאי המטורף</h1>
-              </div>
-              </div>
-              <div class="row">
-                <div class="image-container">
-                  <img src="contents/villains/scylla.png" alt="scylla">
-                  <h1>סקיליה</h1>
-                </div>
-                <div class="image-container">
-                  <img src="contents/villains/icebite.png" alt="icebite">
-                  <h1>אייסבייט</h1>
-                </div>
-                </div>
-        </div>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/council.png" class="img-fluid" alt="Council">
         </article>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-        <script src="assets/scripts/scrollfiles.js"></script>
         <script src="assets/scripts/credits.js"></script>
-        <script src="assets/scripts/charactersone.js"></script>
-        <script src="assets/scripts/list.js"></script>
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="assets/scripts/translate.js"></script>
         <footer>
