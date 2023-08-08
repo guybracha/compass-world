@@ -2,7 +2,7 @@ header{
     width: auto;
     height: auto;
     text-align: center;
-    background-color: white;
+    background-color: rgb(255, 170, 170);
 }
 footer{
     background-color: black;
@@ -79,3 +79,37 @@ h1, h2, h3, p, a{
     max-width: 100%;
     height: auto;
 }
+
+.containerHead {
+    display: flex;
+    flex-direction: column; /* Default to column layout */
+    align-items: center;
+    width: auto;
+  }
+  .logo img {
+    max-width: 100%; /* Set maximum width to 100% */
+    height: auto;
+  }
+  #desc {
+    padding: 20px;
+    text-align: center;
+  }
+  .title {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .containerHead {
+      flex-direction: row; /* Switch to row layout on larger screens */
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      max-height: 15px; /* Set maximum height for the image on desktop */
+    }
+    #desc {
+      width: 80%;
+      padding: 0;
+      text-align: left;
+    }
+  }
