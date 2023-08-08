@@ -1,62 +1,103 @@
 let Hero = [{
-    Hero_Name: "פלאדין",
-    Private_Name: "מרדכי רמון",
-    Powers: "רפלקסים משופרים",
-    Image: "contents\\avatars\\paladin.png",
-}, {
-    Hero_Name: "אסטרל",
-    Private_Name: "מיאנסקה",
-    Powers: "טלפתיה וראיית העתיד",
-    Image: "contents\\avatars\\astral.png",
-}, {
-    Hero_Name: "וולטאז'",
-    Private_Name: "אלק אטלס",
-    Powers: "יריית חשמל ומהירות על",
-    Image: "contents\\avatars\\voltage.png",
-}, {
-    Hero_Name: "ג'ייגנטיק",
-    Private_Name: "מיכה הייד",
-    Powers: "שרירי על וחוזקה אדירה",
-    Image: "contents\\avatars\\gigantic.png",
-}, {
-    Hero_Name: "קומראד",
-    Private_Name: "מיכה אלחימסקי",
-    Powers: "ספיגה גרעינית וירייתה החוצה",
-    Image: "contents\\avatars\\comrade.png",
-},{
-    Hero_Name: "מריפוסה",
-    Private_Name: "נלי אנדור",
-    Powers: "קסם פיות",
-    Image: "contents\\avatars\\mariposa.png",
-},{
-    Hero_Name: "סימבול",
-    Private_Name: "נתניאל כהן",
-    Powers: "יכולות על אנושיות",
-    Image: "contents\\avatars\\symbol.png",
-},{
-    Hero_Name: "צונאמי",
-    Private_Name: "טליה",
-    Powers: "שליטה במים",
-    Image: "contents\\avatars\\tsunami.png",
-},{
-    Hero_Name: "דרגון פייטר",
-    Private_Name: "בלייק וו-צ'אנג",
-    Powers: "שליטת בסודות הקונג-פו",
-    Image: "contents\\avatars\\dragon.png",
-},{
-    Hero_Name: "סייז",
-    Private_Name: "בן גורדון",
-    Powers: "גדילה וצמיחה לממדי על",
-    Image: "contents\\avatars\\size.png",
-}];
+    "superName": "פלאדין",
+    "privateName": "מודי רמון",
+    "Powers": "רפלקסים גבוהים ומשופרים",
+    "img": "contents\\avatars\\paladin.png"
+    },
+    {
+    "superName": "אסטרל",
+    "privateName": "הנסיכה מיאנסקה",
+    "Powers": "טלפתיה והשתגרות שמיימית",
+    "img": "contents\\avatars\\astral.png"
+    },{
+    "superName": "וולטאז'",
+    "privateName": "אלק אטלס",
+    "Powers": "יריית חשמל",
+    "img": "contents\\avatars\\voltage.png"
+    },{
+    "superName": "ג'ייגנטיק",
+    "privateName": "מיכה הייד",
+    "Powers": "חוזקת על ושרירי ענק",
+    "img": "contents\\avatars\\gigantic.png"
+    },{
+    "superName":"קומראד",
+    "privateName": "רוסלן",
+    "Powers": "ירי פלזמה גרעינית",
+    "img": "contents\\avatars\\comrade.png"
+    },{
+    "superName":"צונאמי",
+    "privateName": "טליה",
+    "Powers": "שליטה בצורות המים",
+    "img": "contents\\avatars\\tsunami.png"
+    },{
+    "superName":"דרגון פייטר",
+    "privateName": "בלייק וו-צ'אנג",
+    "Powers": "שליטה באמנות הדרקון",
+    "img": "contents\\avatars\\dragon.png"
+    },{
+        "superName":"סימבול",
+        "privateName": "נתניאל",
+        "Powers": "תעופת על, חוזקת ועוד",
+        "img": "contents\\avatars\\symbol.png"
+    },{
+        "superName":"סייז",
+        "privateName": "בן גורדון",
+        "Powers": "גדילה לממדי ענק",
+        "img": "contents\\avatars\\size.png"
+    },{
+        "superName":"מריפוסה",
+        "privateName": "נלי אנדור",
+        "Powers": "קסם פיות",
+        "img": "contents\\avatars\\mariposa.png"
+    },{
+        "superName":"אנפורסר",
+        "privateName": "אלי רמון",
+        "Powers": "בלש על, ראיית רנטגן",
+        "img": "contents\\avatars\\enforcer.png"
+    },{
+        "superName":"מלודי",
+        "privateName": "שירה רמון",
+        "Powers": "גלי קול",
+        "img": "contents\\avatars\\melody.png"
+    },{
+        "superName":"טכנולאד",
+        "privateName": "אריק קרלטון",
+        "Powers": "טכנופתיה - תקשורת עם מכונות",
+        "img": "contents\\avatars\\techno.png"
+    },{
+        "superName":"רוקט פריים",
+        "privateName": "חי גרינברג",
+        "Powers": "שריון טילים היכול להטיס אותו",
+        "img": "contents\\avatars\\rocket.png"
+    },{
+        "superName":"נורת'לייט",
+        "privateName": "אורורה אנרדסן",
+        "Powers": "יצירת אורות",
+        "img": "contents\\avatars\\northlight.png"
+    },{
+        "superName":"קפטן חלל",
+        "privateName": "דן אוקס",
+        "Powers": "יצירת אובייקטים מריק",
+        "img": "contents\\avatars\\captain.png"
+    },{
+        "superName":"הרקאדיוס",
+        "privateName": "הרקאדיוס",
+        "Powers": "קנטאור, מומחה בחרבות",
+        "img": "contents\\avatars\\harkadius.png"
+    },{
+        "superName":"הייליתיאה",
+        "privateName": "הייליתיאה",
+        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "img": "contents\\avatars\\hallethea.png"
+    }];
 
 const Random = Hero[Math.floor(Math.random() * Hero.length)];
 
 function Id() {
-    document.getElementById("heroName").innerHTML = "שם על: " + Random.Hero_Name;
-    document.getElementById("Private").innerHTML = "שם פרטי: " + Random.Private_Name;
+    document.getElementById("heroName").innerHTML = "שם על: " + Random.superName;
+    document.getElementById("Private").innerHTML = "שם פרטי: " + Random.privateName;
     document.getElementById("powers").innerHTML = "כוחות: " + Random.Powers;
-    document.getElementById("image").src = Random.Image;
+    document.getElementById("image").src = Random.img;
 }
 
 Id();
