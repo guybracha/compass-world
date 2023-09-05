@@ -2,6 +2,7 @@ ul {
     list-style: none;
     overflow: hidden;
     background-color: #7ebeff;
+    border: solid white 2px;
     text-align: center;
     padding: auto;
     margin: 25px;
