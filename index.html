@@ -5,7 +5,6 @@
     <title>עולם המצפן | דף בית</title>
     <meta name="description" content="יקום הרעיונות של הרפתקני המחר. אקשן, הרפתקאות, מתח ורומנטיקה בצורתם של גיבורי על.">
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
-    <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <html lang="he"></html>
@@ -43,6 +42,7 @@
     }
 </style>
 <body dir="rtl">
+  <div class="container-lg">
   <header>
     <div class="containerHead">
       <div id="logo">
@@ -53,15 +53,15 @@
       </div>
     </div>
     <nav>
-    <ul>
-      <li><a href="index.html">בית</a></li>
-      <li><a href="story.html">הסיפור</a></li>
-      <li><a href="tales.html">הרפתקאות</a></li>
-      <li><a href="files.html">גיבורים-נבלים</a></li>
-      <li><a href="history.html">היסטוריה</a></li>
-      <li><a href="world.html">אטלס</a></li>
-      <li><a href="about.html">היוצר</a></li>
-      <li><a href="https://www.facebook.com/groups/6941542269224419">קחו חלק</a></li>
+    <ul class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">בית</a>
+      <a class="navbar-brand" href="story.html">הסיפור</a>
+      <a class="navbar-brand" href="tales.html">הרפתקאות</a>
+      <a class="navbar-brand" href="files.html">גיבורים-נבלים</a>
+      <a class="navbar-brand" href="history.html">היסטוריה</a>
+      <a class="navbar-brand" href="world.html">אטלס</a>
+      <a class="navbar-brand" href="about.html">היוצר</a>
+      <a class="navbar-brand" href="https://www.facebook.com/groups/6941542269224419">קחו חלק</a>
     </ul>
     </nav>
     </header>
@@ -70,6 +70,7 @@
     <h1 class="welcome">ברוכים הבאים</h1>
     <h1 class="welcome">לעולם חדש!</h1>
     <img class="img-fluid"  style="border: solid red 2.5px;" src="contents/art/onepiece.png" alt="עולם המצפן">
+    <img id="compass" src="contents/indexphoto/rotate.png" style="animation: rotate 10s linear infinite;">
     <h2 style="text-align: center;">ברית המצפן</h2>
     <img class="img-fluid" style="border: solid red 2.5px;" src="contents/art/ensemble.png" alt="החבורה במלואה">
     <div class="container text-center" style="font-size: 20px; background-color: papayawhip;">
@@ -166,23 +167,6 @@
           </div>
         </div>
     <br>
-    <!--
-    <div class="container">
-        <div class="row">
-            <div class="col" style="background-color: rgba(255, 152, 173, 0.5); font-size: 30px; border: double 5px white;">
-                <h2 style="text-decoration: underline; font-weight: bolder;">היי אתם? מעוניינים לצאת להרפתקה מותחת ומרגשת?</h2>
-                <p>מסעות בזמן, הרפתקאות ברחבי העולם, הצטרפות לאלים בני נוער במאבקם נגד אויביהם המושבעים: האילומינטי השואפים לשלוט בעולם מהצללים.</p>
-                <p>בואו תצטרפו לגיבורים הצעירים השומרים על העולם המופלא הזה. תכירו אותם, תחוו את הרפתקאותיהם, ותלמדו עליהם ועל עולמם לעומק.</p>
-                <p style="text-align: center;">זה לא סתם עולם, זהו...</p>
-                <h2 style="text-align: center; font-size: 60px;"><b>עולם המצפן!</b></h2>
-            </div>
-            <div class="col" style="background-color: rgba(135, 135, 255, 0.5); font-size: 30px; border: double 5px white;">
-                <h2 style="text-decoration: underline;">ההרפתקה היומית</h2>
-                <h3>מתקפת המאסטרו וצבא גורילות הברייקדאנס</h3>
-            </div>
-        </div>
-    </div>
-    -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <section style="background-color: rgba(255, 217, 0, 0.500); border: solid white;">
@@ -192,7 +176,6 @@
         <p style="margin-right: 15px; margin-left: 15px;">אז שתהיה לכם חוויה מהנה מהאתר</p>
         <p style="margin-right: 15px; margin-left: 15px;">יוצר האתר והעולם (שזהותו תגלו עוד מעט), ינואר 2023</p>
     </section>
-    <img id="compass" src="contents/indexphoto/rotate.png" style="animation: rotate 10s linear infinite;">
     <footer class="text-white bg-dark" style="text-align: center;">
       <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
       <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
@@ -216,5 +199,6 @@
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       <script src="assets/scripts/translate.js"></script>
   </footer>
+  </div>
 </body>
 </html>
