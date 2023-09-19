@@ -91,13 +91,14 @@ let Hero = [{
         "img": "contents\\avatars\\hallethea.png"
     }];
 
-const Random = Hero[Math.floor(Math.random() * Hero.length)];
+    const Random = Hero[Math.floor(Math.random() * Hero.length)];
 
-function Id() {
-    document.getElementById("heroName").innerHTML = "שם על: " + Random.superName;
-    document.getElementById("Private").innerHTML = "שם פרטי: " + Random.privateName;
-    document.getElementById("powers").innerHTML = "כוחות: " + Random.Powers;
-    document.getElementById("image").src = Random.img;
-}
-
-Id();
+    function Id() {
+        document.getElementById("heroName").innerHTML = "שם על: " + Random.superName;
+        document.getElementById("Private").innerHTML = "שם פרטי: " + Random.privateName;
+        document.getElementById("powers").innerHTML = "כוחות: " + Random.Powers;
+        document.getElementById("image").src = Random.img;
+        document.querySelector(".id").style.backgroundImage = "url('" + Random.img + "')";
+    }
+    
+    Id();

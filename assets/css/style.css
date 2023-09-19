@@ -62,23 +62,31 @@ h1, h2, h3, p, a{
         }
     }
 
-.id{
-    width: 300px;
-    background-color: rgb(174, 255, 211);
-    padding: 20px;
-    margin: auto;
-    text-align: center;
-}
-.hero-info{
-    color: rgb(31, 103, 21);
-    display: block;
-    margin: auto;
-    padding: 10px;
-}
-.id img {
-    max-width: 100%;
-    height: auto;
-}
+    .id {
+        max-width: 400px;
+        background-color: white;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .hero-info {
+        color: rgb(31, 103, 21);
+        display: block;
+        margin: auto;
+        padding: 10px;
+    }
+    .id img{
+        width: 300px;
+        height: 300px;
+        display: block;
+        margin: auto;
+        border-radius: 25px;
+        border: dotted blue;
+    }
+    
 
 .containerHead {
     display: flex;
@@ -113,3 +121,21 @@ h1, h2, h3, p, a{
       text-align: left;
     }
   }
+
+  .random {
+    background-color: blue;
+    display: flex; /* Use flexbox for centering vertically */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure the container takes full height of its parent */
+    border-radius: 10px;
+}
+
+/* Ensure the .random image doesn't exceed its container */
+.random img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 400px;
+    height: 400px;
+    display: block;
+}
