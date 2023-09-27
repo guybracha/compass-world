@@ -1,10 +1,16 @@
 class heroClass{
-    constructor(superName,privateName,Powers,img){
+    constructor(superName,privateName,Powers,img,quote){
         this.superName =  superName;
         this.privateName = privateName;
         this.Powers = Powers;
         this.img = img;
+        this.quote = quote;
     }
+    myText(buttonElement) {
+        const quoteParagraph = buttonElement.nextElementSibling;
+        quoteParagraph.innerHTML = this.quote;
+    }
+    
     render(){
         let div = document.createElement("div");
         div.className = "col-md-6 border";
@@ -15,6 +21,7 @@ class heroClass{
             <h2>${this.superName}</h2>
             <div>שם פרטי: ${this.privateName}</div>
             <div>כוחות: ${this.Powers}</div>
+            <p>${this.quote}</p>            
         `
     }
 }

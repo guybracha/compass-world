@@ -1,17 +1,17 @@
 let Hero = [{
     "superName": "פלאדין",
-    "privateName": "מודי רמון",
+    "privateName": "יואב רמון",
     "Powers": "רפלקסים גבוהים ומשופרים",
     "img": "contents\\avatars\\paladin.png"
     },
     {
     "superName": "אסטרל",
-    "privateName": "הנסיכה מיאנסקה",
+    "privateName": "מיקה/הנסיכה מיאנסקה",
     "Powers": "טלפתיה והשתגרות שמיימית",
     "img": "contents\\avatars\\astral.png"
     },{
     "superName": "וולטאז'",
-    "privateName": "אלק אטלס",
+    "privateName": "אדם אטלס",
     "Powers": "יריית חשמל",
     "img": "contents\\avatars\\voltage.png"
     },{
@@ -21,37 +21,37 @@ let Hero = [{
     "img": "contents\\avatars\\gigantic.png"
     },{
     "superName":"קומראד",
-    "privateName": "רוסלן",
+    "privateName": "רועי",
     "Powers": "ירי פלזמה גרעינית",
     "img": "contents\\avatars\\comrade.png"
     },{
     "superName":"צונאמי",
-    "privateName": "טליה",
+    "privateName": "אגם",
     "Powers": "שליטה בצורות המים",
     "img": "contents\\avatars\\tsunami.png"
     },{
     "superName":"דרגון פייטר",
-    "privateName": "בלייק וו-צ'אנג",
+    "privateName": "דוד",
     "Powers": "שליטה באמנות הדרקון",
     "img": "contents\\avatars\\dragon.png"
     },{
         "superName":"סימבול",
-        "privateName": "נתניאל",
+        "privateName": "שחר",
         "Powers": "תעופת על, חוזקת ועוד",
         "img": "contents\\avatars\\symbol.png"
     },{
         "superName":"סייז",
-        "privateName": "בן גורדון",
+        "privateName": "בני גורדון",
         "Powers": "גדילה לממדי ענק",
         "img": "contents\\avatars\\size.png"
     },{
         "superName":"מריפוסה",
-        "privateName": "נלי אנדור",
+        "privateName": "נטלי אנדור",
         "Powers": "קסם פיות",
         "img": "contents\\avatars\\mariposa.png"
     },{
         "superName":"אנפורסר",
-        "privateName": "אלי רמון",
+        "privateName": "אבי רמון",
         "Powers": "בלש על, ראיית רנטגן",
         "img": "contents\\avatars\\enforcer.png"
     },{
@@ -71,12 +71,12 @@ let Hero = [{
         "img": "contents\\avatars\\rocket.png"
     },{
         "superName":"נורת'לייט",
-        "privateName": "אורורה אנרדסן",
+        "privateName": "אור אנרדסן",
         "Powers": "יצירת אורות",
         "img": "contents\\avatars\\northlight.png"
     },{
         "superName":"קפטן חלל",
-        "privateName": "דן אוקס",
+        "privateName": "דניאל אוקס",
         "Powers": "יצירת אובייקטים מריק",
         "img": "contents\\avatars\\captain.png"
     },{
