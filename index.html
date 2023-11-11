@@ -7,18 +7,34 @@
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <html lang="he"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="assets/scripts/toggle.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
 </head>
+<style>
+    #myContainer {
+    border: solid blue 4px;
+    }
+
+    #myContainer ol {
+        display: none;
+    }
+
+    #myContainer img {
+        display: none;
+    }
+
+</style>
 <body dir="rtl">
   <div class="container-lg">
   <header>
@@ -78,34 +94,77 @@
     <p>מן ההריסות של העולם הישן, נולד לו עולם חדש עם איומים מסוכנים. בשביל לנטרל את הסכנות, נולד דור חדש של שומרים צעירים הנקראים "הרפתקנים".</p>
     <p>חלק מצעירי הדור החדש והמופלא החליטו לאגד כוחות כצוות חדש בשם "ברית המצפן", המטרה? להגן בכל הכוח על העולם החדש מהפחד המאיים על העולם המאוחד.</p>
     <p>אבל בשביל שהם יצליחו לעמוד במטרה הגדולה, קודם כל הם צריכים לדעת איך להילחם, איך לשלוט בכוחותיהם והכי חשוב: לדעת איך לעבוד ביחד כצוות...</p>
-    <div class="row gx-6">
-      <div class="col"  style="color: crimson; background-color: crimson;">
-      <div class="p-3">
-      <h2 style="background-color: gold;">אנשי המצפן</h2>
-      <p style="background-color:gold;">מיהם הנפשות הפועלות בעולם חדש ומופלא כמו זה?</p>
-      <a style="color: white;" href="files.html">תגלה עליהם</a>
-      </div>
-      </div>
-      <div class="col" style="color: crimson; background-color: crimson;">
-        <div class="p-3">
-        <h2 style="background-color: gold;">ההיסטוריה האבודה</h2>
-        <p style="background-color:gold;">אסופת תיעודים ואירועים הידועים לאנושות</p>
-        <a style="color: white;" href="history.html">תיסע בזמן</a>
-      </div>
-      </div>
-      <div class="col"  style="color: crimson; background-color: crimson;">
-        <div class="p-3">
-        <h2 style="background-color: gold;">העולם המופלא</h2>
-        <p style="background-color:gold;">אוסף רישומים ופריטי מידע על מקומות מרחבי תבל</p>
-        <a style="color: white;" href="world.html">העולם מחכה לכם</a>
-      </div>
-      </div>
     </div>
+    <div id="myContainer" class="container">
+      <div class="row">
+      <div style="background-color: rgb(142, 142, 142);"></div>
+      <div class="col-8">
+      <h3 style="text-align: center;">חברי ברית המצפן</h3>
+      </div>
+      <div class="col-4">
+        <button onclick="toggleContainer()">תלחץ</button>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-sm">
+            <h4 style="text-align: center;">מייסדים</h4>
+            <ol>
+              <li>פלאדין</li>
+              <li>ליידי אסטרל</li>
+              <li>וולטאז'</li>
+              <li>הידרו-זן</li>
+              <li>קפטן חלל</li>
+              <li>גרדיאן אנג'ל</li>
+              <li>מארק וונצ'ר</li>
+            </ol>
+          </div>
+          <div class="col-sm">
+            <h4 style="text-align: center;">מגויסים לאחר ההקמה</h4>
+            <ol>
+              <li>קומראד</li>
+              <li>אנפורסר</li>
+              <li>נורת'לייט</li>
+              <li>ג'ייגנטיק</li>
+              <li>ליון-מן</li>
+              <li>קינג סודליט</li>
+              <li>אייבורי</li>
+              <li>סייז</li>
+              <li>מריפוסה</li>
+              <li>דוק פיזיקס</li>
+              <li>טכנולאד</li>
+              <li>צונאמי</li>
+              <li>דרגון פייטר</li>
+              <li>סימבול</li>
+              <li>רוקט פריים</li>
+              <li>מלודי</li>
+            </ol>
+          </div>
+          <div class="col-sm">
+            <h4 style="text-align: center;">חיל המילואים</h4>
+            <ol>
+              <li>החפרפר האדום</li>
+              <li>יין ויאנג</li>
+              <li>צ'ירסטאר</li>
+              <li>פסים</li>
+              <li>הורסוומן</li>
+              <li>קילזון</li>
+              <li>אופטימוס קוונטום</li>
+              <li>סאנד נומאד</li>
+              <li>ג'וני בי. גוד</li>
+              <li>איירדאנס</li>
+              <li>טיימר</li>
+              <li>ווטלנדר</li>
+              <li>פרוג גירל</li>
+              <li>טיטאניום</li>
+              <li>הרקאדיוס</li>
+              <li>האליתיאה</li>
+            </ol>
+          </div>
+        </div>
+      </div>
       <a href="story.html"><img class="img-fluid" src="contents/indexphoto/PitchText-min.png" alt="Mock-up"></a>
     <div class="container px-4">
     <br>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <section style="background-color: rgba(255, 217, 0, 0.500); border: solid white;">
         <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
         <p style="margin-right: 15px; margin-left: 15px;">מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
