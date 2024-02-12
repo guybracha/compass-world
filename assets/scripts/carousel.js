@@ -1,12 +1,12 @@
 const images = [
     {
-      imgSrc: "../contents/gallery/UniteCol-min.png"
+      imgSrc: "\\contents\\gallery\\UniteCol-min.png"
     },
     {
-      imgSrc: "../contents/gallery/hanukkah-min.png"
+      imgSrc: "\\contents\\gallery\\hanukkah-min.png"
     },
     {
-      imgSrc: "../contents/art/CoverDSFinished-min.png"
+      imgSrc: "\\contents\\art\\CoverDSFinished-min.png"
     }
   ];
   
