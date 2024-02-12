@@ -36,7 +36,7 @@
 
 </style>
 <body dir="rtl">
-  <div class="container-lg">
+  <div class="container-md">
   <header>
     <div class="containerHead">
       <div id="logo">
@@ -78,12 +78,10 @@
     </header>
     <br>
     <div id="google_translate_element"></div>
-    <div style="background-image: url(contents/indexphoto/screentones.jpg);">
-    <h1 style="text-align: center; color: rgb(0, 134, 11); font-size: 60px;">ברוכים הבאים <br> לעולם חדש!</h1>
-    </div>
+    <h1 style="text-align: center; color: rgb(0, 134, 11); font-size: 60px;">ברוכים הבאים לעולם חדש!</h1>
     <div class="row">
       <div class="col-sm-8">
-        <img class="img-fluid" style="border: solid red 2.5px;" src="contents/art/ensemble.png" alt="החבורה במלואה">    
+        <div id="carousel"></div>
       </div>
       <div class="col-sm-4">
         <div style="background-color: black;">
@@ -91,11 +89,9 @@
         </div>
       </div>
     </div>
-    <p>מן ההריסות של העולם הישן, נולד לו עולם חדש עם איומים מסוכנים. בשביל לנטרל את הסכנות, נולד דור חדש של שומרים צעירים הנקראים "הרפתקנים".</p>
-    <p>חלק מצעירי הדור החדש והמופלא החליטו לאגד כוחות כצוות חדש בשם "ברית המצפן", המטרה? להגן בכל הכוח על העולם החדש מהפחד המאיים על העולם המאוחד.</p>
-    <p>אבל בשביל שהם יצליחו לעמוד במטרה הגדולה, קודם כל הם צריכים לדעת איך להילחם, איך לשלוט בכוחותיהם והכי חשוב: לדעת איך לעבוד ביחד כצוות...</p>
     </div>
-    <div id="myContainer" class="container">
+    <br>
+    <!-- <div id="myContainer" class="container">
       <div class="row">
       <div style="background-color: rgb(142, 142, 142);"></div>
       <div class="col-8">
@@ -161,41 +157,47 @@
             </ol>
           </div>
         </div>
-      </div>
-      <a href="story.html"><img class="img-fluid" src="contents/indexphoto/PitchText-min.png" alt="Mock-up"></a>
-    <div class="container px-4">
-    <br>
-    <section style="background-color: rgba(255, 217, 0, 0.500); border: solid white;">
-        <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
-        <p style="margin-right: 15px; margin-left: 15px;">מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
-        <p style="margin-right: 15px; margin-left: 15px;">אני מאוד מקווה שתאהבו את האתר ואת תכניו, לקח לי כ-10 שנים לאסוף ולכתוב את הרעיונות, הסיפורים והדמויות, כך שיצרתי אותו עם לבי.</p>
-        <p style="margin-right: 15px; margin-left: 15px;">אז שתהיה לכם חוויה מהנה מהאתר</p>
-        <p style="margin-right: 15px; margin-left: 15px;">יוצר האתר והעולם (שזהותו תגלו עוד מעט), ינואר 2023</p>
-    </section>
-    <footer class="text-white bg-dark" style="text-align: center;">
-      <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
-      <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
-      <p>2023</p>
-      <br>
-      <h2>לפניות עסקיות</h2>
-      <a href="mailto:guy.bracha@gmail.com">לחץ כאן</a>
-      <br>
-      <div style="display: flex; display: block; margin-left: auto; margin-right: auto;">
-      <a href="https://www.facebook.com/groups/6941542269224419"><img src="contents/indexphoto/facebook.png" height="50px" width="50px"></a>
-      <a href="https://github.com/guybracha/compass-world"><img src="contents/indexphoto/GitHub-Mark.png" height="50px" width="50px"></a>
-      </div>
-      <script src="assets/scripts/credits.js"></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      </div> -->
+      <!-- <a href="story.html"><img class="img-fluid" src="contents/indexphoto/PitchText-min.png" alt="Mock-up"></a> -->
+      <div class="container text-center">
+        <div class="row justify-content-center align-items-stretch">
+            <div class="col-6">
+                <section style="background-color: rgba(255, 217, 0, 0.5); border: solid white; height: 100%;">
+                    <h2 style="text-align: center;">ברוכים הבאים לעולם מופלא, מסתורי וחדש</h2>
+                    <p>מתח, הרפתקאות ורומנטיקה באתר אחד בלבד. אתר זה נעשה בתור פרויקט להנאה עצמית על ידי יוצרו האקסצנטרי, שביקש למסור את הדברים הבאים:</p>
+                    <p>אני מאוד מקווה שתאהבו את האתר ואת תכניו, לקח לי כ-10 שנים לאסוף ולכתוב את הרעיונות, הסיפורים והדמויות, כך שיצרתי אותו עם לבי.</p>
+                    <p>אז שתהיה לכם חוויה מהנה מהאתר</p>
+                    <p>יוצר האתר והעולם (שזהותו תגלו עוד מעט), ינואר 2023</p>
+                </section>
+            </div>
+            <div class="col-6">
+                <section class="text-white bg-dark" style="text-align: center; height: 100%;">
+                    <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
+                    <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
+                    <p>2023-2024</p>
+                    <h2>לפניות עסקיות</h2>
+                    <a href="mailto:guy.bracha@gmail.com">לחץ כאן</a>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                        <a href="https://www.facebook.com/groups/6941542269224419"><img src="contents/indexphoto/facebook.png" height="50px" width="50px"></a>
+                        <a href="https://github.com/guybracha/compass-world"><img src="contents/indexphoto/GitHub-Mark.png" height="50px" width="50px"></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+  <script src="assets/scripts/credits.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('config', 'G-1LV563TQEJ');
-      </script>
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      <script src="assets/scripts/translate.js"></script>
-  </footer>
-  </div>
+          gtag('config', 'G-1LV563TQEJ');
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="assets/scripts/translate.js"></script>
+        <script src="assets/scripts/carousel.js"></script>
 </body>
 </html>
