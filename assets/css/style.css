@@ -2,7 +2,8 @@ header{
     width: auto;
     height: auto;
     text-align: center;
-    background-color: rgb(255, 76, 76);
+    background: rgb(127,120,255);
+    background: linear-gradient(90deg, rgba(127,120,255,1) 13%, rgba(76,76,168,1) 50%, rgba(0,212,255,1) 100%);
 }
 footer{
     background-color: black;
@@ -31,9 +32,6 @@ button:hover{
 }
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
-h1, h2, h3, p, a{
-    font-family: 'Rubik Bubbles', cursive;
-}
 .logo{
     display: block;
     margin-left: auto;
