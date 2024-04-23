@@ -2,13 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>עולם המצפן | מסמכים סודיים</title>
+    <title>Compass World | Gods and Monsters</title>
     <meta name="description" content="יקום הרעיונות של הרפתקני המחר. אקשן, הרפתקאות, מתח ורומנטיקה בצורתם של גיבורי על. - תיעוד גיבורים ונבלים">
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <script defer src="assets/scripts/heroes.js"></script>
     <script src="assets/scripts/heroJson.js"></script>
     <script src="assets/scripts/heroClass.js"></script>
+    <script src="assets/scripts/random.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="assets/scripts/translate.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -19,116 +20,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
-<style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .central {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-   }
-    .bottom{
-      position: absolute;
-      bottom: 8px;
-      right: 16px;
-    }
-      .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-      }
-
-      #files{
-        background-color: black;
-        border: solid 2.5px greenyellow;
-      }
-      #files h1, h2, h3{
-        color: rgb(102, 102, 102);
-        text-decoration: underline;
-      }
-      #files{
-        color: greenyellow;
-      }
-    #collection {
-     width: 100%;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .image-container {
-      text-align: center;
-      width: 50%; /* Adjust the width to leave space for spacing between images */
-    }
-
-    .image-container img {
-      width: 40%;
-      height: auto;
-      padding: 0.5px;
-    }
-
-    .image-container {
-      margin-top: 10px; /* Adjust the spacing between the image and text as needed */
-    }
-    .name{
-      font-family: 'Amatic SC', cursive;
-      font-size: 50px;
-    }
-
-    .fadeIn {
-      opacity: 0;
-      animation: fadeInAnimation 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-</style>
 <body>
-  <div class="container-lg">
-  <a href="index.html"><img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" width="auto" height="150px"></a>
-  <h1 style="text-align: center;">יקום הרעיונות של הרפתקני המחר</h1>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">ניווט</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">בית<span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/groups/6941542269224419">הצטרפו אלינו</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            עמודים נוספים
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="story.html">הסיפור</a>
-            <a class="dropdown-item" href="tales.html">הרפתקאות</a>
-            <a class="dropdown-item" href="world.html">העולם</a>
-            <a class="dropdown-item" href="history.html">היסטוריה</a>
-            <a class="dropdown-item" href="files.html">הדמויות</a>
-            <a class="dropdown-item" href="about.html">אודות היוצר</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="container-md">
+    <header>
+      <div class="text-center">
+      <div id="logo">
+        <a href="index.html"><img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" height="120px"></a>
+      </div>
+        <h1 class="title">Welcome to a new universe</h1>    
+      </div>
+    </header>
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="files.html">Gods and Monsters</a>
+      <a class="navbar-brand" href="history.html">Choronology</a>
+      <a class="navbar-brand" href="world.html">Atlas</a>
+      <a class="navbar-brand" href="about.html">Author</a>
+    </nav>
     <div id="google_translate_element"></div>
         <article style="background-color:antiquewhite;">
         <h1>אנשי עולם המצפן</h1>
@@ -136,11 +44,11 @@
         <br>
         <button style="font-family: 'Rubik Bubbles', cursive; border-radius: 15px;" onclick="clickMe()">גיבור בהפתעה</button>
         <p id="random"></p>
-        <script src="assets/scripts/random.js"></script>
         <br>
           <div style="background-color: rgba(0, 124, 124, 0.25); border: skyblue 3px solid;">
             <h1 style="text-align: center; color: white;">האחדות העולמית - ברית המצפן</h1>
         <img class="img-fluid" src="contents/indexphoto/union.png" alt="World union" style="display: block; margin-left: auto; margin-right: auto;">
+        <br>
         <div class="container">
           <div id="showMe" class="row"></div>
         </div>
@@ -148,6 +56,7 @@
         <div style="background-color: rgba(92, 0, 66, 0.885);  border: green solid 3px; color: white;">
           <h1 style="text-align: center;">הרעים והמנוולים</h1>
           <img style="display: block; margin-left: auto; margin-right: auto;" src="contents/indexphoto/council.png" class="img-fluid" alt="Council">
+          <br>
           <div class="container">
             <div class="row">
             <div class="col-sm">

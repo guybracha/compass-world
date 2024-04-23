@@ -1,0 +1,20 @@
+.navbar{
+    background-color: skyblue;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-brand:hover{
+    color: gold;
+    text-decoration: underline;
+}
+footer{
+    background-color: rgb(152, 255, 255);
+    text-align: center;
+}
+footer a{
+    color: rgb(116, 99, 0);
+}
+footer a:hover{
+    color: green;
+}
