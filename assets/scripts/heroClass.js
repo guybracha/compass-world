@@ -13,15 +13,21 @@ class heroClass{
     
     render(){
         let div = document.createElement("div");
-        div.className = "col-md-6 border";
+        div.className = "col-md-6 col-sm-6 col-sx-6 border";
         document.querySelector("#showMe").append(div);
 
         div.innerHTML = `
-            <img src="${this.img}" alt="${this.superName}" class="w-25 float-start me-2">
+            <div class="row">
+            <div class="col-md-4">
+            <img src="${this.img}" alt="${this.superName}" class="img-fluid">
+            </div>
+            <div class="col-md-8">
             <h2>${this.superName}</h2>
-            <div>שם פרטי: ${this.privateName}</div>
-            <div>כוחות: ${this.Powers}</div>
-            <p>${this.quote}</p>            
+            <div>Secret identity: ${this.privateName}</div>
+            <div>Powers: ${this.Powers}</div>
+            <p>${this.quote}</p>  
+            </div>
+            </div>          
         `
     }
 }

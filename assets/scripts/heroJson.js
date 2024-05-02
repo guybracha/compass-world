@@ -1,7 +1,7 @@
 const superList =  [{
-    "superName": "פלאדין",
-    "privateName": "יואב רמון",
-    "Powers": "רפלקסים גבוהים ומשופרים",
+    "superName": "Paladin",
+    "privateName": "Yoav Ramon",
+    "Powers": "High Reflexes skill",
     "img": "contents\\avatars\\paladin.png",
     "quote": "ברית, לפעולה!"
     },
