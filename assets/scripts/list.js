@@ -1,18 +1,18 @@
 let list=[
-    {Name: "פלאדין"},
-    {Name: "וולטאז'"},
-    {Name: "אסטרל"},
-    {Name: "דרגון פייטר"},
-    {Name: "סייז"},
-    {Name: "מריפוסה"},
-    {Name: "קומראד"},
-    {Name: "ג'ייגנטיק"},
-    {Name: "צונאמי"},
-    {Name: "סימבול"},
-    {Name: "טכנולאד"}
+    {Name: "Paladin"},
+    {Name: "Voltage"},
+    {Name: "Astral"},
+    {Name: "Comrade"},
+    {Name: "Gigantic"},
+    {Name: "Jupiterian"},
+    {Name: "Leviathan"},
+    {Name: "Eastwind"},
+    {Name: "Sunshine"},
+    {Name: "Captain Space"},
+    {Name: "Rocket Prime"}
 ];
 
 var i;
 for(i = 0; i < list.length; i++){
-    console.log("גיבור מס'" + i + " " + list[i].Name);
+    console.log("Hero no." + i + " " + list[i].Name);
 }
