@@ -25,7 +25,7 @@ class heroClass{
             <h2>${this.superName}</h2>
             <div>Secret identity: ${this.privateName}</div>
             <div>Powers: ${this.Powers}</div>
-            <p>${this.quote}</p>  
+            <p><i>${this.quote}</i></p>  
             </div>
             </div>          
         `

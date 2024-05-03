@@ -3,76 +3,76 @@ const superList =  [{
     "privateName": "Yoav Ramon",
     "Powers": "High Reflexes skill",
     "img": "contents\\avatars\\paladin.png",
-    "quote": "ברית, לפעולה!"
+    "quote": "Alliance, to Action"
     },
     {
-    "superName": "אסטרל",
-    "privateName": "מיקה/הנסיכה מיאנסקה",
-    "Powers": "טלפתיה והשתגרות שמיימית",
+    "superName": "Astral",
+    "privateName": "Princess Mianeska",
+    "Powers": "Cosmic Strength and mist generation",
     "img": "contents\\avatars\\astral.png",
     "quote": "ברית, לפעולה!"
     },{
-    "superName": "וולטאז'",
-    "privateName": "אדם אטלס",
-    "Powers": "יריית חשמל",
+    "superName": "Voltage",
+    "privateName": "Alec Atlas",
+    "Powers": "Electricity",
     "img": "contents\\avatars\\voltage.png",
     "quote": "ברית, לפעולה!"
     },{
-    "superName": "ג'ייגנטיק",
-    "privateName": "מיכה הייד",
-    "Powers": "חוזקת על ושרירי ענק",
+    "superName": "Gigantic",
+    "privateName": "Michael Hyde",
+    "Powers": "Big Muscles",
     "img": "contents\\avatars\\gigantic.png",
     "quote": "ברית, לפעולה!"
     },{
-    "superName":"קומראד",
-    "privateName": "רועי",
-    "Powers": "ירי פלזמה גרעינית",
+    "superName":"Comrade",
+    "privateName": "Ruslan Choeminsky",
+    "Powers": "Nuclear Blasts",
     "img": "contents\\avatars\\comrade.png",
     "quote": "ברית, לפעולה!"
     },{
-    "superName":"צונאמי",
-    "privateName": "אגם",
-    "Powers": "שליטה בצורות המים",
+    "superName":"Tsunami",
+    "privateName": "Talia",
+    "Powers": "Hydrokinesis",
     "img": "contents\\avatars\\tsunami.png",
     "quote": "ברית, לפעולה!"
     },{
-    "superName":"דרגון פייטר",
-    "privateName": "דוד",
-    "Powers": "שליטה באמנות הדרקון",
+    "superName":"Dragon Fighter",
+    "privateName": "Blake Wu-Chang",
+    "Powers": "Martial Art Master",
     "img": "contents\\avatars\\dragon.png",
     "quote": "ברית, לפעולה!"
     },{
-        "superName":"סימבול",
-        "privateName": "שחר",
-        "Powers": "תעופת על, חוזקת ועוד",
+        "superName":"Seraph",
+        "privateName": "Nate",
+        "Powers": "Synthetic Man",
         "img": "contents\\avatars\\symbol.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"סייז",
-        "privateName": "בני גורדון",
-        "Powers": "גדילה לממדי ענק",
+        "superName":"Size",
+        "privateName": "Ben Gordon",
+        "Powers": "Size Changing",
         "img": "contents\\avatars\\size.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"מריפוסה",
-        "privateName": "נטלי אנדור",
-        "Powers": "קסם פיות",
+        "superName":"Mariposa",
+        "privateName": "Nelly Andor",
+        "Powers": "Magic",
         "img": "contents\\avatars\\mariposa.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"אנפורסר",
-        "privateName": "אבי רמון",
-        "Powers": "בלש על, ראיית רנטגן",
+        "superName":"Enfocer",
+        "privateName": "Eli Ramon",
+        "Powers": "Super-Detective",
         "img": "contents\\avatars\\enforcer.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"מלודי",
-        "privateName": "שירה רמון",
-        "Powers": "גלי קול",
+        "superName":"Melody",
+        "privateName": "Shira Ramon",
+        "Powers": "Super Singing",
         "img": "contents\\avatars\\melody.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"טכנולאד",
+        "superName":"Techno",
         "privateName": "אריק קרלטון",
         "Powers": "טכנופתיה - תקשורת עם מכונות",
         "img": "contents\\avatars\\techno.png",
