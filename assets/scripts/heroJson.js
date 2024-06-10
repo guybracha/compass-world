@@ -78,31 +78,31 @@ const superList =  [{
         "img": "contents\\avatars\\techno.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"רוקט פריים",
+        "superName":"Rocket Prime",
         "privateName": "חי גרינברג",
         "Powers": "שריון טילים היכול להטיס אותו",
         "img": "contents\\avatars\\rocket.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"נורת'לייט",
+        "superName":"Northlight",
         "privateName": "אור אנרדסן",
         "Powers": "יצירת אורות",
         "img": "contents\\avatars\\northlight.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"קפטן חלל",
+        "superName":"Captain Space",
         "privateName": "דניאל אוקס",
         "Powers": "יצירת אובייקטים מריק",
         "img": "contents\\avatars\\captain.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"הרקאדיוס",
+        "superName":"Harkadius",
         "privateName": "הרקאדיוס",
         "Powers": "קנטאור, מומחה בחרבות",
         "img": "contents\\avatars\\harkadius.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"הייליתיאה",
+        "superName":"Hallethea",
         "privateName": "הייליתיאה",
         "Powers": "קנטאורית, מומחית בחץ וקשת",
         "img": "contents\\avatars\\hallethea.png",
