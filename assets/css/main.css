@@ -1,20 +1,49 @@
-.navbar{
-    background-color: skyblue;
-}
-.navbar-brand{
+body {
+    font-family: 'Bangers', cursive; /* Comic style font for headings */
+    background-color: #111; /* Dark theme for the site */
     color: white;
 }
-.navbar-brand:hover{
+
+.navbar {
+    background-color: #007bff; /* Primary color for navbar */
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
     color: gold;
     text-decoration: underline;
 }
-footer{
-    background-color: rgb(152, 255, 255);
-    text-align: center;
+
+.card {
+    transition: transform 0.2s;
 }
-footer a{
-    color: rgb(116, 99, 0);
+
+.card:hover {
+    transform: scale(1.05); /* Grow card on hover */
 }
-footer a:hover{
-    color: green;
+
+footer {
+    background-color: #444;
+    padding: 20px;
+}
+
+footer a {
+    color: #f1c40f;
+}
+
+footer a:hover {
+    color: #16a085;
+}
+
+/* Styling for hero section text overlay */
+.hero-section .position-absolute {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
 }

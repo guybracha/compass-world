@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-        "target": "ES5",
-        "outDir": "build",
-        "lib": ["ES2015","DOM"]
-    }
-}
