@@ -90,7 +90,7 @@ const superList =  [{
         "img": "contents\\avatar2024\\heroes\\northlight.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"Captain Space",
+        "superName":"Savior",
         "privateName": "דניאל אוקס",
         "Powers": "יצירת אובייקטים מריק",
         "img": "contents\\avatar2024\\heroes\\savior.png",
