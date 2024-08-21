@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="assets/scripts/translate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/scripts/poll.js"></script>
 </head>
 <body class="bg-dark text-white">
   <div class="container-md">
@@ -28,10 +28,10 @@
         <h1 class="title display-4">Welcome to a New Universe</h1>    
       </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar">
       <a class="navbar-brand" href="index.html">Home</a>
       <a class="navbar-brand" href="files.html">Gods and Monsters</a>
-      <a class="navbar-brand" href="history.html">Chronology</a>
+      <a class="navbar-brand" href="history.html">Choronology</a>
       <a class="navbar-brand" href="world.html">Atlas</a>
       <a class="navbar-brand" href="about.html">Author</a>
     </nav>
@@ -43,7 +43,20 @@
         <img src="contents/art2024/allianceunlimitedCol.png" class="img-fluid rounded" alt="Unlimited">
       </div>
     </section>
-
+    <section class="poll-section">
+      <h2>What is your favorite hero?</h2>
+      <form id="poll-form">
+        <input type="radio" id="paladin" name="hero" value="Paladin">
+        <label for="paladin">Paladin</label><br>
+        <input type="radio" id="voltage" name="hero" value="Voltage">
+        <label for="voltage">Voltage</label><br>
+        <input type="radio" id="astral" name="hero" value="Astral">
+        <label for="astral">Astral</label><br>
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+      <div id="poll-result"></div>
+    </section>
+    
     <section class="profiles my-5">
       <h2 class="text-center text-warning mb-4">Meet the Heroes</h2>
       <div class="row">
@@ -52,7 +65,7 @@
             <img src="contents/avatar2024/heroes/paladin-min.png" class="card-img-top" alt="Hero 1">
             <div class="card-body">
               <h5 class="card-title">Paladin</h5>
-              <p class="card-text">Short description of the hero's powers and backstory.</p>
+              <p class="card-text">The Knight of Tomorrow</p>
               <a href="files.html" class="btn btn-warning">Read More</a>
             </div>
           </div>
@@ -62,7 +75,7 @@
             <img src="contents/avatar2024/heroes/voltage-min.png" class="card-img-top" alt="Hero 2">
             <div class="card-body">
               <h5 class="card-title">Voltage</h5>
-              <p class="card-text">Short description of the hero's powers and backstory.</p>
+              <p class="card-text">The Electric Man</p>
               <a href="files.html" class="btn btn-warning">Read More</a>
             </div>
           </div>
@@ -72,7 +85,7 @@
             <img src="contents/avatar2024/heroes/astral-min.png" class="card-img-top" alt="Hero 3">
             <div class="card-body">
               <h5 class="card-title">Astral</h5>
-              <p class="card-text">Short description of the hero's powers and backstory.</p>
+              <p class="card-text">The Last unicorn of the cosmos</p>
               <a href="files.html" class="btn btn-warning">Read More</a>
             </div>
           </div>

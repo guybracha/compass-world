@@ -4,18 +4,20 @@ body {
     color: white;
 }
 
-.navbar {
-    background-color: #007bff; /* Primary color for navbar */
+nav.navbar {
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #212529;
 }
 
-.navbar-brand {
-    color: #fff;
-    font-weight: bold;
+nav.navbar a.navbar-brand {
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    margin: 0 15px;
 }
 
-.navbar-brand:hover {
-    color: gold;
-    text-decoration: underline;
+nav.navbar a.navbar-brand:hover {
+    color: #ffb703;
 }
 
 .card {

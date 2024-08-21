@@ -12,7 +12,19 @@ header {
 }
 
 nav.navbar {
-    border-radius: 8px;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #212529;
+}
+
+nav.navbar a.navbar-brand {
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+
+nav.navbar a.navbar-brand:hover {
+    color: #ffb703;
 }
 
 /* Profile container styling */
