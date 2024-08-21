@@ -1,34 +1,114 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+/* General styling */
+body {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
 }
-.center{
+
+header {
+    background-color: #343a40;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+nav.navbar {
+    border-radius: 8px;
+}
+
+/* Profile container styling */
+.profile-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-images {
     position: relative;
-    border-radius: 50%;
+    margin-bottom: 20px;
 }
-.center img{
-    transition: all linear 0.7s;
+
+.profile-images img {
+    transition: opacity 0.7s linear;
 }
-img.hover-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    border-radius: 50%;
-}
-.center:hover img{
-    opacity: 0;
-}
-.center:hover img.hover-img{
+
+.shadow-img {
     opacity: 1;
 }
-.shadow{
-    background-color: black;
-    text-align: center;
+
+.hover-img {
+    opacity: 0;
+    top: 0;
+    left: 0;
 }
-.shadow:hover{
+
+/* Hover effects */
+.profile-images:hover .shadow-img {
+    opacity: 0;
+}
+
+.profile-images:hover .hover-img {
+    opacity: 1;
+}
+
+/* Name hover effects */
+.name-shadow {
+    font-size: 1.5rem;
+    background-color: #212529;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.name-shadow:hover {
     background-color: goldenrod;
     color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #212529;
+    padding: 20px;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb703;
+}
+
+.coin-container {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+
+.coin {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
 }
