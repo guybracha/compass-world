@@ -32,7 +32,7 @@
     </div>
   </nav>
 
-  <div class="container profile-container">
+  <div class="container content-center">
     <h1 class="mb-4">The Mysterious Author</h1>
     <div class="coin-container">
       <div class="coin" id="coin">
@@ -40,19 +40,23 @@
           <img src="contents/indexphoto/profile.jpg" alt="Back Image" class="back">
       </div>
   </div>
-  <button class="btn btn-primary" onclick="flipCoin()">Flip Coin</button>
+  <div class="text-center">
+    <button class="btn btn-primary" onclick="flipCoin()">Flip to reveal</button>
+    <p class="name-shadow">Guy Bracha</p>
+  </div>
   <script>
     function flipCoin() {
         const coin = document.getElementById('coin');
         coin.classList.toggle('flip');
     }
   </script>
-    <p class="name-shadow">Guy Bracha</p>
     <a href="mailto:guy.bracha@gmail.com" class="btn btn-outline-warning mt-3">Business Inquiries - Press Here</a>
   </div>
-
-  <footer class="text-center mt-5">
-    <p><a href="https://github.com/guybracha/compass-world">Source Code</a></p>
+  <footer class="text-center py-4 bg-secondary text-white">
+    <p>© 2024 Compass World. All Rights Reserved.</p>
+    <a href="https://github.com/guybracha/compass-world" class="text-white">Source Code</a>
+    <br>
+    <img src="contents/indexphoto/icon.png" height="200px" width="auto" class="mt-3">
   </footer>
 
   <!-- Google Analytics and Google Translate scripts -->
