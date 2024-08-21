@@ -1,103 +1,32 @@
-/* Container for the timeline */
 .timeline {
-    position: relative;
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* הבטחה שהקונטיינר לא יעבור את הרוחב של המסך */
     margin: 0 auto;
     padding: 20px 0;
+    overflow-x: hidden; /* ביטול גלילה אופקית */
 }
 
-/* Vertical line in the middle */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #f8d568;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-/* Base style for all cards */
 .timeline-card {
+    width: 90%; /* הקטנת הרוחב ל-90% על מנת למנוע גלישה */
+    max-width: 500px; /* הבטחה שהכרטיסים לא יעלו על רוחב קבוע */
+    margin-bottom: 40px;
     padding: 20px;
-    position: relative;
-    width: 45%; /* Adjusted width to prevent overlap */
-    background-color: inherit;
+    background-color: #f1c40f;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 40px; /* Increased margin to prevent overlap */
     transition: transform 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Hover effect for scaling the card */
-.timeline-card:hover {
-    transform: scale(1.03);
-}
-
-/* Cards on the left */
-.timeline-card-left {
-    left: 0;
-    transform: translateX(-10%);
-}
-
-/* Cards on the right */
-.timeline-card-right {
-    left: 55%;
-    transform: translateX(-10%);
-}
-
-/* Arrow for the left cards */
-.timeline-card-left::after {
-    content: '';
-    position: absolute;
-    right: -16px;
-    top: 15px;
-    border-style: solid;
-    border-width: 8px 0 8px 8px;
-    border-color: transparent transparent transparent #f8d568;
-}
-
-/* Arrow for the right cards */
-.timeline-card-right::after {
-    content: '';
-    position: absolute;
-    left: -16px;
-    top: 15px;
-    border-style: solid;
-    border-width: 8px 8px 8px 0;
-    border-color: transparent #f8d568 transparent transparent;
-}
-
-/* Responsive design for screens less than 768px */
 @media screen and (max-width: 768px) {
-    /* Make the cards full width and remove left/right placement */
     .timeline-card {
-        width: 100%;
-        left: 0 !important;
-        transform: none;
-        margin-bottom: 20px; /* Adjusted for smaller screens */
+        width: 95%; /* התאמת רוחב הכרטיסים למכשירים ניידים */
     }
 
-    /* Center the arrow for all cards */
-    .timeline-card::after {
-        left: 50%;
-        top: 0;
-        margin-left: -8px;
-        border-width: 8px 8px 0 8px;
-        border-color: #f8d568 transparent transparent transparent;
-    }
-
-    /* Hide the vertical line on small screens */
     .timeline::after {
         display: none;
     }
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    padding: 20px;
-    color: white;
-    text-align: center;
 }
