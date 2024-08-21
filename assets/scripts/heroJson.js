@@ -119,4 +119,10 @@ const superList =  [{
         "Powers": "קנטאורית, מומחית בחץ וקשת",
         "img": "contents\\avatar2024\\heroes\\lionMan.png",
         "quote": "ברית, לפעולה!"
+    },{
+        "superName":"Optimus Quatum",
+        "privateName": "הייליתיאה",
+        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "img": "contents\\avatar2024\\heroes\\optimusQuantum.png",
+        "quote": "ברית, לפעולה!"
     }];

@@ -6,6 +6,7 @@
     <meta name="description" content="A universe of ideas by a one man - Atlas">
     <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/world.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -13,122 +14,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="assets/scripts/translate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </head>
-
-<style>
-    .fadeIn {
-      opacity: 0;
-      animation: fadeInAnimation 1s ease-in-out forwards;
-    }
-    .imgcenter{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-</style>
 <body class="bg-dark text-white">
   <div class="container-lg">
     <header>
-      <div class="text-center">
       <div id="logo">
-        <a href="index.html"><img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" height="120px"></a>
+          <a href="index.html"><img class="logo img-fluid" src="contents/indexphoto/logo.png" alt="logo"></a>
       </div>
-        <h1 class="title">Welcome to a new universe</h1>    
-      </div>
-    </header>  <nav class="navbar">
-    <a class="navbar-brand" href="index.html">Home</a>
-    <a class="navbar-brand" href="files.html">Gods and Monsters</a>
-    <a class="navbar-brand" href="history.html">Choronology</a>
-    <a class="navbar-brand" href="world.html">Atlas</a>
-    <a class="navbar-brand" href="about.html">Author</a>
+      <h1>Welcome to a new universe</h1>
+  </header>
+
+  <nav class="navbar">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="files.html">Gods and Monsters</a>
+      <a class="navbar-brand" href="history.html">Choronology</a>
+      <a class="navbar-brand" href="world.html">Atlas</a>
+      <a class="navbar-brand" href="about.html">Author</a>
   </nav>
-      <div id="google_translate_element"></div>
-        <article style="background-color: coral;">
-        <h1 class="text-center">Atlas</h1>
-        <p>אסופת תיעודים של ערים, אומות, צמחים ובעלי חיים המרכיבים את העולם המופלא הזה</p>
-        <div style="background-color: rgb(163, 243, 170); border: solid skyblue 3px;">
-        <h1>העולם</h1>
-        <h1>המזרח התיכון</h1>
-        <h2>תל ציון, ישראל</h2>
-        <p>ממוקמת דרומית בין באר שבע לסיני. נחשבת מרכז טכנולוגי עבור החבורה של פלאדין.</p>
-        <img class="img-fluid" src="contents/locations/negev.jpg" alt="negev">
-        <h2>מבצר פיטר הקדוש</h2>
-        <p>מבצר צלבני הממוקם במזרח הגליל (על יד רמת הגולן), משמש לעתים מקום מפגש של החבורה.</p>
-        <img class="img-fluid" src="contents/locations/fortress.jpg" alt="fortress">
-        <h2>העיר התחתית, תל אביב-יפו</h2>
-        <p>אזור תת-קרקעי הנמצא בתעלות הביוב של תל אביב, ומיושב על ידי שבט יצורים הנחשבים כ-"פרטצ'ים".</p>
-        <h2>הרצליה</h2>
-        <h3>בניין אטלס</h3>
-        <p>בניין עסקים השייך לוולטאז', הממוקם בדרום אזור התעשייה של העיר.</p>
-        <h3>פנינת המזרח</h3>
-        <p>מסעדה אסייתית השייכת לאדון נוין, שהגיע לישראל כפליט מוייטנאם. אחת מהמסעדות האהובות על החבורה.</p>
-        <h1>ארצות הברית</h1>
-        <h2>פייפר פארק, דלאוור</h2>
-        <p>עיר מסתורית שנחשבת לרוב האנשים כ"עיר על הנייר", אבל בפועל היא משמשת כבית עבור מכשפים.</p>
-        <img class="img-fluid" src="contents/locations/paper.jpg" alt="paepr park">
-        <h1>מזרח אירופה</h1>
-        <h2>דארקויה</h2>
-        <p>חבל ארץ הממוקם במזרח אירופה (על גבול רומניה-הונגריה), מאוכלס ברובו על ידי צוענים.</p>
-        <h2>אקטלבה</h2>
-        <p>ממוקמת במזרח אירופה בין בלארוס לפולין, בעלת ברית חשובה של איראן, נחשבת כמקלט למבוקשים.</p>
-        <h1>האיים הקאריביים</h1>
-        <h2>סונדיאנו</h2>
-        <p>אי עשיר הנמצא באיים הקאריביים, נשלט על ידי משפחת המלוכה של האי.</p>
-        <h1>האוקיינוס האטלנטי</h1>
-        <h2>סאבלניה</h2>
-        <p>רפובליקה חזקה הנמצאת בתחתית האוקיינוס האטלנטי. נשלטת על ידי מועצת העליונים.</p>
-        <img class="img-fluid" src="contents/locations/underwater.jpg" alt="underwater">
-        <h1>מזרח אסיה</h1>
-        <h2>דרגון-לה</h2>
-        <p>חבל ארץ הנמצא בין סין לטיבט, נשלט על ידי מסדר לוחמי הדרקון.</p>
-        <img class="img-fluid" src="contents/locations/himalaya.jpg" alt="himalaya">
-        <h1>האוקיינוס השקט</h1>
-        <h2>פאסיפיה</h2>
-        <p>פדרציית איים הנמצאת בלב האוקיינוס השקט. ממוקמת 15 אלף ק"מ מאיי הוואי.</p>
-        </div>
-        <img class="img-fluid" src="contents/indexphoto/worldmap.png" alt="מפה">
-        <div style="background-color: rgb(243, 163, 163); border: solid skyblue 3px;">
-          <h1>מיני העולם</h1>
-          <h2>בני האדם</h2>
-          <p>הומו סאפיינס. הגזע השולט בכדור הארץ.</p>
-          <h2>ילדי פריים</h2>
-          <p>הומו מיראביליס. דור חדש של ילדים שנולדו עם תחילת שנת 2000 שהתגלה אצלם גן נדיר היכול לפתח כוחות על.</p>
-          <h2>אנשי מים</h2>
-          <p>הומו אקווריוס. המין הדמוי-אנוש היחידי שחי באוקיינוסים. מין זה מאופיין עם וריאציות גופניות שונות: דמוי-אנוש, בנות ים, אנשי דג ועוד...</p>
-        </div>
-        <div style="background-color: rgb(196, 196, 196); border: solid skyblue 3px;">
-          <h1>המצאות וחידושים</h1>
-          <h2>ג'ברווקי</h2>
-          <p>מטוס סילון X61, הידוע גם בכינויו הג'ברווקי (על שם היצור מאליס בארץ הפלאות), משמש לעיתים ככלי התחבורה האווירי של חבורת פלאדין.</p>
-          <h2>הצב</h2>
-          <p>צוללת ענקית הנמצאת בבעלות החבורה והאחדות העולמית, משמשת למשימות חילוץ וחקר תת-ימיות.</p>
-          <h2>ווק-טום</h2>
-          <p>מכשיר קשר היכול ליצור הסוואה הולוגרמית לפי בחירותיו של המשתמש.</p>
-          <h2>כדורי מוביוס</h2>
-          <p>כדורי הרגעה לסובלים מהתקפי חרדה. הכדורים גורמים תחושת אשליה דמיונית לנוטלים אותה.</p>
-          <h2>שער ביפרוסט</h2>
-          <p>מכונה קוונטית היכולה ליצור שערים בין ממדיים הנפתחים בצד אחר הנמצא איפשהו בעולם.</p>
-        </div>
-        </article>
-        <br>
-        <script src="assets/scripts/scroll.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-        <footer>
-            <p>כל התכנים נכתבו ופותחו על ידי גיא ברכה</p>
-            <p>שימוש בתכנים למטרות אישיות כפוף לאישורו של היוצר</p>
-            <p>2023</p>
-        </footer>
+
+  <div id="google_translate_element"></div>
+
+  <article class="fadeIn">
+      <h1 class="text-center">Atlas</h1>
+      <p class="text-center">A collection of various records of places around the world</p>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>Middle East</h1>
+              <h2>תל ציון, ישראל</h2>
+              <p>ממוקמת דרומית בין באר שבע לסיני. נחשבת מרכז טכנולוגי עבור החבורה של פלאדין.</p>
+              <img class="img-fluid" src="contents/locations/negev.jpg" alt="negev">
+              <h2>מבצר פיטר הקדוש</h2>
+              <p>מבצר צלבני הממוקם במזרח הגליל (על יד רמת הגולן), משמש לעתים מקום מפגש של החבורה.</p>
+              <img class="img-fluid" src="contents/locations/fortress.jpg" alt="fortress">
+              <h2>העיר התחתית, תל אביב-יפו</h2>
+              <p>אזור תת-קרקעי הנמצא בתעלות הביוב של תל אביב, ומיושב על ידי שבט יצורים הנחשבים כ-"פרטצ'ים".</p>
+              <img class="img-fluid" src="contents/locations/sewers.jpg" alt="sewers">
+              <h2>הרצליה</h2>
+              <h3>בניין אטלס</h3>
+              <p>בניין עסקים השייך לוולטאז', הממוקם בדרום אזור התעשייה של העיר.</p>
+              <img class="img-fluid" src="contents/avatar2024/places/earthTower.png" alt="earth tower">
+              <h3>פנינת המזרח</h3>
+              <p>מסעדה אסייתית השייכת לאדון וו, שהגיע לישראל כפליט מוייטנאם. אחת מהמסעדות האהובות על החבורה.</p>
+              <img class="img-fluid" src="contents/locations/restaurant.jpg" alt="restaurant">
+          </div>
       </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>ארצות הברית</h1>
+              <h2>פייפר פארק, דלאוור</h2>
+              <p>עיר מסתורית שנחשבת לרוב האנשים כ"עיר על הנייר", אבל בפועל היא משמשת כבית עבור מכשפים.</p>
+              <img class="img-fluid" src="contents/locations/paper.jpg" alt="paper park">
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>מזרח אירופה</h1>
+              <h2>דארקויה</h2>
+              <p>חבל ארץ הממוקם במזרח אירופה (על גבול רומניה-הונגריה), מאוכלס ברובו על ידי צוענים.</p>
+              <h2>אקטלבה</h2>
+              <p>ממוקמת במזרח אירופה בין בלארוס לפולין, בעלת ברית חשובה של איראן, נחשבת כמקלט למבוקשים.</p>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>האיים הקאריביים</h1>
+              <h2>סונדיאנו</h2>
+              <p>אי עשיר הנמצא באיים הקאריביים, נשלט על ידי משפחת המלוכה של האי.</p>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>האוקיינוס האטלנטי</h1>
+              <h2>סאבלניה</h2>
+              <p>רפובליקה חזקה הנמצאת בתחתית האוקיינוס האטלנטי. נשלטת על ידי מועצת העליונים.</p>
+              <img class="img-fluid" src="contents/locations/underwater.jpg" alt="underwater">
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>מזרח אסיה</h1>
+              <h2>דרגון-לה</h2>
+              <p>חבל ארץ הנמצא בין סין לטיבט, נשלט על ידי מסדר לוחמי הדרקון.</p>
+              <img class="img-fluid" src="contents/locations/himalaya.jpg" alt="himalaya">
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <h1>האוקיינוס השקט</h1>
+              <h2>פאסיפיה</h2>
+              <p>מדינת-עיר השוכנת על פני האוקיינוס השקט, נחשבת לעיר הבירה של תושבי האוקיינוסים.</p>
+              <img class="img-fluid" src="contents/locations/pacific.jpg" alt="pacific">
+          </div>
+      </div>
+  </article>
+    <footer>
+        <p>&copy; Compass World. All Rights Reserved.</p>
+    </footer>
+    </div>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
         <script>
           window.dataLayer = window.dataLayer || [];

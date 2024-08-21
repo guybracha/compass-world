@@ -1,38 +1,83 @@
-
 * {
-    box-sizing: border-box;
-  }
-  h1, h2, h4, p{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e1e2f;
+  color: silver;
   font-family: 'Noto Sans Hebrew', sans-serif;
-  }
-  .central {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
- }
- .logo{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
- }
-  .container {
-    position: relative;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
-    background-color: rgb(0, 0, 181);
-  }
-  .bottom{
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  .btn{
-    background-color: gold;
-    color: black;
-  }
-  body{
-    margin: 0;
-    background-color: rgb(66, 66, 255);
-    background-image: linear-gradient(rgb(0, 0, 157), white);
-  }
+}
+
+h1, h2{
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+header .logo {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #343a40;
+}
+
+article {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+article h1, article h2 {
+  color: #343a40;
+}
+
+.btn-warning {
+  font-family: 'Rubik Bubbles', cursive;
+  border-radius: 15px;
+}
+
+.card {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+
+#showMe .col-md-4 {
+  margin-bottom: 20px;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+.card-body {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
