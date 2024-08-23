@@ -1,21 +1,17 @@
-class heroClass{
-    constructor(superName,privateName,Powers,img,quote){
-        this.superName =  superName;
+class heroClass {
+    constructor(superName, privateName = "Unknown", Powers, img, quote = "No quote available.") {
+        this.superName = superName;
         this.privateName = privateName;
         this.Powers = Powers;
         this.img = img;
         this.quote = quote;
     }
-    myText(buttonElement) {
-        const quoteParagraph = buttonElement.nextElementSibling;
-        quoteParagraph.innerHTML = this.quote;
-    }
-    
-    render(){
+
+    render(containerId) {
         let div = document.createElement("div");
         div.className = "col-md-4";
-        document.querySelector("#showMe").append(div);
-    
+        document.querySelector(containerId).append(div);
+
         div.innerHTML = `
             <div class="card">
                 <img src="${this.img}" alt="${this.superName}" class="card-img-top">
@@ -27,5 +23,5 @@ class heroClass{
                 </div>
             </div>
         `;
-    }    
-}    
+    }
+}

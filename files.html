@@ -10,6 +10,7 @@
     <script defer src="assets/scripts/heroes.js"></script>
     <script src="assets/scripts/heroJson.js"></script>
     <script src="assets/scripts/heroClass.js"></script>
+    <script src="assets/scripts/villainJson.js"></script>
     <script src="assets/scripts/random.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -44,17 +45,17 @@
         <button class="btn btn-warning" onclick="clickMe()">Secret Hero</button>
         <p id="random"></p>
       </div>
-
       <div class="bg-info text-white p-4 rounded mb-4">
-        <h2 class="text-center">Compass Alliance</h2>
+        <h2 class="text-center">Compass Alliance (Heroes)</h2>
         <img class="img-fluid d-block mx-auto mb-3" src="contents/indexphoto/union.png" alt="World union">
-        <div class="row" id="showMe"></div>
-      </div>
+        <div class="row" id="showMeHeroes"></div>
+    </div>
 
-      <!-- <div class="bg-danger text-white p-4 rounded">
-        <h2 class="text-center">The Bad Guys</h2>
-        <img class="img-fluid d-block mx-auto" src="contents/indexphoto/council.png" alt="Council">
-      </div> -->
+    <div class="bg-danger text-white p-4 rounded">
+        <h2 class="text-center">The Bad Guys (Villains)</h2>
+        <img class="img-fluid d-block mx-auto mb-3" src="contents/indexphoto/council.png" alt="Council">
+        <div class="row" id="showMeVillains"></div>
+    </div>
     </article>
 
     <footer class="text-center py-4 bg-secondary text-white">

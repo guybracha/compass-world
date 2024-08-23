@@ -1,12 +1,17 @@
-const init = () =>{
-    createList();
+const init = () => {
+    createList(superList, "#showMeHeroes");
+    createList(villainList, "#showMeVillains");
 }
 
-const createList = () => {
-    superList.forEach((item) =>{
-        let vip1 = new heroClass(item.superName,item.privateName,item.Powers,item.img,item.quote);
-        vip1.render();
-    })
+const createList = (list, containerId) => {
+    list.forEach((item) => {
+        // Set default values for missing fields
+        let privateName = item.privateName || "Unknown";
+        let quote = item.quote || "No quote available.";
+        
+        let character = new heroClass(item.superName || item.supername, privateName, item.Powers || item.powers, item.img, quote);
+        character.render(containerId);
+    });
 }
 
 init();
