@@ -19,7 +19,6 @@ class heroClass {
                     <h5 class="card-title">${this.superName}</h5>
                     <p class="card-text">Secret identity: ${this.privateName}</p>
                     <p class="card-text">Powers: ${this.Powers}</p>
-                    <p class="card-text"><i>${this.quote}</i></p>
                 </div>
             </div>
         `;

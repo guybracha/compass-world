@@ -1,22 +1,22 @@
 const HistoryList = [
     {
         "year": "750 BC",
-        "description": "מטאור מסתורי מתרסק באזור הלבנט במזרח התיכון"
+        "description": "A mysterious meteor crashes in the Levant region of the Middle East"
     },
     {
         "year": "2020",
-        "description": "במהלך סגרי הקורונה, מתחילים להתגלות דור חדש של בני אדם: הפוסט-אנושיים. המאופיינים בכוחות על ובמראה חריג. הדבר גורם לחששות בעולם."
+        "description": "During the corona lockdowns, a new generation of humans is beginning to emerge: the post-humans. Characterized by superpowers and an unusual appearance. This causes concerns in the world."
     },
     {
         "year": "2021",
-        "description": "לאחר עלייה גדולה במספר האנשים הנחשבים כ'פוסט-אנושיים', רוב ממשלות מחליטות לעקוב ולנטר אחריהם תחת ארגון חדש בשם האינטרגארד. תחת פיקודו של אלוף מאיר ירקוני."
+        "description": "After a large increase in the number of people considered 'post-human', most governments decide to track and monitor them under a new organization called the Interguard. Under the command of General Meir Yarkoni."
     },
     {
         "year": "2022",
-        "description": "במהלך חודש מאי, האנושות מצאה את עצמה תחת מתקפה מהחלל החיצון על ידי שבט חוצני בשם 'המפתחים', מטרתם הוא לחטוף את הפוסט-אנושיים במטרה לחקור אותם ולהפוך אותם כצבאם. רוב החטופים החליטו להתנגד ולהילחם בפולשים, ואילו חלק קטן שאינו יכל עוד לסמוך על בני האדם החליט לסייע לפולשים."
+        "description": "During the month of May, humanity found itself under attack from outer space by an alien tribe called the Developers, their goal is to kidnap the post-humans in order to study them and make them their army. Most of the abductees decided to resist and fight the invaders, while a small part who could no longer trust the humans decided to help the invaders."
     },
     {
         "year": "2023",
-        "description": "לאחר הפלישה שהסתיימה בניצחון לאנושות, מחליטים המורדים החטופים להתחיל לשרת ולהגן על ביתם. שישה מהם: פלאדין, וולטאז', אסטרל, ג'ייגנטיק, קומראד וצונאמי מחליטים לעבוד ביחד כצוות שיילחם וילכוד את החטופים שהחליטו לסייע לפולשים. לצוות הם מחליטים לקרוא בשם ברית המצפן."
+        "description": "After the invasion that ended in victory for humanity, the kidnapped rebels decide to start serving and protecting their home. Six of them: Paladin, Voltage, Astral, Gigentic, Comrade, and Tsunami decide to work together as a team to fight and capture the abductees who chose to help the invaders. They decide to name the team the Compass Alliance."
     }
 ];

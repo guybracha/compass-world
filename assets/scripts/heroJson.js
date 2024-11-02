@@ -1,6 +1,6 @@
 const superList =  [{
     "superName": "Paladin",
-    "privateName": "Yoav Ramon",
+    "privateName": "Guy Ramon",
     "Powers": "High Reflexes skill",
     "img": "contents\\avatar2024\\heroes\\paladin-min.png",
     "quote": "Alliance, to Action"
@@ -25,7 +25,7 @@ const superList =  [{
     "quote": "ברית, לפעולה!"
     },{
     "superName":"Comrade",
-    "privateName": "Ruslan Choeminsky",
+    "privateName": "Ruslan Chomesky",
     "Powers": "Nuclear Blasts",
     "img": "contents\\avatar2024\\heroes\\comrade-min.png",
     "quote": "ברית, לפעולה!"
@@ -42,7 +42,7 @@ const superList =  [{
     "img": "contents\\avatar2024\\heroes\\dragonFighter-min.png",
     "quote": "ברית, לפעולה!"
     },{
-        "superName":"Seraph",
+        "superName":"Symbol",
         "privateName": "Nate",
         "Powers": "Synthetic Man",
         "img": "contents\\avatar2024\\heroes\\seraph-min.png",
@@ -73,56 +73,56 @@ const superList =  [{
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Techno",
-        "privateName": "אליס קרלטון",
-        "Powers": "טכנופתיה - תקשורת עם מכונות",
+        "privateName": "Alice Carleton",
+        "Powers": "Technopathy",
         "img": "contents\\avatar2024\\heroes\\techno-min.png",
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Rocket Prime",
-        "privateName": "חי גרינברג",
-        "Powers": "שריון טילים היכול להטיס אותו",
+        "privateName": "Chaim Greenberg",
+        "Powers": "A giant Rocket Armor",
         "img": "contents\\avatar2024\\heroes\\rocketPrime-min.png",
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Northlight",
-        "privateName": "אור אנרדסן",
-        "Powers": "יצירת אורות",
+        "privateName": "Aurora Andeson",
+        "Powers": "Light Manipulation",
         "img": "contents\\avatar2024\\heroes\\northlight-min.png",
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Savior",
-        "privateName": "דניאל אוקס",
-        "Powers": "יצירת אובייקטים מריק",
+        "privateName": "Danny Ox",
+        "Powers": "Cosmic Omnipotente",
         "img": "contents\\avatar2024\\heroes\\savior-min.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"East",
-        "privateName": "הרקאדיוס",
-        "Powers": "קנטאור, מומחה בחרבות",
+        "superName":"Eastwind",
+        "privateName": "Unknown",
+        "Powers": "Aerokinesis",
         "img": "contents\\avatar2024\\heroes\\east-min.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"Sun",
-        "privateName": "הייליתיאה",
-        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "superName":"Sunshine",
+        "privateName": "Unknown",
+        "Powers": "Generating light sword",
         "img": "contents\\avatar2024\\heroes\\sun-min.png",
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Zero",
-        "privateName": "הייליתיאה",
-        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "privateName": "Z-25",
+        "Powers": "Mercenary Android",
         "img": "contents\\avatar2024\\heroes\\zero-min.png",
         "quote": "ברית, לפעולה!" 
     },{
         "superName":"Lion-Man",
-        "privateName": "הייליתיאה",
-        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "privateName": "Rex Blake",
+        "Powers": "A lion-like abilities",
         "img": "contents\\avatar2024\\heroes\\lionMan-min.png",
         "quote": "ברית, לפעולה!"
     },{
-        "superName":"Optimus Quatum",
-        "privateName": "הייליתיאה",
-        "Powers": "קנטאורית, מומחית בחץ וקשת",
+        "superName":"Optimus Quantum",
+        "privateName": "Unknown",
+        "Powers": "Quantic blasts",
         "img": "contents\\avatar2024\\heroes\\optimusQuantum-min.png",
         "quote": "ברית, לפעולה!"
     }];
