@@ -1,51 +1,97 @@
+/* Dark theme with a subtle gradient */
 body {
-    font-family: 'Bangers', cursive; /* Comic style font for headings */
-    background-color: #111; /* Dark theme for the site */
-    color: white;
+    font-family: 'Bangers', cursive;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c1c); /* Gradient background for a more dynamic dark theme */
+    color: #f8f9fa;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Navbar styling for a sleeker look */
 nav.navbar {
     justify-content: center;
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: #212529;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 nav.navbar a.navbar-brand {
-    color: #f8f9fa;
-    font-size: 1.2rem;
+    color: #ffb703;
+    font-size: 1.3rem;
+    font-weight: bold;
     margin: 0 15px;
+    transition: color 0.3s;
 }
 
 nav.navbar a.navbar-brand:hover {
-    color: #ffb703;
+    color: #f8f9fa; /* Reverse hover effect */
+    text-shadow: 0 0 5px #ffb703;
 }
 
+/* Enhanced card styling */
 .card {
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Grow card on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 183, 3, 0.5); /* אפקט זוהר עדין */
 }
 
+
+/* Footer styling for a cohesive look */
 footer {
-    background-color: #444;
-    padding: 20px;
+    background-color: #333;
+    color: #f8f9fa;
+    padding: 25px 0;
+    text-align: center;
 }
 
 footer a {
-    color: #f1c40f;
+    color: #ffb703;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #16a085;
+    text-decoration: underline;
 }
 
-/* Styling for hero section text overlay */
+footer p, footer a {
+    margin: 0; /* מסיר מרווחים פנימיים מיותרים */
+}
+
+footer .container {
+    padding: 10px 20px; /* מצמצם את גובה ה-footer */
+}
+
+footer img {
+    margin-left: auto; /* מוודא שהתמונה מיושרת לצד ימין */
+}
+
+
+/* Hero section text overlay with a bolder style */
 .hero-section .position-absolute {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 12px;
+    color: #ffb703;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Button styling for a cohesive, modern look */
+.btn-custom {
+    background-color: #ffb703;
+    color: #111;
+    font-weight: bold;
+    border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #f1c40f;
+    transform: translateY(-3px); /* Slight lift effect on hover */
 }
