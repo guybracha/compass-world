@@ -16,13 +16,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="assets/scripts/poll.js"></script>
 </head>
+<style>
+  /* סגנון לקונטיינר הראשי */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #c6ffee; /* צבע רקע, אם יש */
+    overflow: hidden; /* מונע גלישה מחוץ לגבולות */
+  }
+
+  /* סגנון לתמונות */
+  .team-image {
+    width: 100%;
+    max-width: 120px; /* רוחב מקסימלי */
+    height: auto; /* גובה יחסי לרוחב */
+    margin: 0 auto; /* ממרכז את התמונה */
+    display: block; /* כדי שהתמונה לא תהיה inline */
+    border-radius: 50%; /* עיגול */
+  }
+
+  /* עבור מסכים קטנים */
+  @media (max-width: 576px) {
+    .team-image {
+      max-width: 90px; /* הקטנת גודל התמונה בטלפונים */
+    }
+  }
+
+  /* סגנון לכותרות מתחת לתמונות */
+  .team-title {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: black; /* צבע טקסט */
+  }
+</style>
 <body class="bg-dark text-white">
   <div class="container-md">
     <header>
       <div class="text-center">
         <div id="logo">
           <a href="index.html">
-            <img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" height="120px">
+            <img class="logo" src="contents/indexphoto/logo.png" class="team-image" alt="logo" height="120px">
           </a>
         </div>
         <h1 class="title display-4">Welcome to a New Universe</h1>    
@@ -38,63 +73,184 @@
 
     <div id="google_translate_element" class="my-3"></div>
 
-    <section class="hero-section text-center">
-      <div class="position-relative text-center">
-        <img src="contents/art2024/allianceunlimitedCol.png" class="img-fluid rounded" alt="Unlimited">
-      </div>
-    </section>
-    <section class="poll-section">
-      <h2>What is your favorite hero?</h2>
-      <form id="poll-form">
-        <input type="radio" id="paladin" name="hero" value="Paladin">
-        <label for="paladin">Paladin</label><br>
-        <input type="radio" id="voltage" name="hero" value="Voltage">
-        <label for="voltage">Voltage</label><br>
-        <input type="radio" id="astral" name="hero" value="Astral">
-        <label for="astral">Astral</label><br>
-        <button type="submit" class="btn btn-warning">Submit</button>
-      </form>
-      <div id="poll-result"></div>
-    </section>
-    
-    <section class="profiles my-5">
-      <h2 class="text-center text-warning mb-4">Meet the Heroes</h2>
+    <div class="container">
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card bg-primary text-white shadow">
-            <img src="contents/avatar2024/heroes/paladin-min.png" class="card-img-top" alt="Hero 1">
-            <div class="card-body">
-              <h5 class="card-title">Paladin</h5>
-              <p class="card-text">The Knight of Tomorrow</p>
-              <a href="files.html" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
+        <div class="col-6">
+          <img class="img-fluid" style="border-radius: 15%;" src="contents/gallery/UniteCol-min.png" alt="unite to action!">
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-danger text-white shadow">
-            <img src="contents/avatar2024/heroes/voltage-min.png" class="card-img-top" alt="Hero 2">
-            <div class="card-body">
-              <h5 class="card-title">Voltage</h5>
-              <p class="card-text">The Electric Man</p>
-              <a href="files.html" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
+        <div class="col-6">
+          <h3 style="text-align: center; background-color: yellow; color: black;">Compass Alliance</h3>
+          <p style="background-color: green; color: black; text-align: center; max-width: 500px; margin: 0 auto; height: 200px; overflow-y: auto; padding: 10px;">
+            Founded in late 2020 during the Corona pandemic, when the nations of the world embarked on an arms race after
+            young teenagers who had acquired powers during the pandemic, these teenagers were newly classified as
+            post-humans. This race was also flavored with global polarization, bringing about the arrival of invaders from 
+            outer space who aimed to conquer and enslave humanity. And just when it seemed that there was no hope, 
+            six young superheroes emerged from the darkness who managed to return a war that ended in victory for humanity, 
+            and on a different day from the days, a team was formed with the goal of gathering and uniting the best 
+            superheroes from across the universe and young people who saw their new powers as a curse. 
+            This is the story of the Compass Alliance...
+          </p>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-success text-white shadow">
-            <img src="contents/avatar2024/heroes/astral-min.png" class="card-img-top" alt="Hero 3">
-            <div class="card-body">
-              <h5 class="card-title">Astral</h5>
-              <p class="card-text">The Cosmic Lady</p>
-              <a href="files.html" class="btn btn-warning">Read More</a>
+      </div>            
+      <div style="text-align: center;">
+        <h1 style="color: #ffb703; text-decoration: underline;">Team Members</h1>
+        <div style="background-color: aquamarine;">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/paladin-min.png" alt="Paladin">
+                <h3 class="team-title">Paladin</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/astral-min.png" alt="Lady Astral">
+                <h3 class="team-title">Lady Astral</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/voltage-min.png" alt="Voltage">
+                <h3 class="team-title">Voltage</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/tsunami-min.png" alt="Tsunami">
+                <h3 class="team-title">Tsunami</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/gigantic-min.png" alt="Gigantic">
+                <h3 class="team-title">Gigantic</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/comrade-min.png" alt="Comrade">
+                <h3 class="team-title">Comrade</h3>
+              </div>
             </div>
-          </div>
+            <div class="row text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/lordPhoenix-min.png" alt="Captain Phoenix">
+                <h3 class="team-title">Captain Phoenix</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/bloom-min.png" alt="Bloom">
+                <h3 class="team-title">Bloom</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/dragonFighter-min.png" alt="Dragon Fighter">
+                <h3 class="team-title">Dragon Fighter</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/maltesecross-min.png" alt="Maltese Cross">
+                <h3 class="team-title">Maltese Cross</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/size-min.png" alt="Size">
+                <h3 class="team-title">Size</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/mariposa-min.png" alt="Mariposa">
+                <h3 class="team-title">Mariposa</h3>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/cheerstar-min.png" alt="Cheerstar">
+                <h3 class="team-title">Cheerstar</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/docPhysics-min.png" alt="Doctor Physics">
+                <h3 class="team-title">Doctor Physics</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/enforcer-min.png" alt="Enforcer">
+                <h3 class="team-title">The Enforcer</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/honeybee-min.png" alt="Honeybee">
+                <h3 class="team-title">Honeybee</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/metalclad-min.png" alt="Metalclad">
+                <h3 class="team-title">Metalclad</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/optimusQuantum-min.png" alt="Optimus Quantum">
+                <h3 class="team-title">Optimus Quantum</h3>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/melody-min.png" alt="Melody">
+                <h3 class="team-title">Melody</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/east-min.png" alt="Eastwind">
+                <h3 class="team-title">Eastwind</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/sun-min.png" alt="Sunshine">
+                <h3 class="team-title">Sunshine</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/ra-min.png" alt="Ra">
+                <h3 class="team-title">Ra</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/rubberMan-min.png" alt="Rubberman">
+                <h3 class="team-title">Rubberman</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/rocketPrime-min.png" alt="Rocket Prime">
+                <h3 class="team-title">Rocket Prime</h3>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/redMole-min.png" alt="Red Mole">
+                <h3 class="team-title">Red Mole</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/scarab-min.png" alt="Scarab">
+                <h3 class="team-title">Scarab</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/seraph-min.png" alt="Symbol">
+                <h3 class="team-title">Symbol</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/timer-min.png" alt="Timer">
+                <h3 class="team-title">Timer</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/western-min.png" alt="Western">
+                <h3 class="team-title">Western</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/wetlander-min.png" alt="Wetlander">
+                <h3 class="team-title">Wetlander</h3>
+              </div>
+            </div>
+            <div class="row text-center justify-content-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/savior-min.png" alt="Captain Space">
+                <h3 class="team-title">Captain Space</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/snowie-min.png" alt="Snowie">
+                <h3 class="team-title">Snowie</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/squire-min.png" alt="Squire">
+                <h3 class="team-title">Squire</h3>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <img class="team-image" style="border-radius: 50%; max-width: 150px;" src="contents/avatar2024/heroes/techno-min.png" alt="Techno">
+                <h3 class="team-title">Techno</h3>
+              </div>
+            </div>
+          </div>          
         </div>
       </div>
-    </section>
+    </div>
 
     <footer class="text-center py-3 bg-dark text-light">
-      <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center justify-content-between">
           <!-- Left Content -->
           <div>
               <p class="mb-1">&copy; 2024 Compass World. All Rights Reserved.</p>
