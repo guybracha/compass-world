@@ -76,7 +76,14 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <img class="img-fluid" style="border-radius: 15%;" src="contents/gallery/UniteCol-min.png" alt="unite to action!">
+          <img 
+            class="img-fluid" 
+            style="border-radius: 15%; cursor: pointer;" 
+            src="contents/gallery/UniteCol-min.png" 
+            alt="unite to action!" 
+            data-bs-toggle="modal" 
+            data-bs-target="#imageModal"
+          >
         </div>
         <div class="col-6">
           <h3 style="text-align: center; background-color: yellow; color: black;">Compass Alliance</h3>
@@ -249,6 +256,20 @@
       </div>
     </div>
 
+    <!-- MODAL -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img 
+          src="contents/gallery/UniteCol-min.png" 
+          alt="unite to action!" 
+          class="img-fluid" 
+          >
+      </div>
+    </div>
+   </div>
+  </div>
     <footer class="text-center py-3 bg-dark text-light">
       <div class="d-flex align-items-center justify-content-between">
           <!-- Left Content -->
@@ -263,8 +284,6 @@
           <img src="contents/indexphoto/icon.png" height="80" width="auto" alt="Compass World Logo" style="filter: drop-shadow(0px 0px 10px #ffb703);">
       </div>
   </footer>
-  
-  
   </div>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>

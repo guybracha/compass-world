@@ -6,14 +6,14 @@ const superList =  [{
     "quote": "Alliance, to Action"
     },
     {
-    "superName": "Astral",
+    "superName": "Lady Astral",
     "privateName": "Princess Mianeska",
     "Powers": "Cosmic Strength and mist generation",
     "img": "contents\\avatar2024\\heroes\\astral-min.png",
     "quote": "ברית, לפעולה!"
     },{
     "superName": "Voltage",
-    "privateName": "Alec Atlas",
+    "privateName": "Adam Atlas",
     "Powers": "Electricity",
     "img": "contents\\avatar2024\\heroes\\voltage-min.png",
     "quote": "ברית, לפעולה!"
