@@ -95,3 +95,27 @@ footer img {
     background-color: #f1c40f;
     transform: translateY(-3px); /* Slight lift effect on hover */
 }
+
+.modal-dialog {
+    max-width: 80%; /* קובע את רוחב המודאל */
+}
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+nav.navbar a.navbar-brand {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+nav.navbar a.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.btn, .team-title {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover, .team-title:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 183, 3, 0.5);
+}
