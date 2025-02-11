@@ -1,4 +1,4 @@
-let heroes = ["Paladin","Voltage","Lady Astral","Gigatnic","Comrade","Tsunami","Eastwind","Sunshine","Jupiterian"];
+let heroes = ["Paladin","Voltage","Lady Astral","Gigatnic","Comrade","Tsunami","Eastwind","Sunshine","Jupiterian","Symbol","Captain Space"];
 
 const surprise = heroes[(Math.floor(Math.random() * (heroes.length)))];
 function clickMe(){
