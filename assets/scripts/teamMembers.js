@@ -25,7 +25,7 @@ const teamMembers = [
     { name: "Scarab", image: "./contents/profile/scarab-min.png"},
     { name: "Timer", image: "./contents/profile/timer-min.png"},
     { name: "Rubberman", image: "./contents/profile/rubberman-min.png"},
-    { name: "techno", image: "./contents/profile/techno-min.png"},
+    { name: "Techno", image: "./contents/profile/techno-min.png"},
     { name: "Ra", image: "./contents/profile/ra-min.png"},
     { name: "Captain Phoenix", image: "./contents/profile/captainPhoenix-min.png"},
     { name: "Wetlander", image: "./contents/profile/wetlander-min.png"},
@@ -39,11 +39,11 @@ const galleryContainer = document.getElementById("dynamicGallery");
   teamMembers.forEach(member => {
     // צור עמודה לכל דמות
     const col = document.createElement("div");
-    col.className = "col-6 col-md-2 mb-6 text-center";
+    col.className = "col-4 col-md-2 mb-6 text-center";
     col.innerHTML = `
       <img 
         class="img-fluid" 
-        style="border-radius: 25%; cursor: pointer;" 
+        style="border-radius: 50%; cursor: pointer;" 
         src="${member.image}" 
         alt="${member.name}" 
         data-bs-toggle="modal" 
