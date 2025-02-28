@@ -6,9 +6,9 @@ let list=[
     {Name: "Gigantic"},
     {Name: "Jupiterian"},
     {Name: "Leviathan"},
-    {Name: "East"},
-    {Name: "Sun"},
-    {Name: "Savior"},
+    {Name: "Eastwind"},
+    {Name: "Sunshine"},
+    {Name: "Captain Space"},
     {Name: "Rocket Prime"}
 ];
 
