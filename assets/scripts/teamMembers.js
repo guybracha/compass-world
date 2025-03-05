@@ -36,27 +36,29 @@ const teamMembers = [
 ];
 
 const galleryContainer = document.getElementById("dynamicGallery");
-  teamMembers.forEach(member => {
-    // צור עמודה לכל דמות
+teamMembers.forEach(member => {
     const col = document.createElement("div");
-    col.className = "col-4 col-md-2 mb-6 text-center";
+    col.className = "col-4 col-md-2 mb-4 text-center";
     col.innerHTML = `
-      <img 
-        class="img-fluid" 
-        style="border-radius: 50%; cursor: pointer;" 
-        src="${member.image}" 
-        alt="${member.name}" 
-        data-bs-toggle="modal" 
-        data-bs-target="#imageModal"
-        onclick="openModal('${member.image}', '${member.name}')"
-      >
-      <h5 class="mt-2" style="color: black;">${member.name}</h5>
+        <div class="card border-0 shadow-sm" style="background: #222; border-radius: 15px;">
+            <img 
+                class="img-fluid hover-zoom"
+                style="border-radius: 50%; cursor: pointer; transition: transform 0.3s ease;"
+                src="${member.image}" 
+                alt="${member.name}" 
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal"
+                onclick="openModal('${member.image}', '${member.name}', '${member.bio}')"
+            >
+            <h5 class="mt-2" style="color: #fdd835; font-weight: bold;">${member.name}</h5>
+        </div>
     `;
     galleryContainer.appendChild(col);
-  });
+});
 
-  // פונקציה לפתיחת ה-MODAL
-  function openModal(image, name) {
+// פונקציה לפתיחת ה-MODAL
+function openModal(image, name, bio) {
     document.getElementById("modalImage").src = image;
     document.getElementById("modalTitle").textContent = name;
-  }
+    document.getElementById("modalBio").textContent = bio;
+}
