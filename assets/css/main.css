@@ -1,8 +1,7 @@
 /* Dark theme with a subtle gradient */
 body {
     font-family: 'Bangers', cursive;
-    background: linear-gradient(135deg, #0d0d0d, #1c1c1c); /* Gradient background for a more dynamic dark theme */
-    color: #f8f9fa;
+    color: #00376d;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
@@ -40,7 +39,7 @@ nav.navbar a.navbar-brand:hover {
 
 /* Footer styling for a cohesive look */
 footer {
-    background-color: #333;
+    background-color: #3f477c;
     color: #f8f9fa;
     padding: 25px 0;
     text-align: center;
@@ -118,4 +117,8 @@ nav.navbar a.navbar-brand:hover {
 .btn:hover, .team-title:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 183, 3, 0.5);
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
 }
