@@ -1,9 +1,8 @@
 /* Dark theme with a subtle gradient */
 body {
-    font-family: 'Bangers', cursive;
-    color: #00376d;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    background: linear-gradient(180deg, #0d1117 0%, #1f2937 100%);
 }
+
 
 /* Navbar styling for a sleeker look */
 nav.navbar {
@@ -28,8 +27,13 @@ nav.navbar a.navbar-brand:hover {
 
 /* Enhanced card styling */
 .card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff0d; /* חצי שקוף */
+    border: 1px solid #ffb70355;
+    backdrop-filter: blur(4px);
 }
+
 
 .card:hover {
     transform: scale(1.05);
@@ -111,6 +115,13 @@ nav.navbar a.navbar-brand:hover {
     transform: scale(1.1);
 }
 
+.team-title {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    color: #ffb703;
+    text-shadow: 2px 2px 0 #000;
+}
+
 .btn, .team-title {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -122,3 +133,40 @@ nav.navbar a.navbar-brand:hover {
 .hover-zoom:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    .hero-section .position-absolute {
+      font-size: 1.1rem;
+      padding: 10px;
+    }
+  
+    .navbar-brand {
+      font-size: 1rem;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .card .btn {
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Bangers', cursive;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
