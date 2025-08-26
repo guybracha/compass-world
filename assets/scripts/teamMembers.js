@@ -31,19 +31,7 @@ const teamMembers = [
     { name: "Bloom", image: "./contents/profile/bloom-min.png"},
     { name: "Squire", image: "./contents/profile/squire-min.png"},
     { name: "Snowie", image: "./contents/profile/snowie-min.png"},
-    { name: "Optimus Quantum", image: "./contents/profile/optimusQuantum-min.png"},
-    { name: "Guardsman", image: "./contents/profile/guardsman-min.png"},
-    { name: "Nighthunter", image: "./contents/profile/nighthunter-min.png"},
-    { name: "Wonderbeast", image: "./contents/profile/wonderbeast-min.png"},
-    { name: "Mirror Girl", image: "./contents/profile/mirrorgirl-min.png"},
-    { name: "The Alchemist", image: "./contents/profile/alchemist-min.png"},
-    { name: "Hightask", image: "./contents/profile/hightask-min.png"},
-    { name: "Polar", image: "./contents/profile/polar-min.png"},
-    { name: "Genesis", image: "./contents/profile/genesis-min.png"},
-    { name: "Bricktown", image: "./contents/profile/bricktown-min.png"},
-    { name: "Cheshire Surprise", image: "./contents/profile/cheshiresurprise-min.png"},
-    { name: "New Age", image: "./contents/profile/newage-min.png"},
-    { name: "Astro Sentry", image: "./contents/profile/astrosentry-min.png"}
+    { name: "Optimus Quantum", image: "./contents/profile/optimusQuantum-min.png"}
 ];
 
 const galleryContainer = document.getElementById("dynamicGallery");

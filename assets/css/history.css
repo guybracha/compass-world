@@ -1,48 +1,119 @@
+/* =========================
+   Chronology (history.css)
+   תואם ל-main.css ול-Bootstrap 5
+   ========================= */
+
+/* Timeline wrapper */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%; /* הבטחה שהקונטיינר לא יעבור את הרוחב של המסך */
-    margin: 0 auto;
-    padding: 20px 0;
-    overflow-x: hidden; /* ביטול גלילה אופקית */
+  display: grid;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  position: relative;
 }
 
+/* קו מרכזי עדין (רק במסכים רחבים) */
+@media (min-width: 992px) {
+  .timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  }
+}
+
+/* כרטיס Timeline בסיסי */
 .timeline-card {
-    width: 90%; /* הקטנת הרוחב ל-90% על מנת למנוע גלישה */
-    max-width: 500px; /* הבטחה שהכרטיסים לא יעלו על רוחב קבוע */
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #f1c40f;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 16px;
+  padding: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 34px rgba(0,0,0,.45);
+  border-color: rgba(255, 183, 3, .55);
 }
 
-@media screen and (max-width: 768px) {
-    .timeline-card {
-        width: 95%; /* התאמת רוחב הכרטיסים למכשירים ניידים */
-    }
-
-    .timeline::after {
-        display: none;
-    }
+/* נקודת ציר (דקורטיבי) במסכים רחבים */
+@media (min-width: 992px) {
+  .timeline-card {
+    position: relative;
+  }
+  .timeline-card::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--brand);
+    box-shadow: 0 0 0 4px rgba(255,183,3,.2);
+  }
+  /* צד שמאל */
+  .timeline > *:nth-child(odd) .timeline-card::after {
+    right: -30px;
+  }
+  /* צד ימין */
+  .timeline > *:nth-child(even) .timeline-card::after {
+    left: -30px;
+  }
 }
 
+/* כותרות / טקסטים בכרטיס */
+.timeline-card h3,
+.timeline-card .title {
+  font-family: 'Bangers', cursive;
+  color: var(--brand);
+  margin-bottom: .35rem;
+  text-shadow: 2px 2px 6px rgba(255, 183, 3, .35);
+}
+.timeline-card .meta {
+  font-size: .9rem;
+  color: var(--text-300);
+  margin-bottom: .5rem;
+}
+.timeline-card p {
+  margin: 0;
+  color: var(--text-100);
+}
+
+/* תמונות בתוך הכרטיסים */
+.timeline-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: .5rem 0;
+}
+
+/* Navbar – יישור קל (נשען על main.css) */
 nav.navbar {
-    justify-content: center;
-    padding: 20px 0;
-    background-color: #212529;
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-nav.navbar a.navbar-brand {
-    color: #f8f9fa;
-    font-size: 1.2rem;
-    margin: 0 15px;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .timeline-card { padding: 14px; }
 }
 
-nav.navbar a.navbar-brand:hover {
-    color: #ffb703;
+/* נגישות ותנועה */
+:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }

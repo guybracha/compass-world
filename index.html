@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Compass World - Homepage</title>
-    <meta name="description" content="A universe of ideas by one man - Homepage">
-    <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script defer src="assets/scripts/teamMembers.js"></script>
-    <script defer src="assets/scripts/list.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compass World - Homepage</title>
+  <meta name="description" content="A universe of ideas by one man - Homepage" />
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap core + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Performance: preload logo -->
+  <link rel="preload" as="image" href="contents/art2025/new_logo_fix.png" imagesrcset="contents/art2025/new_logo_fix.png 1x" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compass World" />
+  <meta property="og:description" content="A bold, cinematic superhero universe." />
+  <meta property="og:image" content="contents/indexphoto/rotate.png" />
+  <meta property="og:type" content="website" />
+
+  <script defer src="assets/scripts/teamMembers.js"></script>
+  <script defer src="assets/scripts/list.js"></script>
 </head>
+
 <body class="bg-dark text-white">
     <header class="text-center py-4">
         <a href="index.html">
-            <img class="logo" src="contents/art2025/new_logo_fix.png" alt="logo" height="250px" class="img-fluid">
+          <img class="img-fluid logo-glow" src="contents/indexphoto/logo.png" alt="Compass World logo" height="120" />
         </a>
         <h1 class="display-4 text-warning">Welcome to a New Universe</h1>
     </header>
-    <!--
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
-        <div class="container-fluid justify-content-center">
-            <a class="nav-link text-warning mx-3" href="index.html">Home</a>
-            <a class="nav-link text-warning mx-3" href="files.html">Gods and Monsters</a>
-            <a class="nav-link text-warning mx-3" href="history.html">Chronology</a>
-            <a class="nav-link text-warning mx-3" href="world.html">Atlas</a>
-            <a class="nav-link text-warning mx-3" href="about.html">Author</a>
-        </div>
-    </nav>
-    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
+      <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
+      <span class="fw-bold">Compass World</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="mainNav" class="collapse navbar-collapse justify-content-center">
+      <ul class="navbar-nav gap-lg-3">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="files.html">Gods & Monsters</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+        <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+      </ul>
+      <div class="d-none d-lg-flex ms-auto">
+        <a href="https://github.com/guybracha/compass-world" target="_blank" class="btn btn-outline-warning btn-sm">
+          <i class="bi bi-github"></i> Source
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
     <div id="google_translate_element" class="my-3 text-center"></div>
 
-    <main class="container py-4">
-        <section class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img class="img-fluid rounded shadow-lg" src="contents/gallery/UniteCol-min.png" alt="Unite to Action!" data-bs-toggle="modal" data-bs-target="#imageModal">
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-center bg-warning text-dark py-2 rounded">Compass Alliance</h3>
-                <p class="p-3 bg-success text-white rounded shadow" style="max-height: 200px; overflow-y: auto;">
-                    Born out of the chaos of the 2020 pandemic, as nations raced to recruit the next generation of post-humans, six young heroes changed the course of history.  
-                    In a world torn by global polarization and alien invasions, a new force emerged —  
-                    This is the story of... The Compass Alliance.
-                    </p>
-            </div>
-        </section>
+    <main class="container py-5">
+  <section class="row align-items-center g-4">
+    <div class="col-md-6">
+      <div class="glass p-4 rounded-4">
+        <h3 class="section-title mb-3"><span class="marker">Compass Alliance</span></h3>
+        <p class="mb-0">
+          Born out of the chaos of the 2020 pandemic, as nations raced to recruit the next generation of post-humans,
+          six young heroes changed the course of history. In a world torn by global polarization and alien invasions,
+          a new force emerged — This is the story of... <strong>The Compass Alliance.</strong>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <img class="img-fluid rounded-4 shadow-lg hover-float" src="contents/gallery/UniteCol-min.png" alt="Compass Alliance poster"
+           data-bs-toggle="modal" data-bs-target="#imageModal" />
+    </div>
+  </section>
 
-        <section class="text-center my-5">
-            <h2 class="text-warning text-decoration-underline">Team Members</h2>
-            <div class="bg-secondary p-4 rounded shadow">
-                <div class="row" id="dynamicGallery"></div>
-            </div>
-        </section>
-    </main>
-    <div class="container">
+  <section id="team" class="my-5">
+    <h2 class="section-heading text-center">Team Members</h2>
+    <div class="bg-surface p-4 rounded-4 shadow-sm">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="dynamicGallery"></div>
+    </div>
+  </section>
+</main>
+
+<section id="gallery" class="container pb-5">
         <h2 style="text-align: center;">Gallery</h2>
         <div class="row">
             <div class="col-md-4">
@@ -78,7 +117,7 @@
         <div class="text-center">
             <a href="https://www.deviantart.com/guybracha/art/Teen-Titans-Compass-Alliance-Go-to-Action-1186319551"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djmay0v-6cc74d44-526b-4ca0-94ae-b322eb7b1638.png/v1/fill/w_1280,h_906,q_80,strp/teen_titans_compass_alliance__go_to_action__by_guybracha_djmay0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTA2IiwicGF0aCI6IlwvZlwvZWUxNGU2NGYtMzJhNC00YzliLTg4N2ItNjdiY2FmOGEyNDU3XC9kam1heTB2LTZjYzc0ZDQ0LTUyNmItNGNhMC05NGFlLWIzMjJlYjdiMTYzOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3e4sQV9yWn_j02kATOSVB6MT9aRvqybp3bq-fHkNxZM" alt="Compass Alliance VS. The Teen Titans" class="img-fluid"></a>
         </div>
-    </div>
+</section>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -90,25 +129,37 @@
         </div>
     </div>
 
-    <footer class="text-center py-3 bg-dark text-light">
-        <div class="d-flex align-items-center justify-content-between">
-            <div>
-                <p class="mb-1">&copy; 2025 Compass World. All Rights Reserved.</p>
-                <a href="https://github.com/guybracha/compass-world" class="text-warning fw-bold" target="_blank">
-                    <i class="bi bi-github"></i> Source Code
-                </a>
-            </div>
-            <img src="contents/art2025/symbol.png" height="85" alt="Compass World Logo" style="filter: drop-shadow(0px 0px 10px #ffb703);">
-        </div>
-    </footer>
+    <footer class="py-4 mt-auto border-top-dark">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <div class="text-secondary small">
+      <div>&copy; 2025 Compass World. All Rights Reserved.</div>
+      <div class="mt-1">
+        <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i> Source Code
+        </a>
+      </div>
+    </div>
+    <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+  </div>
+</footer>
+
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1LV563TQEJ');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-1LV563TQEJ');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Back to top -->
+<button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<script>
+  const topBtn = document.querySelector('.back-to-top');
+  const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', onScroll); onScroll();
+  topBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+</script>
+
 </body>
 </html>

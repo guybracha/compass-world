@@ -1,138 +1,145 @@
-/* General Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* =========================
+   Gods & Monsters (files.css)
+   תואם ל-main.css ול-Bootstrap 5
+   ========================= */
 
-/* Body Styling */
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: 'Bangers', cursive;
-}
+/* Reset עדין */
+* { box-sizing: border-box; }
+.container { max-width: 1200px; }
 
-.container {
-  max-width: 1200px;
-}
-
-/* Header Styling */
-header .logo {
-  margin-bottom: 20px;
-}
-
+/* טיפוגרפיה ממוקדת עמוד */
+header .logo { margin-bottom: 16px; }
 .title {
-  font-size: 3rem;
-  text-shadow: 2px 2px 10px rgba(255, 183, 3, 0.8);
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2.2rem, 1.4rem + 2.5vw, 3rem);
+  color: var(--brand);
+  text-shadow: 2px 2px 10px rgba(255, 183, 3, .65);
 }
 
-/* Navigation */
+/* ----- Navbar -----
+   אל תשנה את ה-navbar מ-main.css; רק ניואנס קטן */
 nav.navbar {
-  justify-content: center;
-  padding: 15px 0;
-  background: linear-gradient(90deg, #ffb703, #ff5733);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-nav.navbar a.navbar-brand {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 0 20px;
-  transition: 0.3s;
-}
-
-nav.navbar a.navbar-brand:hover {
-  color: #121212;
-  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
-}
-
-/* Article Styling */
+/* ----- Article Wrapper ----- */
 article {
-  background-color: #222;
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  background: var(--glass);
+  color: var(--text-100);
+  padding: clamp(16px, 2vw, 24px);
+  border-radius: 16px;
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
 article h1, article h2 {
-  color: #ffb703;
+  font-family: 'Bangers', cursive;
+  color: var(--brand);
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(255, 183, 3, 0.5);
+  text-shadow: 2px 2px 6px rgba(255, 183, 3, .45);
 }
 
-/* Hero & Villain Sections */
-.bg-info, .bg-danger {
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+/* ----- Sections: Heroes / Villains -----
+   שומרים על המחלקות שהשתמשת בהן, אבל מכוונים אותן רק בתוך article
+   כדי לא לפגוע בעמודים אחרים */
+article .bg-info,
+article .bg-danger {
+  padding: clamp(16px, 2vw, 24px);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
 }
 
-.bg-info {
-  background: linear-gradient(90deg, #17a2b8, #005f73);
+/* Gradient עדין תואם פלטה */
+article .bg-info {
+  background: linear-gradient(135deg, rgba(23,162,184,.18), rgba(0,95,115,.22));
+}
+article .bg-danger {
+  background: linear-gradient(135deg, rgba(220,53,69,.20), rgba(106,4,15,.24));
 }
 
-.bg-danger {
-  background: linear-gradient(90deg, #dc3545, #6a040f);
-}
-
-/* Button Styling */
+/* ----- כפתורים ----- */
 .btn-warning {
-  font-family: 'Rubik Bubbles', cursive;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #ffb703, #ff5733);
-  border: none;
-  transition: 0.3s;
+  /* הסטייל הבסיסי מגיע מ-main.css; מוסיפים ניואנס קל */
+  border-radius: 14px;
+  padding: .65rem 1.1rem;
+  box-shadow: 0 8px 24px rgba(255, 183, 3, .25);
 }
-
 .btn-warning:hover {
-  background: linear-gradient(90deg, #ff5733, #ffb703);
-  box-shadow: 0 0 10px rgba(255, 183, 3, 0.8);
+  box-shadow: 0 10px 28px rgba(255, 183, 3, .35);
 }
 
-/* Cards */
+/* ----- כרטיסים לרשת דינמית (Heroes/Villains) ----- */
 .card {
-  border-radius: 15px;
-  margin-bottom: 20px;
-  background: #333;
-  color: white;
-  transition: 0.3s;
+  background: rgba(255,255,255,.04);
+  color: var(--text-100);
+  border-radius: 16px;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
-
 .card:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+  border-color: rgba(255, 183, 3, .55);
 }
-
 .card img {
-  border-radius: 15px 15px 0 0;
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
 .card-body {
-  background-color: black;
-  color: white;
-  padding: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+  color: var(--text-100);
+  padding: 16px;
 }
-
 .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: .35rem;
 }
-
 .card-text {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: .95rem;
+  color: var(--text-300);
 }
 
-/* Footer */
+/* תגיות/מדבקות קטנות אם תרצה להוסיף בעתיד */
+.badge-soft {
+  display: inline-block;
+  padding: .35rem .55rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text-300);
+  font-size: .75rem;
+}
+
+/* ----- תמונות גדולות בראש כל סקשן ----- */
+.hover-float { transition: transform .28s ease, box-shadow .28s ease; }
+.hover-float:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
+
+/* גריד הדינמי: רווחים יפים */
+#showMeHeroes, #showMeVillains { margin-top: .25rem; }
+
+/* ----- Footer ----- */
 footer {
-  background-color: #121212;
-  padding: 20px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,.03));
+  padding: 20px 0;
   text-align: center;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+footer a { color: var(--brand); }
+footer a:hover { color: var(--brand-600); }
+
+/* ----- נגישות ותנועה ----- */
+:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ----- רספונסיביות ----- */
+@media (max-width: 768px) {
+  .title { font-size: clamp(1.8rem, 4vw, 2.2rem); }
+  article { padding: 14px; }
 }
