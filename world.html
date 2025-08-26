@@ -1,145 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Compass World | Atlas</title>
-    <meta name="description" content="A universe of ideas by a one man - Atlas">
-    <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/world.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="assets/scripts/translate.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-</head>
-<body class="bg-dark text-white">
-  <div class="container-lg">
-    <header>
-      <div id="logo">
-          <a href="index.html"><img class="logo img-fluid" src="contents/indexphoto/logo.png" alt="logo"></a>
-      </div>
-      <h1 class="title display-4">Welcome to a New Universe</h1>    
-    </header>
+  <meta charset="UTF-8" />
+  <title>Compass World | Atlas</title>
+  <meta name="description" content="A universe of ideas by one man - Atlas" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <nav class="navbar">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <a class="navbar-brand" href="files.html">Gods and Monsters</a>
-      <a class="navbar-brand" href="history.html">Choronology</a>
-      <a class="navbar-brand" href="world.html">Atlas</a>
-      <a class="navbar-brand" href="about.html">Author</a>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/world.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compass World — Atlas" />
+  <meta property="og:description" content="A collection of records about places across the Compass World." />
+  <meta property="og:image" content="contents/indexphoto/rotate.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Translate -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script defer src="assets/scripts/translate.js"></script>
+</head>
+
+<body class="bg-dark text-white">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
+        <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
+        <span class="fw-bold">Compass World</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="files.html">Gods &amp; Monsters</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="world.html">Atlas</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+        </ul>
+        <div class="d-none d-lg-flex ms-auto">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-github"></i> Source
+          </a>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <div id="google_translate_element"></div>
+  <!-- Google Translate placeholder -->
+  <div id="google_translate_element" class="container mt-3"></div>
 
-  <article class="fadeIn">
-      <h1 class="text-center">Atlas</h1>
-      <p class="text-center">A collection of various records of places around the world</p>
+  <!-- PAGE HEADER -->
+  <header class="container text-center mt-4">
+    <a href="index.html">
+      <img class="logo img-fluid logo-glow" src="contents/indexphoto/logo.png" alt="Compass World logo" height="120" />
+    </a>
+    <h1 class="display-5 fw-extrabold text-gradient mt-3">Atlas</h1>
+    <p class="lead opacity-85">A collection of various records of places around the world.</p>
+  </header>
 
-      <div class="card">
-          <div class="card-body">
-              <h1>Middle East</h1>
-              <h2>Tel Giborim, Israel</h2>
-              <p>Located south to Be'er Sheva, served as a technological city of Israel</p>
-              <img class="img-fluid" src="contents/locations/negev.jpg" alt="negev">
-              <h2>Saint Peter Temple</h2>
-              <p>A Crusader fortress located in the eastern Galilee (by the Golan Heights), used as a meeting place for the group.</p>
-              <img class="img-fluid" src="contents/locations/fortress.jpg" alt="fortress">
-              <h2>The UnderCity, tel aviv, Israel</h2>
-              <p>An underground area located in the sewers of Tel Aviv, and inhabited by a tribe of creatures considered to be "Partaches".</p>
-              <img class="img-fluid" src="contents/locations/sewers.jpg" alt="sewers">
-              <h2>Herzliya</h2>
-              <h3>The Atlas Building</h3>
-              <p>A business building located at the city's industrial zone, belong to voltage.</p>
-              <img class="img-fluid" src="contents/avatar2024/places/earthTower-min.png" alt="earth tower">
-              <h3>The Oriental Pearl</h3>
-              <p>An Asian restaurant belonging to Mr. Nguyen, who came to Israel as a refugee from Vietnam. One of the gang's favorite restaurants.</p>
-              <img class="img-fluid" src="contents/locations/restaurant.jpg" alt="restaurant">
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>United States</h1>
-              <h2>Paper Park, Delaware</h2>
-              <p>A mysterious city that most people consider a "city on paper", but in reality it serves as a home for wizards.</p>
-              <img class="img-fluid" src="contents/locations/paper.jpg" alt="paper park">
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>Eatern Europe</h1>
-              <h2>Darkoia</h2>
-              <p>A region located in Eastern Europe (on the Romanian-Hungarian border), mostly inhabited by Gypsies.</p>
-              <h2>Actalba</h2>
-              <p>Located in Eastern Europe between Belarus and Poland, an important ally of Iran, it is considered a refuge for the wanted.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>The Caribbean</h1>
-              <h2>Sondianno</h2>
-              <p>A rich island located in the Caribbean, ruled by the royal family of the island.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>The Atlnatic Ocean</h1>
-              <h2>Sublania</h2>
-              <p>A powerful republic located at the bottom of the Atlantic Ocean. controlled by the Supreme Council.</p>
-              <img class="img-fluid" src="contents/locations/underwater.jpg" alt="underwater">
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>Far East Asia</h1>
-              <h2>Dragon-La</h2>
-              <p>A land between China and Tibet, controlled by the Order of the Dragon Warriors.</p>
-              <img class="img-fluid" src="contents/locations/himalaya.jpg" alt="himalaya">
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-body">
-              <h1>The Pacific Ocean</h1>
-              <h2>Pacifia</h2>
-              <p>A city-state located on the surface of the Pacific Ocean, it is considered the capital city of the ocean dwellers.</p>
-              <img class="img-fluid" src="contents/locations/pacific.jpg" alt="pacific">
-          </div>
-      </div>
-  </article>
-    <footer class="text-center py-3 bg-dark text-light">
-        <div class="container d-flex align-items-center justify-content-between">
-            <!-- Left Content -->
-            <div>
-                <p class="mb-1">&copy; 2024 Compass World. All Rights Reserved.</p>
-                <a href="https://github.com/guybracha/compass-world" class="text-warning fw-bold" target="_blank">
-                    <i class="bi bi-github"></i> Source Code
-                </a>
+  <!-- CONTENT -->
+  <main class="container pb-5">
+    <!-- Middle East -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">Middle East</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/negev.jpg" alt="Negev desert" />
+            <div class="card-body">
+              <h3 class="card-title">Tel Giborim, Israel</h3>
+              <p class="card-text">Located south of Be’er Sheva; served as a technological city of Israel.</p>
             </div>
-            
-            <!-- Icon Image on the Right -->
-            <img src="contents/indexphoto/icon.png" height="80" width="auto" alt="Compass World Logo" style="filter: drop-shadow(0px 0px 10px #ffb703);">
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/sewers.jpg" alt="UnderCity, Tel Aviv" />
+            <div class="card-body">
+              <h3 class="card-title">The UnderCity, Tel Aviv, Israel</h3>
+              <p class="card-text">An underground area located in Tel Aviv’s sewers, inhabited by a tribe of creatures known as “Partaches”.</p>
+            </div>
+          </div>
         </div>
-    </footer>
+
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/fortress.jpg" alt="Crusader fortress in the Galilee" />
+            <div class="card-body">
+              <h3 class="card-title">Saint Peter Temple</h3>
+              <p class="card-text">A Crusader fortress in the eastern Galilee (near the Golan Heights); used as a meeting place for the group.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="contents/avatar2024/places/earthTower-min.png" alt="The Atlas Building" />
+            <div class="card-body">
+              <h3 class="card-title">Herzliya — The Atlas Building</h3>
+              <p class="card-text">A business tower in the city’s industrial zone; owned by Voltage.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/restaurant.jpg" alt="The Oriental Pearl restaurant" />
+            <div class="card-body">
+              <h3 class="card-title">Herzliya — The Oriental Pearl</h3>
+              <p class="card-text">An Asian restaurant belonging to Mr. Nguyen, a Vietnamese refugee. A team favorite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- United States -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">United States</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/paper.jpg" alt="Paper Park" />
+            <div class="card-body">
+              <h3 class="card-title">Paper Park, Delaware</h3>
+              <p class="card-text">A mysterious city many consider “only on paper”, yet a real haven for wizards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eastern Europe -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">Eastern Europe</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Darkoia</h3>
+              <p class="card-text">A region on the Romanian–Hungarian border, mostly inhabited by Romani communities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Actalba</h3>
+              <p class="card-text">Between Belarus and Poland; an ally of Iran, considered a refuge for the wanted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Caribbean -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">The Caribbean</h2>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Sondianno</h3>
+          <p class="card-text">A wealthy island ruled by its royal family.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Atlantic Ocean -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">The Atlantic Ocean</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/underwater.jpg" alt="Submarine city" />
+            <div class="card-body">
+              <h3 class="card-title">Sublania</h3>
+              <p class="card-text">A powerful republic at the bottom of the Atlantic, governed by the Supreme Council.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Far East Asia -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-4">
+      <h2 class="section-heading text-center mb-3">Far East Asia</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/himalaya.jpg" alt="Himalaya" />
+            <div class="card-body">
+              <h3 class="card-title">Dragon-La</h3>
+              <p class="card-text">A land between China and Tibet, controlled by the Order of the Dragon Warriors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Pacific Ocean -->
+    <section class="glass p-4 p-md-5 rounded-4">
+      <h2 class="section-heading text-center mb-3">The Pacific Ocean</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <img class="card-img-top" src="contents/locations/pacific.jpg" alt="Pacific city-state" />
+            <div class="card-body">
+              <h3 class="card-title">Pacifia</h3>
+              <p class="card-text">A city-state on the ocean’s surface; considered the capital of ocean dwellers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 mt-5 border-top-dark">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">
+        <div>&copy; 2025 Compass World. All Rights Reserved.</div>
+        <div class="mt-1">
+          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
     </div>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-  
-          gtag('config', 'G-1LV563TQEJ');
-        </script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <script src="assets/scripts/translate.js"></script>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1LV563TQEJ');
+  </script>
+
+  <!-- Bootstrap 5 bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Back to top behavior -->
+  <script>
+    const topBtn = document.querySelector('.back-to-top');
+    const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
+    window.addEventListener('scroll', onScroll); onScroll();
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>

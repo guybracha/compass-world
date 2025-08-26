@@ -1,125 +1,74 @@
-/* General styling */
-body {
-    background-color: #1a1a1a;
-    color: #f8f9fa;
-}
+/* =========================
+   About (about.css)
+   תואם ל-main.css + Bootstrap 5
+   ========================= */
 
-header {
-    background-color: #343a40;
-    padding: 20px 0;
-    margin-bottom: 40px;
-}
+/* לא משנים את body/global – נשען על main.css */
 
-nav.navbar {
-    justify-content: center;
-    padding: 20px 0;
-    background-color: #212529;
-}
+/* Navbar – קו תחתון עדין */
+nav.navbar { border-bottom: 1px solid rgba(255,255,255,.08); }
 
-nav.navbar a.navbar-brand {
-    color: #f8f9fa;
-    font-size: 1.2rem;
-    margin: 0 15px;
-}
-
-nav.navbar a.navbar-brand:hover {
-    color: #ffb703;
-}
-
-/* Profile container styling */
-.profile-container {
-    text-align: center;
-    padding: 20px;
-}
-
-.profile-images {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.profile-images img {
-    transition: opacity 0.7s linear;
-}
-
-.shadow-img {
-    opacity: 1;
-}
-
-.hover-img {
-    opacity: 0;
-    top: 0;
-    left: 0;
-}
-
-/* Hover effects */
-.profile-images:hover .shadow-img {
-    opacity: 0;
-}
-
-.profile-images:hover .hover-img {
-    opacity: 1;
-}
-
-/* Name hover effects */
+/* כותרת שם (שומר על הלוק הייחודי שלך) */
 .name-shadow {
-    font-size: 1.5rem;
-    background-color: #212529;
-    padding: 10px;
-    border-radius: 8px;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
+  font-size: 1.25rem;
+  display: inline-block;
+  background: rgba(33, 37, 41, .85);
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  color: var(--text-100);
+  transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
 }
-
 .name-shadow:hover {
-    background-color: goldenrod;
-    color: white;
+  background-color: var(--brand);
+  color: #111;
+  box-shadow: 0 10px 28px rgba(255,183,3,.35);
 }
 
-/* Footer styling */
-footer {
-    background-color: #212529;
-    padding: 20px;
-}
-
-footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #ffb703;
-}
-
+/* Coin flip */
 .coin-container {
-    width: 200px;
-    height: 200px;
-    margin: 100px auto;
-    perspective: 1000px;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  perspective: 1000px;
 }
-
 .coin {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
 }
-
 .coin img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  border-radius: 16px;
+  backface-visibility: hidden;
+}
+.front { transform: rotateY(0deg); }
+.back  { transform: rotateY(180deg); }
+.flip  { transform: rotateY(180deg); }
+
+/* כפתור פעולה */
+.btn-warning { border-radius: 14px; box-shadow: 0 8px 24px rgba(255,183,3,.25); }
+.btn-warning:hover { box-shadow: 0 10px 28px rgba(255,183,3,.35); }
+
+/* Header image */
+.logo { height: 120px; }
+
+/* נגישות ותנועה */
+:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }
 
-.front {
-    transform: rotateY(0deg);
-}
-
-.back {
-    transform: rotateY(180deg);
-}
-
-.flip {
-    transform: rotateY(180deg);
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .coin-container { width: 200px; height: 200px; }
+  .logo { height: 96px; }
 }

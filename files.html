@@ -1,96 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Compass World | Gods and Monsters</title>
-    <meta name="description" content="A universe of ideas by a one man - Gods and Monsters">
-    <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/files.css">
-    <script defer src="assets/scripts/heroes.js"></script>
-    <script src="assets/scripts/heroJson.js"></script>
-    <script src="assets/scripts/heroClass.js"></script>
-    <script src="assets/scripts/villainJson.js"></script>
-    <script src="assets/scripts/random.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="assets/scripts/translate.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <title>Compass World | Gods and Monsters</title>
+  <meta name="description" content="A universe of ideas by one man - Gods and Monsters" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/files.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compass World — Gods & Monsters" />
+  <meta property="og:description" content="Meet the heroes and villains of the Compass World." />
+  <meta property="og:image" content="contents/indexphoto/rotate.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Preload logo -->
+  <link rel="preload" as="image" href="contents/art2025/new_logo_fix.png" />
+
+  <!-- Page Scripts (defer) -->
+  <script defer src="assets/scripts/heroes.js"></script>
+  <script defer src="assets/scripts/heroJson.js"></script>
+  <script defer src="assets/scripts/heroClass.js"></script>
+  <script defer src="assets/scripts/villainJson.js"></script>
+  <script defer src="assets/scripts/random.js"></script>
+
+  <!-- Google Translate -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script defer src="assets/scripts/translate.js"></script>
 </head>
+
 <body class="bg-dark text-white">
-  <div class="container-md">
-    <header class="text-center my-4">
-      <div id="logo">
-        <img class="logo" src="contents/indexphoto/logo.png" class="img-fluid" alt="logo" height="120px">
+  <!-- NAVBAR (same style as index) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
+        <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
+        <span class="fw-bold">Compass World</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="files.html">Gods &amp; Monsters</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+          <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+        </ul>
+        <div class="d-none d-lg-flex ms-auto">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-github"></i> Source
+          </a>
+        </div>
       </div>
-      <h1 class="title display-4">Welcome to a New Universe</h1>    
-    </header>
-    <nav class="navbar">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <a class="navbar-brand" href="files.html">Gods and Monsters</a>
-      <a class="navbar-brand" href="history.html">Choronology</a>
-      <a class="navbar-brand" href="world.html">Atlas</a>
-      <a class="navbar-brand" href="about.html">Author</a>
-    </nav>
-    <div id="google_translate_element"></div>
-    <article class="bg-light p-4 rounded">
-      <h1 class="text-center text-dark">Gods and Monsters</h1>
-      <p class="text-center text-dark">Come and meet the heroes and the villains of the world...</p>
-      <div class="text-center mb-4">
-        <button class="btn btn-warning" onclick="clickMe()">Secret Hero</button>
-        <p id="random"></p>
-      </div>    
-      <div class="bg-info text-white p-4 rounded mb-4">
-        <h2 class="text-center">Compass Alliance - The Heroes</h2>
-        <img class="img-fluid d-block mx-auto mb-3" src="contents/indexphoto/union.png" alt="World union">
-        <img class="img-fluid d-block mx-auto mb-3" src="contents/art2025/unlimited-min.png" alt="heroes">
-        <h3>Founding Members:</h3>
-        <p>Paladin, Voltage, Lady Astral, Captain Space, Hydro-Zen, Mark Venture, and Guardian Angel.</p>
-        <h3>Joined after foundation:</h3>
-        <p>Metalclad, Sand Nomad, Red Mole, Northlight, Dragon Fighter, Size, Gigantic, King Sodalite,
-           Mariposa, Optimus Quantum, Rubberman, Timer, Symbol, Eastwind & Sunshine, Wetlander, Rocket Prime, Guardsman,
-           Comrade, Jupiterian, Captain Phoenix, Equinox, Archer, Luna, Snowie, Unicorn, The First Maccabi, Wonderbeast, Johnny b. Goode and his butler Zap, Bulldog,
-           Dynamite, Speedmax, Nighthunter, Tsunami, Doctor Palladium, The Historian, Enforcer, Melody, Lion-Man, Kid Dimension, Princess Dream, Doctor Physics, Bloom,
-           Honeybee, Third-eye, Spectrum Man, The Scarab, Captain Space II, Techno, Western, Frankoman, Ivory, Cheerstar, Rags the mummy, and Squire.
-          </p>
-        <div class="row" id="showMeHeroes"></div>
     </div>
+  </nav>
 
-    <div class="bg-danger text-white p-4 rounded">
-        <h2 class="text-center">The Bad Guys</h2>
-        <img class="img-fluid d-block mx-auto mb-3" src="contents/indexphoto/council.png" alt="Council">
-        <img class="img-fluid d-block mx-auto mb-3" src="contents/gallery/GrandmastersColo-min.png" alt="heroes">
-        <div class="row" id="showMeVillains"></div>
+  <!-- Google Translate placeholder -->
+  <div id="google_translate_element" class="container mt-3"></div>
+
+  <!-- PAGE HEADER -->
+  <header class="container mt-4">
+    <div class="text-center mb-4">
+      <img class="img-fluid logo-glow" src="contents/indexphoto/logo.png" alt="Compass World logo" height="120" />
+      <h1 class="display-5 fw-extrabold text-gradient mt-3">Gods &amp; Monsters</h1>
+      <p class="lead opacity-85">Come and meet the heroes and the villains of the world...</p>
+      <div class="mt-3">
+        <button class="btn btn-warning shadow-lift" onclick="clickMe()">Secret Hero</button>
+        <p id="random" class="mt-2"></p>
+      </div>
     </div>
-    </article>
+  </header>
 
-    <footer class="text-center py-3 bg-dark text-light">
-      <div class="container d-flex align-items-center justify-content-between">
-          <!-- Left Content -->
-          <div>
-              <p class="mb-1">&copy; 2024 Compass World. All Rights Reserved.</p>
-              <a href="https://github.com/guybracha/compass-world" class="text-warning fw-bold" target="_blank">
-                  <i class="bi bi-github"></i> Source Code
-              </a>
+  <!-- CONTENT -->
+  <main class="container pb-5">
+    <!-- HEROES -->
+    <section class="glass p-4 p-md-5 rounded-4 mb-5">
+      <h2 class="section-heading text-center mb-4">Compass Alliance — The Heroes</h2>
+
+      <div class="text-center mb-3">
+        <img class="img-fluid rounded-3 shadow-lg hover-float mb-3" src="contents/indexphoto/union.png" alt="World union" />
+        <img class="img-fluid rounded-3 shadow-lg hover-float" src="contents/art2025/unlimited-min.png" alt="Heroes poster" />
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
+            <h3 class="section-title mb-2"><span class="marker">Founding Members</span></h3>
+            <p class="mb-0">
+              Paladin, Voltage, Lady Astral, Captain Space, Hydro-Zen, Mark Venture, and Guardian Angel.
+            </p>
           </div>
-          
-          <!-- Icon Image on the Right -->
-          <img src="contents/indexphoto/icon.png" height="80" width="auto" alt="Compass World Logo" style="filter: drop-shadow(0px 0px 10px #ffb703);">
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
+            <h3 class="section-title mb-2"><span class="marker">Joined After Foundation</span></h3>
+            <p class="mb-0">
+              Metalclad, Sand Nomad, Red Mole, Northlight, Dragon Fighter, Size, Gigantic, King Sodalite, Mariposa,
+              Optimus Quantum, Rubberman, Timer, Symbol, Eastwind &amp; Sunshine, Wetlander, Rocket Prime, Guardsman,
+              Comrade, Jupiterian, Captain Phoenix, Equinox, Archer, Luna, Snowie, Unicorn, The First Maccabi, Wonderbeast,
+              Johnny b. Goode and his butler Zap, Bulldog, Dynamite, Speedmax, Nighthunter, Tsunami, Doctor Palladium,
+              The Historian, Enforcer, Melody, Lion-Man, Kid Dimension, Princess Dream, Doctor Physics, Bloom, Honeybee,
+              Third-eye, Spectrum Man, The Scarab, Captain Space II, Techno, Western, Frankoman, Ivory, Cheerstar,
+              Rags the Mummy, and Squire.
+            </p>
+          </div>
+        </div>
       </div>
-  </footer>
+
+      <!-- Dynamic heroes grid -->
+      <div class="mt-4">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeHeroes"></div>
+      </div>
+    </section>
+
+    <!-- VILLAINS -->
+    <section class="glass p-4 p-md-5 rounded-4">
+      <h2 class="section-heading text-center mb-4">The Bad Guys</h2>
+
+      <div class="text-center mb-3">
+        <img class="img-fluid rounded-3 shadow-lg hover-float mb-3" src="contents/indexphoto/council.png" alt="Council" />
+        <img class="img-fluid rounded-3 shadow-lg hover-float" src="contents/gallery/GrandmastersColo-min.png" alt="Grandmasters" />
+      </div>
+
+      <!-- Dynamic villains grid -->
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeVillains"></div>
+    </section>
+  </main>
+
+  <!-- IMAGE MODAL (click any img with data-bs-target) -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark">
+        <button type="button" class="btn-close btn-close-white position-absolute end-0 me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-0">
+          <img id="modalImg" src="" alt="Preview" class="img-fluid w-100" />
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- FOOTER (same look & fixes) -->
+  <footer class="py-4 mt-5 border-top-dark">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">
+        <div>&copy; 2025 Compass World. All Rights Reserved.</div>
+        <div class="mt-1">
+          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1LV563TQEJ');
+  </script>
+
+  <!-- Bootstrap 5 bundle (no jQuery/Popper needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Modal image handler + Back-to-top visibility + delegate for dynamic cards -->
+  <script>
+    // Open any clicked image in modal (works for dynamic content)
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('img');
+      if (!img) return;
+      // Only activate for gallery-style images (avoid logos/icons)
+      const eligible = !img.closest('nav, footer') && img.width > 120 && !img.classList.contains('no-modal');
+      if (!eligible) return;
+
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      if (modal && modalImg) {
+        modalImg.src = img.getAttribute('src');
+        modalImg.alt = img.getAttribute('alt') || 'Preview';
+        const bsModal = new bootstrap.Modal(modal);
+        bsModal.show();
+      }
+    });
+
+    // Back to top
+    const topBtn = document.querySelector('.back-to-top');
+    const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
+    window.addEventListener('scroll', onScroll); onScroll();
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
