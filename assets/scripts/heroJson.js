@@ -79,7 +79,7 @@ const superList =  [{
         "quote": "ברית, לפעולה!"
     },{
         "superName":"Rocket Prime",
-        "privateName": "Chaim Greenberg",
+        "privateName": "Haim Greenberg",
         "Powers": "A giant Rocket Armor",
         "img": "contents\\profile\\rocketPrime-min.png",
         "quote": "ברית, לפעולה!"
