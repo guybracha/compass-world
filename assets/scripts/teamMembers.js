@@ -37,7 +37,7 @@ const teamMembers = [
   { name: "Hoopoe", image: "./contents/avatar2024/heroes/hoopoe-min.webp" },
   { name: "Admiral Mars", image: "./contents/avatar2024/heroes/admiralMars-min.webp" },
   { name: "Sweet Girl", image: "./contents/avatar2024/heroes/sweetGirl-min.webp" },
-  { name: "Rubberman", image: "./contents/avatar2024/heroes/rubberman-min.webp" },
+  { name: "Rubberman", image: "./contents/avatar2024/heroes/rubberMan-min.webp" },
   { name: "Maltese Cross", image: "./contents/avatar2024/heroes/malteseCross-min.webp" }
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." })); // ברירת מחדל ל-bio
 
