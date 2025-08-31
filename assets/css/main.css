@@ -112,3 +112,12 @@ footer { background: linear-gradient(180deg, transparent, rgba(255,255,255,.03))
 @media (max-width: 768px) {
   .hero, .hero-img { min-height: 48vh; height: 48vh; }
 }
+.styled-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  background-color: rgba(114, 120, 0, 0.511);
+  color: white;
+  -webkit-text-stroke: 2px black; /* עובי וצבע הstroke */
+  text-stroke: 2px black; /* חלק מהדפדפנים החדשים */
+  border-radius: 25px;
+}
