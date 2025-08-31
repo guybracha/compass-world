@@ -32,167 +32,154 @@
 </head>
 
 <body class="bg-dark text-white">
-    <header class="text-center py-4">
-        <a href="index.html">
-          <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" />
-        </a>
-        <h1 class="display-4 text-warning">Welcome to a New Universe</h1>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
-      <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
-      <span class="fw-bold">Compass World</span>
+  <header class="text-center py-4">
+    <a href="index.html">
+      <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <h1 class="display-4 text-warning">Welcome to a New Universe</h1>
+  </header>
 
-    <div id="mainNav" class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-lg-3">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="files.html">Gods & Monsters</a></li>
-        <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
-        <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
-      </ul>
-      <div class="d-none d-lg-flex ms-auto">
-        <a href="https://github.com/guybracha/compass-world" target="_blank" class="btn btn-outline-warning btn-sm">
-          <i class="bi bi-github"></i> Source
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
+        <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
+        <span class="fw-bold">Compass World</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="files.html">Gods & Monsters</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+          <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+        </ul>
+        <div class="d-none d-lg-flex ms-auto">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-github"></i> Source
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-    <div id="google_translate_element" class="my-3 text-center"></div>
+  <div id="google_translate_element" class="my-3 text-center"></div>
 
   <main class="container py-5">
-  <section class="row align-items-center g-4">
-    <div class="col-md-6 text-center">
-      <img class="img-fluid rounded-4 shadow-lg hover-float" src="contents/gallery/UniteCol-min.webp" alt="Compass Alliance poster"
-           data-bs-toggle="modal" data-bs-target="#imageModal" />
-    </div>
-    <div class="col-md-6">
-      <div class="glass p-4 rounded-4">
-        <h3 class="section-title mb-3" style="text-align: center;"><span class="marker">Compass Alliance</span></h3>
-        <p class="mb-0" style="text-align: center;">
-          Founded in late 2020 during the Covid-19 pandemic, when the nations of the world embarked on an arms race after young teenagers who had acquired powers during the pandemic, these teenagers were newly classified as <i><strong>Prime-Children!</strong></i>
-          <br>
-          This race was also flavored with global polarization, bringing
-          about the arrival of invaders from outer space who aimed to
-          conquer and enslave humanity. And just when it seemed
-          that there was no hope, six young superheroes emerged
-          from the darkness who managed to return a war that ended
-          in victory for humanity, and on a different day from the days,
-          a team was formed with the goal of gathering and uniting
-          the best superheroes from across the universe and young
-          people who saw their new powers as a curse.
-          <br>
-          This is the story of the <strong>Compass Alliance...</strong>
-        </p>
+    <!-- Hero section -->
+    <section class="row align-items-center g-4">
+      <div class="col-md-6 text-center">
+        <img
+          class="img-fluid rounded-4 shadow-lg hover-float"
+          src="contents/gallery/UniteCol-min.webp"
+          alt="Compass Alliance poster"
+          data-bs-toggle="modal"
+          data-bs-target="#heroImageModal"
+        />
       </div>
-    </div>
-  </section>
-
-  <section id="team" class="my-5">
-    <h2 class="section-heading text-center">Team Members</h2>
-    <!-- HTML: מכולה לגלריה + מודאל בוטסטראפ -->
-<div id="dynamicGallery" class="row g-3"></div>
-
-<!-- Modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content" style="background:#1a1a1a; color:#fff;">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="col-md-6">
+        <div class="glass p-4 rounded-4">
+          <h3 class="section-title mb-3 text-center"><span class="marker">Compass Alliance</span></h3>
+          <p class="mb-0 text-center">
+            Founded in late 2020 during the Covid-19 pandemic, when the nations of the world embarked on an arms race after young teenagers who had acquired powers during the pandemic, these teenagers were newly classified as <i><strong>Prime-Children!</strong></i>
+            <br />
+            This race was also flavored with global polarization, bringing about the arrival of invaders from outer space who aimed to conquer and enslave humanity. And just when it seemed that there was no hope, six young superheroes emerged from the darkness who managed to return a war that ended in victory for humanity, and on a different day from the days, a team was formed with the goal of gathering and uniting the best superheroes from across the universe and young people who saw their new powers as a curse.
+            <br />
+            This is the story of the <strong>Compass Alliance...</strong>
+          </p>
+        </div>
       </div>
-      <div class="modal-body text-center">
-        <img id="modalImage" class="img-fluid rounded-circle mb-3" alt="" />
-        <p id="modalBio" class="mb-0"></p>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-  </section>
-</main>
+    <!-- Team section -->
+    <section id="team" class="my-5">
+      <h2 class="section-heading text-center">Team Members</h2>
+      <div id="dynamicGallery" class="row g-3"></div>
 
-<!--
-<section id="gallery" class="container pb-5">
-        <h2 style="text-align: center;">Gallery</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="https://www.deviantart.com/guybracha/art/Compass-Alliance-The-case-of-the-shrunken-heroes-1186582863"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djmgl73-fe470f14-7c00-4ab8-99c0-da37c45ab7f7.png/v1/fill/w_1280,h_1811,q_80,strp/compass_alliance___the_case_of_the_shrunken_heroes_by_guybracha_djmgl73-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgxMSIsInBhdGgiOiJcL2ZcL2VlMTRlNjRmLTMyYTQtNGM5Yi04ODdiLTY3YmNhZjhhMjQ1N1wvZGptZ2w3My1mZTQ3MGYxNC03YzAwLTRhYjgtOTljMC1kYTM3YzQ1YWI3ZjcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qkkI_n-t58vuY-XpC2hBRvcP0ux5NM4eTavLAIIF9DA" alt="Shrinking heroes" class="img-fluid"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://www.deviantart.com/guybracha/art/Compass-Alliance-Kaiju-Royale-1186693077"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djmiy8l-28e93b68-a342-4b64-a203-12b176e3aca2.png/v1/fill/w_1920,h_2716,q_80,strp/compass_alliance___kaiju_royale__by_guybracha_djmiy8l-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjcxNiIsInBhdGgiOiJcL2ZcL2VlMTRlNjRmLTMyYTQtNGM5Yi04ODdiLTY3YmNhZjhhMjQ1N1wvZGptaXk4bC0yOGU5M2I2OC1hMzQyLTRiNjQtYTIwMy0xMmIxNzZlM2FjYTIucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.r90Wi1wNgRvjFFfAnR6CaUvMFSmEnOqIwra1ShuFOk0" alt="Kaiju Royale" class="img-fluid"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://www.deviantart.com/guybracha/art/Compass-Alliance-Bright-lights-bigger-city-1187389526"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djmxvme-d885b882-ee27-4e2a-95da-c004cb4847e9.png/v1/fill/w_1280,h_1811,q_80,strp/compass_alliance___bright_lights_bigger_city_by_guybracha_djmxvme-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgxMSIsInBhdGgiOiJcL2ZcL2VlMTRlNjRmLTMyYTQtNGM5Yi04ODdiLTY3YmNhZjhhMjQ1N1wvZGpteHZtZS1kODg1Yjg4Mi1lZTI3LTRlMmEtOTVkYS1jMDA0Y2I0ODQ3ZTkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.8oHiVGWx9UbgcmvsgmG6zetM6ObDSlKNXHes_zUK6g0" alt="CyberPunk" class="img-fluid"></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <a href="https://www.deviantart.com/guybracha/art/Compass-Alliance-Shrunken-Heroes-page-1188370499"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djniwjn-9e7d03f8-35a0-4b58-b4be-0e749468becf.png/v1/fill/w_1280,h_1811,q_80,strp/compass_alliance___shrunken_heroes_page_by_guybracha_djniwjn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgxMSIsInBhdGgiOiJcL2ZcL2VlMTRlNjRmLTMyYTQtNGM5Yi04ODdiLTY3YmNhZjhhMjQ1N1wvZGpuaXdqbi05ZTdkMDNmOC0zNWEwLTRiNTgtYjRiZS0wZTc0OTQ2OGJlY2YucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.C2iBUl80JgOPrXCDqXY-jhlTIxR7seM5yFPgSrpYqmI" alt="Comics 1" class="img-fluid"></a>
-            </div>
-            <div class="col-md-6">
-                <a href="https://www.deviantart.com/guybracha/art/Compass-Alliance-Teen-Conference-1189255381"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djo1vbp-0dd9fc3c-0a60-4e42-aaba-ab56ad9ea491.png/v1/fill/w_1280,h_1811,q_80,strp/compass_alliance___teen_conference_by_guybracha_djo1vbp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgxMSIsInBhdGgiOiJcL2ZcL2VlMTRlNjRmLTMyYTQtNGM5Yi04ODdiLTY3YmNhZjhhMjQ1N1wvZGpvMXZicC0wZGQ5ZmMzYy0wYTYwLTRlNDItYWFiYS1hYjU2YWQ5ZWE0OTEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.QVuc0_MSD3qogXZwokmpuSAdXlV8y6vK6sqamglNKxU" alt="Comics 2" class="img-fluid"></a>
-            </div>
-        </div>
-        <div class="text-center">
-            <a href="https://www.deviantart.com/guybracha/art/Teen-Titans-Compass-Alliance-Go-to-Action-1186319551"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee14e64f-32a4-4c9b-887b-67bcaf8a2457/djmay0v-6cc74d44-526b-4ca0-94ae-b322eb7b1638.png/v1/fill/w_1280,h_906,q_80,strp/teen_titans_compass_alliance__go_to_action__by_guybracha_djmay0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTA2IiwicGF0aCI6IlwvZlwvZWUxNGU2NGYtMzJhNC00YzliLTg4N2ItNjdiY2FmOGEyNDU3XC9kam1heTB2LTZjYzc0ZDQ0LTUyNmItNGNhMC05NGFlLWIzMjJlYjdiMTYzOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3e4sQV9yWn_j02kATOSVB6MT9aRvqybp3bq-fHkNxZM" alt="Compass Alliance VS. The Teen Titans" class="img-fluid"></a>
-        </div>
-</section>
--->
-  
-    <div class="container my-5 text-center styled-text">
-      Alliance, To Action!
-    </div>
-
-
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <!-- Team modal (profileModal) -->
+      <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="contents/gallery/UniteCol-min.webp" alt="Unite to Action!" class="img-fluid">
-                </div>
+          <div class="modal-content" style="background:#1a1a1a; color:#fff;">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body text-center">
+              <img id="modalImage" class="img-fluid rounded-circle mb-3" alt="" />
+              <p id="modalBio" class="mb-0"></p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+  </main>
 
-    <footer class="py-4 mt-auto border-top-dark">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-    <div class="text-secondary small">
-      <div>&copy; 2025 Compass World. All Rights Reserved.</div>
-      <div class="mt-1">
-        <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
-          <i class="bi bi-github"></i> Source Code
-        </a>
+  <!-- Slogan -->
+  <div class="container my-5 text-center styled-text">
+    Alliance, To Action!
+  </div>
+
+  <!-- Hero image modal (heroImageModal) -->
+  <div class="modal fade" id="heroImageModal" tabindex="-1" aria-labelledby="heroImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="contents/gallery/UniteCol-min.webp" alt="Unite to Action!" class="img-fluid rounded-4 d-block w-100" />
+        </div>
       </div>
     </div>
-    <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
   </div>
-</footer>
 
+  <footer class="py-4 mt-auto border-top-dark">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">
+        <div>&copy; 2025 Compass World. All Rights Reserved.</div>
+        <div class="mt-1">
+          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+    </div>
+  </footer>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date()); gtag('config', 'G-1LV563TQEJ');
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-1LV563TQEJ');
+  </script>
 
-<!-- Back to top -->
-<button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
-<script>
-  const topBtn = document.querySelector('.back-to-top');
-  const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
-  window.addEventListener('scroll', onScroll); onScroll();
-  topBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-</script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Back to top -->
+  <button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <script>
+    const topBtn = document.querySelector('.back-to-top');
+    const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
+    window.addEventListener('scroll', onScroll); onScroll();
+    topBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  </script>
+
+  <!-- Compatibility bridge for old selectors that expect #imageModal -->
+  <script>
+    // אם סקריפטים חיצוניים עדיין מחפשים '#imageModal', נמפה אותו ל-#profileModal
+    document.addEventListener('DOMContentLoaded', () => {
+      const legacy = document.getElementById('imageModal');
+      if (!legacy) {
+        const alias = document.createElement('div');
+        alias.id = 'imageModal';
+        alias.style.display = 'none';
+        alias.setAttribute('data-alias-of', 'profileModal');
+        document.body.appendChild(alias);
+      }
+    });
+  </script>
 </body>
 </html>
