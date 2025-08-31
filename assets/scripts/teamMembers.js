@@ -42,31 +42,23 @@ const teamMembers = [
   { name: "Wonderbeast", image: "./contents/avatar2024/heroes/wonderbeast-min.webp" },
   { name: "Nighthunter", image: "./contents/avatar2024/heroes/nighthunter-min.webp" },
   { name: "Luna", image: "./contents/avatar2024/heroes/luna-min.webp" }
-].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." })); // ברירת מחדל ל-bio
+].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." }));
 
 // --- סדר לפי הגלריה ב-PDF ---
 const pdfOrder = [
-  // שורה 1
   "Comrade","Gigantic","Paladin","Tsunami","Voltage",
-  // שורה 2
   "Bloom","Captain Phoenix","Dragon Fighter","Maltese Cross","Size","Mariposa",
-  // שורה 3
   "Doc Physics","Enforcer","Honeybee","Metalclad","Optimus Quantum",
-  // שורה 4
   "Eastwind","Sunshine","Ra","Rubberman","Rocket Prime",
-  // שורה 5
   "Scarab","Symbol","Timer","Western","Wetlander",
-  // שורה 6
   "Captain Space","Snowie","Squire","Techno",
-  // שורה 7
   "Lady Astral","Cheerstar","Melody","Red Mole"
 ];
 
-// למפות לפי שם ולהרכיב מערך מסודר
 const byName = new Map(teamMembers.map(m => [m.name, m]));
 const orderedMembers = [
   ...pdfOrder.map(n => byName.get(n)).filter(Boolean),
-  ...teamMembers.filter(m => !pdfOrder.includes(m.name)) // אם יש דמויות נוספות שלא הוגדרו ב-PDF
+  ...teamMembers.filter(m => !pdfOrder.includes(m.name))
 ];
 
 // --- רנדר גלריה ---
@@ -74,14 +66,13 @@ const galleryContainer = document.getElementById("dynamicGallery");
 
 orderedMembers.forEach(member => {
   const col = document.createElement("div");
-  // רספונסיבי: 2 בעמודה ב-xs, 3 ב-sm, 4 ב-md, 6 ב-lg+
   col.className = "col-6 col-sm-4 col-md-3 col-lg-2 d-flex";
 
   col.innerHTML = `
     <div class="card border-0 shadow-sm w-100 text-center" style="background:#222; border-radius:16px;">
       <img
         class="img-fluid mx-auto mt-3"
-        style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; cursor: pointer; transition: transform .25s ease;"
+        style="width:120px; height:120px; object-fit:cover; border-radius:50%; cursor:pointer; transition:transform .25s ease;"
         src="${member.image}"
         alt="${member.name}"
         loading="lazy"
@@ -107,21 +98,30 @@ galleryContainer.addEventListener("mouseout", (e) => {
   if (img) img.style.transform = "scale(1)";
 });
 
-// פתיחת מודאל בבטיחות (ללא onclick אינליין)
+// --- פתיחת מודאל לדמויות ---
+// שים לב: HTML עודכן ל-id="profileModal" (לא imageModal).
+const modalEl =
+  document.getElementById("profileModal") || // החדש
+  document.getElementById("imageModal");     // תאימות לאחור אם שכחת לעדכן HTML
+
 galleryContainer.addEventListener("click", (e) => {
   const img = e.target.closest("img[data-image]");
-  if (!img) return;
+  if (!img || !modalEl) return;
 
   const modalImage = document.getElementById("modalImage");
   const modalTitle = document.getElementById("modalTitle");
   const modalBio   = document.getElementById("modalBio");
 
-  modalImage.src = img.dataset.image;
-  modalImage.alt = img.dataset.name;
-  modalTitle.textContent = img.dataset.name;
-  modalBio.textContent = img.dataset.bio || "Member of the Compass Alliance.";
+  if (modalImage) {
+    modalImage.src = img.dataset.image;
+    modalImage.alt = img.dataset.name;
+  }
+  if (modalTitle) modalTitle.textContent = img.dataset.name;
+  if (modalBio)   modalBio.textContent   = img.dataset.bio || "Member of the Compass Alliance.";
 
-  // אם אתה משתמש בבוטסטראפ 5 ומאתחל דרך JS:
-  const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById("imageModal"));
-  modal.show();
+  // Bootstrap 5
+  if (window.bootstrap && bootstrap.Modal) {
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
+  }
 });
