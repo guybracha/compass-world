@@ -8,7 +8,7 @@ const teamMembers = [
   { name: "Tsunami", image: "./contents/avatar2024/heroes/tsunami-min.webp" },
   { name: "Size", image: "./contents/avatar2024/heroes/size-min.webp" },
   { name: "Dragon Fighter", image: "./contents/avatar2024/heroes/dragonFighter-min.webp" },
-  { name: "Mariposa", image: "./contents/avatar2024/heroes/mariposa-min.webp" },
+  { name: "Mariposa", image: "./contents/avatar2024/heroes/kittyposa-min.webp" },
   { name: "Symbol", image: "./contents/avatar2024/heroes/symbol-min.webp" },
   { name: "Eastwind", image: "./contents/avatar2024/heroes/eastwind-min.webp" },
   { name: "Sunshine", image: "./contents/avatar2024/heroes/sunshine-min.webp" },
