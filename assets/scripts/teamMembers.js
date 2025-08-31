@@ -17,7 +17,7 @@ const teamMembers = [
   { name: "Melody", image: "./contents/avatar2024/heroes/melody-min.webp" },
   { name: "Captain Space", image: "./contents/avatar2024/heroes/captainSpace-min.webp" },
   { name: "Honeybee", image: "./contents/avatar2024/heroes/honeybee-min.webp" },
-  { name: "Maltese Cross", image: "./contents/avatar2024/heroes/maltesecross-min.webp" },
+  { name: "Maltese Cross", image: "./contents/avatar2024/heroes/malteseCross-min.webp" },
   { name: "Rocket Prime", image: "./contents/avatar2024/heroes/rocketPrime-min.webp" },
   { name: "Cheerstar", image: "./contents/avatar2024/heroes/cheerstar-min.webp" },
   { name: "Red Mole", image: "./contents/avatar2024/heroes/redMole-min.webp" },
@@ -25,7 +25,7 @@ const teamMembers = [
   { name: "Western", image: "./contents/avatar2024/heroes/western-min.webp" },
   { name: "Scarab", image: "./contents/avatar2024/heroes/scarab-min.webp" },
   { name: "Timer", image: "./contents/avatar2024/heroes/timer-min.webp" },
-  { name: "Rubberman", image: "./contents/avatar2024/heroes/rubberMan-min.webp" },
+  { name: "Rubberman", image: "./contents/avatar2024/heroes/rubberman-min.webp" },
   { name: "Techno", image: "./contents/avatar2024/heroes/techno-min.webp" },
   { name: "Captain Phoenix", image: "./contents/avatar2024/heroes/captainPhoenix-min.webp" },
   { name: "Wetlander", image: "./contents/avatar2024/heroes/wetlander-min.webp" },
@@ -33,7 +33,12 @@ const teamMembers = [
   { name: "Squire", image: "./contents/avatar2024/heroes/squire-min.webp" },
   { name: "Snowie", image: "./contents/avatar2024/heroes/snowie-min.webp" },
   { name: "Optimus Quantum", image: "./contents/avatar2024/heroes/optimusQuantum-min.webp" },
-  { name: "Ra", image: "./contents/avatar2024/heroes/ra-min.webp" }
+  { name: "Ra", image: "./contents/avatar2024/heroes/ra-min.webp" },
+  { name: "Mark Venture", image: "./contents/avatar2024/heroes/markVenture-min.webp" },
+  { name: "Archer", image: "./contents/avatar2024/heroes/archer-min.webp" },
+  { name: "Hoopoe", image: "./contents/avatar2024/heroes/hoopoe-min.webp" },
+  { name: "Admiral Mars", image: "./contents/avatar2024/heroes/admiralMars-min.webp" },
+  { name: "Sweet Girl", image: "./contents/avatar2024/heroes/sweetGirl-min.webp" }
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." })); // ברירת מחדל ל-bio
 
 // --- סדר לפי הגלריה ב-PDF ---
