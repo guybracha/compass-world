@@ -4,6 +4,38 @@ const HistoryList = [
         "description": "A mysterious meteor crashes in the Levant region of the Middle East"
     },
     {
+        "year": "1100 AD",
+        "description": "During the medieval Crusades, rumors spread of 'Prime Children'—gifted youths with supernatural abilities appearing on battlefields in the Holy Land."
+    },
+    {
+        "year": "1799",
+        "description": "During Napoleon's campaign in the Middle East, local legends speak of desert warriors with unusual powers—early Prime Children who influenced battles in secret."
+    },
+    {
+        "year": "1839–1860",
+        "description": "During the Opium Wars between Britain and China, young Prime Children are rumored to have been exploited as secret weapons on both sides, stirring fear and fascination."
+    },
+    {
+        "year": "1850s–1890s",
+        "description": "In the reign of Queen Victoria, some Prime Children are taken into secret royal service, working as spies, messengers, and even bodyguards for the Crown."
+    },
+    {
+        "year": "1865–1895",
+        "description": "In the American Old West, stories spread of masked youths with uncanny abilities who fought outlaws, defended towns, and became the seeds of dime novel legends."
+    },
+    {
+        "year": "1948",
+        "description": "In the chaos of Israel’s War of Independence, a handful of Prime Children are born. Some fight alongside freedom fighters, becoming local legends."
+    },
+    {
+        "year": "1947–1991",
+        "description": "Throughout the Cold War, both the USA and USSR secretly recruit Prime Children into covert programs. These hidden operatives influence proxy wars, espionage missions, and superpower rivalries."
+    },
+    {
+        "year": "1967",
+        "description": "The Six-Day War sees the appearance of a new wave of powered youths. Their existence sparks global rumors about a hidden generation of post-humans."
+    },
+    {
         "year": "2020",
         "description": "During the corona lockdowns, a new generation of humans is beginning to emerge: the post-humans. Characterized by superpowers and an unusual appearance. This causes concerns in the world."
     },
