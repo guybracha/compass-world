@@ -102,7 +102,8 @@ const characters = [
   { name: "Sticker Man", side: SIDE.VILLAIN, power: "Explosive stickers", tags: [CATS.PRIME] },
   { name: "Madame Blackout", side: SIDE.VILLAIN, power: "Shadow phasing", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
   { name: "The Sphinx", side: SIDE.VILLAIN, power: "Rapid healing", tags: [CATS.PRIME, CATS.LEGEND] },
-  { name: "Wizmaster", side: SIDE.VILLAIN, power: "Dark magic", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] }
+  { name: "Wizmaster", side: SIDE.VILLAIN, power: "Dark magic", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
+  { name: "Headmaster Vile", side: SIDE.VILLAIN, power: "Mind Manipulation & Control", tags: [CATS.PRIME,  CATS.DARK] }
 ];
 
 // =====================
