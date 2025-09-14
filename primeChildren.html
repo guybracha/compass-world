@@ -1,0 +1,141 @@
+<!-- =====================================================
+File: prime-children.html
+Purpose: Prime-Children hub page (overview + gallery + filters)
+Author: Guy Bracha (Compass World)
+Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
+===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prime Children | Compass World</title>
+  <meta name="description" content="Meet the Prime-Children — superpowered teens shaped by a strange new era. Browse heroes and villains, filter by power domains, and dive into short bios." />
+  <meta name="keywords" content="Prime Children, Compass World, superheroes, teen heroes, comic universe, worldbuilding" />
+  <meta name="author" content="Guy Bracha" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://guybracha.github.io/compass-world/prime-children.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Prime-Children | Compass World" />
+  <meta property="og:description" content="A focused guide to the Prime-Children — origins, powers, and key members." />
+  <meta property="og:image" content="contents/indexphoto/rotate.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Compass World" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prime-Children | Compass World" />
+  <meta name="twitter:description" content="Explore the roster of Prime-Children — filter by power domains and sides." />
+  <meta name="twitter:image" content="contents/indexphoto/rotate.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/primeChildren.css" />
+
+  <!-- Data + Renderer for Prime-Children -->
+  <script defer src="assets/scripts/primeChildren.js"></script>
+  <script defer src="assets/scripts/primeRender.js"></script>
+</head>
+<body class="bg-dark text-white">
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="contents/art2025/symbol.png" alt="" height="28" class="logo-glow" />
+        <span class="fw-bold">Compass World</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="files.html">Gods & Monsters</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+          <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Prime-Children</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="container py-5 text-center">
+    <h1 class="display-5 text-warning fw-bold">Prime-Children</h1>
+    <p class="lead text-secondary">A generation of power. A world reshaped.</p>
+  </header>
+
+  <!-- Filters -->
+  <section id="prime-lineages" class="container mb-4">
+    <div class="row g-2 align-items-end">
+      <div class="col-12 col-md-3">
+        <label class="form-label small">Side</label>
+        <select id="filter-side" class="form-select bg-black text-white border-secondary">
+          <option>All</option>
+          <option>Hero</option>
+          <option>Villain</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-4">
+        <label class="form-label small">Category</label>
+        <select id="filter-cat" class="form-select bg-black text-white border-secondary">
+          <option>All</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-5">
+        <label class="form-label small">Search</label>
+        <input id="filter-search" type="search" class="form-control bg-black text-white border-secondary" placeholder="Name or power…" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main class="container pb-5">
+    <div id="pc-grid" class="row g-3"></div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="pcModal" tabindex="-1" aria-labelledby="pcModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background:#1a1a1a; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="pcModalLabel">Profile</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="pcModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top-dark">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">
+        <div>&copy; 2025 Compass World. All Rights Reserved.</div>
+        <div class="mt-1"><a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener"><i class="bi bi-github"></i> Source Code</a></div>
+      </div>
+      <img src="contents/art2025/symbol.png" height="54" alt="Compass symbol" class="logo-glow" />
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- =====================================================
+File: prime-timeline.html
+Purpose: Narrative/chronology page for Prime-Children incidents & milestones
+===================================================== -->
