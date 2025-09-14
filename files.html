@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Compass World | Gods and Monsters</title>
+  <title>Compass World | Gods & Monsters</title>
   <meta name="description" content="A universe of ideas by one man - Gods and Monsters" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -20,6 +20,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/files.css" />
+  <link rel="stylesheet" href="assets/css/heroes.css" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Compass World — Gods & Monsters" />
@@ -30,42 +31,45 @@
   <!-- Preload logo -->
   <link rel="preload" as="image" href="contents/art2025/new_logo_fix.png" />
 
-  <!-- Page Scripts (defer) -->
+  <!-- Page Scripts (keep order; 'defer' preserves order) -->
   <script defer src="assets/scripts/heroes.js"></script>
-  <script src="assets/scripts/heroJson.js"></script>
   <script src="assets/scripts/heroClass.js"></script>
+  <script src="assets/scripts/heroJson.js"></script>
   <script src="assets/scripts/villainJson.js"></script>
-  <script defer src="assets/scripts/random.js"></script>
+  <script src="assets/scripts/random.js"></script>
 
   <!-- Google Translate -->
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script defer src="assets/scripts/translate.js"></script>
 </head>
 
 <body class="bg-dark text-white">
-  <!-- NAVBAR (same style as index) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
         <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
         <span class="fw-bold">Compass World</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="mainNav" class="collapse navbar-collapse justify-content-center">
-        <ul class="navbar-nav gap-lg-3">
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="files.html">Gods &amp; Monsters</a></li>
           <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
           <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
           <li class="nav-item"><a class="nav-link" href="primeChildren.html">Prime Children</a></li>
+          <li class="nav-item"><a class="nav-link" href="ideas.html">Ideas</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
         </ul>
-        <div class="d-none d-lg-flex ms-auto">
-          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">
+        <div class="d-none d-lg-flex ms-lg-3">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener"
+             class="btn btn-outline-warning btn-sm">
             <i class="bi bi-github"></i> Source
           </a>
         </div>
@@ -73,76 +77,260 @@
     </div>
   </nav>
 
-  <!-- Google Translate placeholder -->
+  <!-- Google Translate -->
   <div id="google_translate_element" class="container mt-3"></div>
 
   <!-- PAGE HEADER -->
   <header class="container mt-4">
-    <div class="text-center mb-4">
-      <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" />
+    <div class="text-center">
+      <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" loading="lazy" />
       <h1 class="display-5 fw-extrabold text-gradient mt-3">Gods &amp; Monsters</h1>
-      <p class="lead opacity-85">Come and meet the heroes and the villains of the world...</p>
-      <div class="mt-3">
+      <p class="lead opacity-75 mb-3">Meet the heroes, the villains — and the alliances that shape the world.</p>
+      <div class="d-inline-flex align-items-center gap-2">
         <button class="btn btn-warning shadow-lift" onclick="clickMe()">Secret Hero</button>
-        <p id="random" class="mt-2"></p>
+        <span id="random" class="small text-secondary"></span>
       </div>
     </div>
   </header>
 
-  <!-- CONTENT -->
-  <main class="container pb-5">
-    <!-- HEROES -->
-    <section class="glass p-4 p-md-5 rounded-4 mb-5">
-      <h2 class="section-heading text-center mb-4">Compass Alliance — The Heroes</h2>
+  <!-- MAIN -->
+  <main class="container py-5">
 
-      <div class="text-center mb-3">
-        <img class="img-fluid rounded-3 shadow-lg hover-float mb-3" src="contents/indexphoto/union.webp" alt="union" />
-        <img class="img-fluid rounded-3 shadow-lg hover-float" src="contents/gallery/UniteCol-min.webp" alt="Heroes poster" />
-      </div>
+    <!-- TABS -->
+    <ul class="nav nav-pills justify-content-center gap-2 mb-4" id="gmTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="heroes-tab" data-bs-toggle="tab" href="#heroes-pane"
+       role="tab" aria-controls="heroes-pane" aria-selected="true">
+      <i class="bi bi-shield-check me-1"></i> Heroes
+    </a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="villains-tab" data-bs-toggle="tab" href="#villains-pane"
+       role="tab" aria-controls="villains-pane" aria-selected="false">
+      <i class="bi bi-lightning-charge me-1"></i> Villains
+    </a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="teams-tab" data-bs-toggle="tab" href="#teams-pane"
+       role="tab" aria-controls="teams-pane" aria-selected="false">
+      <i class="bi bi-people me-1"></i> Teams &amp; Alliances
+    </a>
+  </li>
+</ul>
 
-      <div class="row g-4">
-        <div class="col-12 col-lg-6">
-          <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
-            <h3 class="section-title mb-2"><span class="marker">Founding Members</span></h3>
-            <p class="mb-0">
-              Paladin, Voltage, Lady Astral, Comrade, Gigantic, and Tsunami.
+
+    <div class="tab-content" id="gmTabsContent">
+      <!-- HEROES TAB -->
+      <section class="tab-pane fade show active" id="heroes-pane" role="tabpanel" aria-labelledby="heroes-tab">
+        <div class="glass p-4 p-md-5 rounded-4 mb-4">
+          <div class="text-center mb-3">
+            <img class="img-fluid rounded-3 shadow-lg hover-float mb-3"
+                 src="contents/indexphoto/union.webp" alt="Compass Alliance team" loading="lazy" />
+            <img class="img-fluid rounded-3 shadow-lg hover-float"
+                 src="contents/gallery/UniteCol-min.webp" alt="Heroes poster" loading="lazy" />
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
+                <h3 class="section-title mb-2"><span class="marker">Founding Members</span></h3>
+                <p class="mb-0">Paladin, Voltage, Lady Astral, Comrade, Gigantic, and Tsunami.</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
+                <h3 class="section-title mb-2"><span class="marker">Joined After Foundation</span></h3>
+                <p class="mb-0">Coming soon…</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic heroes grid -->
+          <div class="mt-4">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeHeroes"></div>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="bg-surface p-3 p-md-4 rounded-3 h-100">
-            <h3 class="section-title mb-2"><span class="marker">Joined After Foundation</span></h3>
-            <p class="mb-0">
-              Coming soon...
-            </p>
+      </section>
+
+      <!-- VILLAINS TAB -->
+      <section class="tab-pane fade" id="villains-pane" role="tabpanel" aria-labelledby="villains-tab">
+        <div class="glass p-4 p-md-5 rounded-4 mb-4">
+          <div class="text-center mb-3">
+            <img class="img-fluid rounded-3 shadow-lg hover-float mb-3"
+                 src="contents/indexphoto/council.webp" alt="Villains council" loading="lazy" />
+            <img class="img-fluid rounded-3 shadow-lg hover-float"
+                 src="contents/gallery/GrandmastersColo-min.png" alt="Grandmasters" loading="lazy" />
           </div>
+
+          <!-- Dynamic villains grid -->
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeVillains"></div>
+        </div>
+      </section>
+
+      <!-- TEAMS & ALLIANCES TAB -->
+      <section class="tab-pane fade" id="teams-pane" role="tabpanel" aria-labelledby="teams-tab">
+        <div class="glass p-4 p-md-5 rounded-4">
+
+          <!-- Filters (optional placeholders for later JS) -->
+          <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+            <button class="btn btn-outline-warning btn-sm" data-team-filter="all">All</button>
+            <button class="btn btn-outline-light btn-sm" data-team-filter="heroes">Hero Teams</button>
+            <button class="btn btn-outline-light btn-sm" data-team-filter="villains">Villain Orgs</button>
+          </div>
+
+          <!-- Teams Accordion -->
+          <div class="accordion accordion-flush" id="teamsAccordion">
+
+            <!-- Compass Alliance -->
+            <div class="accordion-item bg-transparent border-secondary">
+              <h2 class="accordion-header" id="team1-h">
+                <button class="accordion-button collapsed text-white bg-dark" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#team1" aria-expanded="false" aria-controls="team1">
+                  <img src="contents/art2025/symbol.png" alt="" width="28" height="28" class="me-2 opacity-75" />
+                  Compass Alliance (Founders & Core)
+                </button>
+              </h2>
+              <div id="team1" class="accordion-collapse collapse" aria-labelledby="team1-h" data-bs-parent="#teamsAccordion">
+                <div class="accordion-body">
+                  <div class="row g-4 align-items-start">
+                    <div class="col-md-7">
+                      <p class="mb-3">
+                        The veteran hero team at the heart of the modern era. They set the standard for cooperation,
+                        ethics, and world-scale response.
+                      </p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent text-white"><strong>Members (Founders):</strong> Paladin, Voltage, Lady Astral, Comrade, Gigantic, Tsunami</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Headquarters:</strong> Central Command, Israel</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Domains:</strong> Prime, Tech, Mystic, Undersea</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5">
+                      <img src="contents/indexphoto/union.webp" class="img-fluid rounded-3 shadow-lg hover-float"
+                           alt="Compass Alliance group" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prime Children -->
+            <div class="accordion-item bg-transparent border-secondary">
+              <h2 class="accordion-header" id="team2-h">
+                <button class="accordion-button collapsed text-white bg-dark" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#team2" aria-expanded="false" aria-controls="team2">
+                  <img src="contents/gallery/UniteCol-min.webp" alt="" width="28" height="28" class="me-2 opacity-75" />
+                  Prime Children (Young Generation)
+                </button>
+              </h2>
+              <div id="team2" class="accordion-collapse collapse" aria-labelledby="team2-h" data-bs-parent="#teamsAccordion">
+                <div class="accordion-body">
+                  <div class="row g-4 align-items-start">
+                    <div class="col-md-7">
+                      <p class="mb-3">
+                        A rising generation shaped by a strange new era. Training, mentorship, and field missions forge
+                        them into tomorrow’s leaders.
+                      </p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent text-white"><strong>Notable Members:</strong> Enforcer, Melody, Rubberman, Bloom, Rocket Prime, Size, Dragon Fighter</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Mentors:</strong> Compass Alliance</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Focus:</strong> Discovery, teamwork, growth</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5">
+                      <img src="contents/gallery/UniteCol-min.webp" class="img-fluid rounded-3 shadow-lg hover-float"
+                           alt="Prime Children poster" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="text-end mt-3">
+                    <a href="primeChildren.html" class="btn btn-outline-warning btn-sm">
+                      Learn more <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Pyramid (villains) -->
+            <div class="accordion-item bg-transparent border-secondary">
+              <h2 class="accordion-header" id="team3-h">
+                <button class="accordion-button collapsed text-white bg-dark" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#team3" aria-expanded="false" aria-controls="team3">
+                  <img src="contents/indexphoto/council.webp" alt="" width="28" height="28" class="me-2 opacity-75" />
+                  The Pyramid (Global Villain Network)
+                </button>
+              </h2>
+              <div id="team3" class="accordion-collapse collapse" aria-labelledby="team3-h" data-bs-parent="#teamsAccordion">
+                <div class="accordion-body">
+                  <div class="row g-4 align-items-start">
+                    <div class="col-md-7">
+                      <p class="mb-3">
+                        A shadowy organization pulling strings across politics, tech, and mystic artifacts.
+                      </p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent text-white"><strong>Leaders:</strong> Ramesses the Undying, Johannes Reich, Jonathon Scorp, The Red Queen, Atremo, Rosh Riva</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Cells:</strong> Finance, Occult, Engineering, Intelligence</li>
+                        <li class="list-group-item bg-transparent text-white"><strong>Goal:</strong> Order through domination</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5">
+                      <img src="contents/indexphoto/council.webp" class="img-fluid rounded-3 shadow-lg hover-float"
+                           alt="Pyramid council" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-secondary">
+  <h2 class="accordion-header" id="team-vasco-h">
+    <button class="accordion-button collapsed text-white bg-dark" type="button"
+            data-bs-toggle="collapse" data-bs-target="#team-vasco"
+            aria-expanded="false" aria-controls="team-vasco">
+      <img src="contents/indexphoto/crestDesign.webp" alt="Vasco crest" width="28" height="28" class="me-2 opacity-75" />
+      Vasco Corporation (Corporate Powerhouse)
+    </button>
+  </h2>
+  <div id="team-vasco" class="accordion-collapse collapse"
+       aria-labelledby="team-vasco-h" data-bs-parent="#teamsAccordion">
+    <div class="accordion-body">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-7">
+          <p class="mb-3">
+            Vasco Corporation is a secretive megacorp whose true agenda goes far beyond finance.
+            Using its immense resources in science, technology and shadow diplomacy, it leads
+            projects aimed at <strong>discovering the existence of parallel universes</strong>
+            and exploiting interdimensional rifts. While presenting itself as a
+            forward-thinking research conglomerate, its methods are often ruthless.
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-transparent text-white"><strong>Focus:</strong> Multiverse research, interdimensional travel, advanced technologies</li>
+            <li class="list-group-item bg-transparent text-white"><strong>Front Companies:</strong> Vasco Labs, Vasco Finance, Vasco Defense</li>
+            <li class="list-group-item bg-transparent text-white"><strong>Key Projects:</strong> Project Gate, Mirror Initiative, Quantum Corridor</li>
+            <li class="list-group-item bg-transparent text-white"><strong>Alignment:</strong> Officially neutral — secretly manipulative</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <img src="contents/indexphoto/crestDesign.webp"
+               class="img-fluid rounded-3 shadow-lg hover-float"
+               alt="Vasco Corporation crest" loading="lazy" />
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Dynamic heroes grid -->
-      <div class="mt-4">
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeHeroes"></div>
-      </div>
-    </section>
-
-    <!-- VILLAINS -->
-    <section class="glass p-4 p-md-5 rounded-4">
-      <h2 class="section-heading text-center mb-4">The Bad Guys</h2>
-
-      <div class="text-center mb-3">
-        <img class="img-fluid rounded-3 shadow-lg hover-float mb-3" src="contents/indexphoto/council.webp" alt="Council" />
-        <img class="img-fluid rounded-3 shadow-lg hover-float" src="contents/gallery/GrandmastersColo-min.png" alt="Grandmasters" />
-      </div>
-
-      <!-- Dynamic villains grid -->
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="showMeVillains"></div>
-    </section>
+            <!-- Add more teams here… -->
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- IMAGE MODAL (click any img with data-bs-target) -->
+  <!-- IMAGE MODAL -->
   <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content bg-dark">
-        <button type="button" class="btn-close btn-close-white position-absolute end-0 me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white position-absolute end-0 me-2 mt-2"
+                data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body p-0">
           <img id="modalImg" src="" alt="Preview" class="img-fluid w-100" />
         </div>
@@ -150,8 +338,8 @@
     </div>
   </div>
 
-  <!-- FOOTER (same look & fixes) -->
-  <footer class="py-4 mt-5 border-top-dark">
+  <!-- FOOTER -->
+<footer class="py-4 mt-5 border-top-dark">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
       <div class="text-secondary small">
         <div>&copy; 2025 Compass World. All Rights Reserved.</div>
@@ -165,7 +353,6 @@
     </div>
   </footer>
 
-  <!-- Back to top -->
   <button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
   <!-- Analytics -->
@@ -177,34 +364,29 @@
     gtag('config', 'G-1LV563TQEJ');
   </script>
 
-  <!-- Bootstrap 5 bundle (no jQuery/Popper needed) -->
+  <!-- Bootstrap 5 bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Modal image handler + Back-to-top visibility + delegate for dynamic cards -->
+  <!-- Back-to-top + (אופציונלי) האזנה ליצירת כרטיסי Timeline דינמית -->
   <script>
-    // Open any clicked image in modal (works for dynamic content)
-    document.addEventListener('click', (e) => {
-      const img = e.target.closest('img');
-      if (!img) return;
-      // Only activate for gallery-style images (avoid logos/icons)
-      const eligible = !img.closest('nav, footer') && img.width > 120 && !img.classList.contains('no-modal');
-      if (!eligible) return;
-
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
-      if (modal && modalImg) {
-        modalImg.src = img.getAttribute('src');
-        modalImg.alt = img.getAttribute('alt') || 'Preview';
-        const bsModal = new bootstrap.Modal(modal);
-        bsModal.show();
-      }
-    });
-
     // Back to top
     const topBtn = document.querySelector('.back-to-top');
     const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
     window.addEventListener('scroll', onScroll); onScroll();
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // דוגמה: אם history.js מזריק כרטיסים, נוודא קלאס תקין
+    // (אפשר להסיר אם כבר מטופל בקוד שלך)
+    const timeline = document.getElementById('showMe');
+    if (timeline) {
+      const observer = new MutationObserver(() => {
+        [...timeline.querySelectorAll('.timeline-card')].forEach(el => {
+          el.classList.add('glass', 'rounded-4');
+        });
+      });
+      observer.observe(timeline, { childList: true, subtree: true });
+    }
+
   </script>
 </body>
 </html>

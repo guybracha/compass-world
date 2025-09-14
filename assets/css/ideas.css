@@ -1,0 +1,158 @@
+/* ==============================
+   Compass World — ideas.css
+   ייחודי לעמוד ideas.html
+   ============================== */
+
+:root{
+  --ideas-accent: #f8c23a;                /* זהב חמים */
+  --ideas-accent-2: #7dd3fc;              /* כחול-ציור */
+  --ideas-ink: #f1f5f9;                   /* טקסט בהיר */
+  --ideas-muted: #94a3b8;                 /* טקסט משני */
+  --ideas-surface: rgba(255,255,255,.05); /* רקע כרטיס */
+  --ideas-surface-2: rgba(255,255,255,.08);
+  --ideas-border: rgba(255,255,255,.12);
+  --ideas-glow: 0 10px 30px rgba(0,0,0,.45);
+}
+
+/* ---------- Header ---------- */
+.ideas-header {
+  text-align: center;
+  padding: clamp(24px, 4vw, 56px) 0 8px;
+}
+.ideas-kicker {
+  display:inline-block;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:700;
+  font-size:.8rem;
+  color: var(--ideas-accent);
+  background: linear-gradient(90deg, rgba(248,194,58,.12), transparent);
+  padding:.25rem .5rem;
+  border-radius:.4rem;
+}
+.ideas-title {
+  margin-top:.5rem;
+  background: linear-gradient(90deg, #fff, #ffd67a 45%, #fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-weight:800;
+}
+.ideas-sub {
+  color: var(--ideas-muted);
+  max-width: 72ch;
+  margin: .5rem auto 0;
+}
+
+/* ---------- Filters (אופציונלי) ---------- */
+.ideas-filters {
+  display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center;
+  margin: 14px 0 22px;
+}
+.ideas-chip {
+  border:1px solid var(--ideas-border);
+  background: rgba(255,255,255,.03);
+  color: var(--ideas-ink);
+  padding:.4rem .75rem;
+  border-radius:999px;
+  font-weight:600; font-size:.9rem;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+  cursor:pointer;
+}
+.ideas-chip:hover { transform: translateY(-1px); background: rgba(255,255,255,.06); }
+.ideas-chip.is-active {
+  background: linear-gradient(180deg, rgba(248,194,58,.28), rgba(248,194,58,.12));
+  border-color: rgba(248,194,58,.65);
+  color:#111; text-shadow:0 1px 0 rgba(255,255,255,.35);
+}
+
+/* ---------- Grid ---------- */
+.ideas-grid {
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(12px,2vw,18px);
+}
+.ideas-col { grid-column: span 12; }
+@media (min-width: 576px){ .ideas-col{ grid-column: span 6; } }
+@media (min-width: 992px){ .ideas-col{ grid-column: span 4; } }
+
+/* ---------- Card ---------- */
+.idea-card {
+  position:relative;
+  height:100%;
+  background: linear-gradient(180deg, var(--ideas-surface), var(--ideas-surface-2));
+  border:1px solid var(--ideas-border);
+  border-radius: 16px;
+  box-shadow: var(--ideas-glow);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.idea-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(0,0,0,.55);
+  border-color: rgba(248,194,58,.5);
+}
+
+/* פס דק למעלה (accent) */
+.idea-card::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0; height:3px;
+  background: linear-gradient(90deg, var(--ideas-accent), var(--ideas-accent-2));
+  opacity:.7;
+}
+
+/* גוף הכרטיס */
+.idea-body{ padding: 16px 16px 12px; }
+.idea-title{
+  margin:0 0 6px;
+  font-weight:800; letter-spacing:.2px;
+}
+.idea-meta{
+  display:flex; align-items:center; gap:.5rem;
+  font-size:.85rem; color: var(--ideas-muted);
+}
+.idea-dot{ width:6px;height:6px;border-radius:50%;background:var(--ideas-accent-2);display:inline-block; }
+
+/* תיאור */
+.idea-text{
+  margin-top:.65rem; color: var(--ideas-ink);
+  line-height:1.55;
+}
+
+/* תגיות קטנות */
+.idea-tags{
+  display:flex; flex-wrap:wrap; gap:.35rem;
+  margin-top:.75rem;
+}
+.idea-tag{
+  font-size:.75rem; font-weight:700; letter-spacing:.03em;
+  padding:.25rem .5rem; border-radius:.4rem;
+  background: rgba(125, 211, 252, .15);
+  border:1px solid rgba(125, 211, 252, .35);
+  color:#e6f6ff;
+}
+.idea-tag.is-gold{ background: rgba(248, 194, 58, .16); border-color: rgba(248, 194, 58, .45); color:#fff5d6; }
+.idea-tag.is-red { background: rgba(244, 63, 94, .16); border-color: rgba(244, 63, 94, .45); color:#ffe1e7; }
+
+/* פוטר הכרטיס */
+.idea-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:.75rem;
+  padding: 10px 16px 14px;
+  border-top:1px dashed var(--ideas-border);
+  color: var(--ideas-muted);
+  font-size:.85rem;
+}
+.idea-badge{
+  font-size:.75rem; font-weight:700;
+  padding:.25rem .5rem; border-radius:.4rem;
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--ideas-border);
+}
+
+/* ---------- Utils ---------- */
+.glow { filter: drop-shadow(0 0 10px rgba(248,194,58,.35)); }
+.hide { display:none !important; }
+
+/* ---------- RTL תמיכה בסיסית ---------- */
+:root[dir="rtl"] .ideas-meta, 
+:root[dir="rtl"] .idea-meta,
+:root[dir="rtl"] .idea-foot { direction: rtl; }
