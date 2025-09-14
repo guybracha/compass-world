@@ -1,33 +1,30 @@
-// =====================
+// assets/scripts/primeChildren.js
+// =====================================================
+// Compass World — Prime-Children (DATA ONLY)
+// This file exposes window.characters (+ CATS, SIDE, badgeForTags if needed).
+// It does NOT wire any UI. Rendering is done in primeRender.js.
+// =====================================================
+
+'use strict';
+
 // Categories & Sides
-// =====================
 const CATS = {
-  PRIME: "Prime",       // born with the Prime gift
-  TECH: "Tech",         // technology-based
-  MYSTIC: "Mystic",     // magic / occult / arcane
-  UNDERSEA: "Undersea", // oceanic origins
-
-  COSMIC: "Cosmic",     // cosmic energy / space-related
-  ALIEN: "Alien",       // extraterrestrial
-  LEGEND: "Legendary",  // mythic/ancient lineage
-  SCIENCE: "Science",   // scientific experiment (non-tech gear)
-  DARK: "Dark",         // shadow/demonic/forbidden
-  ELEMENTAL: "Elemental", // classical elements
-  MUTANT: "Mutant"      // random mutation (non-Prime)
+  PRIME: "Prime",
+  TECH: "Tech",
+  MYSTIC: "Mystic",
+  UNDERSEA: "Undersea",
+  COSMIC: "Cosmic",
+  ALIEN: "Alien",
+  LEGEND: "Legendary",
+  SCIENCE: "Science",
+  DARK: "Dark",
+  ELEMENTAL: "Elemental",
+  MUTANT: "Mutant"
 };
-
-const ALL_CATS_ORDER = [
-  CATS.PRIME, CATS.TECH, CATS.MYSTIC, CATS.UNDERSEA,
-  CATS.COSMIC, CATS.ALIEN, CATS.LEGEND, CATS.SCIENCE,
-  CATS.DARK, CATS.ELEMENTAL, CATS.MUTANT
-];
 
 const SIDE = { HERO: "Hero", VILLAIN: "Villain" };
 
-// =====================
 // Data
-// =====================
-// English names & powers; tags expanded where relevant
 const characters = [
   // === HEROES ===
   { name: "Voltage", side: SIDE.HERO, power: "Electricity", tags: [CATS.PRIME, CATS.TECH, CATS.ELEMENTAL] },
@@ -97,139 +94,21 @@ const characters = [
   { name: "Ramesses the Immortal", side: SIDE.VILLAIN, power: "Immortality", tags: [CATS.PRIME, CATS.MYSTIC, CATS.LEGEND] },
   { name: "Black Eagle", side: SIDE.VILLAIN, power: "Reflexes", tags: [CATS.PRIME] },
   { name: "Dark Mind", side: SIDE.VILLAIN, power: "Telekinesis", tags: [CATS.PRIME, CATS.DARK] },
-  { name: "Alternatia", side: SIDE.VILLAIN, power: "Matter transmutation", tags: [CATS.PRIME] },
+  { name: "Alternatasha", side: SIDE.VILLAIN, power: "Matter transmutation", tags: [CATS.PRIME] },
   { name: "Scarfield", side: SIDE.VILLAIN, power: "Vampiric abilities", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
   { name: "Sticker Man", side: SIDE.VILLAIN, power: "Explosive stickers", tags: [CATS.PRIME] },
   { name: "Madame Blackout", side: SIDE.VILLAIN, power: "Shadow phasing", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
   { name: "The Sphinx", side: SIDE.VILLAIN, power: "Rapid healing", tags: [CATS.PRIME, CATS.LEGEND] },
   { name: "Wizmaster", side: SIDE.VILLAIN, power: "Dark magic", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
-  { name: "Headmaster Vile", side: SIDE.VILLAIN, power: "Mind Manipulation & Control", tags: [CATS.PRIME,  CATS.DARK] }
+  { name: "Headmaster Vile", side: SIDE.VILLAIN, power: "Mind Manipulation & Control", tags: [CATS.PRIME, CATS.DARK] }
 ];
 
-// =====================
-// Badges (Bootstrap colors only)
-// =====================
-function badgeForTags(tags) {
-  return tags.map((t) => {
-    let cls = "text-bg-secondary";
-    if (t === CATS.PRIME) cls = "text-bg-primary";
-    else if (t === CATS.TECH) cls = "text-bg-warning text-dark";
-    else if (t === CATS.MYSTIC) cls = "text-bg-info text-dark";
-    else if (t === CATS.UNDERSEA) cls = "text-bg-success";
-    else if (t === CATS.COSMIC) cls = "text-bg-dark";
-    else if (t === CATS.ALIEN) cls = "text-bg-light text-dark";
-    else if (t === CATS.LEGEND) cls = "text-bg-secondary";
-    else if (t === CATS.SCIENCE) cls = "text-bg-primary-subtle";
-    else if (t === CATS.DARK) cls = "text-bg-danger";
-    else if (t === CATS.ELEMENTAL) cls = "text-bg-success";
-    else if (t === CATS.MUTANT) cls = "text-bg-secondary";
-    return `<span class="badge ${cls} me-1">${t}</span>`;
-  }).join("");
-}
+// Expose to window (for renderer)
+window.CATS = CATS;
+window.SIDE = SIDE;
+window.characters = characters;
 
-// =====================
-// List item template
-// =====================
-function li(c) {
-  return `
-    <li class="list-group-item">
-      <div class="fw-semibold">${c.name}</div>
-      <div class="small text-secondary">${c.power}</div>
-      <div>${badgeForTags(c.tags)}</div>
-    </li>`;
-}
-
-// =====================
-// Filtering state
-// =====================
-const state = {
-  q: "",
-  side: "ALL",
-  tags: new Set([CATS.PRIME]) // default: Prime checked
+// (optional) Export badgeForTags for other pages/modals
+window.badgeForTags = function badgeForTags(tags) {
+  return (tags || []).map((t) => `<span class="badge bg-secondary me-1">${t}</span>`).join('');
 };
-
-// =====================
-// Controls wiring
-// =====================
-
-// Render tag checkboxes dynamically from ALL_CATS_ORDER
-function renderTagControls() {
-  const mount = document.getElementById("pc-tags");
-  if (!mount) return;
-
-  mount.innerHTML = ALL_CATS_ORDER.map(cat => {
-    const id = `tag-${cat.toLowerCase()}`;
-    const checked = state.tags.has(cat) ? "checked" : "";
-    return `
-      <div class="form-check">
-        <input class="form-check-input pc-tag" type="checkbox" value="${cat}" id="${id}" ${checked}>
-        <label class="form-check-label" for="${id}">${cat}</label>
-      </div>`;
-  }).join("");
-
-  // attach listeners
-  Array.from(mount.querySelectorAll(".pc-tag")).forEach(ch => {
-    ch.addEventListener("change", (e) => {
-      const v = e.target.value;
-      if (e.target.checked) state.tags.add(v); else state.tags.delete(v);
-      render();
-    });
-  });
-}
-
-// Debounce helper
-function debounce(fn, ms = 200) {
-  let t;
-  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
-}
-
-// Filtering
-function getFiltered() {
-  const q = state.q.trim().toLowerCase();
-  const side = state.side;
-  const activeTags = state.tags;
-
-  return characters.filter((c) => {
-    if (side !== "ALL" && c.side !== side) return false;
-    if (activeTags.size > 0) {
-      // require at least one active tag
-      if (!c.tags.some(t => activeTags.has(t))) return false;
-    }
-    if (q) {
-      const hay = `${c.name} ${c.power}`.toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
-    return true;
-  });
-}
-
-// Render lists
-function render() {
-  const data = getFiltered();
-  const heroes = data.filter(c => c.side === SIDE.HERO);
-  const villains = data.filter(c => c.side === SIDE.VILLAIN);
-
-  document.getElementById("pc-heroes-list").innerHTML = heroes.map(li).join("");
-  document.getElementById("pc-villains-list").innerHTML = villains.map(li).join("");
-
-  document.getElementById("pc-heroes-count").textContent = heroes.length;
-  document.getElementById("pc-villains-count").textContent = villains.length;
-}
-
-// Initial wiring
-function wireControls() {
-  const input = document.getElementById("pc-search");
-  const sideSel = document.getElementById("pc-side");
-
-  input.addEventListener("input", debounce((e) => { state.q = e.target.value; render(); }, 180));
-  sideSel.addEventListener("change", (e) => { state.side = e.target.value; render(); });
-}
-
-// =====================
-// Init
-// =====================
-document.addEventListener("DOMContentLoaded", () => {
-  renderTagControls();
-  wireControls();
-  render();
-});

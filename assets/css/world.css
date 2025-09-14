@@ -75,3 +75,13 @@ footer { background: linear-gradient(180deg, transparent, rgba(255,255,255,.03))
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+#prime-lineages .btn-outline-secondary.active {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+#prime-lineages .list-group-item {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
