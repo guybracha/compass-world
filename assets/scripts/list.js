@@ -1,15 +1,18 @@
 let list=[
     {Name: "Paladin"},
     {Name: "Voltage"},
-    {Name: "Astral"},
+    {Name: "Lady Astral"},
     {Name: "Comrade"},
     {Name: "Gigantic"},
-    {Name: "Jupiterian"},
-    {Name: "Leviathan"},
-    {Name: "Eastwind"},
-    {Name: "Sunshine"},
+    {Name: "Tsunami"},
+    {Name: "Size"},
+    {Name: "Mariposa"},
+    {Name: "Dragon Fighter"},
     {Name: "Captain Space"},
-    {Name: "Rocket Prime"}
+    {Name: "Rocket Prime"},
+    {Name: "Symbol"},
+    {Name: "Enforcer"},
+    {Name: "Melody"}
 ];
 
 var i;

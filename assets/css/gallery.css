@@ -1,0 +1,168 @@
+/* ===========================
+   Compass World — Gallery
+   =========================== */
+
+/* בסיס (מתחשב במצב כהה ובמשתנים אם הוגדרו ב-main.css) */
+:root {
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-brd: rgba(255,255,255,0.08);
+  --tag-bg: rgba(255,255,255,0.10);
+  --tag-brd: rgba(255,255,255,0.15);
+}
+
+body.bg-dark {
+  background: var(--bg-body, #0f1115);
+  color: var(--text-main, #e5e7eb);
+}
+
+/* כרטיס “זכוכית” עדין (אם כבר מוגדר ב-main.css, זה רק מלטש) */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-brd);
+  border-radius: 1rem;
+}
+
+/* כותרת מקטעים */
+.section-heading {
+  font-family: "Bangers", system-ui, -apple-system, sans-serif;
+  letter-spacing: .5px;
+}
+
+/* ===== סרגל פילטרים/חיפוש ===== */
+.filter-btn {
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+  transition: all .18s ease-in-out;
+}
+.filter-btn:hover {
+  transform: translateY(-1px);
+  border-color: #ffc107;
+  color: #ffc107;
+}
+.filter-btn.active {
+  background: #ffc107;
+  color: #1a1a1a;
+  border-color: #ffc107;
+}
+
+.input-group .form-control {
+  color: #fff;
+}
+.input-group .form-control::placeholder {
+  color: rgba(255,255,255,.6);
+}
+.input-group .input-group-text {
+  color: #fff;
+  border-color: rgba(255,255,255,.35);
+}
+
+/* ===== גריד הגלריה ===== */
+#galleryGrid {
+  /* מאפשר ציור עצלני יעיל כשיש הרבה כרטיסים */
+  contain: content;
+}
+
+.gallery-col {
+  content-visibility: auto; /* משפר ביצועים בתמונות רבות */
+}
+
+.gallery-card {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+}
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border-color: rgba(255,255,255,.12);
+}
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .75rem;
+  transition: transform .25s ease;
+  will-change: transform;
+}
+.gallery-card:hover img {
+  transform: scale(1.02);
+}
+
+/* תגיות */
+.tag-badge {
+  display: inline-block;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-brd);
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+/* מצב ריק */
+.empty-state {
+  opacity: .8;
+}
+.empty-state i {
+  display: inline-block;
+  margin-bottom: .25rem;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+}
+
+/* ===== מודאל תמונה ===== */
+.modal-content.bg-black {
+  background: #0b0d12 !important;
+}
+#imgModalImg {
+  max-height: calc(100vh - 12rem);
+  object-fit: contain;
+}
+#imgModalCaption {
+  color: #9aa3b2 !important;
+}
+
+/* ===== כפתורים משלימים ===== */
+.btn-outline-secondary {
+  color: #cbd5e1;
+  border-color: rgba(255,255,255,.25);
+}
+.btn-outline-secondary:hover {
+  color: #0b0d12;
+  background: #cbd5e1;
+  border-color: #cbd5e1;
+}
+
+/* מצב נגישות לפוקוס מקלדת */
+button:focus-visible,
+a:focus-visible,
+.input-group .form-control:focus-visible {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* ===== התאמות רספונסיביות ===== */
+@media (max-width: 576px) {
+  .gallery-card { border-radius: .875rem; }
+  .gallery-card img { border-radius: .6rem; }
+  .input-group { width: 100%; }
+}
+
+@media (min-width: 1400px) {
+  /* ריווח עדין במסכים רחבים מאוד */
+  #galleryGrid .gallery-col { padding-left: .75rem; padding-right: .75rem; }
+}
+
+/* ===== ליטוש נווט/פוטר בדף זה (עדין, לא הורס ערכות אחרות) ===== */
+.navbar.bg-black {
+  background: rgba(0,0,0,.6) !important;
+}
+footer.border-top-dark {
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+}
+footer .link-warning {
+  text-underline-offset: 3px;
+}
+footer .link-warning:hover {
+  text-decoration: underline;
+}
