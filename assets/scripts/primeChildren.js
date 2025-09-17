@@ -33,7 +33,7 @@ const characters = [
   { name: "Enforcer", side: SIDE.HERO, power: "Living shadow", tags: [CATS.PRIME, CATS.MYSTIC, CATS.DARK] },
   { name: "Melody", side: SIDE.HERO, power: "Super-song", tags: [CATS.PRIME] },
   { name: "Cheerstar", side: SIDE.HERO, power: "Firework blasts", tags: [CATS.PRIME] },
-  { name: "Snowy", side: SIDE.HERO, power: "Snow creation", tags: [CATS.PRIME, CATS.MYSTIC, CATS.ELEMENTAL] },
+  { name: "Snowie", side: SIDE.HERO, power: "Snow creation", tags: [CATS.PRIME, CATS.MYSTIC, CATS.ELEMENTAL] },
   { name: "Polar", side: SIDE.HERO, power: "Magnetic fields", tags: [CATS.PRIME, CATS.ELEMENTAL] },
   { name: "Captain Phoenix", side: SIDE.HERO, power: "Pyrokinesis", tags: [CATS.PRIME, CATS.ELEMENTAL] },
   { name: "The Alchemist", side: SIDE.HERO, power: "Matter transmutation", tags: [CATS.PRIME, CATS.MYSTIC, CATS.SCIENCE] },
