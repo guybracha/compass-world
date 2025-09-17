@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Compass World | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Art, posters, and concept pieces from the Compass World universe." />
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://guybracha.github.io/compass-world/gallery.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Guy Bracha" />
+  <meta name="keywords" content="Compass World, gallery, art, posters, concept art, superheroes" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compass World – Gallery" />
+  <meta property="og:description" content="Browse artworks, posters, and concept pieces from the Compass World." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="contents/indexphoto/logo.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compass World – Gallery" />
+  <meta name="twitter:description" content="Art, posters, and concepts from the Compass World." />
+  <meta name="twitter:image" content="https://guybracha.github.io/compass-world/contents/indexphoto/logo.webp" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/gallery.css" />
+
+  <!-- Page script (kept external) -->
+  <script src="assets/scripts/gallery.js" defer></script>
+
+  <style>
+    /* תוספות עדינות לעמוד */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
+    .gallery-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .gallery-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    .tag-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); }
+    .filter-btn.active { background: #ffc107; color:#000; border-color:#ffc107; }
+    .empty-state { opacity:.8 }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
+        <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow"/>
+        <span class="fw-bold">Compass World</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="files.html">Gods &amp; Monsters</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+          <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
+          <li class="nav-item"><a class="nav-link" href="primeChildren.html">Prime Children</a></li>
+          <li class="nav-item"><a class="nav-link" href="ideas.html">Ideas</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
+        </ul>
+        <div class="d-none d-lg-flex ms-lg-3 gap-2">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-github"></i> Source
+          </a>
+          <a href="https://www.facebook.com/groups/6941542269224419" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm" aria-label="Compass World Architects Facebook group">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1 class="display-5 text-warning mb-2">Gallery</h1>
+        <p class="lead mb-0">Posters, key art, and concept explorations from the <strong>Compass World</strong>. Filter by team, era, or theme and open any image for a closer look.</p>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img class="img-fluid rounded-4 shadow-lg" src="contents/gallery/UniteCol-min.webp" alt="Compass Alliance artwork" loading="lazy"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <section class="container">
+    <div class="glass rounded-4 p-3 p-md-4">
+      <div class="d-flex flex-wrap align-items-center gap-2">
+        <button class="btn btn-outline-light btn-sm filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="alliance">Compass Alliance</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="prime">Prime-Children</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="villains">Villains</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="myth">Gods &amp; Myth</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="space">Space</button>
+        <button class="btn btn-outline-light btn-sm filter-btn" data-filter="poster">Poster</button>
+
+        <div class="ms-auto d-flex align-items-center gap-2">
+          <div class="input-group input-group-sm" style="max-width:280px;">
+            <span class="input-group-text bg-transparent text-white border-secondary"><i class="bi bi-search"></i></span>
+            <input id="searchInput" type="search" class="form-control bg-transparent text-white border-secondary" placeholder="Search title or tags…" />
+          </div>
+          <button id="clearFilters" class="btn btn-outline-secondary btn-sm" title="Clear filters"><i class="bi bi-x-circle"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main class="container my-4">
+    <div id="galleryGrid" class="row g-3 g-md-4">
+      <!-- cards injected by assets/scripts/gallery.js -->
+    </div>
+
+    <div id="emptyState" class="empty-state text-center py-5 d-none">
+      <i class="bi bi-image" style="font-size:3rem;"></i>
+      <p class="mt-3 mb-0">No results. Try a different filter or search term.</p>
+    </div>
+  </main>
+
+  <!-- Modal viewer -->
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-black text-white border-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="imgModalTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="imgModalImg" class="img-fluid rounded-3 w-100" alt="" />
+          <p id="imgModalCaption" class="text-secondary small mt-3 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA to Facebook group -->
+  <section class="container my-5 text-center">
+    <div class="glass p-4 rounded-4">
+      <h2 class="section-heading mb-3 text-primary"><i class="bi bi-facebook"></i> Join the Architects</h2>
+      <p class="mb-4">Share ideas, sketches, and feedback in the official community of the Compass World.</p>
+      <a href="https://www.facebook.com/groups/6941542269224419" target="_blank" rel="noopener" class="btn btn-primary btn-lg fw-bold">
+        <i class="bi bi-facebook"></i> Join Our Group
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto border-top-dark">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">
+        <div>&copy; <span id="year"></span> Compass World. All rights reserved.</div>
+        <div class="mt-1 d-flex gap-3">
+          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+          <a href="https://www.facebook.com/groups/6941542269224419" class="link-warning fw-semibold" target="_blank" rel="noopener" aria-label="Compass World Architects Facebook group">
+            <i class="bi bi-facebook"></i> Architects
+          </a>
+        </div>
+      </div>
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Small util: current year (kept inline to avoid coupling with gallery.js) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

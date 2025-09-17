@@ -1,3 +1,4 @@
-const credits = "אתר זה נוצר ופותח על ידי גיא ברכה. 2023";
+const year = new Date().getFullYear();
+const credits = `This site was created and developed by Guy Bracha. © ${year} All rights reserved.`;
 
 console.log(credits);
