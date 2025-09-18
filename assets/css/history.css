@@ -203,3 +203,119 @@
   }
   .timeline-card img { page-break-inside: avoid; }
 }
+
+/* ========== Media polish for timeline cards ========== */
+
+/* רדיוסים עקביים ותיחום עדין */
+:root {
+  --radius-card: 18px;
+  --radius-media: 14px;
+  --img-border: rgba(255,255,255,.10);
+  --img-border-2x: rgba(255,255,255,.16);
+}
+
+/* מעט הידוק לקארד */
+.timeline-card {
+  border-radius: var(--radius-card);
+}
+
+/* עטיפת מדיה שמאפשרת זום/חיתוך בטוח */
+.timeline-media {
+  position: relative;
+  border-radius: var(--radius-media);
+  overflow: hidden;
+  border: 1px solid var(--img-border);
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(255,255,255,.06), rgba(255,255,255,.01)),
+    #0d1117;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+
+/* תמונה: יחס ממדים ברירת מחדל + התאמה למצבי רוחב/גובה */
+.timeline-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;                 /* עובר לרכיב העוטף */
+  margin: 0;                        /* נשלט דרך .timeline-media */
+  object-fit: cover;
+  transition: transform .35s ease, filter .35s ease;
+  /* יחס ממדים כללי – מתאים לכרזות רחבות */
+  aspect-ratio: 16 / 9;
+}
+
+/* תמונות אנכיות – הוסף class="portrait" לתמונה או לעטיפה */
+.timeline-media.portrait img,
+.timeline-card img.portrait {
+  aspect-ratio: 3 / 4;
+  object-position: center top;
+}
+
+/* תמונות ריבועיות */
+.timeline-media.square img,
+.timeline-card img.square {
+  aspect-ratio: 1 / 1;
+}
+
+/* זום עדין בהובר + היילייט למסגרת */
+.timeline-media:hover img { transform: scale(1.035); }
+.timeline-media:hover { border-color: var(--brand-600); }
+
+/* מסגרת חדה במסכים צפופים (רטינה) */
+@media (min-resolution: 1.5dppx) {
+  .timeline-media { border-color: var(--img-border-2x); }
+}
+
+/* כיתוביות מתחת לתמונה */
+.timeline-caption {
+  font-size: .82rem;
+  color: var(--text-300);
+  margin-top: .5rem;
+  display: flex;
+  gap: .5rem;
+  align-items: baseline;
+}
+.timeline-caption .credit {
+  font-size: .78rem;
+  opacity: .8;
+}
+
+/* תגית "תמונה" אופציונלית בפינה */
+.timeline-media .badge-media {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  font-size: .72rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  border: 1px solid var(--stroke);
+  color: var(--text-100);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+/* Skeleton לטעינה (הוסף/הסר class is-loading בעטיפה ב-JS) */
+.timeline-media.is-loading {
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.03) 25%,
+      rgba(255,255,255,.10) 37%,
+      rgba(255,255,255,.03) 63%) #0d1117;
+  background-size: 400% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.timeline-media.is-loading img { opacity: 0; }
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* כפתורי פעולה מתחת לתמונה—מרווח קצת גדול יותר כשיש מדיה */
+.timeline-actions { margin-top: 1rem; }
+
+/* מצב הדפסה – שמור יחס ותבטל זום */
+@media print {
+  .timeline-media { border-color: #ccc; background: #fff; }
+  .timeline-media:hover img { transform: none; }
+}

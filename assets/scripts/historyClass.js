@@ -1,7 +1,8 @@
 class HistoryClass {
-  constructor(year, description, index) {
+  constructor(year, description, image, index) {
     this.year = year;
     this.description = description;
+    this.image = image;
     this.index = index;
   }
 
@@ -9,32 +10,41 @@ class HistoryClass {
     const host = document.querySelector("#showMe");
     if (!host) return;
 
-    // עטיפה לכל פריט (משמשת ל-nth-child בעיצוב)
+    // עטיפה לכל פריט
     const item = document.createElement("article");
     item.className = "timeline-item";
 
-    // הכרטיס עצמו
+    // כרטיס
     const card = document.createElement("div");
     card.className = "timeline-card";
 
-    // תווית שנה צפה
+    // שנה
     const yearBadge = document.createElement("span");
     yearBadge.className = "timeline-year";
     yearBadge.textContent = this.year;
 
-    // כותרת (רשות – אם תרצה לשים טייטל נפרד; כרגע שנה משמשת גם ככותרת)
+    // כותרת
     const title = document.createElement("h3");
     title.className = "title";
-    title.textContent = this._titleFromYear(this.year); // כרגע נגזרת מהשנה (ראה פונקציה למטה)
+    title.textContent = this._titleFromYear(this.year);
 
     // מטא (רשות)
     const meta = document.createElement("div");
     meta.className = "meta";
-    meta.textContent = ""; // אפשר למלא לפי צורך (מיקום, תקופה, תגים וכו')
+    meta.textContent = "";
 
     // תיאור
     const p = document.createElement("p");
     p.textContent = this.description;
+
+    // תמונה (אם קיימת)
+    if (this.image && this.image.trim() !== "") {
+      const img = document.createElement("img");
+      img.src = this.image;
+      img.alt = this._titleFromYear(this.year);
+      img.loading = "lazy";
+      card.appendChild(img);
+    }
 
     // הרכבה
     card.appendChild(yearBadge);
@@ -46,9 +56,7 @@ class HistoryClass {
     host.appendChild(item);
   }
 
-  // מחלץ טייטל קריא מהשנה (אפשר/כדאי להחליף למיפוי מפורש)
   _titleFromYear(y) {
-    // דוגמאות פשוטות — שפר כרצונך:
     if (String(y).includes("1455") || String(y).includes("1487")) return "Wars of the Roses";
     if (String(y).includes("750")) return "Mysterious Meteor";
     if (y === "1799") return "Napoleon in the Middle East";
@@ -57,7 +65,7 @@ class HistoryClass {
     if (String(y).includes("1865")) return "American Old West";
     if (y === "1948") return "War of Independence";
     if (String(y).includes("1947") || String(y).includes("1991")) return "Cold War";
-    if (y === "1967") return "Six-Day War";
+    if (y === "1960s") return "Prime Children in the 1960s";
     if (y === "2020") return "Prime-Children Emerge";
     if (y === "2021") return "Interguard Established";
     if (y === "2022") return "Alien Invasion";

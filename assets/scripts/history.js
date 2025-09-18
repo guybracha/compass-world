@@ -10,7 +10,7 @@ const createList = () => {
   host.innerHTML = "";
 
   HistoryList.forEach((item, index) => {
-    const historyItem = new HistoryClass(item.year, item.description, index);
+    const historyItem = new HistoryClass(item.year, item.description, item.image, index);
     historyItem.render();
   });
 };
