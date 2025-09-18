@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Compass World | Chronology</title>
-  <meta name="description" content="A universe of ideas by one man - Chronology" />
+  <meta name="description" content="All the known historic events in Compass World — an evolving sci-fi/fantasy universe." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Favicon -->
@@ -27,26 +27,33 @@
   <meta property="og:image" content="contents/indexphoto/logo.webp" />
   <meta property="og:type" content="website" />
 
-  <!-- Scripts (defer) -->
-  <script defer src="assets/scripts/history.js"></script>
-  <script src="assets/scripts/historyJson.js"></script>
-  <script src="assets/scripts/historyClass.js"></script>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compass World — Chronology" />
+  <meta name="twitter:description" content="All the known historic events in the Compass World." />
+  <meta name="twitter:image" content="contents/indexphoto/logo.webp" />
 
   <!-- Google Translate -->
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script defer src="assets/scripts/translate.js"></script>
+
+  <!-- App scripts (correct order!) -->
+  <script defer src="assets/scripts/historyJson.js"></script>
+  <script defer src="assets/scripts/historyClass.js"></script>
+  <script defer src="assets/scripts/history.js"></script>
 </head>
 
 <body class="bg-dark text-white">
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Compass World home">
-        <img src="contents/art2025/symbol.png" alt="" height="32" class="logo-glow" />
+        <img src="contents/art2025/symbol.png" alt="Compass symbol" height="32" class="logo-glow" />
         <span class="fw-bold">Compass World</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -72,11 +79,11 @@
   </nav>
 
   <!-- Google Translate placeholder -->
-  <div id="google_translate_element" class="container mt-3"></div>
+  <div id="google_translate_element" class="container mt-3" aria-label="Language selector"></div>
 
   <!-- PAGE HEADER -->
   <header class="container mt-4 text-center">
-    <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" />
+    <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" loading="lazy" />
     <h1 class="display-5 fw-extrabold text-gradient mt-3">Chronology of the World</h1>
     <p class="lead opacity-85">All of the known historic events in our <strong>World</strong>.</p>
   </header>
@@ -85,29 +92,34 @@
   <main class="container pb-5">
     <article class="glass p-4 p-md-5 rounded-4">
       <figure class="text-center mb-4">
-        <img src="contents/art2025/20th century heroes flat-min.png" class="img-fluid rounded-3 shadow-lg hover-float" alt="20th century heroes" />
+        <img
+          src="contents/art2025/20th century heroes flat-min.png"
+          class="img-fluid rounded-3 shadow-lg hover-float"
+          alt="20th century heroes"
+          loading="lazy" />
       </figure>
 
-      <!-- Timeline Filters (optional hook for future) -->
-      <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
-        <!-- אפשר בעתיד להזריק כאן Badges לפילטור לפי תקופה/אירוע -->
-      </div>
+      <!-- (Optional) Filters hook -->
+      <div class="d-flex flex-wrap gap-2 justify-content-center mb-4" aria-label="Timeline filters"></div>
 
       <!-- Timeline Grid (filled by history.js) -->
-      <section id="showMe" class="timeline"></section>
+      <section id="showMe" class="timeline" dir="rtl" aria-label="Chronology timeline"></section>
 
       <figure class="text-center mt-4">
-        <img class="img-fluid rounded-3 hover-float" src="contents/indexphoto/book.jpg" alt="Open book" />
+        <img class="img-fluid rounded-3 hover-float" src="contents/indexphoto/book.jpg" alt="Open book" loading="lazy" />
       </figure>
     </article>
   </main>
 
-  <!-- FOOTER -->
+  <!-- CTA -->
   <section class="container my-5 text-center">
     <div class="glass p-4 rounded-4">
-      <h2 class="section-heading mb-3 text-primary"><i class="bi bi-facebook"></i> Join the Architects</h2>
-      <p class="mb-4">Share ideas, sketches, and feedback in the official community of the Compass World.</p>
-      <a href="https://www.facebook.com/groups/6941542269224419" target="_blank" rel="noopener" class="btn btn-primary btn-lg fw-bold">
+      <h2 class="section-heading mb-3 text-primary">
+        <i class="bi bi-facebook"></i> Join the Architects
+      </h2>
+      <p class="mb-4">Share ideas, sketches, and feedback in the official Compass World community.</p>
+      <a href="https://www.facebook.com/groups/6941542269224419" target="_blank" rel="noopener"
+         class="btn btn-primary btn-lg fw-bold" aria-label="Join our Facebook group">
         <i class="bi bi-facebook"></i> Join Our Group
       </a>
     </div>
@@ -119,7 +131,7 @@
       <div class="text-secondary small">
         <div>&copy; <span id="year"></span> Compass World. All rights reserved.</div>
         <div class="mt-1 d-flex gap-3">
-          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener">
+          <a href="https://github.com/guybracha/compass-world" class="link-warning fw-semibold" target="_blank" rel="noopener" aria-label="Source code on GitHub">
             <i class="bi bi-github"></i> Source Code
           </a>
           <a href="https://www.facebook.com/groups/6941542269224419" class="link-warning fw-semibold" target="_blank" rel="noopener" aria-label="Compass World Architects Facebook group">
@@ -127,7 +139,7 @@
           </a>
         </div>
       </div>
-      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" loading="lazy" />
     </div>
   </footer>
 
@@ -138,31 +150,38 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1LV563TQEJ');
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-1LV563TQEJ');
   </script>
 
   <!-- Bootstrap 5 bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Back-to-top + (אופציונלי) האזנה ליצירת כרטיסי Timeline דינמית -->
+  <!-- Back-to-top + minor helpers -->
   <script>
-    // Back to top
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Back to top visibility
     const topBtn = document.querySelector('.back-to-top');
     const onScroll = () => topBtn.classList.toggle('show', window.scrollY > 500);
     window.addEventListener('scroll', onScroll); onScroll();
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // דוגמה: אם history.js מזריק כרטיסים, נוודא קלאס תקין
-    // (אפשר להסיר אם כבר מטופל בקוד שלך)
+    // Optional: add glass & rounded to injected cards (safe no-op if already present)
     const timeline = document.getElementById('showMe');
     const observer = new MutationObserver(() => {
-      [...timeline.querySelectorAll('.timeline-card')].forEach(el => {
+      timeline.querySelectorAll('.timeline-card').forEach(el => {
         el.classList.add('glass', 'rounded-4');
       });
     });
     observer.observe(timeline, { childList: true, subtree: true });
   </script>
+
+  <noscript>
+    <div class="container my-4 alert alert-warning">
+      JavaScript is disabled. The timeline requires JavaScript to render.
+    </div>
+  </noscript>
 </body>
 </html>

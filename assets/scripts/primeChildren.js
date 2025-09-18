@@ -64,7 +64,7 @@ const characters = [
   { name: "Mermaid", side: SIDE.HERO, power: "Shapeshift into mermaid", tags: [CATS.PRIME, CATS.UNDERSEA, CATS.MYSTIC, CATS.LEGEND], img: "contents/avatar2024/heroes/mermaid-min.webp" },
   { name: "Art Einstein", side: SIDE.HERO, power: "Super-intellect", tags: [CATS.PRIME, CATS.SCIENCE], img: "contents/avatar2024/heroes/artEinstein-min.webp" },
   { name: "Airdance", side: SIDE.HERO, power: "Aerokinesis", tags: [CATS.PRIME, CATS.ELEMENTAL], img: "contents/avatar2024/heroes/airdance-min.webp" },
-  { name: "McBot", side: SIDE.HERO, power: "Technopathy", tags: [CATS.PRIME, CATS.TECH], img: "contents/avatar2024/heroes/mcbot-min.webp" },
+  { name: "McBot", side: SIDE.HERO, power: "Technopathy", tags: [CATS.PRIME, CATS.TECH], img: "contents/avatar2024/heroes/mcBot-min.webp" },
   { name: "Kid Dimension", side: SIDE.HERO, power: "Interdimensional portals", tags: [CATS.PRIME, CATS.MYSTIC, CATS.COSMIC], img: "contents/avatar2024/heroes/kidDimension-min.webp" },
   { name: "Crystallo", side: SIDE.HERO, power: "Crystal form & creation", tags: [CATS.PRIME, CATS.ELEMENTAL], img: "contents/avatar2024/heroes/crystallo-min.webp" },
   { name: "Meir Yarkoni", side: SIDE.HERO, power: "Rapid healing", tags: [CATS.PRIME], img: "contents/avatar2024/otherCharacters/meirYarkoni-min.webp" },

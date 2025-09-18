@@ -1,12 +1,18 @@
 const init = () => {
-    createList();
-}
+  createList();
+};
 
 const createList = () => {
-    HistoryList.forEach((item, index) => {
-        let historyItem = new HistoryClass(item.year, item.description, index);
-        historyItem.render();
-    });
-}
+  const host = document.querySelector("#showMe");
+  if (!host) return;
+
+  // נקה לפני רינדור (אם מרנדרים שוב)
+  host.innerHTML = "";
+
+  HistoryList.forEach((item, index) => {
+    const historyItem = new HistoryClass(item.year, item.description, index);
+    historyItem.render();
+  });
+};
 
 init();

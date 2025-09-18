@@ -4,8 +4,8 @@ const HistoryList = [
         "description": "A mysterious meteor crashes in the Levant region of the Middle East"
     },
     {
-        "year": "1100 AD",
-        "description": "During the medieval Crusades, rumors spread of 'Prime Children'—gifted youths with supernatural abilities appearing on battlefields in the Holy Land."
+        "year": "1455–1487",
+        "description": "During the Wars of the Roses in England, whispers spread of mysterious 'Prime Children' appearing in battles between the houses of York and Lancaster—youths with unnatural powers who tipped the balance in secret."
     },
     {
         "year": "1799",
@@ -33,19 +33,19 @@ const HistoryList = [
     },
     {
         "year": "1967",
-        "description": "The Six-Day War sees the appearance of a new wave of powered youths. Their existence sparks global rumors about a hidden generation of post-humans."
+        "description": "The Six-Day War sees the appearance of a new wave of powered youths. Their existence sparks global rumors about a hidden generation of prime-children."
     },
     {
         "year": "2020",
-        "description": "During the corona lockdowns, a new generation of humans is beginning to emerge: the post-humans. Characterized by superpowers and an unusual appearance. This causes concerns in the world."
+        "description": "During the corona lockdowns, a new generation of humans is beginning to emerge: the prime-children. Characterized by superpowers and an unusual appearance. This causes concerns in the world."
     },
     {
         "year": "2021",
-        "description": "After a large increase in the number of people considered 'post-human', most governments decide to track and monitor them under a new organization called the Interguard. Under the command of General Meir Yarkoni."
+        "description": "After a large increase in the number of people considered 'prime-children', most governments decide to track and monitor them under a new organization called the Interguard. Under the command of General Meir Yarkoni."
     },
     {
         "year": "2022",
-        "description": "During the month of May, humanity found itself under attack from outer space by an alien tribe called the Developers, their goal is to kidnap the post-humans in order to study them and make them their army. Most of the abductees decided to resist and fight the invaders, while a small part who could no longer trust the humans decided to help the invaders."
+        "description": "During the month of May, humanity found itself under attack from outer space by an alien tribe called the Developers, their goal is to kidnap the prime-children in order to study them and make them their army. Most of the abductees decided to resist and fight the invaders, while a small part who could no longer trust the humans decided to help the invaders."
     },
     {
         "year": "2023",
