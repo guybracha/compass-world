@@ -1,119 +1,205 @@
 /* =========================
-   Chronology (history.css)
-   תואם ל-main.css ול-Bootstrap 5
+   Chronology — Redesigned
+   Compatible with main.css + Bootstrap 5
    ========================= */
 
-/* Timeline wrapper */
-.timeline {
-  display: grid;
-  gap: 20px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px 0 0;
-  position: relative;
+/* Vars fallbacks (במידה ואין ב-root) */
+:root {
+  --brand: #ffb703;
+  --brand-600: #f9a602;
+  --stroke: rgba(255,255,255,.12);
+  --text-100: #e5e7eb;
+  --text-300: #9ca3af;
+  --card-bg: rgba(255,255,255,.045);
+  --card-hover-bg: rgba(255,255,255,.06);
+  --line: linear-gradient(to bottom, rgba(255,255,255,.10), rgba(255,255,255,.03));
 }
 
-/* קו מרכזי עדין (רק במסכים רחבים) */
+/* Wrapper */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+/* מרכז — קו */
 @media (min-width: 992px) {
-  .timeline {
-    grid-template-columns: 1fr 1fr;
-  }
   .timeline::before {
     content: "";
     position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
+    inset: 0 auto 0 50%;
+    width: 3px;
     transform: translateX(-50%);
-    background: linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    background: var(--line);
+    border-radius: 2px;
+  }
+  .timeline {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* כרטיס Timeline בסיסי */
-.timeline-card {
-  width: 100%;
-  max-width: 560px;
-  margin: 0 auto 16px;
-  padding: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--stroke);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+/* Item */
+.timeline-item {
+  position: relative;
+  display: grid;
 }
+
+/* תורים — שמאל/ימין */
+@media (min-width: 992px) {
+  .timeline > .timeline-item:nth-child(odd) { grid-column: 1; }
+  .timeline > .timeline-item:nth-child(even){ grid-column: 2; }
+}
+
+/* Card */
+.timeline-card {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+  padding: 18px 18px 16px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  overflow: hidden;
+}
+
 .timeline-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 34px rgba(0,0,0,.45);
-  border-color: rgba(255, 183, 3, .55);
+  box-shadow: 0 14px 36px rgba(0,0,0,.48);
+  border-color: rgba(255,183,3,.55);
+  background: var(--card-hover-bg);
 }
 
-/* נקודת ציר (דקורטיבי) במסכים רחבים */
+/* Year label (תווית שנה צפה) */
+.timeline-year {
+  position: absolute;
+  top: -10px;
+  inset-inline-start: 16px; /* תומך RTL */
+  background: radial-gradient(circle at 30% 30%, #1f2937, #0b0b0b);
+  color: var(--brand);
+  border: 1px solid rgba(255,183,3,.45);
+  padding: 6px 10px;
+  font-weight: 800;
+  font-size: .9rem;
+  letter-spacing: .5px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(255,183,3,.15);
+  user-select: none;
+}
+
+/* נקודת ציר + מחבר לקו המרכזי (רק רחב) */
 @media (min-width: 992px) {
-  .timeline-card {
-    position: relative;
-  }
   .timeline-card::after {
     content: "";
     position: absolute;
-    top: 18px;
-    width: 12px;
-    height: 12px;
+    top: 22px;
+    width: 14px;
+    height: 14px;
     border-radius: 999px;
     background: var(--brand);
-    box-shadow: 0 0 0 4px rgba(255,183,3,.2);
+    box-shadow:
+      0 0 0 4px rgba(255,183,3,.20),
+      0 0 22px rgba(255,183,3,.35);
   }
-  /* צד שמאל */
-  .timeline > *:nth-child(odd) .timeline-card::after {
-    right: -30px;
+  .timeline-card::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    width: 42px;
+    height: 2px;
+    background: var(--line);
   }
-  /* צד ימין */
-  .timeline > *:nth-child(even) .timeline-card::after {
-    left: -30px;
-  }
+  /* פריסה ביחס לקו המרכזי (RTL-aware) */
+  [dir="rtl"] .timeline > .timeline-item:nth-child(odd) .timeline-card::after { left: -33px; }
+  [dir="rtl"] .timeline > .timeline-item:nth-child(even) .timeline-card::after { right: -33px; }
+  [dir="rtl"] .timeline > .timeline-item:nth-child(odd) .timeline-card::before { left: -42px; }
+  [dir="rtl"] .timeline > .timeline-item:nth-child(even) .timeline-card::before { right: -42px; }
+
+  /* LTR (למקרה של דפים באנגלית) */
+  [dir="ltr"] .timeline > .timeline-item:nth-child(odd) .timeline-card::after { right: -33px; }
+  [dir="ltr"] .timeline > .timeline-item:nth-child(even) .timeline-card::after { left: -33px; }
+  [dir="ltr"] .timeline > .timeline-item:nth-child(odd) .timeline-card::before { right: -42px; }
+  [dir="ltr"] .timeline > .timeline-item:nth-child(even) .timeline-card::before { left: -42px; }
 }
 
-/* כותרות / טקסטים בכרטיס */
+/* כותרת */
 .timeline-card h3,
 .timeline-card .title {
   font-family: 'Bangers', cursive;
   color: var(--brand);
-  margin-bottom: .35rem;
-  text-shadow: 2px 2px 6px rgba(255, 183, 3, .35);
+  margin: 6px 0 .35rem 0;
+  font-size: clamp(1.15rem, 1.1rem + .5vw, 1.6rem);
+  text-shadow: 1px 1px 5px rgba(255,183,3,.28);
+  line-height: 1.2;
 }
+
+/* מטא + תיאור */
 .timeline-card .meta {
-  font-size: .9rem;
+  font-size: .92rem;
   color: var(--text-300);
   margin-bottom: .5rem;
 }
 .timeline-card p {
   margin: 0;
   color: var(--text-100);
+  line-height: 1.55;
 }
 
-/* תמונות בתוך הכרטיסים */
+/* תמונה */
 .timeline-card img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  margin: .5rem 0;
+  border-radius: 14px;
+  margin: .7rem 0 .5rem;
+  border: 1px solid rgba(255,255,255,.07);
 }
 
-/* Navbar – יישור קל (נשען על main.css) */
-nav.navbar {
-  border-bottom: 1px solid rgba(255,255,255,.08);
+/* תגיות/כפתורי פעולה (אופציונלי) */
+.timeline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: .75rem;
+}
+.timeline-tag {
+  font-size: .78rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text-100);
+  background: rgba(255,255,255,.04);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.timeline-tag:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.28); }
+
+/* רספונסיביות */
+@media (max-width: 991.98px) {
+  .timeline { gap: 20px; padding-inline: 10px; }
+  .timeline-card { padding: 16px; }
+  .timeline-year { inset-inline-start: 12px; }
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .timeline-card { padding: 14px; }
-}
-
-/* נגישות ותנועה */
-:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
+/* פריטי נגישות */
+:focus-visible { outline: 2px dashed var(--brand); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+}
+
+/* הדפסה */
+@media print {
+  .timeline { max-width: 100%; }
+  .timeline::before { background: none; }
+  .timeline-card {
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+    border-color: #ccc;
+  }
+  .timeline-card img { page-break-inside: avoid; }
 }
