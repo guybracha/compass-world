@@ -2,14 +2,57 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ----- constants -----
+  const PLACEHOLDER_WEBP = 'https://placehold.co/512x512/webp?text=Avatar';
+
+  // ----- helpers (img + slug) -----
+  function slugifyName(name) {
+    return String(name || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove diacritics
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')                     // keep safe chars
+      .trim()
+      .replace(/\s+/g, '-')                             // spaces -> hyphen
+      .replace(/-+/g, '-');
+  }
+
+  function deriveImgFromSideAndName(side, name) {
+    const slug = slugifyName(name);
+    if (!slug) return null;
+    const base = side === 'Hero'
+      ? 'contents/avatar2024/heroes/'
+      : 'contents/avatar2024/villains/';
+    return `${base}${slug}.webp`;
+  }
+
+  function imgUrlFor(charObj) {
+    // prefer explicit img; else derive from side+name
+    return (charObj && charObj.img)
+      ? charObj.img
+      : deriveImgFromSideAndName(charObj?.side, charObj?.name);
+  }
+
+  function imgTag(src, alt = '', classNames = 'w-100 h-100', extra = '') {
+    const safeAlt = alt || 'avatar';
+    // onerror fallback to placeholder (1:1 webp)
+    return `<img src="${src || PLACEHOLDER_WEBP}" alt="${safeAlt}" class="${classNames}"
+             style="object-fit: cover;"
+             onerror="this.onerror=null;this.src='${PLACEHOLDER_WEBP}';"
+             ${extra}>`;
+  }
+
   // ----- data -----
   const raw = Array.isArray(window.characters) ? window.characters : [];
-  const data = raw.map(c => ({
-    name:  c && c.name  || '',
-    side:  c && c.side  || '',
-    power: c && c.power || '',
-    tags:  Array.isArray(c && c.tags) ? c.tags : []
-  }));
+  const data = raw.map(c => {
+    const base = {
+      name:  (c && c.name)  || '',
+      side:  (c && c.side)  || '',
+      power: (c && c.power) || '',
+      tags:  Array.isArray(c && c.tags) ? c.tags : []
+    };
+    const url = imgUrlFor(c);
+    return { ...base, img: url };
+  });
 
   // ----- DOM (old layout) -----
   const grid        = document.getElementById('pc-grid');
@@ -36,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     col.className = 'col-12 col-sm-6 col-lg-4';
     col.innerHTML = `
       <div class="card h-100 glass text-white border-0">
+        <div class="ratio ratio-1x1">
+          ${imgTag(it.img, `${it.name} — ${it.side}`, 'w-100 h-100')}
+        </div>
         <div class="card-body d-flex flex-column">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="card-title mb-0">${it.name}</h5>
@@ -83,13 +129,24 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.addEventListener('show.bs.modal', ev => {
       const name = ev.relatedTarget && ev.relatedTarget.getAttribute('data-name');
       const ch = data.find(x => x.name === name);
+
       const ttl = modal.querySelector('#pcModalLabel');
       if (ttl) ttl.textContent = (ch && ch.name) || 'Profile';
+
       const body = modal.querySelector('#pcModalBody');
       if (body) {
+        const imgHtml = `
+          <div class="ratio ratio-1x1 mb-3" style="max-width: 320px; margin: 0 auto;">
+            ${imgTag(ch && ch.img, `${ch?.name || 'avatar'} — ${ch?.side || ''}`, 'w-100 h-100 rounded')}
+          </div>
+        `;
+
         body.innerHTML = `
           <div class="text-center">
-            <div class="mb-2"><span class="badge ${ch && ch.side === 'Hero' ? 'bg-success' : 'bg-danger'}">${(ch && ch.side) || ''}</span></div>
+            ${imgHtml}
+            <div class="mb-2">
+              <span class="badge ${ch && ch.side === 'Hero' ? 'bg-success' : 'bg-danger'}">${(ch && ch.side) || ''}</span>
+            </div>
             <div class="text-warning mb-2"><i class="bi bi-lightning-charge"></i> ${(ch && ch.power) || ''}</div>
             <div class="mb-3">${tagBadges(ch && ch.tags || [])}</div>
             <p class="small text-secondary mb-0">Bio coming soon. This entry is part of the Prime-Children initiative.</p>

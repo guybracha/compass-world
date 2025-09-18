@@ -1,8 +1,8 @@
 <!-- =====================================================
-File: prime-children.html
+File: primeChildren.html
 Purpose: Prime-Children hub page (overview + gallery + filters)
 Author: Guy Bracha (Compass World)
-Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
+Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js, primeRender.js
 ===================================================== -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,9 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
   <meta name="keywords" content="Prime Children, Compass World, superheroes, teen heroes, comic universe, worldbuilding" />
   <meta name="author" content="Guy Bracha" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://guybracha.github.io/compass-world/prime-children.html" />
+  <meta name="color-scheme" content="dark light" />
+  <!-- Use the actual page path (camelCase) for canonical to avoid SEO duplication -->
+  <link rel="canonical" href="https://guybracha.github.io/compass-world/primeChildren.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Prime-Children | Compass World" />
@@ -30,7 +32,7 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
   <meta name="twitter:image" content="contents/indexphoto/rotate.png" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+  <link rel="icon" type="image/png" href="contents/indexphoto/rotate.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,12 +46,11 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/primeChildren.css" />
 
-  <!-- Data + Renderer for Prime-Children -->
+  <!-- Data + Renderer for Prime-Children (order matters) -->
   <script defer src="assets/scripts/primeChildren.js"></script>
   <script defer src="assets/scripts/primeRender.js"></script>
-  <script src="assets/scripts/translate.js"></script>
 
-    <!-- Google Translate -->
+  <!-- Google Translate (single include) -->
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script defer src="assets/scripts/translate.js"></script>
 </head>
@@ -58,10 +59,12 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
   <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm glass-nav">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="contents/art2025/symbol.png" alt="" height="28" class="logo-glow" />
+        <img src="contents/art2025/symbol.png" alt="Compass World symbol" height="28" class="logo-glow" loading="lazy" />
         <span class="fw-bold">Compass World</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div id="mainNav" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -74,14 +77,15 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
           <li class="nav-item"><a class="nav-link" href="about.html">Author</a></li>
         </ul>
         <div class="d-none d-lg-flex ms-lg-3">
-          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener"
-             class="btn btn-outline-warning btn-sm">
+          <a href="https://github.com/guybracha/compass-world" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">
             <i class="bi bi-github"></i> Source
           </a>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- Google Translate mount -->
   <div id="google_translate_element" class="container mt-3"></div>
 
   <!-- Header -->
@@ -94,22 +98,22 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
   <section id="prime-lineages" class="container mb-4">
     <div class="row g-2 align-items-end">
       <div class="col-12 col-md-3">
-        <label class="form-label small">Side</label>
-        <select id="filter-side" class="form-select bg-black text-white border-secondary">
+        <label class="form-label small" for="filter-side">Side</label>
+        <select id="filter-side" class="form-select bg-black text-white border-secondary" aria-label="Filter by side">
           <option>All</option>
           <option>Hero</option>
           <option>Villain</option>
         </select>
       </div>
       <div class="col-12 col-md-4">
-        <label class="form-label small">Category</label>
-        <select id="filter-cat" class="form-select bg-black text-white border-secondary">
+        <label class="form-label small" for="filter-cat">Category</label>
+        <select id="filter-cat" class="form-select bg-black text-white border-secondary" aria-label="Filter by category">
           <option>All</option>
         </select>
       </div>
       <div class="col-12 col-md-5">
-        <label class="form-label small">Search</label>
-        <input id="filter-search" type="search" class="form-control bg-black text-white border-secondary" placeholder="Name or power…" />
+        <label class="form-label small" for="filter-search">Search</label>
+        <input id="filter-search" type="search" class="form-control bg-black text-white border-secondary" placeholder="Name or power…" aria-label="Search by name or power" />
       </div>
     </div>
   </section>
@@ -156,12 +160,14 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
           </a>
         </div>
       </div>
-      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" />
+      <img src="contents/art2025/symbol.png" height="70" alt="Compass symbol" class="logo-glow" loading="lazy" />
     </div>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LV563TQEJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -169,11 +175,10 @@ Dependencies: Bootstrap 5.3+, Bootstrap Icons, assets/scripts/primeChildren.js
     gtag('js', new Date());
     gtag('config', 'G-1LV563TQEJ');
   </script>
+
+  <!-- Small util: current year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-<!-- =====================================================
-File: prime-timeline.html
-Purpose: Narrative/chronology page for Prime-Children incidents & milestones
-===================================================== -->
