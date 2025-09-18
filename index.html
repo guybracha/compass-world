@@ -148,6 +148,7 @@
   </div>
 
   <!-- Facebook Community Section -->
+<!-- Facebook Community Section -->
 <div class="container my-5 text-center">
   <div class="glass p-4 rounded-4">
     <h2 class="section-heading mb-3 text-primary">
@@ -157,13 +158,59 @@
       Be part of the <strong>Compass World Architects</strong> community on Facebook!  
       Share your ideas, sketches, and feedback, and help shape the universe together.
     </p>
-    <a href="https://www.facebook.com/groups/6941542269224419"
-       target="_blank" rel="noopener"
-       class="btn btn-primary btn-lg fw-bold">
-      <i class="bi bi-facebook"></i> Join Our Group
-    </a>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://www.facebook.com/groups/6941542269224419"
+         target="_blank" rel="noopener"
+         class="btn btn-primary btn-lg fw-bold">
+        <i class="bi bi-facebook"></i> Join Our Group
+      </a>
+      <!-- כפתור לפתיחת הווידאו -->
+      <button class="btn btn-warning btn-lg fw-bold" data-bs-toggle="modal" data-bs-target="#trailerModal">
+        <i class="bi bi-play-circle"></i> Watch 27s Teaser
+      </button>
+    </div>
   </div>
 </div>
+
+<!-- YouTube Trailer Modal -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-black border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="trailerModalLabel">Compass World — 27s Teaser</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe
+            id="trailerFrame"
+            src="https://www.youtube-nocookie.com/embed/Ascfz4y2uiM?autoplay=1&rel=0"
+            title="Compass World — 27s Teaser"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script to stop video when modal is closed -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const trailerModalEl = document.getElementById('trailerModal');
+    const frame = document.getElementById('trailerFrame');
+    if (trailerModalEl && frame) {
+      const originalSrc = frame.getAttribute('src');
+      trailerModalEl.addEventListener('hidden.bs.modal', () => {
+        frame.setAttribute('src', '');
+        frame.setAttribute('src', originalSrc);
+      });
+    }
+  });
+</script>
+
 
 
   <!-- Hero image modal (heroImageModal) -->
