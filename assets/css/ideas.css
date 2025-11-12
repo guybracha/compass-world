@@ -4,15 +4,16 @@
    ============================== */
 
 :root{
-  --ideas-accent: #f8c23a;                /* זהב חמים */
-  --ideas-accent-2: #7dd3fc;              /* כחול-ציור */
-  --ideas-ink: #f1f5f9;                   /* טקסט בהיר */
-  --ideas-muted: #94a3b8;                 /* טקסט משני */
-  --ideas-surface: rgba(255,255,255,.05); /* רקע כרטיס */
-  --ideas-surface-2: rgba(255,255,255,.08);
-  --ideas-border: rgba(255,255,255,.12);
-  --ideas-glow: 0 10px 30px rgba(0,0,0,.45);
+  --ideas-accent: var(--brand);
+  --ideas-accent-2: var(--accent-2);
+  --ideas-ink: var(--text-100);
+  --ideas-muted: var(--text-500);
+  --ideas-surface: var(--surface-panel);
+  --ideas-surface-2: var(--surface-panel-strong);
+  --ideas-border: var(--border-soft);
+  --ideas-glow: var(--shadow-card);
 }
+
 
 /* ---------- Header ---------- */
 .ideas-header {
@@ -156,3 +157,4 @@
 :root[dir="rtl"] .ideas-meta, 
 :root[dir="rtl"] .idea-meta,
 :root[dir="rtl"] .idea-foot { direction: rtl; }
+

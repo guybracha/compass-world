@@ -1,87 +1,47 @@
-/* =========================
-   Atlas (world.css)
-   תואם ל-main.css + Bootstrap 5
-   ========================= */
+/* =====================================================
+   Compass World · world.css
+   Atlas highlights + fade-in utility
+===================================================== */
 
-body {
-  color: var(--text-100);
+header {
+  text-align: center;
 }
-
-/* Header */
-header { text-align: center; }
-header .logo { height: 120px; }
+header .logo {
+  height: 120px;
+}
 header .title {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   color: var(--brand);
 }
 
-/* Navbar – נשען על main.css, מוסיף קו תחתון עדין */
-nav.navbar {
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-/* Cards inside glass sections */
-.card {
+.atlas-card {
   background: rgba(255,255,255,.04);
-  border: 1px solid var(--stroke);
-  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
   color: var(--text-100);
 }
-.card:hover {
+.atlas-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,.45);
   border-color: rgba(255,183,3,.55);
 }
-.card-img-top {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.card-body { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35)); }
-.card-title {
-  font-weight: 700;
-  margin-bottom: .35rem;
-}
-.card-text { color: var(--text-300); }
-
-/* Section heading – תואם סגנון האתר */
-.section-heading {
-  font-family: 'Bangers', cursive;
-  color: var(--brand);
-  text-shadow: 2px 2px 0 rgba(0,0,0,.6);
-  font-size: clamp(1.6rem, 1rem + 2vw, 2.2rem);
+.atlas-card .card-text {
+  color: var(--text-300);
 }
 
-/* Article images (if any outside of cards) */
-article img { border-radius: 10px; }
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 0.9s ease-in-out forwards;
+}
+@keyframes fadeInAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-/* Footer */
-footer { background: linear-gradient(180deg, transparent, rgba(255,255,255,.03)); }
-
-/* Fade-in utility (kept from your version) */
-.fadeIn { opacity: 0; animation: fadeInAnimation 0.9s ease-in-out forwards; }
-@keyframes fadeInAnimation { from { opacity: 0; } to { opacity: 1; } }
-
-/* Responsive tweaks */
 @media (max-width: 768px) {
-  header .logo { height: 90px; }
-  .card-body { padding: 14px; }
-}
-
-/* Accessibility */
-:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
-
-#prime-lineages .btn-outline-secondary.active {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-#prime-lineages .list-group-item {
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.08);
+  header .logo {
+    height: 90px;
+  }
 }

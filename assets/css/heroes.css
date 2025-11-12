@@ -1,82 +1,16 @@
-/* ==============================
-   Compass World – Teams/G&M polish
-   Scope: tabs, accordion, glass, small utilities
-   ============================== */
+/* =====================================================
+   Compass World · heroes.css
+   Shared UI patterns for the roster tabs & accordion
+===================================================== */
 
-:root {
-  --cw-accent: #f8c23a;          /* זהב/צהוב */
-  --cw-accent-soft: rgba(248, 194, 58, 0.18);
-  --cw-surface: rgba(255, 255, 255, 0.06);
-  --cw-surface-2: rgba(255, 255, 255, 0.08);
-  --cw-border: rgba(255, 255, 255, 0.12);
-  --cw-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-/* Glass panels */
-.glass {
-  background: linear-gradient(180deg, var(--cw-surface), var(--cw-surface-2));
-  border: 1px solid var(--cw-border);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: var(--cw-shadow);
-}
-
-/* Sub-surface blocks inside glass */
-.bg-surface {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--cw-border);
-  border-radius: 0.75rem;
-}
-
-/* Headings */
-.section-heading {
-  font-weight: 800;
-  letter-spacing: .2px;
-}
-
-.section-title {
-  font-weight: 700;
-}
-
-/* Marker highlight for small headings */
-.marker {
-  background: linear-gradient(90deg, var(--cw-accent-soft), transparent 70%);
-  padding: .1rem .4rem;
-  border-radius: .35rem;
-}
-
-/* Text gradient for H1 */
-.text-gradient {
-  background: linear-gradient(90deg, #fff, #ffd676 45%, #fff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Logo glow */
-.logo-glow {
-  filter: drop-shadow(0 0 10px rgba(248, 194, 58, .35));
-}
-
-/* Hover float for images/cards */
-.hover-float {
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.hover-float:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,.45);
-}
-
-/* ==============================
-   Nav Pills (Tabs)
-   ============================== */
+/* Nav pills (heroes / villains / teams) */
 .nav-pills .nav-link {
-  border: 1px solid var(--cw-border);
+  border: 1px solid var(--border-soft);
   background: rgba(255,255,255,0.03);
-  color: #f3f3f3;
+  color: var(--text-200);
   font-weight: 600;
   padding: .55rem 1rem;
-  border-radius: .75rem;
+  border-radius: .85rem;
   transition: background .2s ease, color .2s ease, transform .15s ease, border-color .2s ease;
 }
 .nav-pills .nav-link:hover {
@@ -91,23 +25,13 @@
   text-shadow: 0 1px 0 rgba(255,255,255,.35);
 }
 
-/* Focus ring (keyboard) */
-.nav-pills .nav-link:focus-visible,
-.accordion-button:focus-visible,
-.btn:focus-visible {
-  outline: 2px solid var(--cw-accent);
-  outline-offset: 2px;
-}
-
-/* ==============================
-   Accordion – dark + minimal
-   ============================== */
+/* Accordion polish for Teams tab */
 .accordion.accordion-flush .accordion-item {
-  border-bottom: 1px solid var(--cw-border);
+  border-bottom: 1px solid var(--border-soft);
 }
 .accordion-button {
   background: rgba(0,0,0,.35) !important;
-  color: #f1f1f1 !important;
+  color: var(--text-100) !important;
   padding: 1rem 1.25rem;
   gap: .5rem;
 }
@@ -117,89 +41,54 @@
 .accordion-button:not(.collapsed) {
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)) !important;
   color: #fff !important;
-  border-bottom: 1px solid var(--cw-border);
-  box-shadow: inset 0 -1px 0 var(--cw-border);
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: inset 0 -1px 0 var(--border-soft);
 }
 .accordion-body {
   background: rgba(255,255,255,.03);
-  border-left: 2px solid var(--cw-border);
-  border-right: 2px solid var(--cw-border);
-  border-bottom: 2px solid var(--cw-border);
+  border-left: 2px solid var(--border-soft);
+  border-right: 2px solid var(--border-soft);
+  border-bottom: 2px solid var(--border-soft);
   border-radius: 0 0 .75rem .75rem;
 }
 
-/* List group inside dark panes */
+/* List groups inside the accordion */
 .list-group-item {
-  border-color: var(--cw-border) !important;
+  border-color: var(--border-soft) !important;
 }
 .list-group-flush .list-group-item {
-  color: #eaeaea;
+  color: var(--text-200);
   background: transparent;
 }
 
-/* ==============================
-   Buttons (light/outline tweaks)
-   ============================== */
-.btn-outline-warning {
-  border-color: rgba(248,194,58,.7);
-  color: var(--cw-accent);
-}
-.btn-outline-warning:hover {
-  background: var(--cw-accent);
-  color: #111;
-  border-color: var(--cw-accent);
-}
-.btn-warning.shadow-lift {
-  box-shadow: 0 12px 24px rgba(248,194,58,.25);
-}
-.btn-warning.shadow-lift:hover {
-  box-shadow: 0 16px 36px rgba(248,194,58,.35);
-}
-
-/* Pills in Teams filters */
+/* Filter buttons */
 [data-team-filter] {
-  border-color: var(--cw-border);
+  border-color: var(--border-soft);
 }
 [data-team-filter].active,
 [data-team-filter][aria-pressed="true"] {
-  background: var(--cw-accent);
+  background: var(--brand);
   color: #111;
-  border-color: var(--cw-accent);
+  border-color: var(--brand);
 }
 
-/* ==============================
-   Modal polish
-   ============================== */
-.modal-content.bg-dark {
-  border: 1px solid var(--cw-border);
-  box-shadow: var(--cw-shadow);
-}
-
-/* ==============================
-   Back to top
-   ============================== */
+/* Back-to-top helper (still used by this page) */
 .back-to-top {
-  position: fixed;
-  right: 16px;
-  bottom: 20px;
-  opacity: 0;
-  visibility: hidden;
   transform: translateY(10px);
-  transition: all .25s ease;
-  z-index: 1040;
 }
 .back-to-top.show {
-  opacity: 1;
-  visibility: visible;
   transform: translateY(0);
 }
 
-/* ==============================
-   Responsive adjustments
-   ============================== */
+/* Responsive adjustments */
 @media (max-width: 992px) {
-  .nav-pills .nav-link { padding: .5rem .85rem; }
+  .nav-pills .nav-link {
+    padding: .5rem .85rem;
+  }
 }
 @media (max-width: 576px) {
-  .accordion-body { border-left-width: 1px; border-right-width: 1px; }
+  .accordion-body {
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
 }
