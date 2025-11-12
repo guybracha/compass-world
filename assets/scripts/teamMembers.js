@@ -34,8 +34,8 @@ const teamMembers = [
   { name: "Ra", image: "./contents/avatar2024/heroes/ra-min.webp" },
   { name: "Mark Venture", image: "./contents/avatar2024/heroes/markVenture-min.webp" },
   { name: "Archer", image: "./contents/avatar2024/heroes/archer-min.webp" },
-  { name: "Hoopoe", image: "./contents/avatar2024/heroes/hoopoe-min.webp" },
-  { name: "Admiral Mars", image: "./contents/avatar2024/heroes/admiralMars-min.webp" },
+  { name: "Mirror Girl", image: "./contents/avatar2024/heroes/mirrorGirl-min.webp" },
+  { name: "Alchemist", image: "./contents/avatar2024/heroes/alchemist-min.webp" },
   { name: "Sweet Girl", image: "./contents/avatar2024/heroes/sweetGirl-min.webp" },
   { name: "Rubberman", image: "./contents/avatar2024/heroes/rubber-min.webp" },
   { name: "Maltese Cross", image: "./contents/avatar2024/heroes/maltese-min.webp" },
@@ -94,14 +94,22 @@ orderedMembers.forEach(member => {
   galleryContainer.appendChild(col);
 });
 
+const scaleAvatar = (img, scale) => {
+  if (!img) return;
+  if (typeof window.gsap !== "undefined") {
+    window.gsap.to(img, { scale, duration: 0.25, ease: "power2.out" });
+  } else {
+    img.style.transform = `scale(${scale})`;
+  }
+};
 // האפקט הקטן של זום הובר
 galleryContainer.addEventListener("mouseover", (e) => {
   const img = e.target.closest("img");
-  if (img) img.style.transform = "scale(1.04)";
+  if (img) scaleAvatar(img, 1.04);
 });
 galleryContainer.addEventListener("mouseout", (e) => {
   const img = e.target.closest("img");
-  if (img) img.style.transform = "scale(1)";
+  if (img) scaleAvatar(img, 1);
 });
 
 // --- פתיחת מודאל לדמויות ---
@@ -131,3 +139,4 @@ galleryContainer.addEventListener("click", (e) => {
     modal.show();
   }
 });
+
