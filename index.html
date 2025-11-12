@@ -43,9 +43,11 @@
   <meta property="og:image" content="contents/indexphoto/logo.webp" />
   <meta property="og:type" content="website" />
 
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script defer src="assets/scripts/teamMembers.js"></script>
   <script defer src="assets/scripts/list.js"></script>
   <script defer src="assets/scripts/credits.js"></script>
+  <script defer src="assets/scripts/animations.js"></script>
 </head>
 
 <body class="bg-dark text-white">
@@ -95,8 +97,8 @@
 
   <main class="container py-5">
     <!-- Hero section -->
-    <section class="row align-items-center g-4">
-      <div class="col-md-6 text-center">
+    <section class="row align-items-center g-4 hero-section">
+      <div class="col-md-6 text-center hero-media">
         <img
           class="img-fluid rounded-4 shadow-lg hover-float"
           src="contents/gallery/UniteCol-min.webp"
@@ -105,8 +107,8 @@
           data-bs-target="#heroImageModal"
         />
       </div>
-      <div class="col-md-6">
-        <div class="glass p-4 rounded-4">
+      <div class="col-md-6 hero-content">
+        <div class="glass p-4 rounded-4 hero-card">
           <h3 class="section-title mb-3 text-center"><span class="marker">Compass Alliance</span></h3>
           <p class="mb-0 text-center">
             Founded in late 2020 during the Covid-19 pandemic, when the nations of the world embarked on an arms race after young teenagers who had acquired powers during the pandemic, these teenagers were newly classified as <i><strong>Prime-Children!</strong></i>
@@ -150,7 +152,7 @@
   <!-- Facebook Community Section -->
 <!-- Facebook Community Section -->
 <div class="container my-5 text-center">
-  <div class="glass p-4 rounded-4">
+  <div class="glass p-4 rounded-4" data-animate="reveal">
     <h2 class="section-heading mb-3 text-primary">
       <i class="bi bi-facebook"></i> Join the Architects
     </h2>
