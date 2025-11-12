@@ -3,17 +3,13 @@
    Compatible with main.css + Bootstrap 5
    ========================= */
 
-/* Vars fallbacks (במידה ואין ב-root) */
+/* Timeline-specific tokens layered on top of main theme */
 :root {
-  --brand: #ffb703;
-  --brand-600: #f9a602;
-  --stroke: rgba(255,255,255,.12);
-  --text-100: #e5e7eb;
-  --text-300: #9ca3af;
   --card-bg: rgba(255,255,255,.045);
   --card-hover-bg: rgba(255,255,255,.06);
   --line: linear-gradient(to bottom, rgba(255,255,255,.10), rgba(255,255,255,.03));
 }
+
 
 /* Wrapper */
 .timeline {
@@ -61,7 +57,7 @@
   margin-inline: auto;
   padding: 18px 18px 16px 18px;
   background: var(--card-bg);
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--border-soft);
   border-radius: 18px;
   box-shadow: 0 10px 28px rgba(0,0,0,.35);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
@@ -289,7 +285,7 @@
   padding: 4px 8px;
   border-radius: 999px;
   background: rgba(0,0,0,.55);
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--border-soft);
   color: var(--text-100);
   backdrop-filter: blur(4px);
   pointer-events: none;
@@ -319,3 +315,5 @@
   .timeline-media { border-color: #ccc; background: #fff; }
   .timeline-media:hover img { transform: none; }
 }
+
+

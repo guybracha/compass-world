@@ -1,145 +1,78 @@
-/* =========================
-   Gods & Monsters (files.css)
-   תואם ל-main.css ול-Bootstrap 5
-   ========================= */
+/* =====================================================
+   Compass World · files.css
+   Gods & Monsters collection page tweaks
+===================================================== */
 
-/* Reset עדין */
-* { box-sizing: border-box; }
-.container { max-width: 1200px; }
-
-/* טיפוגרפיה ממוקדת עמוד */
-header .logo { margin-bottom: 16px; }
-.title {
-  font-family: 'Bangers', cursive;
-  font-size: clamp(2.2rem, 1.4rem + 2.5vw, 3rem);
-  color: var(--brand);
-  text-shadow: 2px 2px 10px rgba(255, 183, 3, .65);
+/* Tab pills */
+#gmTabs .nav-link {
+  min-width: 140px;
+  justify-content: center;
 }
 
-/* ----- Navbar -----
-   אל תשנה את ה-navbar מ-main.css; רק ניואנס קטן */
-nav.navbar {
-  border-bottom: 1px solid rgba(255,255,255,.08);
+/* Dynamic hero/villain grids */
+#showMeHeroes .card,
+#showMeVillains .card {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.55));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+#showMeHeroes .card-img-top,
+#showMeVillains .card-img-top {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  height: 220px;
+  object-fit: cover;
+}
+#showMeHeroes .card-body,
+#showMeVillains .card-body {
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.35));
+}
+#showMeHeroes blockquote,
+#showMeVillains blockquote {
+  font-size: .8rem;
+  font-style: italic;
+  border-left: 2px solid rgba(255,255,255,.15);
+  padding-left: .75rem;
 }
 
-/* ----- Article Wrapper ----- */
-article {
-  background: var(--glass);
-  color: var(--text-100);
-  padding: clamp(16px, 2vw, 24px);
-  border-radius: 16px;
-  border: 1px solid var(--stroke);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+/* Teams accordion */
+#teamsAccordion .accordion-item {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  background: rgba(0,0,0,.25);
 }
-
-article h1, article h2 {
-  font-family: 'Bangers', cursive;
-  color: var(--brand);
-  text-align: center;
-  text-shadow: 2px 2px 6px rgba(255, 183, 3, .45);
-}
-
-/* ----- Sections: Heroes / Villains -----
-   שומרים על המחלקות שהשתמשת בהן, אבל מכוונים אותן רק בתוך article
-   כדי לא לפגוע בעמודים אחרים */
-article .bg-info,
-article .bg-danger {
-  padding: clamp(16px, 2vw, 24px);
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
-}
-
-/* Gradient עדין תואם פלטה */
-article .bg-info {
-  background: linear-gradient(135deg, rgba(23,162,184,.18), rgba(0,95,115,.22));
-}
-article .bg-danger {
-  background: linear-gradient(135deg, rgba(220,53,69,.20), rgba(106,4,15,.24));
-}
-
-/* ----- כפתורים ----- */
-.btn-warning {
-  /* הסטייל הבסיסי מגיע מ-main.css; מוסיפים ניואנס קל */
-  border-radius: 14px;
-  padding: .65rem 1.1rem;
-  box-shadow: 0 8px 24px rgba(255, 183, 3, .25);
-}
-.btn-warning:hover {
-  box-shadow: 0 10px 28px rgba(255, 183, 3, .35);
-}
-
-/* ----- כרטיסים לרשת דינמית (Heroes/Villains) ----- */
-.card {
-  background: rgba(255,255,255,.04);
-  color: var(--text-100);
-  border-radius: 16px;
-  border: 1px solid var(--stroke);
-  overflow: hidden;
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.45);
-  border-color: rgba(255, 183, 3, .55);
-}
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.card-body {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
-  color: var(--text-100);
-  padding: 16px;
-}
-.card-title {
+#teamsAccordion .accordion-button {
+  border-radius: var(--radius-md);
   font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: .35rem;
 }
-.card-text {
-  font-size: .95rem;
+#teamsAccordion .accordion-button:not(.collapsed) {
+  color: var(--text-100);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.35));
+  border-bottom: 1px solid var(--border-soft);
+}
+#teamsAccordion .accordion-body {
+  background: rgba(255,255,255,.02);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+#teamsAccordion .list-group-item {
+  background: transparent;
+  border-color: rgba(255,255,255,.08);
   color: var(--text-300);
 }
 
-/* תגיות/מדבקות קטנות אם תרצה להוסיף בעתיד */
-.badge-soft {
-  display: inline-block;
-  padding: .35rem .55rem;
+/* Filters */
+[data-team-filter] {
   border-radius: 999px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  color: var(--text-300);
-  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
-/* ----- תמונות גדולות בראש כל סקשן ----- */
-.hover-float { transition: transform .28s ease, box-shadow .28s ease; }
-.hover-float:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
-
-/* גריד הדינמי: רווחים יפים */
-#showMeHeroes, #showMeVillains { margin-top: .25rem; }
-
-/* ----- Footer ----- */
-footer {
-  background: linear-gradient(180deg, transparent, rgba(255,255,255,.03));
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: none;
-}
-footer a { color: var(--brand); }
-footer a:hover { color: var(--brand-600); }
-
-/* ----- נגישות ותנועה ----- */
-:focus-visible { outline: 2px dashed var(--brand); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
-
-/* ----- רספונסיביות ----- */
-@media (max-width: 768px) {
-  .title { font-size: clamp(1.8rem, 4vw, 2.2rem); }
-  article { padding: 14px; }
+/* Empty states */
+#showMeHeroes:empty::after,
+#showMeVillains:empty::after {
+  content: "Loading roster...";
+  color: var(--text-500);
+  font-style: italic;
 }
