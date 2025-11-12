@@ -41,7 +41,13 @@ const teamMembers = [
   { name: "Maltese Cross", image: "./contents/avatar2024/heroes/maltese-min.webp" },
   { name: "Wonderbeast", image: "./contents/avatar2024/heroes/wonderbeast-min.webp" },
   { name: "Nighthunter", image: "./contents/avatar2024/heroes/nighthunter-min.webp" },
-  { name: "Luna", image: "./contents/avatar2024/heroes/luna-min.webp" }
+  { name: "Luna", image: "./contents/avatar2024/heroes/luna-min.webp" },
+  { name: "Guardian Angel", image: "./contents/avatar2024/heroes/guardianAngel-min.webp" },
+  { name: "Hydro-Zen", image: "./contents/avatar2024/heroes/hydroZen-min.webp" },
+  { name: "Ivory", image: "./contents/avatar2024/heroes/ivory-min.webp" },
+  { name: "King Sodalite", image: "./contents/avatar2024/heroes/kingSodalite-min.webp" },
+  { name: "Northlight", image: "./contents/avatar2024/heroes/northlight-min.webp" },
+  { name: "Lion Man", image: "./contents/avatar2024/heroes/lionMan-min.webp" },
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." }));
 
 // --- סדר לפי הגלריה ב-PDF ---
