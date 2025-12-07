@@ -97,21 +97,25 @@
 
 
   <!-- Hero -->
-  <header class="container py-5">
+  <header class="text-center py-4">
+    <a href="index.html">
+      <img class="hero-logo logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" />
+    </a>
+    <h1 class="display-4 text-warning">Gallery</h1>
+    <p class="lead mb-0">Posters, key art, and concept explorations from the <strong>Compass World</strong>. Filter by team, era, or theme and open any image for a closer look.</p>
+  </header>
+
+  <div class="container py-3">
     <div class="row align-items-center g-4">
-      <div class="col-lg-7">
-        <h1 class="display-5 text-warning mb-2">Gallery</h1>
-        <p class="lead mb-0">Posters, key art, and concept explorations from the <strong>Compass World</strong>. Filter by team, era, or theme and open any image for a closer look.</p>
-      </div>
-      <div class="col-lg-5 text-center">
-        <img class="img-fluid rounded-4 shadow-lg" src="contents/gallery/UniteCol-min.webp" alt="Compass Alliance artwork" loading="lazy"/>
+      <div class="col-12 text-center">
+        <img class="img-fluid rounded-4 shadow-lg" src="contents/gallery/UniteCol-min.webp" alt="Compass Alliance artwork" loading="lazy" style="max-width: 600px;"/>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- Filters -->
   <section class="container">
-    <div class="glass rounded-4 p-3 p-md-4">
+    <div class="glass rounded-4 p-3 p-md-4" data-animate="reveal">
       <div class="d-flex flex-wrap align-items-center gap-2">
         <button class="btn btn-outline-light btn-sm filter-btn active" data-filter="all">All</button>
         <button class="btn btn-outline-light btn-sm filter-btn" data-filter="alliance">Compass Alliance</button>

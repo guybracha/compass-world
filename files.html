@@ -86,11 +86,13 @@
   <div id="google_translate_element" class="container mt-3"></div>
 
   <!-- PAGE HEADER -->
-  <header class="container mt-4">
+  <header class="text-center py-4">
+    <a href="index.html">
+      <img class="hero-logo logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" />
+    </a>
+    <h1 class="display-4 text-warning">Gods &amp; Monsters</h1>
+    <p class="lead opacity-75 mb-3">Meet the heroes, the villains — and the alliances that shape the world.</p>
     <div class="text-center">
-      <img class="img-fluid logo-glow" src="contents/indexphoto/logo.webp" alt="Compass World logo" height="120" loading="lazy" />
-      <h1 class="display-5 fw-extrabold text-gradient mt-3">Gods &amp; Monsters</h1>
-      <p class="lead opacity-75 mb-3">Meet the heroes, the villains — and the alliances that shape the world.</p>
       <div class="d-inline-flex align-items-center gap-2">
         <button class="btn btn-warning shadow-lift" onclick="clickMe()">Secret Hero</button>
         <span id="random" class="small text-secondary"></span>
@@ -127,7 +129,7 @@
     <div class="tab-content" id="gmTabsContent">
       <!-- HEROES TAB -->
       <section class="tab-pane fade show active" id="heroes-pane" role="tabpanel" aria-labelledby="heroes-tab">
-        <div class="glass p-4 p-md-5 rounded-4 mb-4">
+        <div class="glass p-4 p-md-5 rounded-4 mb-4" data-animate="reveal">
           <div class="text-center mb-3">
             <img class="img-fluid rounded-3 shadow-lg hover-float mb-3"
                  src="contents/indexphoto/union.webp" alt="Compass Alliance team" loading="lazy" />
