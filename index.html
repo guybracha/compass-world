@@ -201,8 +201,27 @@
   document.addEventListener('DOMContentLoaded', () => {
     const trailerModalEl = document.getElementById('trailerModal');
     const frame = document.getElementById('trailerFrame');
+    
     if (trailerModalEl && frame) {
+      // Check if user has already seen the trailer in this session
+      const hasSeenTrailer = sessionStorage.getItem('trailerShown');
+      
+      // Only show modal if user hasn't seen it yet in this session
+      if (!hasSeenTrailer) {
+        const modal = new bootstrap.Modal(trailerModalEl);
+        modal.show();
+        
+        // Mark as shown when modal is hidden
+        trailerModalEl.addEventListener('hidden.bs.modal', () => {
+          sessionStorage.setItem('trailerShown', 'true');
+          frame.setAttribute('src', '');
+          frame.setAttribute('src', originalSrc);
+        });
+      }
+      
       const originalSrc = frame.getAttribute('src');
+      
+      // Also handle manual opening of the modal
       trailerModalEl.addEventListener('hidden.bs.modal', () => {
         frame.setAttribute('src', '');
         frame.setAttribute('src', originalSrc);

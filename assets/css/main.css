@@ -291,6 +291,14 @@ a:focus-visible {
   max-width: 180px;
 }
 
+/* Page titles - Bangers font with glow effect like Prime Children */
+header h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5), 0 0 24px rgba(255, 183, 3, 0.3);
+}
+
 /* ---------- Cards / tiles ---------- */
 .card,
 .tile {
@@ -594,8 +602,29 @@ footer a:hover {
   outline: var(--focus-ring);
   outline-offset: 2px;
 }
+
+/* GSAP animation setup - elements will be animated by JS */
+/* Don't hide by default to prevent FOUC if JS fails */
+
+/* Smooth transitions for interactive elements */
+.card,
+.tile,
+.glass,
+.btn,
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover states for better animation feel */
+.card:hover,
+.tile:hover {
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
   }
