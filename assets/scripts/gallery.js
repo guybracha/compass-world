@@ -55,8 +55,37 @@ const GALLERY_ITEMS = [
     src: "contents/art2025/giantSize.webp",
     caption: "An homage to the classic giant-size x-men #1 comics.",
     tags: ["space","poster"]
+  },
+  {
+    title: "A wide Circle",
+    src: "contents/art2025/circle.webp",
+    caption: "A concept art for a new project in 2026.",
+    tags: ["concept art","poster"]
+  },
+  {
+    title: "My Dream Team",
+    src: "contents/art2025/dreamteam.webp",
+    caption: "A widescreen concept art featuring the compass alliance.",
+    tags: ["concept art","poster", "widescreen"]
+  },
+  {
+    title: "One Piece Remake",
+    src: "contents/art2025/onePiece.webp",
+    caption: "A scene remake from one piece featuring compass alliance characters.",
+    tags: ["cartoon","remake"]
+  },
+  {
+    title: "Spectrum Man",
+    src: "contents/art2025/spectrumMan.webp",
+    caption: "A concept art featuring Spectrum Man.",
+    tags: ["concept art","spectrum man"]
+  },
+  {
+    title: "Futureberg Branch - PowerPoint",
+    src: "contents/art2025/powerPoint.webp",
+    caption: "A comedic scene of the futureberg staff based on the office.",
+    tags: ["comedy","remake"]
   }
-  // הוסף/עדכן פריטים נוספים כאן
 ];
 
 // ====== Selectors ======
@@ -72,7 +101,13 @@ function cardTemplate(item, idx){
   return `
     <div class="col-6 col-md-4 col-lg-3 gallery-col" data-tags="${item.tags.join(',')}" data-title="${item.title.toLowerCase()}">
       <article class="gallery-card glass rounded-4 h-100 p-2">
-        <button class="btn p-0 border-0 bg-transparent w-100 text-start" data-idx="${idx}" data-bs-toggle="modal" data-bs-target="#imgModal" aria-label="Open ${item.title}">
+        <button class="btn p-0 border-0 bg-transparent w-100 text-start" 
+                data-src="${item.src}" 
+                data-title="${item.title}" 
+                data-caption="${item.caption || ''}"
+                data-bs-toggle="modal" 
+                data-bs-target="#imgModal" 
+                aria-label="Open ${item.title}">
           <img class="img-fluid rounded-3 w-100" src="${item.src}" alt="${item.title}" loading="lazy"/>
         </button>
         <div class="px-1 py-2">
@@ -128,13 +163,15 @@ const captionEl = document.getElementById('imgModalCaption');
 
 imgModal.addEventListener('show.bs.modal', (e) => {
   const btn = e.relatedTarget;
-  const idx = +btn.getAttribute('data-idx');
-  const item = GALLERY_ITEMS[idx];
-  if(!item) return;
-  imgEl.src = item.src;
-  imgEl.alt = item.title;
-  titleEl.textContent = item.title;
-  captionEl.textContent = item.caption || '';
+  const src = btn.getAttribute('data-src');
+  const title = btn.getAttribute('data-title');
+  const caption = btn.getAttribute('data-caption');
+  
+  if(!src) return;
+  imgEl.src = src;
+  imgEl.alt = title;
+  titleEl.textContent = title;
+  captionEl.textContent = caption || '';
 });
 
 // ====== Init ======

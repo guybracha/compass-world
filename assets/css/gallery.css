@@ -9,25 +9,73 @@
   --gallery-tag-bg: rgba(255,255,255,0.10);
 }
 
+/* Hero image responsive styling */
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero-image {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-image {
+    max-width: 900px;
+  }
+}
+
 /* Filter toolbar */
 .filter-btn {
   border-color: rgba(255,255,255,.35);
-  color: var(--text-100);
+  color: #fff;
+  background: rgba(255,255,255,.05);
+  font-weight: 500;
+  transition: all .2s ease;
 }
 .filter-btn:hover {
-  border-color: var(--brand);
-  color: var(--brand);
+  border-color: #ffc107;
+  color: #ffc107;
+  background: rgba(255,193,7,.1);
+}
+.filter-btn.active {
+  background: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #000 !important;
 }
 
 .input-group .form-control {
-  color: var(--text-100);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.25);
+  transition: all .2s ease;
+}
+.input-group .form-control:focus {
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255,193,7,.15);
 }
 .input-group .form-control::placeholder {
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.5);
 }
 .input-group .input-group-text {
-  color: var(--text-100);
-  border-color: rgba(255,255,255,.35);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.25);
+}
+
+#clearFilters {
+  color: #fff;
+  border-color: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.05);
+  transition: all .2s ease;
+}
+#clearFilters:hover {
+  color: #000;
+  background: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.9);
 }
 
 /* Gallery cards */
@@ -97,6 +145,26 @@
   color: #0b0d12;
   background: #cbd5e1;
   border-color: #cbd5e1;
+}
+
+/* Responsive filter toolbar */
+@media (max-width: 991px) {
+  .filter-btn {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .input-group {
+    max-width: 100% !important;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  
+  #clearFilters {
+    margin-top: 0.5rem;
+  }
 }
 
 /* Responsive */
