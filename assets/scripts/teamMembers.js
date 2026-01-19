@@ -17,7 +17,7 @@ const teamMembers = [
   { name: "Melody", image: "./contents/avatar2024/heroes/melody-min.webp" },
   { name: "Captain Space", image: "./contents/avatar2024/heroes/captainSpace-min.webp" },
   { name: "Honeybee", image: "./contents/avatar2024/heroes/honeybee-min.webp" },
-  { name: "Rocket Prime", image: "./contents/avatar2024/heroes/rocketPrime-min.webp" },
+  { name: "Rocket the Prime Robot", image: "./contents/avatar2024/heroes/rocketPrime-min.webp" },
   { name: "Cheerstar", image: "./contents/avatar2024/heroes/cheerstar-min.webp" },
   { name: "Red Mole", image: "./contents/avatar2024/heroes/redMole-min.webp" },
   { name: "Metalclad", image: "./contents/avatar2024/heroes/metalclad-min.webp" },
@@ -48,6 +48,14 @@ const teamMembers = [
   { name: "King Sodalite", image: "./contents/avatar2024/heroes/kingSodalite-min.webp" },
   { name: "Northlight", image: "./contents/avatar2024/heroes/northlight-min.webp" },
   { name: "Lion Man", image: "./contents/avatar2024/heroes/lionMan-min.webp" },
+  { name: "Starguard", image: "./contents/avatar2024/heroes/starguard-min.webp" },
+  { name: "Golda", image: "./contents/avatar2024/heroes/golda-min.webp" },
+  { name: "Mighty Bean", image: "./contents/avatar2024/heroes/mightyBean-min.webp" },
+  { name: "Paladin 2", image: "./contents/avatar2024/heroes/paladin2-min.webp" },
+  { name: "Punker", image: "./contents/avatar2024/heroes/punker-min.webp" },
+  { name: "Agamemnon", image: "./contents/avatar2024/heroes/agamemnon-min.webp" },
+  { name: "The Seren", image: "./contents/avatar2024/heroes/seren-min.webp" },
+  { name: "Harkadius and Hallethea", image: "./contents/avatar2024/heroes/harkadiusHallethea-min.webp" }
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." }));
 
 // --- סדר לפי הגלריה ב-PDF ---
@@ -55,10 +63,15 @@ const pdfOrder = [
   "Comrade","Gigantic","Paladin","Tsunami","Voltage",
   "Bloom","Captain Phoenix","Dragon Fighter","Maltese Cross","Size","Mariposa",
   "Doc Physics","Enforcer","Honeybee","Metalclad","Optimus Quantum",
-  "Eastwind","Sunshine","Ra","Rubberman","Rocket Prime",
+  "Eastwind","Sunshine","Ra","Rubberman","Rocket the Prime Robot",
   "Scarab","Symbol","Timer","Western","Wetlander",
   "Captain Space","Snowie","Squire","Techno",
-  "Lady Astral","Cheerstar","Melody","Red Mole"
+  "Lady Astral","Cheerstar","Melody","Red Mole","Starguard",
+  "Mark Venture","Archer","Mirror Girl","Alchemist","Sweet Girl",
+  "Wonderbeast","Nighthunter","Luna","Guardian Angel","Hydro-Zen",
+  "Ivory","King Sodalite","Northlight","Lion Man","Golda",
+  "Mighty Bean","Paladin 2","Punker","Agamemnon","The Seren",
+  "Harkadius and Hallethea"
 ];
 
 const byName = new Map(teamMembers.map(m => [m.name, m]));
