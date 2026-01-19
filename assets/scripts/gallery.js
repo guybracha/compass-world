@@ -1,4 +1,5 @@
 // assets/scripts/gallery.js
+// ====== Gallery with Modular Search & Filters ======
 
 // ====== Gallery data (עדכן נתיבים/תגיות לפי הקבצים שלך) ======
 const GALLERY_ITEMS = [
@@ -125,17 +126,21 @@ function render(items){
   emptyState.classList.toggle('d-none', items.length > 0);
 }
 
-// ====== Filtering & Search ======
+// ====== Filtering & Search (Using Modular Functions) ======
 let currentFilter = 'all';
 
 function applyFilters(){
   const q = (searchInput.value || '').trim().toLowerCase();
-  const items = GALLERY_ITEMS.filter(item => {
-    const inFilter = currentFilter === 'all' ? true : item.tags.includes(currentFilter);
-    const inSearch = !q || item.title.toLowerCase().includes(q) || item.tags.join(' ').includes(q);
-    return inFilter && inSearch;
+  
+  // שימוש במודול החיפוש המרכזי
+  const filtered = SearchModule.searchAndSort(GALLERY_ITEMS, {
+    searchTerm: q,
+    searchFields: ['title', 'caption'],
+    tags: currentFilter === 'all' ? null : [currentFilter],
+    tagField: 'tags'
   });
-  render(items);
+  
+  render(filtered);
 }
 
 filterBtns.forEach(btn => {
@@ -175,5 +180,18 @@ imgModal.addEventListener('show.bs.modal', (e) => {
 });
 
 // ====== Init ======
-document.getElementById('year').textContent = new Date().getFullYear();
-render(GALLERY_ITEMS);
+document.addEventListener('DOMContentLoaded', () => {
+  // אתחול ניווט
+  NavigationModule.init({
+    currentPage: 'gallery'
+  });
+  
+  // אתחול תצוגה
+  document.getElementById('year').textContent = new Date().getFullYear();
+  render(GALLERY_ITEMS);
+  
+  // הוספת אנימציות
+  if (typeof UIUtils !== 'undefined') {
+    UIUtils.fadeInElements('.gallery-col', 50);
+  }
+});

@@ -31,6 +31,12 @@
   <!-- Preload logo -->
   <link rel="preload" as="image" href="contents/art2025/new_logo_fix.png" />
 
+  <!-- Modular scripts -->
+  <script defer src="assets/scripts/search.js"></script>
+  <script defer src="assets/scripts/filters.js"></script>
+  <script defer src="assets/scripts/navigation.js"></script>
+  <script defer src="assets/scripts/ui-utils.js"></script>
+
   <!-- Page Scripts (keep order; 'defer' preserves order) -->
   <script defer src="assets/scripts/heroes.js"></script>
   <script src="assets/scripts/heroClass.js"></script>
@@ -102,6 +108,25 @@
 
   <!-- MAIN -->
   <main class="container py-5">
+    
+    <!-- Search Box -->
+    <div class="glass p-3 rounded-4 mb-4">
+      <div class="input-group">
+        <span class="input-group-text bg-dark text-white border-secondary">
+          <i class="bi bi-search"></i>
+        </span>
+        <input 
+          type="text" 
+          id="heroesSearchInput"
+          class="form-control bg-dark text-white border-secondary" 
+          placeholder="חפש גיבורים ונבלים לפי שם..."
+          aria-label="Search heroes and villains"
+        />
+        <button class="btn btn-outline-secondary" type="button" id="clearHeroSearch" title="נקה חיפוש">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
 
     <!-- TABS -->
     <ul class="nav nav-pills justify-content-center gap-2 mb-4" id="gmTabs" role="tablist">
