@@ -6,6 +6,15 @@ class HistoryClass {
     this.index = index;
   }
 
+  _eraFromYear(y) {
+    const str = String(y);
+    const num = parseInt(str.replace(/[^\d]/g, ""), 10) || 0;
+    if (str.includes("BC") || num < 1700) return "ancient";
+    if (num < 1940)                        return "colonial";
+    if (num < 2000)                        return "modern";
+    return "present";
+  }
+
   render() {
     const host = document.querySelector("#showMe");
     if (!host) return;
@@ -13,6 +22,7 @@ class HistoryClass {
     // עטיפה לכל פריט
     const item = document.createElement("article");
     item.className = "timeline-item";
+    item.dataset.era = this._eraFromYear(this.year);
 
     // כרטיס
     const card = document.createElement("div");

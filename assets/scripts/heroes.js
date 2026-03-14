@@ -1,13 +1,14 @@
 // heroes.js
-// Enhanced with modular search functionality
+// Enhanced with modular search + category filter functionality
 (function () {
   function normPath(p) {
     return (p || "").replace(/\\/g, "/");
   }
 
-  // Store original lists for search functionality
+  // Store original lists for search/filter functionality
   let originalHeroesList = [];
   let originalVillainsList = [];
+  let activeCategory = "all";
 
   function createList(list, containerSelector) {
     const container = document.querySelector(containerSelector);
@@ -15,18 +16,21 @@
       console.warn("[heroes.js] container not found:", containerSelector);
       return;
     }
-    // נקה לפני רינדור (כדי לא לצבור כפילויות בריענון)
     container.innerHTML = "";
 
     list.forEach((item) => {
-      const superName = item.superName || item.supername || "Unknown";
+      const superName   = item.superName   || item.supername   || "Unknown";
       const privateName = item.privateName || "Unknown";
-      const powers = item.Powers || item.powers || "Unknown";
-      const quote = item.quote || "No quote available.";
-      const img = normPath(item.img);
+      const powers      = item.Powers      || item.powers      || "Unknown";
+      const quote       = item.quote       || "No quote available.";
+      const img         = normPath(item.img);
+      const category    = item.category    || "";
+      const allies      = item.allies      || [];
+      const enemies     = item.enemies     || [];
+      const stats       = item.stats       || null;
 
       try {
-        const character = new heroClass(superName, privateName, powers, img, quote);
+        const character = new heroClass(superName, privateName, powers, img, quote, category, allies, enemies, stats);
         character.render(containerSelector);
       } catch (err) {
         console.error("[heroes.js] render failed for:", superName, err);
@@ -34,57 +38,86 @@
     });
   }
 
-  function setupSearch() {
-    const searchInput = document.getElementById('heroesSearchInput');
-    const clearBtn = document.getElementById('clearHeroSearch');
+  // Build category filter pills above the heroes grid
+  function buildCategoryFilters() {
+    const filterHost = document.getElementById("heroCategoryFilters");
+    if (!filterHost) return;
 
-    if (!searchInput || !SearchModule) return;
+    const categories = [...new Set(originalHeroesList.map(h => h.category).filter(Boolean))].sort();
 
-    function performSearch() {
-      const searchTerm = searchInput.value.trim();
+    filterHost.innerHTML = `
+      <button class="btn btn-sm btn-warning category-filter active" data-cat="all">All</button>
+      ${categories.map(cat =>
+        `<button class="btn btn-sm btn-outline-secondary category-filter" data-cat="${cat}">${cat}</button>`
+      ).join("")}
+    `;
 
-      // חיפוש גיבורים
-      const filteredHeroes = SearchModule.search(originalHeroesList, {
-        searchTerm,
-        searchFields: ['superName', 'supername', 'privateName', 'powers', 'Powers']
+    filterHost.querySelectorAll(".category-filter").forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterHost.querySelectorAll(".category-filter").forEach(b => b.classList.remove("active", "btn-warning"));
+        btn.classList.add("active", "btn-warning");
+        btn.classList.remove("btn-outline-secondary");
+
+        activeCategory = btn.dataset.cat;
+        applyFiltersAndRender();
       });
+    });
+  }
 
-      // חיפוש נבלים
-      const filteredVillains = SearchModule.search(originalVillainsList, {
-        searchTerm,
-        searchFields: ['superName', 'supername', 'privateName', 'powers', 'Powers']
-      });
+  function applyFiltersAndRender() {
+    const searchInput = document.getElementById("heroesSearchInput");
+    const searchTerm  = searchInput ? searchInput.value.trim() : "";
 
-      // עדכון תצוגה
-      createList(filteredHeroes, "#showMeHeroes");
-      createList(filteredVillains, "#showMeVillains");
+    let filtered = originalHeroesList;
 
-      // הצגת הודעה אם אין תוצאות
-      if (searchTerm && filteredHeroes.length === 0 && filteredVillains.length === 0) {
-        if (typeof UIUtils !== 'undefined') {
-          const activeTab = document.querySelector('.tab-pane.active');
-          if (activeTab) {
-            const container = activeTab.querySelector('.row[id^="showMe"]');
-            if (container) {
-              container.innerHTML = `
-                <div class="col-12 text-center py-5">
-                  <i class="bi bi-search text-warning" style="font-size: 3rem;"></i>
-                  <h4 class="text-white mt-3">לא נמצאו תוצאות</h4>
-                  <p class="text-secondary">נסה מונח חיפוש אחר</p>
-                </div>
-              `;
-            }
-          }
-        }
-      }
+    // Category filter
+    if (activeCategory !== "all") {
+      filtered = filtered.filter(h => h.category === activeCategory);
     }
 
-    searchInput.addEventListener('input', performSearch);
-    
+    // Text search
+    if (searchTerm && typeof SearchModule !== "undefined") {
+      filtered = SearchModule.search(filtered, {
+        searchTerm,
+        searchFields: ["superName", "privateName", "Powers", "category"]
+      });
+    }
+
+    createList(filtered, "#showMeHeroes");
+
+    // Villains: only text search, no category
+    let filteredVillains = originalVillainsList;
+    if (searchTerm && typeof SearchModule !== "undefined") {
+      filteredVillains = SearchModule.search(filteredVillains, {
+        searchTerm,
+        searchFields: ["supername", "powers"]
+      });
+    }
+    createList(filteredVillains, "#showMeVillains");
+
+    if (filtered.length === 0) {
+      const heroesContainer = document.querySelector("#showMeHeroes");
+      if (heroesContainer) {
+        heroesContainer.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <i class="bi bi-search text-warning" style="font-size:3rem;"></i>
+            <h4 class="text-white mt-3">No results found</h4>
+            <p class="text-secondary">Try a different search or category</p>
+          </div>`;
+      }
+    }
+  }
+
+  function setupSearch() {
+    const searchInput = document.getElementById("heroesSearchInput");
+    const clearBtn    = document.getElementById("clearHeroSearch");
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", applyFiltersAndRender);
     if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        performSearch();
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        applyFiltersAndRender();
       });
     }
   }
@@ -95,25 +128,20 @@
       return;
     }
 
-    // שמירת הרשימות המקוריות
-    originalHeroesList = [...superList];
+    originalHeroesList  = [...superList];
     originalVillainsList = [...villainList];
 
-    createList(superList, "#showMeHeroes");
-    createList(villainList, "#showMeVillains");
+    createList(superList,    "#showMeHeroes");
+    createList(villainList,  "#showMeVillains");
 
-    // אתחול חיפוש
+    buildCategoryFilters();
     setupSearch();
 
-    // אתחול ניווט
-    if (typeof NavigationModule !== 'undefined') {
-      NavigationModule.init({
-        currentPage: 'files'
-      });
+    if (typeof NavigationModule !== "undefined") {
+      NavigationModule.init({ currentPage: "files" });
     }
   }
 
-  // אם הסקריפט נטען עם defer, ה-DOM כבר מוכן; בכל מקרה נקשיב לגיבוי:
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {

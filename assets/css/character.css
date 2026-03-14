@@ -1,0 +1,231 @@
+/* =====================================================
+   Compass World · character.css
+   Styles for character.html — the per-character profile page
+===================================================== */
+
+/* ── CSS custom props (set by character.js) ─────── */
+:root {
+  --char-color:     #ffb703;
+  --char-color-dim: rgba(255,183,3,.13);
+  --char-color-mid: rgba(255,183,3,.27);
+}
+
+/* ── Banner ─────────────────────────────────────── */
+.char-banner {
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2.5rem;
+  background: linear-gradient(160deg, #0b0f16 40%, #1a1f2e 100%);
+  transition: background 0.6s ease;
+  overflow: hidden;
+}
+.char-banner::before {
+  /* subtle star noise */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 30%  20%, rgba(255,255,255,.25), transparent),
+    radial-gradient(1px 1px at 70%  60%, rgba(255,255,255,.18), transparent),
+    radial-gradient(1px 1px at 15%  75%, rgba(255,255,255,.20), transparent),
+    radial-gradient(1px 1px at 85%  15%, rgba(255,255,255,.22), transparent),
+    radial-gradient(1px 1px at 50%  50%, rgba(255,255,255,.15), transparent);
+  pointer-events: none;
+}
+.char-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,7,13,.9) 20%, transparent 100%);
+}
+.char-banner-content {
+  position: relative;
+  z-index: 2;
+}
+.char-banner-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 2rem + 3vw, 5rem);
+  color: var(--char-color, #ffb703);
+  text-shadow: 0 0 24px var(--char-color-mid, rgba(255,183,3,.4)),
+               2px 2px 0 rgba(0,0,0,.7);
+  line-height: 1.05;
+  margin: .35rem 0 .5rem;
+}
+.char-banner-quote {
+  font-style: italic;
+  color: var(--text-300);
+  font-size: clamp(1rem, .85rem + .5vw, 1.25rem);
+  opacity: .88;
+  max-width: 60ch;
+}
+.char-breadcrumb { font-size: .82rem; }
+.char-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: var(--text-500); }
+.char-breadcrumb a { color: var(--char-color, var(--brand)); }
+.char-breadcrumb .active { color: var(--text-300); }
+
+/* ── Portrait card ──────────────────────────────── */
+.char-portrait {
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.char-portrait:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(0,0,0,.55);
+}
+.char-quote {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--char-color, var(--brand));
+  opacity: .9;
+  border-left: 3px solid var(--char-color, var(--brand));
+  padding-left: 1rem;
+  text-align: left;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+.char-power-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; }
+.char-power-tag  { font-size: .78rem !important; }
+
+/* ── Stat bars ──────────────────────────────────── */
+.char-stat-track {
+  height: 6px;
+  background: rgba(255,255,255,.10);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.char-stat-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width .6s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Radar chart wrapper ────────────────────────── */
+.char-radar-wrap {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ── Relationship badges ────────────────────────── */
+.char-ally-badge {
+  background: rgba(34,197,94,.15) !important;
+  color: #4ade80 !important;
+  border: 1px solid rgba(34,197,94,.35) !important;
+  transition: background .2s ease;
+}
+.char-ally-badge:hover {
+  background: rgba(34,197,94,.3) !important;
+  color: #86efac !important;
+}
+.char-enemy-badge {
+  background: rgba(239,68,68,.15);
+  color: #f87171;
+  border: 1px solid rgba(239,68,68,.3);
+}
+
+/* ── Infobox ─────────────────────────────────────── */
+.char-infobox {
+  border: 1px solid var(--border-strong);
+}
+.char-infobox-header {
+  transition: background .5s ease, border-color .5s ease;
+}
+.char-infobox-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  color: var(--char-color, #ffb703);
+}
+.char-infobox-img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.char-infobox-table {
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+.char-infobox-table th,
+.char-infobox-table td {
+  padding: .5rem .75rem;
+  border-top: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+.char-infobox-table th {
+  color: var(--text-500);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 35%;
+}
+.char-infobox-table td {
+  color: var(--text-100);
+}
+.infobox-badge {
+  display: inline-block;
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+/* ── Left sidebar ────────────────────────────────── */
+.char-sidenav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.char-sidenav-link {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .4rem .5rem;
+  border-radius: var(--radius-sm);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text-300);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.char-sidenav-link:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text-100);
+}
+.char-sidenav-link.active {
+  background: rgba(255,255,255,.07);
+  /* border-left set inline by JS */
+}
+.char-sidenav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Light-mode overrides ────────────────────────── */
+[data-theme="light"] .char-banner {
+  background: linear-gradient(160deg, #e2e8f0 40%, #ede9fe 100%) !important;
+}
+[data-theme="light"] .char-banner-overlay {
+  background: linear-gradient(to top, rgba(241,245,249,.92) 20%, transparent 100%);
+}
+[data-theme="light"] .char-infobox-table th { color: var(--text-500); }
+[data-theme="light"] .char-infobox-table td { color: var(--text-100); }
+[data-theme="light"] .char-infobox-table th,
+[data-theme="light"] .char-infobox-table td { border-top-color: var(--border-soft); }
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .char-banner { min-height: 160px; padding-bottom: 1.75rem; }
+  .char-portrait { max-height: 280px; }
+}
+@media (max-width: 575.98px) {
+  .char-banner { min-height: 130px; }
+  .char-banner-name { font-size: 2.4rem; }
+}

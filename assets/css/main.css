@@ -753,3 +753,120 @@ footer a:hover {
     padding: 0.75rem;
   }
 }
+
+/* ===============================================
+   Light Mode  (toggle via data-theme="light" on <html>)
+   =============================================== */
+[data-theme="light"] {
+  --bg-900: #f1f5f9;
+  --bg-800: #e2e8f0;
+  --bg-700: #cbd5e1;
+  --bg-hero: radial-gradient(1200px 800px at 10% -10%, #dbeafe 0%, transparent 50%),
+             radial-gradient(1000px 700px at 100% 0%, #ede9fe 0%, transparent 55%),
+             linear-gradient(180deg, #f1f5f9, #e2e8f0);
+
+  --text-100: #0f172a;
+  --text-200: #1e293b;
+  --text-300: #334155;
+  --text-500: #64748b;
+
+  --surface-glass:        rgba(255, 255, 255, 0.70);
+  --surface-panel:        rgba(255, 255, 255, 0.55);
+  --surface-panel-strong: rgba(255, 255, 255, 0.85);
+  --border-soft:          rgba(0,  0,  0,  0.10);
+  --border-strong:        rgba(0,  0,  0,  0.20);
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, .12);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, .14);
+  --shadow-lift: 0 14px 32px rgba(0, 0, 0, .18);
+}
+
+/* Override Bootstrap bg-dark / text-white utilities */
+[data-theme="light"] body,
+[data-theme="light"] .bg-dark {
+  background: var(--bg-hero) !important;
+  color: var(--text-100) !important;
+}
+[data-theme="light"] .text-white { color: var(--text-100) !important; }
+[data-theme="light"] .text-secondary { color: var(--text-500) !important; }
+
+/* Navbar */
+[data-theme="light"] .glass-nav {
+  background: rgba(255,255,255,0.88) !important;
+  border-bottom-color: var(--border-soft) !important;
+}
+[data-theme="light"] .navbar .nav-link { color: var(--text-300) !important; }
+[data-theme="light"] .navbar .nav-link:hover,
+[data-theme="light"] .navbar .nav-link.active { color: var(--text-100) !important; background: rgba(255,183,3,.15) !important; }
+
+/* Cards */
+[data-theme="light"] .card,
+[data-theme="light"] .tile {
+  background: var(--surface-panel-strong) !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-100) !important;
+}
+[data-theme="light"] .card-body,
+[data-theme="light"] .card-text,
+[data-theme="light"] .card-title { color: var(--text-100) !important; }
+
+/* Glass panels */
+[data-theme="light"] .glass {
+  background: var(--surface-glass) !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* Forms */
+[data-theme="light"] .form-control,
+[data-theme="light"] .input-group-text {
+  background: rgba(255,255,255,.9) !important;
+  border-color: var(--border-strong) !important;
+  color: var(--text-100) !important;
+}
+[data-theme="light"] .form-control::placeholder { color: var(--text-500) !important; }
+
+/* Modal */
+[data-theme="light"] .modal-content,
+[data-theme="light"] #heroDetailModal .modal-content {
+  background: #fff !important;
+  color: var(--text-100) !important;
+  border-color: var(--border-strong) !important;
+}
+[data-theme="light"] .modal-content .text-white { color: var(--text-100) !important; }
+[data-theme="light"] .modal-content .text-secondary { color: var(--text-500) !important; }
+
+/* Timeline cards */
+[data-theme="light"] .timeline-card {
+  background: rgba(255,255,255,0.80) !important;
+  border-color: var(--border-soft) !important;
+  color: var(--text-100) !important;
+}
+[data-theme="light"] .timeline-card p { color: var(--text-100) !important; }
+
+/* Mobile menu in light mode */
+[data-theme="light"] .navbar-collapse {
+  background: rgba(255,255,255,.95) !important;
+  border-color: var(--border-soft) !important;
+}
+[data-theme="light"] .bg-surface { background: rgba(0,0,0,.04) !important; }
+
+/* Theme toggle button */
+#themeToggleBtn {
+  border: 1px solid rgba(255,183,3,.55);
+  background: transparent;
+  color: var(--brand);
+  border-radius: 999px;
+  padding: .3rem .7rem;
+  font-size: .85rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+#themeToggleBtn:hover {
+  background: var(--brand);
+  color: #111;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compass World | Character</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Character profile — Compass World" />
+  <link rel="icon" type="image/x-icon" href="contents/indexphoto/rotate.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/character.css" />
+
+  <!-- Modular scripts -->
+  <script defer src="assets/scripts/navigation.js"></script>
+  <script defer src="assets/scripts/components.js"></script>
+  <script defer src="assets/scripts/ui-utils.js"></script>
+
+  <!-- Data (non-deferred so character.js can read them) -->
+  <script src="assets/scripts/heroJson.js"></script>
+  <script src="assets/scripts/villainJson.js"></script>
+
+  <!-- Page script -->
+  <script defer src="assets/scripts/character.js"></script>
+  <script defer src="assets/scripts/animations.js"></script>
+</head>
+
+<body class="bg-dark text-white">
+  <!-- Navbar -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Dynamic hero banner -->
+  <div id="char-banner" class="char-banner">
+    <div class="char-banner-overlay"></div>
+    <div class="char-banner-content container">
+      <nav aria-label="breadcrumb" class="mb-2">
+        <ol class="breadcrumb char-breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="files.html">Gods &amp; Monsters</a></li>
+          <li class="breadcrumb-item active" id="breadcrumb-name">Character</li>
+        </ol>
+      </nav>
+      <h1 class="char-banner-name" id="char-hero-name">Loading…</h1>
+      <p class="char-banner-quote" id="char-banner-quote"></p>
+    </div>
+  </div>
+
+  <!-- Main layout -->
+  <main class="container-xl py-4">
+    <div class="row g-4">
+
+      <!-- ── Left sidebar: character navigation ── -->
+      <aside class="col-lg-2 d-none d-lg-block">
+        <div class="char-sidenav glass p-3 rounded-4 sticky-top" style="top:80px;max-height:calc(100vh - 100px);overflow-y:auto;">
+          <h6 class="text-warning mb-3 fw-bold small text-uppercase letter-spacing-wide">
+            <i class="bi bi-people-fill me-1"></i>All Heroes
+          </h6>
+          <div id="charSideNav" class="char-sidenav-list"></div>
+        </div>
+      </aside>
+
+      <!-- ── Centre: main content ── -->
+      <article class="col-lg-6 col-xl-7">
+
+        <!-- Mobile infobox (top on small screens) -->
+        <div class="d-lg-none mb-4" id="infobox-mobile"></div>
+
+        <!-- Portrait card -->
+        <div class="glass p-4 rounded-4 mb-4 text-center char-portrait-card" id="char-portrait-card">
+          <img id="char-portrait" src="" alt=""
+               class="char-portrait img-fluid rounded-3 shadow-lg"
+               onerror="this.src='contents/indexphoto/logo.webp'" />
+          <blockquote class="char-quote mt-3" id="char-quote"></blockquote>
+          <div class="char-power-tags mt-3" id="char-power-tags"></div>
+        </div>
+
+        <!-- Biography -->
+        <div class="glass p-4 rounded-4 mb-4">
+          <h2 class="section-heading mb-3">
+            <i class="bi bi-journal-text me-2"></i>Biography
+          </h2>
+          <p id="char-description" class="lead opacity-85 mb-0"></p>
+        </div>
+
+        <!-- Power stats -->
+        <div class="glass p-4 rounded-4 mb-4">
+          <h2 class="section-heading mb-3">
+            <i class="bi bi-bar-chart-line me-2"></i>Power Stats
+          </h2>
+          <div class="char-radar-wrap mb-3">
+            <canvas id="charRadarChart"></canvas>
+          </div>
+          <div id="char-stat-bars"></div>
+        </div>
+
+        <!-- Relationships -->
+        <div class="glass p-4 rounded-4 mb-4">
+          <h2 class="section-heading mb-3">
+            <i class="bi bi-diagram-3 me-2"></i>Relationships
+          </h2>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="bg-surface p-3 rounded-3 h-100">
+                <h6 class="text-success mb-2"><i class="bi bi-shield-check me-1"></i>Allies</h6>
+                <div id="char-allies" class="d-flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="bg-surface p-3 rounded-3 h-100">
+                <h6 class="text-danger mb-2"><i class="bi bi-lightning-charge me-1"></i>Enemies</h6>
+                <div id="char-enemies" class="d-flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prev / Next navigation -->
+        <div class="d-flex justify-content-between gap-3 mb-4">
+          <a id="char-prev" href="#" class="btn btn-outline-warning flex-grow-1 d-none">
+            <i class="bi bi-arrow-left me-1"></i><span id="prev-name">Previous</span>
+          </a>
+          <a id="char-next" href="#" class="btn btn-warning flex-grow-1 d-none">
+            <span id="next-name">Next</span><i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- ── Right: Infobox (desktop) ── -->
+      <aside class="col-lg-4 col-xl-3 d-none d-lg-block">
+        <div class="char-infobox glass rounded-4 overflow-hidden sticky-top" style="top:80px;" id="char-infobox">
+          <div class="char-infobox-header p-3 text-center" id="char-infobox-header">
+            <h3 class="fw-bold mb-0 char-infobox-name" id="char-infobox-name"></h3>
+            <small class="opacity-75" id="char-infobox-id"></small>
+          </div>
+          <img id="char-infobox-img" src="" alt=""
+               class="char-infobox-img"
+               onerror="this.src='contents/indexphoto/logo.webp'" />
+          <table class="char-infobox-table w-100">
+            <tbody id="char-infobox-tbody"></tbody>
+          </table>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer py-4 mt-auto border-top-dark">
+    <div class="container footer-layout">
+      <div class="footer-meta text-secondary small">
+        <div>&copy; <span id="year"></span> Compass World. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="files.html" class="footer-link link-warning">
+            <i class="bi bi-people"></i> All Characters
+          </a>
+          <a href="https://github.com/guybracha/compass-world" class="footer-link link-warning" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="contents/art2025/symbol.png" alt="Compass symbol" class="logo-glow" loading="lazy" />
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn btn-warning back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const topBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 500));
+  </script>
+</body>
+</html>
