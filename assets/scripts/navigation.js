@@ -126,6 +126,8 @@ const NavigationModule = (() => {
       currentPage = path.split('/').pop().replace('.html', '') || 'index';
     }
 
+    const normalizedCurrent = `${currentPage}.html`.toLowerCase();
+
     // מצא את כל קישורי הניווט
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     
@@ -142,6 +144,28 @@ const NavigationModule = (() => {
       } else {
         link.classList.remove('active');
         link.removeAttribute('aria-current');
+      }
+    });
+
+    // הדגשת פריטי dropdown לפי הדף הפעיל
+    const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown-menu .dropdown-item');
+    dropdownItems.forEach(item => {
+      const href = (item.getAttribute('href') || '').toLowerCase();
+      const isActive = href === normalizedCurrent || (normalizedCurrent === '' && href === 'index.html');
+      item.classList.toggle('active', isActive);
+    });
+
+    // הדגשת קבוצות ניווט (למשל Chronology שכולל גם Events)
+    const groupLinks = document.querySelectorAll('.navbar-nav .nav-link[data-nav-group-pages]');
+    groupLinks.forEach(groupLink => {
+      const pages = (groupLink.getAttribute('data-nav-group-pages') || '')
+        .toLowerCase()
+        .split(',')
+        .map(v => v.trim())
+        .filter(Boolean);
+
+      if (pages.includes(normalizedCurrent)) {
+        groupLink.classList.add('active');
       }
     });
   }

@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ----- constants -----
   const PLACEHOLDER_WEBP = 'https://placehold.co/512x512/webp?text=Avatar';
+  const PROFILE_MAP = window.PRIME_CHILDREN_PROFILES || {};
 
   // ----- helpers (img + slug) -----
   function slugifyName(name) {
@@ -41,14 +42,39 @@ document.addEventListener('DOMContentLoaded', () => {
              ${extra}>`;
   }
 
+  function profileUrl(name) {
+    return `character.html?name=${encodeURIComponent(slugifyName(name))}`;
+  }
+
+  function hashName(name) {
+    return String(name || '').split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+  }
+
+  function derivePrimeSync(name, side) {
+    const seed = hashName(name);
+    const base = side === 'Hero' ? 74 : 62;
+    const span = side === 'Hero' ? 25 : 29;
+    return Math.min(99, base + (seed % span));
+  }
+
+  function deriveInheritedFragment(power) {
+    if (!power) return 'Prime resonance signature';
+    const main = String(power).split('&')[0].split('/')[0].trim().toLowerCase();
+    return `Prime's ${main} vector`;
+  }
+
   // ----- data -----
   const raw = Array.isArray(window.characters) ? window.characters : [];
   const data = raw.map(c => {
+    const profile = PROFILE_MAP[c?.name] || {};
     const base = {
       name:  (c && c.name)  || '',
       side:  (c && c.side)  || '',
       power: (c && c.power) || '',
-      tags:  Array.isArray(c && c.tags) ? c.tags : []
+      tags:  Array.isArray(c && c.tags) ? c.tags : [],
+      primeSync: Number.isFinite(profile.primeSync) ? profile.primeSync : derivePrimeSync(c?.name, c?.side),
+      inheritedFragment: profile.inheritedFragment || deriveInheritedFragment(c?.power),
+      loyalty: profile.loyalty || (c?.side === 'Hero' ? 'Alliance' : 'Rogue')
     };
     const url = imgUrlFor(c);
     return { ...base, img: url };
@@ -74,11 +100,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // helpers
   const tagBadges = (tags=[]) => tags.map(t => `<span class="badge bg-secondary me-1">${t}</span>`).join('');
 
+  function syncTone(sync) {
+    if (sync >= 90) return 'high';
+    if (sync >= 75) return 'mid';
+    return 'low';
+  }
+
   function card(it){
     const col = document.createElement('div');
     col.className = 'col-12 col-sm-6 col-lg-4';
     col.innerHTML = `
-      <div class="card h-100 glass text-white border-0">
+      <div class="pc-card ${it.side === 'Hero' ? 'hero' : 'villain'} h-100 text-white border-0">
         <div class="ratio ratio-1x1">
           ${imgTag(it.img, `${it.name} — ${it.side}`, 'w-100 h-100')}
         </div>
@@ -87,13 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
             <h5 class="card-title mb-0">${it.name}</h5>
             <span class="badge ${it.side === 'Hero' ? 'bg-success' : 'bg-danger'}">${it.side}</span>
           </div>
+          <div class="sync-meter ${syncTone(it.primeSync)} mb-2" role="img" aria-label="Prime synchronization ${it.primeSync}%">
+            <div class="sync-meter-bar" style="width:${it.primeSync}%"></div>
+          </div>
+          <p class="sync-label small text-secondary mb-2"><i class="bi bi-cpu me-1"></i>Prime Sync: <strong>${it.primeSync}%</strong></p>
           <p class="small text-warning mb-2"><i class="bi bi-lightning-charge"></i> ${it.power || ''}</p>
+          <p class="small text-secondary mb-2"><i class="bi bi-diagram-2 me-1"></i>Inherited: ${it.inheritedFragment}</p>
+          <p class="small mb-2"><span class="badge ${it.loyalty === 'Alliance' ? 'text-bg-primary' : it.loyalty === 'Rogue' ? 'text-bg-danger' : 'text-bg-secondary'}">${it.loyalty}</span></p>
           <div class="mb-3">${tagBadges(it.tags)}</div>
-          <div class="mt-auto">
+          <div class="mt-auto d-grid gap-2">
+            <a class="btn btn-warning btn-sm w-100" href="${profileUrl(it.name)}">
+              Open Character Page
+            </a>
             <button class="btn btn-outline-warning btn-sm w-100"
                     data-bs-toggle="modal" data-bs-target="#pcModal"
                     data-name="${it.name}">
-              Profile
+              Quick View
             </button>
           </div>
         </div>
@@ -147,8 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="mb-2">
               <span class="badge ${ch && ch.side === 'Hero' ? 'bg-success' : 'bg-danger'}">${(ch && ch.side) || ''}</span>
             </div>
+            <div class="sync-meter ${syncTone(ch?.primeSync || 0)} mb-2" role="img" aria-label="Prime synchronization ${ch?.primeSync || 0}%">
+              <div class="sync-meter-bar" style="width:${ch?.primeSync || 0}%"></div>
+            </div>
+            <p class="small text-secondary mb-2"><i class="bi bi-cpu me-1"></i>Prime Sync: <strong>${ch?.primeSync || 0}%</strong></p>
             <div class="text-warning mb-2"><i class="bi bi-lightning-charge"></i> ${(ch && ch.power) || ''}</div>
+            <div class="small text-secondary mb-2"><i class="bi bi-diagram-2 me-1"></i>Inherited: ${ch?.inheritedFragment || ''}</div>
+            <div class="small mb-2"><span class="badge ${ch?.loyalty === 'Alliance' ? 'text-bg-primary' : ch?.loyalty === 'Rogue' ? 'text-bg-danger' : 'text-bg-secondary'}">${ch?.loyalty || ''}</span></div>
             <div class="mb-3">${tagBadges(ch && ch.tags || [])}</div>
+            <a class="btn btn-warning btn-sm mb-3" href="${profileUrl(ch?.name || '')}">Open Character Page</a>
             <p class="small text-secondary mb-0">Bio coming soon. This entry is part of the Prime-Children initiative.</p>
           </div>`;
       }

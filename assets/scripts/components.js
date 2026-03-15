@@ -29,6 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
             link.removeAttribute('aria-current');
           }
         });
+
+        const dropdownItems = placeholder.querySelectorAll('.navbar-nav .dropdown-menu .dropdown-item');
+        dropdownItems.forEach((item) => {
+          const href = (item.getAttribute('href') || '').toLowerCase();
+          const isActive = href === normalizedCurrent || (normalizedCurrent === '' && href === 'index.html');
+          item.classList.toggle('active', isActive);
+        });
+
+        const groupLinks = placeholder.querySelectorAll('.navbar-nav .nav-link[data-nav-group-pages]');
+        groupLinks.forEach((groupLink) => {
+          const pages = (groupLink.getAttribute('data-nav-group-pages') || '')
+            .toLowerCase()
+            .split(',')
+            .map((v) => v.trim())
+            .filter(Boolean);
+
+          if (pages.includes(normalizedCurrent)) {
+            groupLink.classList.add('active');
+          }
+        });
       }
 
       // ---------- Theme toggle ----------

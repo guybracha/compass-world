@@ -55,11 +55,23 @@
   background: rgba(255,255,255,.02);
   border-top: 1px solid rgba(255,255,255,.06);
   border-radius: 0 0 var(--radius-md) var(--radius-md);
+  color: var(--text-100);
+  line-height: 1.75;
 }
+
+#teamsAccordion .accordion-body p {
+  color: var(--text-200);
+  font-size: 1.05rem;
+}
+
+#teamsAccordion .accordion-body strong {
+  color: #fff;
+}
+
 #teamsAccordion .list-group-item {
   background: transparent;
   border-color: rgba(255,255,255,.08);
-  color: var(--text-300);
+  color: var(--text-100);
 }
 
 /* Filters */

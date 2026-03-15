@@ -1,0 +1,146 @@
+/* Compass World - event page */
+
+.event-banner {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  min-height: 280px;
+}
+
+.event-banner img {
+  width: 100%;
+  min-height: 280px;
+  max-height: 440px;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.event-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.05) 10%, rgba(3, 7, 18, 0.88) 90%);
+}
+
+.event-banner-content {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.event-subtitle {
+  color: var(--text-300);
+  font-size: 0.9rem;
+}
+
+.quick-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quick-info-table th,
+.quick-info-table td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top;
+}
+
+.quick-info-table th {
+  width: 32%;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.narrative-block {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 1rem;
+}
+
+.narrative-block h3 {
+  font-size: 1.06rem;
+  margin-bottom: 0.4rem;
+  color: var(--brand);
+}
+
+.participants-wrap,
+.items-wrap,
+.event-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.participant-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text-100);
+  text-decoration: none;
+}
+
+.participant-chip:hover {
+  border-color: rgba(255, 183, 3, 0.55);
+  color: var(--brand);
+}
+
+.participant-chip-muted {
+  opacity: 0.85;
+}
+
+.participant-avatar {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 183, 3, 0.16);
+  border: 1px solid rgba(255, 183, 3, 0.36);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.item-chip,
+.event-list-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text-200);
+}
+
+.event-list-link {
+  text-decoration: none;
+}
+
+.event-list-link:hover {
+  color: var(--brand);
+  border-color: rgba(255, 183, 3, 0.45);
+}
+
+@media (max-width: 767.98px) {
+  .event-banner {
+    min-height: 220px;
+  }
+
+  .event-banner img {
+    min-height: 220px;
+    max-height: 320px;
+  }
+
+  .event-banner-content {
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.7rem;
+  }
+}

@@ -59,7 +59,7 @@ const characters = [
   { name: "Captain Israel", side: SIDE.HERO, power: "Flight", tags: [CATS.PRIME], img: "contents/avatar2024/heroes/captainIsrael-min.webp" },
   { name: "Frog Girl", side: SIDE.HERO, power: "Super-leaps & long tongue", tags: [CATS.PRIME], img: "contents/avatar2024/heroes/frogGirl-min.webp" },
   { name: "Third-Eye", side: SIDE.HERO, power: "Tri-ocular super-vision", tags: [CATS.PRIME, CATS.MYSTIC], img: "contents/avatar2024/heroes/thirdEye-min.webp" },
-  { name: "Fortress", side: SIDE.HERO, power: "Giant growth", tags: [CATS.PRIME], img: "contents/avatar2024/heroes/fortress-min.webp" },
+  { name: "Obelisk", side: SIDE.HERO, power: "Giant growth", tags: [CATS.PRIME], img: "contents/avatar2024/heroes/obelisk-min.webp" },
   { name: "Shrink", side: SIDE.HERO, power: "Miniaturization", tags: [CATS.PRIME], img: "contents/avatar2024/heroes/shrink-min.webp" },
   { name: "Mermaid", side: SIDE.HERO, power: "Shapeshift into mermaid", tags: [CATS.PRIME, CATS.UNDERSEA, CATS.MYSTIC, CATS.LEGEND], img: "contents/avatar2024/heroes/mermaid-min.webp" },
   { name: "Art Einstein", side: SIDE.HERO, power: "Super-intellect", tags: [CATS.PRIME, CATS.SCIENCE], img: "contents/avatar2024/heroes/artEinstein-min.webp" },
@@ -108,6 +108,22 @@ const characters = [
 window.CATS = CATS;
 window.SIDE = SIDE;
 window.characters = characters;
+
+// Optional narrative metadata per character. Missing values are generated in the renderer.
+const PRIME_CHILDREN_PROFILES = {
+  "Voltage": { primeSync: 93, inheritedFragment: "Prime's electric pulse lattice", loyalty: "Alliance" },
+  "Bloom": { primeSync: 88, inheritedFragment: "Prime's regenerative growth matrix", loyalty: "Alliance" },
+  "Enforcer": { primeSync: 84, inheritedFragment: "Prime's dark-spectrum control", loyalty: "Unclear" },
+  "Captain Phoenix": { primeSync: 91, inheritedFragment: "Prime's ignition core", loyalty: "Alliance" },
+  "Kid Dimension": { primeSync: 86, inheritedFragment: "Prime's space-fold intuition", loyalty: "Alliance" },
+  "Mindbend": { primeSync: 83, inheritedFragment: "Prime's neural pressure wave", loyalty: "Alliance" },
+  "Killer Volt": { primeSync: 80, inheritedFragment: "Prime's unstable current spikes", loyalty: "Rogue" },
+  "Human Rat": { primeSync: 67, inheritedFragment: "Prime's survival-adaptation reflex", loyalty: "Rogue" },
+  "The Human Reactor": { primeSync: 76, inheritedFragment: "Prime's overload core", loyalty: "Rogue" },
+  "General Darkness": { primeSync: 85, inheritedFragment: "Prime's eclipse resonance", loyalty: "Rogue" }
+};
+
+window.PRIME_CHILDREN_PROFILES = PRIME_CHILDREN_PROFILES;
 
 // (optional) Export badgeForTags for other pages/modals
 window.badgeForTags = function badgeForTags(tags) {

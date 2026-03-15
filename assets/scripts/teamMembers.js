@@ -7,7 +7,7 @@ const teamMembers = [
   { name: "Comrade", image: "./contents/avatar2024/heroes/comrade-min.webp" },
   { name: "Tsunami", image: "./contents/avatar2024/heroes/tsunami-min.webp" },
   { name: "Size", image: "./contents/avatar2024/heroes/size-min.webp" },
-  { name: "Dragon Fighter", image: "./contents/avatar2024/heroes/dragonFighter-min.webp" },
+  { name: "Dragon Caesar", image: "./contents/avatar2024/heroes/dragonCaesar-min.webp" },
   { name: "Mariposa", image: "./contents/avatar2024/heroes/kittyposa-min.webp" },
   { name: "Symbol", image: "./contents/avatar2024/heroes/symbol-min.webp" },
   { name: "Eastwind", image: "./contents/avatar2024/heroes/eastwind-min.webp" },
@@ -55,13 +55,18 @@ const teamMembers = [
   { name: "Punker", image: "./contents/avatar2024/heroes/punker-min.webp" },
   { name: "Agamemnon", image: "./contents/avatar2024/heroes/agamemnon-min.webp" },
   { name: "The Seren", image: "./contents/avatar2024/heroes/seren-min.webp" },
-  { name: "Harkadius and Hallethea", image: "./contents/avatar2024/heroes/harkadiusHallethea-min.webp" }
+  { name: "Harkadius and Hallethea", image: "./contents/avatar2024/heroes/harkadiusHallethea-min.webp" },
+  { name: "Polar", image: "./contents/avatar2024/heroes/polar-min.webp" },
+  { name: "Hightask", image: "./contents/avatar2024/heroes/hightask-min.webp" },
+  { name: "Spectrum Man", image: "./contents/avatar2024/heroes/spectrumMan-min.webp" },
+  { name: "Dragon Girl", image: "./contents/avatar2024/heroes/dragonGirl-min.webp" },
+  { name: "The First Macabi", image: "./contents/avatar2024/heroes/firstMacabi-min.webp" },
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." }));
 
 // --- סדר לפי הגלריה ב-PDF ---
 const pdfOrder = [
   "Comrade","Gigantic","Paladin","Tsunami","Voltage",
-  "Bloom","Captain Phoenix","Dragon Fighter","Maltese Cross","Size","Mariposa",
+  "Bloom","Captain Phoenix","Dragon Caesar","Maltese Cross","Size","Mariposa",
   "Doc Physics","Enforcer","Honeybee","Metalclad","Optimus Quantum",
   "Eastwind","Sunshine","Ra","Rubberman","Rocket the Prime Robot",
   "Scarab","Symbol","Timer","Western","Wetlander",
@@ -71,7 +76,7 @@ const pdfOrder = [
   "Wonderbeast","Nighthunter","Luna","Guardian Angel","Hydro-Zen",
   "Ivory","King Sodalite","Northlight","Lion Man","Golda",
   "Mighty Bean","Paladin 2","Punker","Agamemnon","The Seren",
-  "Harkadius and Hallethea"
+  "Harkadius and Hallethea","Polar","Hightask","Spectrum Man","Dragon Girl","The First Macabi"
 ];
 
 const byName = new Map(teamMembers.map(m => [m.name, m]));

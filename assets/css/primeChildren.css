@@ -75,6 +75,36 @@ header p {
   gap: .35rem;
 }
 
+.pc-card .sync-meter {
+  height: 8px;
+  background: rgba(255,255,255,.12);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+.pc-card .sync-meter-bar {
+  height: 100%;
+  border-radius: inherit;
+  transition: width .45s ease;
+}
+
+.pc-card .sync-meter.high .sync-meter-bar {
+  background: linear-gradient(90deg, #30d158, #2de2e6);
+}
+
+.pc-card .sync-meter.mid .sync-meter-bar {
+  background: linear-gradient(90deg, #ffb703, #ffd166);
+}
+
+.pc-card .sync-meter.low .sync-meter-bar {
+  background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+.pc-card .sync-label {
+  letter-spacing: .2px;
+}
+
 /* Buttons on the card */
 .pc-card .btn {
   border-radius: .5rem;

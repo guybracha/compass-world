@@ -25,13 +25,43 @@
     return new URLSearchParams(window.location.search).get(key);
   }
   function nameToSlug(name) {
-    return (name || '').toLowerCase().replace(/\s+/g, '-');
+    return (name || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
   }
   function slugToUrl(slug) {
     return 'character.html?name=' + encodeURIComponent(slug);
   }
 
   // ── Unified character list ─────────────────────────────────────
+  function normalizePrimeChild(pc) {
+    const tags = Array.isArray(pc && pc.tags) ? pc.tags : [];
+    const side = (pc && pc.side) || 'Hero';
+    const derivedCategory = tags.find((t) => t && t !== 'Prime') || 'Prime';
+    const isVillain = side === 'Villain';
+
+    return {
+      superName:   (pc && pc.name) || 'Unknown',
+      privateName: 'Unknown',
+      Powers:      (pc && pc.power) || 'Unknown',
+      img:         (pc && pc.img) || '',
+      quote:       '',
+      category:    isVillain ? 'Villain' : derivedCategory,
+      color:       isVillain ? '#dc2626' : '#ffb703',
+      status:      isVillain ? 'Villain' : 'Prime-Child',
+      team:        isVillain ? 'Rogue Prime-Children' : 'Prime-Children',
+      description: '',
+      allies:      [],
+      enemies:     [],
+      stats:       null
+    };
+  }
+
   function getAllCharacters() {
     const heroes   = typeof superList   !== 'undefined' ? superList   : [];
     const villains = typeof villainList !== 'undefined'
@@ -51,11 +81,41 @@
           stats:       v.stats       || null
         }))
       : [];
-    return [...heroes, ...villains];
+
+    const primeChildren = Array.isArray(window.characters)
+      ? window.characters.map(normalizePrimeChild)
+      : [];
+
+    // Keep rich profiles from hero/villain JSON as source of truth.
+    const merged = new Map();
+    [...heroes, ...villains].forEach((c) => merged.set(nameToSlug(c.superName), c));
+
+    primeChildren.forEach((pc) => {
+      const slug = nameToSlug(pc.superName);
+      if (!merged.has(slug)) {
+        merged.set(slug, pc);
+        return;
+      }
+
+      const existing = merged.get(slug);
+      merged.set(slug, {
+        ...pc,
+        ...existing,
+        img: existing.img || pc.img,
+        Powers: existing.Powers || pc.Powers,
+        category: existing.category || pc.category,
+        color: existing.color || pc.color,
+        status: existing.status || pc.status,
+        team: existing.team || pc.team
+      });
+    });
+
+    return Array.from(merged.values());
   }
 
   function findCharacter(slug, allChars) {
-    return allChars.find(c => nameToSlug(c.superName) === slug) || null;
+    const normalizedSlug = nameToSlug(slug);
+    return allChars.find(c => nameToSlug(c.superName) === normalizedSlug) || null;
   }
 
   function charColor(char) {
@@ -343,12 +403,14 @@
 
   // ── Init ───────────────────────────────────────────────────────
   function init() {
-    const slug = getParam('name');
-    if (!slug) { window.location.replace('files.html'); return; }
+    const slugParam = getParam('name');
+    if (!slugParam) { window.location.replace('files.html'); return; }
+
+    const slug = nameToSlug(slugParam);
 
     const allChars = getAllCharacters();
     const char     = findCharacter(slug, allChars);
-    if (!char) { showNotFound(slug); return; }
+    if (!char) { showNotFound(slugParam); return; }
 
     renderPage(char, allChars, slug);
 

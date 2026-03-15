@@ -20,7 +20,22 @@
       <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-2 gap-lg-3 text-center text-lg-start">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="files.html">Gods &amp; Monsters</a></li>
-        <li class="nav-item"><a class="nav-link" href="history.html">Chronology</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="chronologyDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false"
+             data-nav-group="chronology"
+             data-nav-group-pages="history.html,event.html">
+            Chronology
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="chronologyDropdown">
+            <li><a class="dropdown-item" href="history.html">Timeline</a></li>
+            <li><a class="dropdown-item" href="event.html">Events</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="world.html">Atlas</a></li>
         <li class="nav-item"><a class="nav-link" href="primeChildren.html">Prime Children</a></li>
         <li class="nav-item"><a class="nav-link" href="ideas.html">Ideas</a></li>
