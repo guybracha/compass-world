@@ -61,6 +61,7 @@ const teamMembers = [
   { name: "Spectrum Man", image: "./contents/avatar2024/heroes/spectrumMan-min.webp" },
   { name: "Dragon Girl", image: "./contents/avatar2024/heroes/dragonGirl-min.webp" },
   { name: "The First Macabi", image: "./contents/avatar2024/heroes/firstMacabi-min.webp" },
+  { name: "Tula", image: "./contents/avatar2024/heroes/tula-min.webp" },
 ].map(m => ({ ...m, bio: m.bio ?? "Member of the Compass Alliance." }));
 
 // --- סדר לפי הגלריה ב-PDF ---
@@ -76,7 +77,7 @@ const pdfOrder = [
   "Wonderbeast","Nighthunter","Luna","Guardian Angel","Hydro-Zen",
   "Ivory","King Sodalite","Northlight","Lion Man","Golda",
   "Mighty Bean","Paladin 2","Punker","Agamemnon","The Seren",
-  "Harkadius and Hallethea","Polar","Hightask","Spectrum Man","Dragon Girl","The First Macabi"
+  "Harkadius and Hallethea","Polar","Hightask","Spectrum Man","Dragon Girl","The First Macabi","Tula"
 ];
 
 const byName = new Map(teamMembers.map(m => [m.name, m]));
