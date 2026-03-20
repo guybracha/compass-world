@@ -386,6 +386,48 @@
 
     // Prev / Next
     buildPrevNext(heroes, currentSlug);
+
+    // GSAP page entrance and staggered content reveals
+    animateCharacterPage();
+  }
+
+  function animateCharacterPage() {
+    if (typeof window.gsap === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion?.matches) return;
+
+    const { gsap } = window;
+
+    gsap.fromTo(
+      '.char-banner-name, .char-banner-quote, .char-breadcrumb',
+      { opacity: 0, y: 24 },
+      { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out', stagger: 0.08 }
+    );
+
+    gsap.fromTo(
+      '#char-portrait-card',
+      { opacity: 0, y: 28, scale: 0.98 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'power2.out', delay: 0.08 }
+    );
+
+    gsap.fromTo(
+      '.char-power-tag, .char-ally-badge, .char-enemy-badge',
+      { opacity: 0, y: 10, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: 'power2.out', stagger: 0.03, delay: 0.2 }
+    );
+
+    gsap.fromTo(
+      '.char-stat-fill',
+      { scaleX: 0, transformOrigin: 'left center' },
+      { scaleX: 1, duration: 0.9, ease: 'power2.out', stagger: 0.07, delay: 0.26 }
+    );
+
+    gsap.fromTo(
+      '#char-infobox, #infobox-mobile .char-infobox, .char-sidenav, #char-prev, #char-next',
+      { opacity: 0, y: 18 },
+      { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', stagger: 0.06, delay: 0.22 }
+    );
   }
 
   // ── Not found ──────────────────────────────────────────────────

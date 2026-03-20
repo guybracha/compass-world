@@ -133,6 +133,45 @@
     }
   }
 
+  function animateEventPage() {
+    if (typeof window.gsap === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion?.matches) return;
+
+    const { gsap } = window;
+
+    gsap.fromTo(
+      '.event-banner',
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }
+    );
+
+    gsap.fromTo(
+      '.event-banner img',
+      { scale: 1.08 },
+      { scale: 1, duration: 1.2, ease: 'power2.out' }
+    );
+
+    gsap.fromTo(
+      '.event-banner-content > *',
+      { opacity: 0, y: 22 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.1, delay: 0.1 }
+    );
+
+    gsap.fromTo(
+      '.quick-info-table tr, .narrative-block',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', stagger: 0.08, delay: 0.2 }
+    );
+
+    gsap.fromTo(
+      '.participant-chip, .participant-chip-muted, .item-chip, .event-list-link',
+      { opacity: 0, y: 14, scale: 0.96 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'power2.out', stagger: 0.025, delay: 0.28 }
+    );
+  }
+
   function init() {
     const map = getEventMap();
     const events = Object.values(map);
@@ -151,6 +190,7 @@
 
     const knownSet = getAllCharacterNames();
     renderEvent(eventData, events, knownSet);
+    animateEventPage();
   }
 
   document.addEventListener('DOMContentLoaded', init);

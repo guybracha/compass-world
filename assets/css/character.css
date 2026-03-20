@@ -20,6 +20,7 @@
   background: linear-gradient(160deg, #0b0f16 40%, #1a1f2e 100%);
   transition: background 0.6s ease;
   overflow: hidden;
+  will-change: transform, opacity;
 }
 .char-banner::before {
   /* subtle star noise */
@@ -70,6 +71,7 @@
   object-fit: contain;
   border-radius: var(--radius-lg);
   transition: transform .3s ease, box-shadow .3s ease;
+  will-change: transform, opacity;
 }
 .char-portrait:hover {
   transform: translateY(-6px) scale(1.01);
@@ -100,6 +102,8 @@
   height: 100%;
   border-radius: 999px;
   transition: width .6s cubic-bezier(.4,0,.2,1);
+  transform-origin: left center;
+  will-change: transform;
 }
 
 /* ── Radar chart wrapper ────────────────────────── */
@@ -128,6 +132,7 @@
 /* ── Infobox ─────────────────────────────────────── */
 .char-infobox {
   border: 1px solid var(--border-strong);
+  will-change: transform, opacity;
 }
 .char-infobox-header {
   transition: background .5s ease, border-color .5s ease;
