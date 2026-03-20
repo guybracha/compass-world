@@ -86,6 +86,48 @@ const GALLERY_ITEMS = [
     src: "contents/art2025/powerPoint.webp",
     caption: "A comedic scene of the futureberg staff based on the office.",
     tags: ["comedy","remake"]
+  },
+  {
+    title: "Bruegel",
+    src: "contents/art2026/breugel.webp",
+    caption: "A classical art-inspired composition with Compass World characters.",
+    tags: ["concept art","poster","2026"]
+  },
+  {
+    title: "Hey Size",
+    src: "contents/art2026/hey-size.webp",
+    caption: "Size in action — a dynamic character moment.",
+    tags: ["prime","poster","2026"]
+  },
+  {
+    title: "Intruder I",
+    src: "contents/art2026/intruder1.webp",
+    caption: "First encounter with mysterious intruders.",
+    tags: ["villains","poster","2026"]
+  },
+  {
+    title: "Intruder II",
+    src: "contents/art2026/intruder2.webp",
+    caption: "The second wave of invasion.",
+    tags: ["villains","poster","2026"]
+  },
+  {
+    title: "Size & Mariposa",
+    src: "contents/art2026/size-mariposa.webp",
+    caption: "Size and Mariposa team-up moment.",
+    tags: ["alliance","poster","2026"]
+  },
+  {
+    title: "This Bored Threat",
+    src: "contents/art2026/this-bored-threat.webp",
+    caption: "A villain with attitude — mystery threat.",
+    tags: ["villains","poster","2026"]
+  },
+  {
+    title: "Night of the Wolf",
+    src: "contents/art2026/wolf.webp",
+    caption: "Fierce and untamed — beast or character.",
+    tags: ["concept art","poster","2026"]
   }
 ];
 
